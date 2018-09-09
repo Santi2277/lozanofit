@@ -40,10 +40,10 @@ public class Activity2 extends AppCompatActivity {
                 Picasso
                         .with(this)
                         .load(c.getString(2))
-                        .resize(539, 479)
+                        .resize(1078, 958)
                         .into(image);
             }
-
+        //539 and 479
         }
 
 

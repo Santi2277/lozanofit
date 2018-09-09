@@ -6,9 +6,9 @@ android {
         applicationId "deploy.android.lozanofit.es.lozanofitroutinemixer"
         minSdkVersion 15
         targetSdkVersion 28
-        versionName '3'
+        versionName '4'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        versionCode 3
+        versionCode 4
     }
     buildTypes {
         release {
