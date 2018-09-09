@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity2"
+    tools:context=".activities.Activity2"
     tools:layout_editor_absoluteY="25dp">
 
     <Button
@@ -81,14 +81,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginLeft="156dp"
-        android:layout_marginRight="156dp"
-        android:layout_marginStart="156dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
         android:onClick="nextExercise"
         android:text="Next"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="@+id/textView4" />
+        app:layout_constraintStart_toEndOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:onClick="goToActivity3"
+        android:text="Details"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/button4" />
 
 </android.support.constraint.ConstraintLayout>
