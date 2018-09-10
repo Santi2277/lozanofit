@@ -9,44 +9,47 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import java.util.ArrayList;
+
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
+import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Exercise;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.sqlite.ExercisesDB;
 
 public class Activity3 extends AppCompatActivity {
+
+    public ArrayList<Exercise> exercisesList = new ArrayList<Exercise>();
+    public int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
 
+        // parcelable
+        exercisesList = getIntent().getParcelableArrayListExtra("key");
 
         final VideoView videoView;
         videoView = (VideoView)findViewById(R.id.videoView);
 
-
         TextView text = findViewById(R.id.textView);
         TextView description = findViewById(R.id.textView5);
-        int id = getIntent().getIntExtra("exerciseCounter", 2);
-        id = id +1;
-        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 3);
-        SQLiteDatabase db = exdb.getWritableDatabase();
-        String[] args = new String[] {String.valueOf(id)};
-        Cursor c = db.rawQuery(" SELECT * FROM Exercises WHERE id=? ", args);
-        if (c.moveToFirst()) {
-            text.setText(c.getString(1));
-            videoView.setVideoPath(c.getString(3));
-            videoView.start();
-            description.setText(c.getString(4));
-        }
+        counter = getIntent().getIntExtra("exerciseCounter", 0);
+
+
+        text.setText(exercisesList.get(counter).getName());
+        videoView.setVideoPath(exercisesList.get(counter).getVideo_path());
+        description.setText(exercisesList.get(counter).getDescription());
+        videoView.start();
     }
 
 
 
     public void goToActivity2 (View view){
         Intent intent = new Intent (this, Activity2.class);
-        int count = getIntent().getIntExtra("exerciseCounter", 2);
-        intent.putExtra("exerciseCounter", count);
+        intent.putExtra("exerciseCounter", counter);
+        //parcelable
+        intent.putParcelableArrayListExtra("key", exercisesList);
+        intent.putExtra("listCreated", true);
         startActivity(intent);
 
     }
