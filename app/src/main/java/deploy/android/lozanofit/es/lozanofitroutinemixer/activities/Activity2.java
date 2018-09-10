@@ -29,9 +29,9 @@ public class Activity2 extends AppCompatActivity {
         TextView text = findViewById(R.id.textView4);
         ImageView image = findViewById(R.id.imageView);
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 3);
         SQLiteDatabase db = exdb.getWritableDatabase();
-        if (count<4) {
+        if (count<13) {
             int counter2 = count +1;
             String[] args = new String[] {String.valueOf(counter2)};
             Cursor c = db.rawQuery(" SELECT * FROM Exercises WHERE id=? ", args);
@@ -71,12 +71,12 @@ public class Activity2 extends AppCompatActivity {
 
     public void nextExercise (View view){
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 3);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         TextView text = findViewById(R.id.textView4);
         ImageView image = findViewById(R.id.imageView);
-        if (counter<3) {
+        if (counter<12) {
             counter++;
             int counter2 = counter +1;
             String[] args = new String[] {String.valueOf(counter2)};
@@ -95,7 +95,7 @@ public class Activity2 extends AppCompatActivity {
 
     public void previousExercise (View view){
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 3);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         TextView text = findViewById(R.id.textView4);

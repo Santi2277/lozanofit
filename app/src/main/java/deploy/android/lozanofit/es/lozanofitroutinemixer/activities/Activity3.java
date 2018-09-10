@@ -29,7 +29,7 @@ public class Activity3 extends AppCompatActivity {
         int id = getIntent().getIntExtra("exerciseCounter", 2);
         id = id +1;
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 3);
         SQLiteDatabase db = exdb.getWritableDatabase();
         String[] args = new String[] {String.valueOf(id)};
         Cursor c = db.rawQuery(" SELECT * FROM Exercises WHERE id=? ", args);
