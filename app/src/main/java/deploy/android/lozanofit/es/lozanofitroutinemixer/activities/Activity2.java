@@ -3,10 +3,13 @@ package deploy.android.lozanofit.es.lozanofitroutinemixer.activities;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.CountDownTimer;
 import android.os.Parcelable;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,11 +17,13 @@ import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Exercise;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.sqlite.ExercisesDB;
+import static java.lang.Math.toIntExact;
 
 public class Activity2 extends AppCompatActivity {
 
@@ -46,6 +51,42 @@ public class Activity2 extends AppCompatActivity {
             Toast toast1 = Toast.makeText(getApplicationContext(),
                     timestring, Toast.LENGTH_LONG);
             toast1.show();
+
+            //chrono
+            final TextView simpleChrono = findViewById(R.id.simpleChronometer);
+            int milis = 0;
+            switch(timestring) {
+                case "15 minutes":
+                    milis = 900000;
+                    break;
+                case "30 minutes":
+                    milis = 900000 * 2;
+                    break;
+                case "45 minutes":
+                    milis = 900000 * 3;
+                    break;
+                case "1 hour":
+                    milis = 900000 * 4;
+                    break;
+            }
+            new CountDownTimer(milis, 1000) {
+
+                public void onTick(long millisUntilFinished) {
+                    int numb = toIntExact(millisUntilFinished / 1000);
+                    //Integer.toString(numb)
+                    int minutes = numb / 60;
+                    int seconds = numb % 60;
+                    DecimalFormat twodigits = new DecimalFormat("00");
+                    simpleChrono.setText(Integer.toString(minutes)+":"+twodigits.format(seconds));
+                }
+
+                public void onFinish() {
+                    simpleChrono.setText("Champ!");
+                }
+            }.start();
+
+
+
 
             String muscle1 = "biceps";
             String muscle1count = "";
@@ -117,6 +158,36 @@ public class Activity2 extends AppCompatActivity {
             }
 
         } else {
+            String chronoCont = getIntent().getStringExtra("chronoText");
+            final TextView simpleChrono = findViewById(R.id.simpleChronometer);
+            //simpleChrono.setText(chronoCont);
+
+            String[] parts = chronoCont.split(":");
+            String minutes = parts[0];
+            String seconds = parts[1];
+
+            int milis = (Integer.parseInt(minutes) * 60 + Integer.parseInt(seconds))*1000;
+
+            new CountDownTimer(milis, 1000) {
+
+                public void onTick(long millisUntilFinished) {
+                    int numb = toIntExact(millisUntilFinished / 1000);
+                    //Integer.toString(numb)
+                    int minutes = numb / 60;
+                    int seconds = numb % 60;
+                    DecimalFormat twodigits = new DecimalFormat("00");
+                    simpleChrono.setText(Integer.toString(minutes)+":"+twodigits.format(seconds));
+                }
+
+                public void onFinish() {
+                    simpleChrono.setText("Champ!");
+                }
+            }.start();
+
+
+
+
+
             // parcelable
             exercisesList = getIntent().getParcelableArrayListExtra("key");
         }
@@ -125,10 +196,14 @@ public class Activity2 extends AppCompatActivity {
         counter = getIntent().getIntExtra("exerciseCounter", 0);
 
         TextView text = findViewById(R.id.textView4);
+        TextView uppertext = findViewById(R.id.textView3);
         ImageView image = findViewById(R.id.imageView);
 
 
         text.setText(exercisesList.get(counter).getName());
+        TextView remaining = findViewById(R.id.textView6);
+        remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
+        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
         Picasso
                 .with(this)
                 .load(exercisesList.get(counter).getPhoto_path())
@@ -152,6 +227,11 @@ public class Activity2 extends AppCompatActivity {
         intent.putExtra("exerciseCounter", counter);
         //parcelable
         intent.putParcelableArrayListExtra("key", exercisesList);
+
+        TextView simpleChrono = findViewById(R.id.simpleChronometer);
+        String chronotext = (String) simpleChrono.getText();
+        intent.putExtra("chronoText", chronotext);
+
         startActivity(intent);
     }
 
@@ -169,6 +249,10 @@ public class Activity2 extends AppCompatActivity {
             counter++;
 
             text.setText(exercisesList.get(counter).getName());
+            TextView uppertext = findViewById(R.id.textView3);
+            uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+            TextView remaining = findViewById(R.id.textView6);
+            remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
             Picasso
                     .with(this)
                     .load(exercisesList.get(counter).getPhoto_path())
@@ -187,6 +271,10 @@ public class Activity2 extends AppCompatActivity {
             counter--;
 
             text.setText(exercisesList.get(counter).getName());
+            TextView uppertext = findViewById(R.id.textView3);
+            uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+            TextView remaining = findViewById(R.id.textView6);
+            remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
             Picasso
                     .with(this)
                     .load(exercisesList.get(counter).getPhoto_path())
