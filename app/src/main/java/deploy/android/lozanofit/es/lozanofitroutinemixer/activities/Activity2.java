@@ -41,7 +41,7 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 4);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 6);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //if exercise list (arraylist) hasnt been created, create it
@@ -90,31 +90,85 @@ public class Activity2 extends AppCompatActivity {
 
             String muscle1 = "biceps";
             String muscle1count = "";
-            String muscle2 = "chest";
+            String muscle2 = "abs";
             String muscle2count = "";
-            String muscle3 = "abs";
+            String muscle3 = "forearm";
             String muscle3count = "";
+            String muscle4 = "chest";
+            String muscle4count = "";
+            String muscle5 = "deltoid";
+            String muscle5count = "";
+            String muscle6 = "calf";
+            String muscle6count = "";
+            String muscle7 = "glute";
+            String muscle7count = "";
+            String muscle8 = "mid-back";
+            String muscle8count = "";
+            String muscle9 = "lumbar";
+            String muscle9count = "";
+            String muscle10 = "thigh";
+            String muscle10count = "";
+            String muscle11 = "triceps";
+            String muscle11count = "";
+            String muscle12 = "upper-back";
+            String muscle12count = "";
             // CHOOSE routine exercises number of each category (it doesnt repeat, it will be 4 if you say 5 exercises of biceps and db has only 4)
             switch(timestring) {
                 case "15 minutes":
-                    muscle1count = "2";
-                    muscle2count = "2";
-                    muscle3count = "3";
+                    muscle1count = "1";
+                    muscle2count = "1";
+                    muscle3count = "1";
+                    muscle4count = "1";
+                    muscle5count = "1";
+                    muscle6count = "1";
+                    muscle7count = "1";
+                    muscle8count = "1";
+                    muscle9count = "1";
+                    muscle10count = "1";
+                    muscle11count = "1";
+                    muscle12count = "1";
                     break;
                 case "30 minutes":
-                    muscle1count = "5";
-                    muscle2count = "5";
-                    muscle3count = "5";
+                    muscle1count = "2";
+                    muscle2count = "2";
+                    muscle3count = "1";
+                    muscle4count = "2";
+                    muscle5count = "2";
+                    muscle6count = "1";
+                    muscle7count = "2";
+                    muscle8count = "2";
+                    muscle9count = "2";
+                    muscle10count = "2";
+                    muscle11count = "2";
+                    muscle12count = "2";
                     break;
                 case "45 minutes":
-                    muscle1count = "7";
-                    muscle2count = "7";
-                    muscle3count = "8";
+                    muscle1count = "3";
+                    muscle2count = "3";
+                    muscle3count = "2";
+                    muscle4count = "3";
+                    muscle5count = "3";
+                    muscle6count = "2";
+                    muscle7count = "3";
+                    muscle8count = "3";
+                    muscle9count = "3";
+                    muscle10count = "3";
+                    muscle11count = "3";
+                    muscle12count = "3";
                     break;
                 case "1 hour":
-                    muscle1count = "10";
-                    muscle2count = "10";
-                    muscle3count = "10";
+                    muscle1count = "4";
+                    muscle2count = "4";
+                    muscle3count = "2";
+                    muscle4count = "4";
+                    muscle5count = "4";
+                    muscle6count = "2";
+                    muscle7count = "4";
+                    muscle8count = "4";
+                    muscle9count = "4";
+                    muscle10count = "4";
+                    muscle11count = "4";
+                    muscle12count = "4";
                     break;
             }
 
@@ -135,7 +189,7 @@ public class Activity2 extends AppCompatActivity {
                 } while(c.moveToNext());
             }
 
-            //CHEST
+            //ABS
             query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT "+muscle2count;
             c = db.rawQuery(query, null);
             if (c.moveToFirst()) {
@@ -146,7 +200,7 @@ public class Activity2 extends AppCompatActivity {
                 } while(c.moveToNext());
             }
 
-            //ABS
+            //FOREARM
             query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT "+muscle3count;
             c = db.rawQuery(query, null);
             if (c.moveToFirst()) {
@@ -156,6 +210,115 @@ public class Activity2 extends AppCompatActivity {
                     exercisesList.add(currentExercise);
                 } while(c.moveToNext());
             }
+
+            //CHEST
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT "+muscle4count;
+            c = db.rawQuery(query, null);
+            if (c.moveToFirst()) {
+                //go over cursor until the end
+                do {
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                    exercisesList.add(currentExercise);
+                } while(c.moveToNext());
+            }
+
+            //DELTOID
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT "+muscle5count;
+            c = db.rawQuery(query, null);
+            if (c.moveToFirst()) {
+                //go over cursor until the end
+                do {
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                    exercisesList.add(currentExercise);
+                } while(c.moveToNext());
+            }
+
+            //CALF
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle6+"' ORDER BY RANDOM() LIMIT "+muscle6count;
+            c = db.rawQuery(query, null);
+            if (c.moveToFirst()) {
+                //go over cursor until the end
+                do {
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                    exercisesList.add(currentExercise);
+                } while(c.moveToNext());
+            }
+
+            //GLUTE
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle7+"' ORDER BY RANDOM() LIMIT "+muscle7count;
+            c = db.rawQuery(query, null);
+            if (c.moveToFirst()) {
+                //go over cursor until the end
+                do {
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                    exercisesList.add(currentExercise);
+                } while(c.moveToNext());
+            }
+
+            //MID-BACK
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle8+"' ORDER BY RANDOM() LIMIT "+muscle8count;
+            c = db.rawQuery(query, null);
+            if (c.moveToFirst()) {
+                //go over cursor until the end
+                do {
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                    exercisesList.add(currentExercise);
+                } while(c.moveToNext());
+            }
+
+            //LUMBAR
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle9+"' ORDER BY RANDOM() LIMIT "+muscle9count;
+            c = db.rawQuery(query, null);
+            if (c.moveToFirst()) {
+                //go over cursor until the end
+                do {
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                    exercisesList.add(currentExercise);
+                } while(c.moveToNext());
+            }
+
+            //THIGH
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle10+"' ORDER BY RANDOM() LIMIT "+muscle10count;
+            c = db.rawQuery(query, null);
+            if (c.moveToFirst()) {
+                //go over cursor until the end
+                do {
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                    exercisesList.add(currentExercise);
+                } while(c.moveToNext());
+            }
+
+            //TRICEPS
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle11+"' ORDER BY RANDOM() LIMIT "+muscle11count;
+            c = db.rawQuery(query, null);
+            if (c.moveToFirst()) {
+                //go over cursor until the end
+                do {
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                    exercisesList.add(currentExercise);
+                } while(c.moveToNext());
+            }
+
+            //UPPER-BACK
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle12+"' ORDER BY RANDOM() LIMIT "+muscle12count;
+            c = db.rawQuery(query, null);
+            if (c.moveToFirst()) {
+                //go over cursor until the end
+                do {
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                    exercisesList.add(currentExercise);
+                } while(c.moveToNext());
+            }
+
+
+
+
+
+
+
+
+
+
 
         } else {
             String chronoCont = getIntent().getStringExtra("chronoText");
