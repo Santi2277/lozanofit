@@ -33,6 +33,8 @@ public class Activity2 extends AppCompatActivity {
 
     public int counter = 0;
     public String timestring = "";
+    public String levelstring = "";
+    public String bodystring = "";
     public boolean listcreated = false;
     public ArrayList<Exercise> exercisesList = new ArrayList<Exercise>();
 
@@ -55,6 +57,11 @@ public class Activity2 extends AppCompatActivity {
             Toast toast1 = Toast.makeText(getApplicationContext(),
                     timestring, Toast.LENGTH_LONG);
             toast1.show();
+
+            //get selected body part and level
+            levelstring = getIntent().getStringExtra("selectedLevel");
+            bodystring = getIntent().getStringExtra("selectedBodyPart");
+
 
             //chrono
             final TextView simpleChrono = findViewById(R.id.simpleChronometer);
@@ -145,6 +152,11 @@ public class Activity2 extends AppCompatActivity {
 
 
         } else {
+
+            //get selected body part and level
+            levelstring = getIntent().getStringExtra("selectedLevel");
+
+
             String chronoCont = getIntent().getStringExtra("chronoText");
             final TextView simpleChrono = findViewById(R.id.simpleChronometer);
             //simpleChrono.setText(chronoCont);
@@ -226,6 +238,8 @@ public class Activity2 extends AppCompatActivity {
         TextView simpleChrono = findViewById(R.id.simpleChronometer);
         String chronotext = (String) simpleChrono.getText();
         intent.putExtra("chronoText", chronotext);
+
+        intent.putExtra("selectedLevel", levelstring);
 
         startActivity(intent);
     }

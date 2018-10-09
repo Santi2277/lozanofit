@@ -37,9 +37,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent (this, Activity2.class);
         int count = 0;
         intent.putExtra("exerciseCounter", count);
+
         final Spinner timespinner = (Spinner) findViewById(R.id.spinner);
         String selectedtimestring = timespinner.getSelectedItem().toString();
         intent.putExtra("selectedTime", selectedtimestring);
+
+        final Spinner levelspinner = (Spinner) findViewById(R.id.spinner2);
+        String selectedlevelstring = levelspinner.getSelectedItem().toString();
+        intent.putExtra("selectedLevel", selectedlevelstring);
+
+        final Spinner bodyspinner = (Spinner) findViewById(R.id.spinner3);
+        String selectedbodypartstring = bodyspinner.getSelectedItem().toString();
+        intent.putExtra("selectedBodyPart", selectedbodypartstring);
+
         intent.putExtra("listCreated", false);
         startActivity(intent);
     }

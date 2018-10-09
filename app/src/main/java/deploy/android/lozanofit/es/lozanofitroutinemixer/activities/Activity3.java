@@ -23,6 +23,7 @@ public class Activity3 extends AppCompatActivity {
 
     public ArrayList<Exercise> exercisesList = new ArrayList<Exercise>();
     public int counter = 0;
+    public String levelstring = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,8 @@ public class Activity3 extends AppCompatActivity {
         description.setText(exercisesList.get(counter).getDescription());
         videoView.start();
 
+        //get level selected
+        levelstring = getIntent().getStringExtra("selectedLevel");
 
         //CHRONO don't stop
         String chronoCont = getIntent().getStringExtra("chronoText");
@@ -88,7 +91,7 @@ public class Activity3 extends AppCompatActivity {
         TextView simpleChrono = findViewById(R.id.chrono3);
         String chronotext = (String) simpleChrono.getText();
         intent.putExtra("chronoText", chronotext);
-
+        intent.putExtra("selectedLevel", levelstring);
         startActivity(intent);
 
     }

@@ -14,12 +14,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="33dp"
         android:fontFamily="@font/freshman"
-        android:text="ROUTINE:"
+        android:text="RUTINA:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16pt"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
@@ -28,54 +32,59 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:entries="@array/routinetimelist"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
 
     </Spinner>
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginLeft="8dp"
-
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:entries="@array/routinelevellist"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/spinner">
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
 
     </Spinner>
 
     <Spinner
         android:id="@+id/spinner3"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginLeft="8dp"
-
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="62dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:entries="@array/routinebodypartlist"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2">
+        app:layout_constraintBottom_toTopOf="@+id/imageButton7"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
 
     </Spinner>
 
 
     <ImageButton
         android:id="@+id/imageButton7"
-        android:layout_width="59dp"
-        android:layout_height="47dp"
+        android:layout_width="61dp"
+        android:layout_height="51dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="61dp"
         android:onClick="goToActivity2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -87,35 +96,48 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="102dp"
-        android:layout_marginRight="102dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginStart="77dp"
         android:fontFamily="@font/freshman"
         android:text="Tiempo:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="8pt"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginStart="77dp"
         android:fontFamily="@font/freshman"
         android:text="Nivel:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="8pt"
         app:layout_constraintBottom_toTopOf="@+id/spinner2"
-        app:layout_constraintStart_toStartOf="@+id/textView9" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginStart="77dp"
         android:fontFamily="@font/freshman"
         android:text="Parte del cuerpo :"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="8pt"
         app:layout_constraintBottom_toTopOf="@+id/spinner3"
-        app:layout_constraintStart_toStartOf="@+id/textView11" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
 </android.support.constraint.ConstraintLayout>
