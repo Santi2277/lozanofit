@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="routinetimelist">
-        <item>15 minutes</item>
-        <item>30 minutes</item>
-        <item>45 minutes</item>
-        <item>1 hour</item>
+        <item>15 min</item>
+        <item>30 min</item>
+        <item>45 min</item>
+        <item>1 h</item>
+        <item>1 h 30 min</item>
+    </string-array>
+    <string-array name="routinelevellist">
+        <item>3.- Atlético</item>
+        <item>1.- Mantenimiento</item>
+        <item>2.- En forma</item>
+        <item>4.- Fuerte</item>
+        <item>5.- Muy fuerte</item>
+    </string-array>
+    <string-array name="routinebodypartlist">
+        <item>Todo</item>
+        <item>Superior</item>
+        <item>Inferior</item>
+        <item>Tronco</item>
+        <item>Brazos</item>
+        <item>Piernas</item>
     </string-array>
 </resources>

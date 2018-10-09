@@ -9,6 +9,7 @@ import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +20,9 @@ import com.squareup.picasso.Picasso;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Exercise;
@@ -41,7 +45,7 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 6);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //if exercise list (arraylist) hasnt been created, create it
@@ -56,17 +60,20 @@ public class Activity2 extends AppCompatActivity {
             final TextView simpleChrono = findViewById(R.id.simpleChronometer);
             int milis = 0;
             switch(timestring) {
-                case "15 minutes":
+                case "15 min":
                     milis = 900000;
                     break;
-                case "30 minutes":
+                case "30 min":
                     milis = 900000 * 2;
                     break;
-                case "45 minutes":
+                case "45 min":
                     milis = 900000 * 3;
                     break;
-                case "1 hour":
+                case "1 h":
                     milis = 900000 * 4;
+                    break;
+                case "1 h 30 min":
+                    milis = 900000 * 6;
                     break;
             }
             new CountDownTimer(milis, 1000) {
@@ -87,235 +94,52 @@ public class Activity2 extends AppCompatActivity {
 
 
 
-
-            String muscle1 = "biceps";
-            String muscle1count = "";
-            String muscle2 = "abs";
-            String muscle2count = "";
-            String muscle3 = "forearm";
-            String muscle3count = "";
-            String muscle4 = "chest";
-            String muscle4count = "";
-            String muscle5 = "deltoid";
-            String muscle5count = "";
-            String muscle6 = "calf";
-            String muscle6count = "";
-            String muscle7 = "glute";
-            String muscle7count = "";
-            String muscle8 = "mid-back";
-            String muscle8count = "";
-            String muscle9 = "lumbar";
-            String muscle9count = "";
-            String muscle10 = "thigh";
-            String muscle10count = "";
-            String muscle11 = "triceps";
-            String muscle11count = "";
-            String muscle12 = "upper-back";
-            String muscle12count = "";
             // CHOOSE routine exercises number of each category (it doesnt repeat, it will be 4 if you say 5 exercises of biceps and db has only 4)
             switch(timestring) {
-                case "15 minutes":
-                    muscle1count = "1";
-                    muscle2count = "1";
-                    muscle3count = "1";
-                    muscle4count = "1";
-                    muscle5count = "1";
-                    muscle6count = "1";
-                    muscle7count = "1";
-                    muscle8count = "1";
-                    muscle9count = "1";
-                    muscle10count = "1";
-                    muscle11count = "1";
-                    muscle12count = "1";
+                case "15 min":
+                    createRoutineFull(0,1,0,0,0,0,0,0,0,1,0,0);
+                    createRoutineHalf("biceps","chest");
+                    createRoutineHalf("mid-back","upper-back");
+                    createRoutineHalf("deltoid","triceps");
+                    createRoutineHalf("forearm","calf");
+                    createRoutineHalf("glute","thigh");
+                    createRoutineHalf("abs","lumbar");
+                    createRoutineFifth("biceps", "chest", "upper-back", "mid-back", "deltoid");
+                    Collections.sort(exercisesList);
                     break;
-                case "30 minutes":
-                    muscle1count = "2";
-                    muscle2count = "2";
-                    muscle3count = "1";
-                    muscle4count = "2";
-                    muscle5count = "2";
-                    muscle6count = "1";
-                    muscle7count = "2";
-                    muscle8count = "2";
-                    muscle9count = "2";
-                    muscle10count = "2";
-                    muscle11count = "2";
-                    muscle12count = "2";
+                case "30 min":
+                    createRoutineFull(1,1,1,1,1,0,1,1,1,1,1,1);
+                    createRoutineHalf("biceps","chest");
+                    createRoutineHalf("upper-back","mid-back");
+                    createRoutineHalf("deltoid","forearm");
+                    createRoutineThird("triceps","calf", "lumbar");
+                    createRoutineHalf("thigh","glute");
+                    Collections.sort(exercisesList);
                     break;
-                case "45 minutes":
-                    muscle1count = "3";
-                    muscle2count = "3";
-                    muscle3count = "2";
-                    muscle4count = "3";
-                    muscle5count = "3";
-                    muscle6count = "2";
-                    muscle7count = "3";
-                    muscle8count = "3";
-                    muscle9count = "3";
-                    muscle10count = "3";
-                    muscle11count = "3";
-                    muscle12count = "3";
+                case "45 min":
+                    createRoutineFull(2,4,2,2,2,0,2,2,2,2,2,2);
+                    createRoutineHalf("thigh","calf");
+                    Collections.sort(exercisesList);
                     break;
-                case "1 hour":
-                    muscle1count = "4";
-                    muscle2count = "4";
-                    muscle3count = "2";
-                    muscle4count = "4";
-                    muscle5count = "4";
-                    muscle6count = "2";
-                    muscle7count = "4";
-                    muscle8count = "4";
-                    muscle9count = "4";
-                    muscle10count = "4";
-                    muscle11count = "4";
-                    muscle12count = "4";
+                case "1 h":
+                    createRoutineFull(2,4,2,2,2,0,2,2,2,2,2,2);
+                    createRoutineHalf("biceps","chest");
+                    createRoutineHalf("upper-back","mid-back");
+                    createRoutineHalf("deltoid","forearm");
+                    createRoutineThird("triceps","calf", "lumbar");
+                    createRoutineHalf("thigh","glute");
+                    createRoutineHalf("biceps","chest");
+                    createRoutineHalf("upper-back","mid-back");
+                    createRoutineHalf("deltoid","forearm");
+                    createRoutineThird("triceps","calf", "lumbar");
+                    createRoutineHalf("thigh","glute");
+                    Collections.sort(exercisesList);
+                    break;
+                case "1 h 30 min":
+                    createRoutineFull(5,8,5,5,5,1,3,5,4,3,4,5);
+                    Collections.sort(exercisesList);
                     break;
             }
-
-            //BICEPS
-            //String[] args = new String[] {muscle3, muscle3count};
-            //SQL binding (attacks from here?¿?¿)
-            String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' ORDER BY RANDOM() LIMIT "+muscle1count;
-            //random query with selected options (!!!MUST CHANGE ? method to work with args)
-            //Cursor c = db.rawQuery("SELECT * FROM Exercises WHERE muscle_zone LIKE 'abs' ORDER BY RANDOM() LIMIT 3", null);
-            Cursor c = db.rawQuery(query, null);
-            //add exercises to array list
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-
-                } while(c.moveToNext());
-            }
-
-            //ABS
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT "+muscle2count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //FOREARM
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT "+muscle3count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //CHEST
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT "+muscle4count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //DELTOID
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT "+muscle5count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //CALF
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle6+"' ORDER BY RANDOM() LIMIT "+muscle6count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //GLUTE
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle7+"' ORDER BY RANDOM() LIMIT "+muscle7count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //MID-BACK
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle8+"' ORDER BY RANDOM() LIMIT "+muscle8count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //LUMBAR
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle9+"' ORDER BY RANDOM() LIMIT "+muscle9count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //THIGH
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle10+"' ORDER BY RANDOM() LIMIT "+muscle10count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //TRICEPS
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle11+"' ORDER BY RANDOM() LIMIT "+muscle11count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-            //UPPER-BACK
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle12+"' ORDER BY RANDOM() LIMIT "+muscle12count;
-            c = db.rawQuery(query, null);
-            if (c.moveToFirst()) {
-                //go over cursor until the end
-                do {
-                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                    exercisesList.add(currentExercise);
-                } while(c.moveToNext());
-            }
-
-
-
-
-
-
-
 
 
 
@@ -375,7 +199,15 @@ public class Activity2 extends AppCompatActivity {
 
         //539 and 479
 
+        //set CheckBox
+        CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
+        if (exercisesList.get(counter).getDone()==1){
+            //mark it
+            checkb.setChecked(true);
 
+        }else{
+            checkb.setChecked(false);
+        }
     }
 
 
@@ -421,7 +253,15 @@ public class Activity2 extends AppCompatActivity {
                     .load(exercisesList.get(counter).getPhoto_path())
                     .resize(539, 479)
                     .into(image);
+            //set CheckBox
+            CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
+            if (exercisesList.get(counter).getDone()==1){
+                //mark it
+                checkb.setChecked(true);
 
+            }else{
+                checkb.setChecked(false);
+            }
         }
     }
 
@@ -443,9 +283,421 @@ public class Activity2 extends AppCompatActivity {
                     .load(exercisesList.get(counter).getPhoto_path())
                     .resize(539, 479)
                     .into(image);
+            //set CheckBox
+            CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
+            if (exercisesList.get(counter).getDone()==1){
+                //mark it
+                checkb.setChecked(true);
 
+            }else{
+                checkb.setChecked(false);
+            }
         }
 
+    }
+
+    public void lastExercise (View view){
+
+        TextView text = findViewById(R.id.textView4);
+        ImageView image = findViewById(R.id.imageView);
+
+        //change counter
+        counter = exercisesList.size()-1;
+
+        text.setText(exercisesList.get(counter).getName());
+        TextView uppertext = findViewById(R.id.textView3);
+        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+        TextView remaining = findViewById(R.id.textView6);
+        remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
+        Picasso
+                .with(this)
+                .load(exercisesList.get(counter).getPhoto_path())
+                .resize(539, 479)
+                .into(image);
+        //set CheckBox
+        CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
+        if (exercisesList.get(counter).getDone()==1){
+            //mark it
+            checkb.setChecked(true);
+        }else{
+            checkb.setChecked(false);
+        }
+
+    }
+
+    public void firstExercise (View view){
+
+        TextView text = findViewById(R.id.textView4);
+        ImageView image = findViewById(R.id.imageView);
+
+        //change counter
+        counter = 0;
+
+        text.setText(exercisesList.get(counter).getName());
+        TextView uppertext = findViewById(R.id.textView3);
+        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+        TextView remaining = findViewById(R.id.textView6);
+        remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
+        Picasso
+                .with(this)
+                .load(exercisesList.get(counter).getPhoto_path())
+                .resize(539, 479)
+                .into(image);
+        //set CheckBox
+        CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
+        if (exercisesList.get(counter).getDone()==1){
+            //mark it
+            checkb.setChecked(true);
+        }else{
+            checkb.setChecked(false);
+        }
+
+    }
+
+
+    public void middleExercise (View view){
+
+        TextView text = findViewById(R.id.textView4);
+        ImageView image = findViewById(R.id.imageView);
+
+        //change counter
+        counter = (exercisesList.size()-1)/2;
+
+
+        text.setText(exercisesList.get(counter).getName());
+        TextView uppertext = findViewById(R.id.textView3);
+        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+        TextView remaining = findViewById(R.id.textView6);
+        remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
+        Picasso
+                .with(this)
+                .load(exercisesList.get(counter).getPhoto_path())
+                .resize(539, 479)
+                .into(image);
+        //set CheckBox
+        CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
+        if (exercisesList.get(counter).getDone()==1){
+            //mark it
+            checkb.setChecked(true);
+        }else{
+            checkb.setChecked(false);
+        }
+
+    }
+
+
+    public void createRoutineFull (int biceps, int abs, int forearm, int chest, int deltoid, int calf, int glute, int midBack, int lumbar, int thigh, int triceps, int upperBack) {
+
+        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        SQLiteDatabase db = exdb.getWritableDatabase();
+
+
+        String muscle1 = "biceps";
+        String muscle1count = Integer.toString(biceps);
+        String muscle2 = "abs";
+        String muscle2count = Integer.toString(abs);
+        String muscle3 = "forearm";
+        String muscle3count = Integer.toString(forearm);
+        String muscle4 = "chest";
+        String muscle4count = Integer.toString(chest);
+        String muscle5 = "deltoid";
+        String muscle5count = Integer.toString(deltoid);
+        String muscle6 = "calf";
+        String muscle6count = Integer.toString(calf);
+        String muscle7 = "glute";
+        String muscle7count = Integer.toString(glute);
+        String muscle8 = "mid-back";
+        String muscle8count = Integer.toString(midBack);
+        String muscle9 = "lumbar";
+        String muscle9count = Integer.toString(lumbar);
+        String muscle10 = "thigh";
+        String muscle10count = Integer.toString(thigh);
+        String muscle11 = "triceps";
+        String muscle11count = Integer.toString(triceps);
+        String muscle12 = "upper-back";
+        String muscle12count = Integer.toString(upperBack);
+
+        //BICEPS
+        //SQL binding (attacks from here?¿?¿)
+        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' ORDER BY RANDOM() LIMIT "+muscle1count;
+        Cursor c = db.rawQuery(query, null);
+        //add exercises to array list
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+
+            } while(c.moveToNext());
+        }
+
+        //ABS
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT "+muscle2count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //FOREARM
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT "+muscle3count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //CHEST
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT "+muscle4count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //DELTOID
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT "+muscle5count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //CALF
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle6+"' ORDER BY RANDOM() LIMIT "+muscle6count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //GLUTE
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle7+"' ORDER BY RANDOM() LIMIT "+muscle7count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //MID-BACK
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle8+"' ORDER BY RANDOM() LIMIT "+muscle8count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //LUMBAR
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle9+"' ORDER BY RANDOM() LIMIT "+muscle9count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //THIGH
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle10+"' ORDER BY RANDOM() LIMIT "+muscle10count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //TRICEPS
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle11+"' ORDER BY RANDOM() LIMIT "+muscle11count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+        //UPPER-BACK
+        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle12+"' ORDER BY RANDOM() LIMIT "+muscle12count;
+        c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+            } while(c.moveToNext());
+        }
+
+    }
+
+    public void createRoutineHalf (String muscle1, String muscle2){
+
+
+        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        SQLiteDatabase db = exdb.getWritableDatabase();
+
+        //Half
+        //SQL binding (attacks from here?¿?¿)
+        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT 1";
+        Cursor c = db.rawQuery(query, null);
+        //add exercises to array list
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+
+            } while(c.moveToNext());
+        }
+
+    }
+
+    public void createRoutineThird (String muscle1, String muscle2, String muscle3){
+
+
+        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        SQLiteDatabase db = exdb.getWritableDatabase();
+
+        //Third
+        //SQL binding (attacks from here?¿?¿)
+        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT 1";
+        Cursor c = db.rawQuery(query, null);
+        //add exercises to array list
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+
+            } while(c.moveToNext());
+        }
+
+    }
+
+    public void createRoutineFourth (String muscle1, String muscle2, String muscle3, String muscle4){
+
+
+        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        SQLiteDatabase db = exdb.getWritableDatabase();
+
+        //Third
+        //SQL binding (attacks from here?¿?¿)
+        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT 1";
+        Cursor c = db.rawQuery(query, null);
+        //add exercises to array list
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+
+            } while(c.moveToNext());
+        }
+
+    }
+
+
+    public void createRoutineFifth (String muscle1, String muscle2, String muscle3, String muscle4, String muscle5){
+
+
+        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        SQLiteDatabase db = exdb.getWritableDatabase();
+
+        //Third
+        //SQL binding (attacks from here?¿?¿)
+        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' OR muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT 1";
+        Cursor c = db.rawQuery(query, null);
+        //add exercises to array list
+        if (c.moveToFirst()) {
+            //go over cursor until the end
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.add(currentExercise);
+
+            } while(c.moveToNext());
+        }
+
+    }
+
+
+    public void changeExercise (View view){
+
+        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 9);
+        SQLiteDatabase db = exdb.getWritableDatabase();
+
+        int index = counter;
+        String exerciseName = exercisesList.get(index).getName();
+        String exerciseCategory = exercisesList.get(index).getMuscle_zone();
+
+
+        //find a new exercise (different from that and not existing in the list)
+        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+exerciseCategory+"' AND name NOT IN ('"+exerciseName+"') ORDER BY RANDOM() LIMIT 1";
+        Cursor c = db.rawQuery(query, null);
+        //change exercise
+        if (c.moveToFirst()) {
+            do {
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                exercisesList.set(index, currentExercise);
+
+            } while(c.moveToNext());
+        }
+
+        //change the view
+        TextView text = findViewById(R.id.textView4);
+        ImageView image = findViewById(R.id.imageView);
+
+
+        text.setText(exercisesList.get(counter).getName());
+        TextView uppertext = findViewById(R.id.textView3);
+        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+        TextView remaining = findViewById(R.id.textView6);
+        remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
+        Picasso
+                .with(this)
+                .load(exercisesList.get(counter).getPhoto_path())
+                .resize(539, 479)
+                .into(image);
+
+    }
+
+    public void markDone(View view) {
+        CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
+        if (checkb.isChecked()){
+            //puede ser que sea al reves
+            exercisesList.get(counter).setDone(1);
+        }else{
+            exercisesList.get(counter).setDone(0);
+        }
     }
 
 

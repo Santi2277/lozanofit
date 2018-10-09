@@ -10,6 +10,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
     //create database SQL sentence
     String sqlCreate = "CREATE TABLE Exercises (id INTEGER, name TEXT, photo_path TEXT, video_path TEXT, description TEXT, muscle_zone TEXT)";
 
+
     public ExercisesDB(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
@@ -35,93 +36,93 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 switch (i) {
                     case 1:
                         name = "Scott Dumbbell Curl";
-                        photo_path = "https://lh3.googleusercontent.com/ahXRXJx0q7sVYKN4mTecvr1odkRjNhDI4PT9VUOHpMbo9Zpm6L_X_juYRxcyoaWU1J7kMKUh3-gT5X3c3Y6g_EKDx3I8y3tHtvcXjrPgptYUTiSBxk0V6FR_iiOiYNOcQYu0NemOx2lcq8EVBT5wryhwhowLBgN3g1IawBkVfSLDAyj_e1G0UnkZmRiuG3Dhp0Ien6O0lCt06w3WFXTiVFQwISLpjRsHYJWUvrK0QjZp0qQF8Tg6g0cjtagNk5kHjUWRGjjd9PUN3VqKHgTzDoMfm4x8Jruw9ut5xBIiYTmtCbE16U6zHI794-5DKsTVx7-whmidPGVfN03AaNY_91_yLY7-veXl7JgeII4RS8KvprJ__2Hyu2UdeUrFU-f6baLQ0XQoypz1Ktckl2tDRDKxnMLEcvSXMZxU_QzsULeMh0h5eip1LVy5aCSFusdPLVJcsKdKllolStCgDwiVjQ2OUT_GAKTiOwJ7FlV0DFBR0v3CQTrfIOK_Q7-kOZWAjklWBWmLJH54EIsTQrAPcj9eFStVvLUYwAwTb_T-yriuLDAalkk66WkNkICmMwKY-OjElwYyuHsmQR6p2Ke4-InR9WDiEaOEQffpBvUuVSFb3feccrm5OYqwtugLKUFSeIN7dftjLis1TUDn3U_jvZtgcxKO_hm1jP0dB-MxTZHDAkOsSvMxVH5X=w712-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "Apoyar el codo en una superfície 90º inclinada, el brazo no baja hasta el final baja un poco menos, no mover hombros y espalda recta";
+                        photo_path = "https://lh3.googleusercontent.com/qXOn76A0V3vvjW_BNApwrN6UQ7wWtFhxTA_NAzC0b8EhA1QQBUMhlfwewS1jSm_u6MwmqRL72NgMcHmBSCgz36DndbTyjCuBHTLhxn_qT06yISnO0EKGxSukGNhcKiUkRJZokLuPIWDaeLuG-XiyWwXLabYxGrPMRs3EtzhNJc-vSiTwa9eWIDV0T7ocCcE91iHejJvspuqBCNMvBxPlEvu5HimGf8tW7I03KrhKOmVKU9P0xUl58TpMfUKfbXwtF1iHJ-Q5iuzbe-opm1fLJozz_zsfV5aOxJA70jNsL_N8CAO_2ldea_YUBoxsmAtjmjCe9mLEql4K8gN18GXkXoYf8NTKOl5EUmzodZPOFepDIg9yj2--Au1O5ouUZevHOFmp-uid-EuLQzHF4jZh8tOVF00WC2iFNN9OSDaZ_aYTUyp1ojaBYnRUdBHquY8ZzaxOoqXnWVq3l59hU6WHfA4S7T3XAiHNtiHYYIU3XiLwBVIbyRKPILjTxbiSuYBD6ias_Z3HzwiZZybOjOvo8pBKr4yVvWEeUci5UfFMheQ087CRUbWRCXWITf1vJKEzvp3VW3hNHnycXwb8tvYiQeNMRWddViZkhsv-zuZJ045ZL76mmP2JXYpIwa6oycwdvBqMaUAfq4mdl8ba6PVEh21MVGPEOhDUIRHVxSB_q4LzSjdHQIzbDvXa=w712-h632-no";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538431518/001-biceps/003-biceps-dumbbell-curl-scott-bank.mp4";
+                        description = "-El brazo no se extiende del todo (bajada)\n-Piernas ligera flexión\n-Espalda recta\n-No balancearse\n-Hombros estáticos";
                         muscle_zone = "biceps";
                         break;
                     case 2:
                         name = "Curl";
                         photo_path = "https://lh3.googleusercontent.com/9dX8q0rdbHl06S0zybhrOHjLBKqcQUSX9WhsulQwYXj67ZBi4Y28XEaP3UWvBjXt8fJu61ghRRYwO0i71bvzbNvc8j8RJ4B8dK2iXnddoyXOg0-hrG86i-TPSzbDS1TIwKyV4nMcMg9uDADyRYA5eRoko3ZyxZP2zB7rGJrxlKw-dVgevkmNSU23l_nGYXgIbOlwVh9qif-Fbugslj6Ueezq4FnpPTBwN12e8nFLjjlnvz0km681FY8iRRZ8tq41buxY5HWirmkaq6iA5nkiuCzAWcYb-9hywHRJpbgzdpzSoajYMQ9JQHSdFl35v-Z7a7rGbD5uiT11XFVWTqr0IxLET3zyI7v9bEp5CdGuS3QePSNn4cnmykqnNyPPPP_YYtCXX06i5qhkN6yqA-Eb6ItMGQetWIVxtfxBnGiKkdKC4i4mxKg-MMzbpT67RFlNtx6CJssLx9AktH8y1OWpsJWizX_8hAhCa79ym9zbWe7frrZptGBnPMg9ZMFZSGMWUl1E4fJ_yg4I8zypV6AifPdVl1haNPDEPuZNL5Dg4cEhPY2WiA6yPMg_vGHVzAPb6SgcvzLbTElY5x5QEv-9p6DVv8fF2jCQXpKnVk3pPcbGxWBW8syFeWmx1ctjTVfc9qfHWgcSmUnGaFJxGE_OFCRLaFOpOLW-JY8Gmacp-Vy0ML_MAURzuLAR=w711-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "Palma mira al interior gira y mira arriba al final, espalda recta no mover hombro";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538431475/001-biceps/002-biceps-curl.mp4";
+                        description = "-Palma mira al interior (inicio)\n-Piernas ligera flexión\n-Espalda recta\n-No balancearse\n-Codo y hombros estáticos";
                         muscle_zone = "biceps";
                         break;
                     case 3:
                         name = "Concentration Curl";
                         photo_path = "https://lh3.googleusercontent.com/lzAS7j1jzb76P1iit8soZ3jkC8aM3CBlfspwBmRKLTXyfDM4iAUB0Ex3He67u99cPKhc-zx04xbdahxGcoWQOXTckfVBoKYCrvXGj_6y8SykG4mnnIn76qqlZTh5Dpo_cGG5aKWKtxkiIMEy7fyfUnJs8yAXi9Dpgh7ILLRqzGFSFUq_UKsPECmvxTsGqBgsEFzXE99J5lEJEd0Wf8E9yo8GteNSS4A0CC7ihh-cfNhKswTLlFilxyNkdIxdUFLeGt9wKY5LgYGf4WNoFjNuFklJirSTNynjFwGcxVOrAH1sf2rYg7Pcye3plGKAixTC8bM6zv2wnWRVkD2xzNnFy4Y2dMmvJiWfSPVgU2L010KOH4ij6lUsVzIuuPrkC4agB43Kq9c4CtYVLZdYHzZDKl1PCkgSoxuVsitaWpul47gy736LNqVWtshk6Dvy6LeP7MyHJzUAJeenDuk_J3nVdte3Igf0TRh8C91egYhsgB0kFViSgg5CYvLX4TSenV_vtm140wjrcqHFYwumOLmccnf1Cp-QEYJrf3_txpGk5o9Mxo0ggEoCByMMukqE43_RmWl73fgF0MRTKPeRWNnCExlRzOMNchof70Wod-_fjTG6XWrx21_tXXV85u6D3q6WnEWlLCutYb3-m5FCP5Wum-usW6R2hszQ5y5VtMpSRBBxLUrzGDp9Gzz5=w713-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "Codo apoyado en rodilla, espalda recta no mover hombro, brazo baja casi hasta abajo un poco menos";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538431383/001-biceps/001-biceps-conc-curl.mp4";
+                        description = "-Espalda inclinada pero recta\n-Codo estático en rodilla\n-No mover hombros\n-El brazo no se extiende del todo (bajada)\n-Mano sube apuntando a la otra rodilla ";
                         muscle_zone = "biceps";
                         break;
                     case 4:
                         name = "Hammer Curl";
                         photo_path = "https://lh3.googleusercontent.com/-GhEB-qYcj_5hNPnDJDE2yd5gssUYbj8PzRp6IvkYEesl65qepfNTQnXTDwH_wJpXzCbis-1IIfSw_Sd3OvTkaVMYLtSpm0s7p_JTbLu1f2RmKv_myRPTI3qHlVfr6TAv5hCJxDTPBbzB3fDUKSyySTcAn_9ceyLMk1MWRY9hzhWbsfNipsQYI4CnPgOvuXUqnxWwR3vr6UjtWHrgYnc_DeJoM1uvyaEPqxa4G7PJbH3ih8GfW3RrO1Mw6PDlzP_Scinm0pZXnVBAXrvEaI6D0T3h5jg7VKvD-tUIhtQW4K-UYh70uYEmt0Q-DWxsnTQUUtq3d1y2NtpY8FDDNmrp1xm1FCYciqfdeBqdPuBYZRNfrX_NNX_D6R2HmTV-cDn5CmcLlcJbxJAdFKKLn2rZWC5TpcjDp6sZebgDvgg96rrjXXnEqazMK21FuhjGMYTLiH3kaSXF77csKpyh0_1YvcKzjwEtkageXrqtiz9xzVzIWdIeEZb0VxIOcXtVtbixOzDUu3sIJ_bGPwXYVtRlaHSHXtqWBoO3RjSAJF8_qBK5AMyl1DiaCAgpUKeHuKhwh67sCtcdN0DbrsQk0R5pc_FPSNTdhqtaQtTQbbD321jnjSnaL2_KXf2WBkLE53w04-LAXUhOvm9VVlOoZs4__eDcStt1ekbpCnYVquRRI9T0pu8keQcfC91=w711-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538431610/001-biceps/004-biceps-hammer-curl.mp4";
+                        description = "-La palma mira al interior\n-Espalda recta\n-Piernas ligera flexión\n-Hombro estático\n-No balancearse";
                         muscle_zone = "biceps";
                         break;
                     case 5:
                         name = "Chin-Up";
                         photo_path = "https://lh3.googleusercontent.com/VBU6-xhVL5LwQTp7U8Iaj6ompCpwtub35k_NEoirLFny7JxAD1y3wYcXREE_Dh0EGtGIPE6VFoXZe_r4e--0XM57AgxgC1Lv6L-C-NPoMhMc6W4Aln5ozgI_VvGcjXVrwACQRLyEA-_FNjHvW1CxKrwYGCVmEcfZFXN_xPMIJU1DekGUELWNu7KUa3Py17CZ_yaO-1nI5gWUY1F5Am0Kb57FxR5gxVPZxp_RBGLVKS4HKQIPySZC17B0X5xmJPUagdoovZbZySpf9fjXtVMzU1rTP9DMJLJXResKJ_n_2fdYU_M6MReRmkG9Yfd-7Q0_5tnnwnqJavhQGcRXm26N5NuZGUc8KaW8-ymVGBvmHBLybmuI0-nBRRhp9nCV-cHw8KaDeInVyC00M8t3UjpIfYB2i9kVaqQJocUmXB72s__m0SndwYW21DBzX-bAjBcuf34yB58omUmEjG_Uc62Q2VIi-cXBdWaOGzNgtP4lFQij3uZfBWpaOM93P2vA2cZ_vsUtWqIbxVmk8Hn9v_ipORkSfB69enGhquArBtfFr3COw1doJsgWXkoHI2UDuqL_78If5P0zudI6gJWbn8DLM5_8xMB1X5ZH3QsY47Xl7AcsSppUiCxdS3s2FaXKtd0IVqp2ZKKTRntjWX1CXMpUqV5-Yt0K1rFUCs6ayPDY9DXXEumfLoqzU6By=w713-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538433606/001-biceps/005-chin-up.mp4";
+                        description = "-Agarre palma mira hacia atrás\n-Subida con flexión de brazos\n-Evitar el balanceo\n-Peso lastrado en pies o mancuerna entre piernas cruzadas";
                         muscle_zone = "biceps";
                         break;
                     case 6:
                         name = "Parallel Grip Pull Up";
                         photo_path = "https://lh3.googleusercontent.com/-qwHc8VuzGsK9YYRg3FZvspbA3YaWg6oLF2x7VRu3L0nSQJ6w7WQZmXHx6nnnbfmm9TkB0G6wGMeSL_C1X_9jX-n8rNO9bGQIONsz2RJErp23Sr7AVLKcK5LLcQ70mng7IAJ_wVydDqOvkl3zuZ2pvIwPBFkLBAIoOQMxsLmHD5aGOn5WcGRrpbFoFUc7TPjjN-mqbg95NkI8-s9WsiTo5oeoqyFjCt6j0DXhMN5f4R_F_AnlQ8YcT7cGj9dEcs1VZwkNNWGScxykqHEazxlx8aHbPaxWwQ7jhgQ0HuIXZ8itIEHW8RPkoKO5VaMR6m1d6r9GHFNeonKTaPCIJuxmSuZQzjiD4MK5CJpeE-5ao3E78Bc1qHCr1XJSKeCe_bM6DxBo--AxaudK9Le-s6niqS152ELc8GIoqd7xNF7tZHbrVgRPPau1IYyXCuantoed--llzUau2uwgglv6mRNbwtvoWjaQJ_iqekr849PCYBUIzoh9QYI1ReYQGDrMsS2eui0pqd-n9CE_W30e1urgEMdlL00_MhEG6YoR_X3RHRcW3qUZ12pVSQLZL68f9mQiI-0esKrcL-WEDpRd5HjkCOgWRk2gAT2ERqK_Cm5RRxPgi5ibAMQf7oIydW2s2Cu2ISpOGjvVCzeTmLlqqmwBBRdPg1B2OJoCv1dg8r47eZvka_YZRtbmCgy=w711-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Agarre palma mira hacia adentro\n-Subida con flexión de brazos\n-Evitar el balanceo\n-Peso lastrado en pies o mancuerna entre piernas cruzadas";
                         muscle_zone = "biceps";
                         break;
                     case 7:
                         name = "Barbell Curl";
                         photo_path = "https://lh3.googleusercontent.com/41LuhekQGImC8YVf8WC8s4Agh_PQcTX7o8t_sLcqEfCdi9ntADTl3zpgHX61D0WKfzjz9mHXkieCqU5fn7LIxd1Dt-k6rS_d_s2yTGo0YACD774ixYjHH02pR7T2iHQZkJpUX2OyDi6dbalpQVR6ojukcv9IvMj9CHBLFvYodax2EIhrd-0W-BeWnf3oDo-qHACa8MAqNDLD38fBT94YA0PtqwOsh38dAC9d_on7YbQTjXqgE-bbYVT8xLOx__ua82NCQg_x3Wls8dz9x3zk1SHsB3QZJfXaUfsn40RQMVAbQn4l2oDKfcHBMRlZ621DFvg53dgASK6m8XB7N4UU2CnnD7TmgOnwzAWgw1tFkRSHeUVKhP79o93mW7lUYyWuEH9SIJj7sZQBk1aSwNjafhlo_IZelwGWA4jZ_z9EZgC6TZSMkSZEykZhIXPrtN69-gRVcwFkbsI0XG_ohEzmGYJm45_hDioiSDUPdBhz1EanZ31dQfLARav9JhqV_tXzAp9j-ur2KbsndtywSbR4bdkcJ1H3vnlhD9O9znO7n2kGUSDCV1U75Y93g9J697K7JZMtB8Qo72iYVJX0gpAEtGqIuCG-VYF6VDyo8JbT96Thrp0svF9YdNtFbc6fpUXagLJB6061RVQGCQV_GCdMoAPfl3tlhac7rc3FOfUuLm6Ec_f66dpPn3SS=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Barra paralela al suelo siempre\n-No balancearse\n-Piernas ligera flexión\n-Codos estáticos junto al cuerpo\n-Hombros estáticos\n-Agarre palma arriba separación como codos";
                         muscle_zone = "biceps";
                         break;
                     case 8:
                         name = "Kettlebell To Shoulder";
                         photo_path = "https://lh3.googleusercontent.com/gLHzktKF3T_FBBAC4iaelB6m9gQuC1Bjat6WRHXo1tbCgBTwwuuHpglud8PmVlGNMkmIHWj7Bqu1dgI3Q3dWeWJfOhNFDP9l4mG-hiUpqBcJNuJ3gy1ZYoF0Is1AHi1ku0XaNTw95_9M5zN3SsaiaiJDTyty4D9VqBUjL1I1CR7bzZ43qYQX4_yPWxpo-r5ovgN1tpgRhJnRBcatKSGxebXNZ7QK0cgv-B1HVQGwHIGWP6zKKgRlT_BY5XsKGPtrwSK69dc0HWJvM7nqVe_qVz_4XBpMwZNhwKR09D79pElkO9AiKQch4zDLoMd7KmtX0_I4OO8S6p47tdu3LY3zCgkXA77M8_9MkEprQROc3M3eBE2QU6HDnWixdMTDNptREbD4WFpUnFPk5tltXdgBp6tM10I1Yy67LBYhHJiY2sbeECOZYcF-OlaiWhvUwNBq0AvclLZmAb2HXkmGDL_iwK4msUXJGmvhJaujTBc5qdcAkzHdbOK6mpWAlHboqwJUBY-jwqXz1bFkqyKnjFzCso15QNOHe9suO0nhGOQM5pmCpu7I_G4b7Umb8H83SJ8IEpCr4FuYjX8kzV795XbBt7xutGyTzqROjoJy43q0I-CbCNsGgQKN9Wec9XhkHgDaDggPcQez-Riksz2qTm_AJAO19Ilcuf6H1_ZdchwHa-T9HUT1vd3_GdPG=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Codo estático junto al cuerpo\n-Llevar peso al hombro contrario\n-Piernas ligera flexión\n-Espalda recta\n-No balancearse";
                         muscle_zone = "biceps";
                         break;
                     case 9:
                         name = "Pulley Rope Curl";
                         photo_path = "https://lh3.googleusercontent.com/QvXpMXs0NjtRIiXZnwU35dbf7uSugN_slFO9g75y0CsolA7GwZLd8LO-J5s-Jbvx3uqFF5YX7pxLzYBnQw_KtgcryLoVWWLXcCXNmRdLTj4RvWVPZmxfmD0BXlyD2mW2WNKGDATEzHGDoF6T8_cSFs5t2Chvqs6N_sHCfTxnixmEQjL8r89HPvbSFuz9QVvuyk8IQssufJew5aaL2k0L90mCQpPi82DnlMjuY46xAbGd70bTBMSmoqnbvYYXuX9UBV79JCviVznxo8eSTj7XGKTuI32lCF5Rdcp_Q7y5R7SxfduUhN8YoDjVcOC0MaFGWMWSUsXy5HXG_sBbUuDb3TvaygetDMjMIf4ovMpTTVFcICqGJmoqL_4Epy7jhWONYtKXxD_0Var_d3lb1SkgYj6JmU9CzvVIM09hLjWiUIF-pyg3hxs5s6pvgW0Q3lGem3FjQYj00rd9WBTbu_Fv2N91YMPLwuULlxBXm54bghfGTG8jpbEKrQBvqIjAU0Yoq6NmyZnbPYusEb7jDZsLf_8sZPbejFaFSdWAwxlvMru-MNg6Hfs_cbogZuQ0PBb9YELR5VITTLIbNPdFEgdr0_DjdNaejuFZnVh7OaOhMCXgmMffh8DZWAsDarNN28_pfgrbhcRqR9p2PWiuV3iWsDB_3JCAQk0LYl_ZAdcL5tYXkH1vvazEL8FE=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Piernas ligera flexión\n-Espalda recta\n-No balancearse\n-Codo estático junto al cuerpo\n-Subida y bajada de peso sin perder esta posición";
                         muscle_zone = "biceps";
                         break;
                     case 10:
                         name = "Scott Bank Z Bar";
                         photo_path = "https://lh3.googleusercontent.com/f8hV7BI_uAXfds2Pcsga-OoVT1Lv2acCSq7QTTigFf1YtXYu74PXunXisCWD81TRc7heC2RNqdFmC93TyDhcx4ba38iVOK-srSZgBWjBCCcGuLqZejntDiBfh0y-uq1wNet3iCkZCZhACufPyx1iAqoaFQihI5dRlYk17K48FFlr2vDSKb5w6WW-JVxUTbpGR1i4OPudManX3IIzY13qxaThv7BX9tFNw1bUzSy0P7ac2BUB_c0tnO78-acBo4dD3GIqk8bN23gFk27QA2cQqD4NmWGohAxnVRxrxOWpXE8YmUsA8lvR3JVxEAdxZXtm2m3_SceNDxL0kZ7-lL3M5DF50M31b8wJ-PI8tQt9atPQLFfbf_wBZInh9CXKr1OFLT6tUsgjN8t_SYkPR8O604SIOuKc3_fg80hhLGmG4fwzhigl1_3mbxYMYk7tG8VmZ2jStZvwfWNS8DvsDqhmb6PgY-TAXdfdhVfIPxBS0pxv168LuG7_8r7psozlh5fj8Dp2cmdoH4Oz7Hakb80LXSGiaYyfTxBtfauNVJSje9ytnpDmdVZcT-25IEAbnne62RpFxt7BYOItsu4SABkyhn5IZ2TgeTt5LUXHiLVxlAbFw-CF8yR9-aqjdNOwCww-PwKnMvixLmNolhVQRYxPG8dzKqlV8Tp3a4kdPlH3NGckaLXXrIn74J3l=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-No se baja del todo\n-Espalda recta, posición cómoda\n-Ajustar altura del asiento";
                         muscle_zone = "biceps";
                         break;
                     case 11:
                         name = "Z Barbell Curl";
                         photo_path = "https://lh3.googleusercontent.com/V1ArPQSqL0JYNoa7VSVytEuIqXETCcsHLjPiPB0hWL__0C9Q3OCq7HGKyjI5FrxtUcfGVW168EMIeJvRkv4ZDrut3F18l_7iq06zdcthAPGSpCQ4MHQA-CJkjZ-QT88EWndmYJOBjKI0QzurE_akbYbM6o18-3HTF0JNKXgGPDBzfr-B4Z5wNAv3FCWYErCzi_ZMbSRtNj_te2yrpohkxtDCayPz0nmI6j_vrWpK4RDBESC34XaetpPoNrf37ELMaL0AzD--8vJghgLWTzsUiGwS5l7gWj9-Z6VrZNFAQO1lCl6wvLsPoJPExv70JoJp2FrCNelXpgHdBKEE1HBeRNrN7mB6Pd_NEvP_3JWA-2Xb7BJqIkGcKtIXT9SlgmZVkHH3oqf1N94S3oW0ibhMJKBnDs6sT70nU5icrA6WgECSTcVjOCkh2B4FYo7TdYQDOU7efnJ4z2VwMMxNwu5x1dyKdmvcYR38UKlyNaa0etL6iLrgrphNMGJ9-fi_IUAiTithpZT5M8nDRVgi9QiRNWWd7McUBJWIHke_r0mJTZF6O4JFBvmd0-kQ1vsT0a-iYlk4560661oCROgPAa0YFowcYQJOxZ7pIob3X9IcCS3uBNc5qwPjhoTesh7u4nW-k2kmImijtrlPdpl-EIfxdY-yoNhVHMgbOHvkDdnXnfePWyQYSi0K1Mj1=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Barra paralela al suelo siempre\n-No balancearse\n-Piernas ligera flexión\n-Codos estáticos junto al cuerpo\n-Hombros estáticos\n-Agarre por el medio de la barra Z, palmas hacia arriba";
                         muscle_zone = "biceps";
                         break;
                     case 12:
                         name = "Rope Climb";
                         photo_path = "https://lh3.googleusercontent.com/3ykxf62mb7cQDO4i57Oo_5lmP_RJ__iyn_It8HabSgmEZqs-eoDIDTmDSt04ZZwWxo5iWExl80nLPN2e2xN5ICoJBejQt1b5MEVMeHXdehiMKGF_pWqv0bAMQf0WjcJkPcuc80npyAdrLygpB0CRhqDS4a5jSIkxg05aA_DHz6xMGTcTC1ZQ1OqyBzdgEN5qeBvR0bzLyIOFXINFYNW0ZVpAzQ85rc8m44jlLNYrDkl_IgxQ0VYb-HUaLtIz44I0mFKs3NXT-QG7_Sc1ZPX7bXeqAcUnnxz3eGDZ4bT1bk8d_VrWsxB56SpF1Uxbwk7vK6evjL2Zt8V_MkahkZv7IAwpmE1wZaZbGgK7OzpYG96teBJZknu_9lr8MxVJl0orZZL55OJff4wq4kvJNQ-M_Hs0_i2TPVq_QA6oLPAt0-XU53_gMfZhRDmK7eercw1yjlg7JY7YNVHhg3vjcTr9rTPOP4vjdy5l08F0_R2oRvAQtTNyb9Bx_TqjgqwCW2nijjjYVKi4sE5uVRDc4WM_hBf6t72GwZORe0C474JDCfU0GtJ7yTIc71QU5gLxr-9dPK1hgTfGwH54iDsI5Fyiai3JLzgZJfJkb2O4WqelVwJOia7tarkPCaaPXP5GYmkZSOEa_eHZRcWluu1SSIHJovZ7he_TSd8up_X8Tp5vy8CPmN9OkdxEhxpx=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Subida de brazos\n-Evitar mucho balanceo de la cuerda\n-Piernas cruzadas\n-Espalda recta";
                         muscle_zone = "biceps";
                         break;
                     case 13:
                         name = "Rope Waves";
                         photo_path = "https://lh3.googleusercontent.com/yNPYE11qCiF1WW_0rJdZBPKDhywQlv5akHCkMPfqK82-CjcwyNCRHiDKnSwXRryqtCJhIh2snZcP36GwPnZenuuQ09So_4YjJZ99jwUb9hqLEdPFhdgyPu2ljtzo8Mk1S_5V6OKYvscjXENPrZjPQDNiX9f-uxWGdMxnVKMrnjDG_SRDMNCFBG1na9aus7gVyfkbiK6qjocNWacz8Zk1b4Hz02U6rerOY3Ch7Zstv8cJ8mFxKNbvhFWQM0T-6PGsJcpgLpXMgqbHHWgYT9ltFyvmoUVTaWZ7NpZeEv6SEKl19kxPZvqePi4AsZumS_X6jPfW4BYRp6l0O38DD3rLf-xhZjlO_osgZXOG2kVYsGLjpnGzIS0_K1griJ0jUGWAO8WulmKo_TBSeHbQFt_1U6D0bewwWeRSmZoKiHls6HfQ25sTUiZr2Enf9722SPjyLr15Z8cHPBA2TAles6juGUujhz3rRT_0o88lHOkdmtC8YOXTKNnjzGELQCeMMz63g3OQMU93EIxP6T6Z37dCpXfeGBzRakIXSIEaAvMQykFFxbgKylhrsUouqIUgDkfOrHMsvjnI7VIvhQgiXzWDRSbdM_CVoNonOxWjU9vPJKS-ZEvaBsjHcvy3yLW0cxkFYnGkgpy_Aj5iFa_B1QUnNCMV6eBPxTZ_d3jDUJ_nTlrrzJEeuv6YGI_S=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Piernas flexionadas\n-Espalda recta\n-Fuerte para crear olas con la cuerda\n-Brazos altura hombros\n-Movimiento brazos amplio";
                         muscle_zone = "biceps";
                         break;
                     case 14:
@@ -785,93 +786,93 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 switch (i) {
                     case 1:
                         name = "Scott Dumbbell Curl";
-                        photo_path = "https://lh3.googleusercontent.com/ahXRXJx0q7sVYKN4mTecvr1odkRjNhDI4PT9VUOHpMbo9Zpm6L_X_juYRxcyoaWU1J7kMKUh3-gT5X3c3Y6g_EKDx3I8y3tHtvcXjrPgptYUTiSBxk0V6FR_iiOiYNOcQYu0NemOx2lcq8EVBT5wryhwhowLBgN3g1IawBkVfSLDAyj_e1G0UnkZmRiuG3Dhp0Ien6O0lCt06w3WFXTiVFQwISLpjRsHYJWUvrK0QjZp0qQF8Tg6g0cjtagNk5kHjUWRGjjd9PUN3VqKHgTzDoMfm4x8Jruw9ut5xBIiYTmtCbE16U6zHI794-5DKsTVx7-whmidPGVfN03AaNY_91_yLY7-veXl7JgeII4RS8KvprJ__2Hyu2UdeUrFU-f6baLQ0XQoypz1Ktckl2tDRDKxnMLEcvSXMZxU_QzsULeMh0h5eip1LVy5aCSFusdPLVJcsKdKllolStCgDwiVjQ2OUT_GAKTiOwJ7FlV0DFBR0v3CQTrfIOK_Q7-kOZWAjklWBWmLJH54EIsTQrAPcj9eFStVvLUYwAwTb_T-yriuLDAalkk66WkNkICmMwKY-OjElwYyuHsmQR6p2Ke4-InR9WDiEaOEQffpBvUuVSFb3feccrm5OYqwtugLKUFSeIN7dftjLis1TUDn3U_jvZtgcxKO_hm1jP0dB-MxTZHDAkOsSvMxVH5X=w712-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "Apoyar el codo en una superfície 90º inclinada, el brazo no baja hasta el final baja un poco menos, no mover hombros y espalda recta";
+                        photo_path = "https://lh3.googleusercontent.com/qXOn76A0V3vvjW_BNApwrN6UQ7wWtFhxTA_NAzC0b8EhA1QQBUMhlfwewS1jSm_u6MwmqRL72NgMcHmBSCgz36DndbTyjCuBHTLhxn_qT06yISnO0EKGxSukGNhcKiUkRJZokLuPIWDaeLuG-XiyWwXLabYxGrPMRs3EtzhNJc-vSiTwa9eWIDV0T7ocCcE91iHejJvspuqBCNMvBxPlEvu5HimGf8tW7I03KrhKOmVKU9P0xUl58TpMfUKfbXwtF1iHJ-Q5iuzbe-opm1fLJozz_zsfV5aOxJA70jNsL_N8CAO_2ldea_YUBoxsmAtjmjCe9mLEql4K8gN18GXkXoYf8NTKOl5EUmzodZPOFepDIg9yj2--Au1O5ouUZevHOFmp-uid-EuLQzHF4jZh8tOVF00WC2iFNN9OSDaZ_aYTUyp1ojaBYnRUdBHquY8ZzaxOoqXnWVq3l59hU6WHfA4S7T3XAiHNtiHYYIU3XiLwBVIbyRKPILjTxbiSuYBD6ias_Z3HzwiZZybOjOvo8pBKr4yVvWEeUci5UfFMheQ087CRUbWRCXWITf1vJKEzvp3VW3hNHnycXwb8tvYiQeNMRWddViZkhsv-zuZJ045ZL76mmP2JXYpIwa6oycwdvBqMaUAfq4mdl8ba6PVEh21MVGPEOhDUIRHVxSB_q4LzSjdHQIzbDvXa=w712-h632-no";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538431518/001-biceps/003-biceps-dumbbell-curl-scott-bank.mp4";
+                        description = "-El brazo no se extiende del todo (bajada)\n-Piernas ligera flexión\n-Espalda recta\n-No balancearse\n-Hombros estáticos";
                         muscle_zone = "biceps";
                         break;
                     case 2:
                         name = "Curl";
                         photo_path = "https://lh3.googleusercontent.com/9dX8q0rdbHl06S0zybhrOHjLBKqcQUSX9WhsulQwYXj67ZBi4Y28XEaP3UWvBjXt8fJu61ghRRYwO0i71bvzbNvc8j8RJ4B8dK2iXnddoyXOg0-hrG86i-TPSzbDS1TIwKyV4nMcMg9uDADyRYA5eRoko3ZyxZP2zB7rGJrxlKw-dVgevkmNSU23l_nGYXgIbOlwVh9qif-Fbugslj6Ueezq4FnpPTBwN12e8nFLjjlnvz0km681FY8iRRZ8tq41buxY5HWirmkaq6iA5nkiuCzAWcYb-9hywHRJpbgzdpzSoajYMQ9JQHSdFl35v-Z7a7rGbD5uiT11XFVWTqr0IxLET3zyI7v9bEp5CdGuS3QePSNn4cnmykqnNyPPPP_YYtCXX06i5qhkN6yqA-Eb6ItMGQetWIVxtfxBnGiKkdKC4i4mxKg-MMzbpT67RFlNtx6CJssLx9AktH8y1OWpsJWizX_8hAhCa79ym9zbWe7frrZptGBnPMg9ZMFZSGMWUl1E4fJ_yg4I8zypV6AifPdVl1haNPDEPuZNL5Dg4cEhPY2WiA6yPMg_vGHVzAPb6SgcvzLbTElY5x5QEv-9p6DVv8fF2jCQXpKnVk3pPcbGxWBW8syFeWmx1ctjTVfc9qfHWgcSmUnGaFJxGE_OFCRLaFOpOLW-JY8Gmacp-Vy0ML_MAURzuLAR=w711-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "Palma mira al interior gira y mira arriba al final, espalda recta no mover hombro";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538431475/001-biceps/002-biceps-curl.mp4";
+                        description = "-Palma mira al interior (inicio)\n-Piernas ligera flexión\n-Espalda recta\n-No balancearse\n-Codo y hombros estáticos";
                         muscle_zone = "biceps";
                         break;
                     case 3:
                         name = "Concentration Curl";
                         photo_path = "https://lh3.googleusercontent.com/lzAS7j1jzb76P1iit8soZ3jkC8aM3CBlfspwBmRKLTXyfDM4iAUB0Ex3He67u99cPKhc-zx04xbdahxGcoWQOXTckfVBoKYCrvXGj_6y8SykG4mnnIn76qqlZTh5Dpo_cGG5aKWKtxkiIMEy7fyfUnJs8yAXi9Dpgh7ILLRqzGFSFUq_UKsPECmvxTsGqBgsEFzXE99J5lEJEd0Wf8E9yo8GteNSS4A0CC7ihh-cfNhKswTLlFilxyNkdIxdUFLeGt9wKY5LgYGf4WNoFjNuFklJirSTNynjFwGcxVOrAH1sf2rYg7Pcye3plGKAixTC8bM6zv2wnWRVkD2xzNnFy4Y2dMmvJiWfSPVgU2L010KOH4ij6lUsVzIuuPrkC4agB43Kq9c4CtYVLZdYHzZDKl1PCkgSoxuVsitaWpul47gy736LNqVWtshk6Dvy6LeP7MyHJzUAJeenDuk_J3nVdte3Igf0TRh8C91egYhsgB0kFViSgg5CYvLX4TSenV_vtm140wjrcqHFYwumOLmccnf1Cp-QEYJrf3_txpGk5o9Mxo0ggEoCByMMukqE43_RmWl73fgF0MRTKPeRWNnCExlRzOMNchof70Wod-_fjTG6XWrx21_tXXV85u6D3q6WnEWlLCutYb3-m5FCP5Wum-usW6R2hszQ5y5VtMpSRBBxLUrzGDp9Gzz5=w713-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "Codo apoyado en rodilla, espalda recta no mover hombro, brazo baja casi hasta abajo un poco menos";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538431383/001-biceps/001-biceps-conc-curl.mp4";
+                        description = "-Espalda inclinada pero recta\n-Codo estático en rodilla\n-No mover hombros\n-El brazo no se extiende del todo (bajada)\n-Mano sube apuntando a la otra rodilla ";
                         muscle_zone = "biceps";
                         break;
                     case 4:
                         name = "Hammer Curl";
                         photo_path = "https://lh3.googleusercontent.com/-GhEB-qYcj_5hNPnDJDE2yd5gssUYbj8PzRp6IvkYEesl65qepfNTQnXTDwH_wJpXzCbis-1IIfSw_Sd3OvTkaVMYLtSpm0s7p_JTbLu1f2RmKv_myRPTI3qHlVfr6TAv5hCJxDTPBbzB3fDUKSyySTcAn_9ceyLMk1MWRY9hzhWbsfNipsQYI4CnPgOvuXUqnxWwR3vr6UjtWHrgYnc_DeJoM1uvyaEPqxa4G7PJbH3ih8GfW3RrO1Mw6PDlzP_Scinm0pZXnVBAXrvEaI6D0T3h5jg7VKvD-tUIhtQW4K-UYh70uYEmt0Q-DWxsnTQUUtq3d1y2NtpY8FDDNmrp1xm1FCYciqfdeBqdPuBYZRNfrX_NNX_D6R2HmTV-cDn5CmcLlcJbxJAdFKKLn2rZWC5TpcjDp6sZebgDvgg96rrjXXnEqazMK21FuhjGMYTLiH3kaSXF77csKpyh0_1YvcKzjwEtkageXrqtiz9xzVzIWdIeEZb0VxIOcXtVtbixOzDUu3sIJ_bGPwXYVtRlaHSHXtqWBoO3RjSAJF8_qBK5AMyl1DiaCAgpUKeHuKhwh67sCtcdN0DbrsQk0R5pc_FPSNTdhqtaQtTQbbD321jnjSnaL2_KXf2WBkLE53w04-LAXUhOvm9VVlOoZs4__eDcStt1ekbpCnYVquRRI9T0pu8keQcfC91=w711-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538431610/001-biceps/004-biceps-hammer-curl.mp4";
+                        description = "-La palma mira al interior\n-Espalda recta\n-Piernas ligera flexión\n-Hombro estático\n-No balancearse";
                         muscle_zone = "biceps";
                         break;
                     case 5:
                         name = "Chin-Up";
                         photo_path = "https://lh3.googleusercontent.com/VBU6-xhVL5LwQTp7U8Iaj6ompCpwtub35k_NEoirLFny7JxAD1y3wYcXREE_Dh0EGtGIPE6VFoXZe_r4e--0XM57AgxgC1Lv6L-C-NPoMhMc6W4Aln5ozgI_VvGcjXVrwACQRLyEA-_FNjHvW1CxKrwYGCVmEcfZFXN_xPMIJU1DekGUELWNu7KUa3Py17CZ_yaO-1nI5gWUY1F5Am0Kb57FxR5gxVPZxp_RBGLVKS4HKQIPySZC17B0X5xmJPUagdoovZbZySpf9fjXtVMzU1rTP9DMJLJXResKJ_n_2fdYU_M6MReRmkG9Yfd-7Q0_5tnnwnqJavhQGcRXm26N5NuZGUc8KaW8-ymVGBvmHBLybmuI0-nBRRhp9nCV-cHw8KaDeInVyC00M8t3UjpIfYB2i9kVaqQJocUmXB72s__m0SndwYW21DBzX-bAjBcuf34yB58omUmEjG_Uc62Q2VIi-cXBdWaOGzNgtP4lFQij3uZfBWpaOM93P2vA2cZ_vsUtWqIbxVmk8Hn9v_ipORkSfB69enGhquArBtfFr3COw1doJsgWXkoHI2UDuqL_78If5P0zudI6gJWbn8DLM5_8xMB1X5ZH3QsY47Xl7AcsSppUiCxdS3s2FaXKtd0IVqp2ZKKTRntjWX1CXMpUqV5-Yt0K1rFUCs6ayPDY9DXXEumfLoqzU6By=w713-h632-no";
-                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1538433606/001-biceps/005-chin-up.mp4";
+                        description = "-Agarre palma mira hacia atrás\n-Subida con flexión de brazos\n-Evitar el balanceo\n-Peso lastrado en pies o mancuerna entre piernas cruzadas";
                         muscle_zone = "biceps";
                         break;
                     case 6:
                         name = "Parallel Grip Pull Up";
                         photo_path = "https://lh3.googleusercontent.com/-qwHc8VuzGsK9YYRg3FZvspbA3YaWg6oLF2x7VRu3L0nSQJ6w7WQZmXHx6nnnbfmm9TkB0G6wGMeSL_C1X_9jX-n8rNO9bGQIONsz2RJErp23Sr7AVLKcK5LLcQ70mng7IAJ_wVydDqOvkl3zuZ2pvIwPBFkLBAIoOQMxsLmHD5aGOn5WcGRrpbFoFUc7TPjjN-mqbg95NkI8-s9WsiTo5oeoqyFjCt6j0DXhMN5f4R_F_AnlQ8YcT7cGj9dEcs1VZwkNNWGScxykqHEazxlx8aHbPaxWwQ7jhgQ0HuIXZ8itIEHW8RPkoKO5VaMR6m1d6r9GHFNeonKTaPCIJuxmSuZQzjiD4MK5CJpeE-5ao3E78Bc1qHCr1XJSKeCe_bM6DxBo--AxaudK9Le-s6niqS152ELc8GIoqd7xNF7tZHbrVgRPPau1IYyXCuantoed--llzUau2uwgglv6mRNbwtvoWjaQJ_iqekr849PCYBUIzoh9QYI1ReYQGDrMsS2eui0pqd-n9CE_W30e1urgEMdlL00_MhEG6YoR_X3RHRcW3qUZ12pVSQLZL68f9mQiI-0esKrcL-WEDpRd5HjkCOgWRk2gAT2ERqK_Cm5RRxPgi5ibAMQf7oIydW2s2Cu2ISpOGjvVCzeTmLlqqmwBBRdPg1B2OJoCv1dg8r47eZvka_YZRtbmCgy=w711-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Agarre palma mira hacia adentro\n-Subida con flexión de brazos\n-Evitar el balanceo\n-Peso lastrado en pies o mancuerna entre piernas cruzadas";
                         muscle_zone = "biceps";
                         break;
                     case 7:
                         name = "Barbell Curl";
                         photo_path = "https://lh3.googleusercontent.com/41LuhekQGImC8YVf8WC8s4Agh_PQcTX7o8t_sLcqEfCdi9ntADTl3zpgHX61D0WKfzjz9mHXkieCqU5fn7LIxd1Dt-k6rS_d_s2yTGo0YACD774ixYjHH02pR7T2iHQZkJpUX2OyDi6dbalpQVR6ojukcv9IvMj9CHBLFvYodax2EIhrd-0W-BeWnf3oDo-qHACa8MAqNDLD38fBT94YA0PtqwOsh38dAC9d_on7YbQTjXqgE-bbYVT8xLOx__ua82NCQg_x3Wls8dz9x3zk1SHsB3QZJfXaUfsn40RQMVAbQn4l2oDKfcHBMRlZ621DFvg53dgASK6m8XB7N4UU2CnnD7TmgOnwzAWgw1tFkRSHeUVKhP79o93mW7lUYyWuEH9SIJj7sZQBk1aSwNjafhlo_IZelwGWA4jZ_z9EZgC6TZSMkSZEykZhIXPrtN69-gRVcwFkbsI0XG_ohEzmGYJm45_hDioiSDUPdBhz1EanZ31dQfLARav9JhqV_tXzAp9j-ur2KbsndtywSbR4bdkcJ1H3vnlhD9O9znO7n2kGUSDCV1U75Y93g9J697K7JZMtB8Qo72iYVJX0gpAEtGqIuCG-VYF6VDyo8JbT96Thrp0svF9YdNtFbc6fpUXagLJB6061RVQGCQV_GCdMoAPfl3tlhac7rc3FOfUuLm6Ec_f66dpPn3SS=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Barra paralela al suelo siempre\n-No balancearse\n-Piernas ligera flexión\n-Codos estáticos junto al cuerpo\n-Hombros estáticos\n-Agarre palma arriba separación como codos";
                         muscle_zone = "biceps";
                         break;
                     case 8:
                         name = "Kettlebell To Shoulder";
                         photo_path = "https://lh3.googleusercontent.com/gLHzktKF3T_FBBAC4iaelB6m9gQuC1Bjat6WRHXo1tbCgBTwwuuHpglud8PmVlGNMkmIHWj7Bqu1dgI3Q3dWeWJfOhNFDP9l4mG-hiUpqBcJNuJ3gy1ZYoF0Is1AHi1ku0XaNTw95_9M5zN3SsaiaiJDTyty4D9VqBUjL1I1CR7bzZ43qYQX4_yPWxpo-r5ovgN1tpgRhJnRBcatKSGxebXNZ7QK0cgv-B1HVQGwHIGWP6zKKgRlT_BY5XsKGPtrwSK69dc0HWJvM7nqVe_qVz_4XBpMwZNhwKR09D79pElkO9AiKQch4zDLoMd7KmtX0_I4OO8S6p47tdu3LY3zCgkXA77M8_9MkEprQROc3M3eBE2QU6HDnWixdMTDNptREbD4WFpUnFPk5tltXdgBp6tM10I1Yy67LBYhHJiY2sbeECOZYcF-OlaiWhvUwNBq0AvclLZmAb2HXkmGDL_iwK4msUXJGmvhJaujTBc5qdcAkzHdbOK6mpWAlHboqwJUBY-jwqXz1bFkqyKnjFzCso15QNOHe9suO0nhGOQM5pmCpu7I_G4b7Umb8H83SJ8IEpCr4FuYjX8kzV795XbBt7xutGyTzqROjoJy43q0I-CbCNsGgQKN9Wec9XhkHgDaDggPcQez-Riksz2qTm_AJAO19Ilcuf6H1_ZdchwHa-T9HUT1vd3_GdPG=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Codo estático junto al cuerpo\n-Llevar peso al hombro contrario\n-Piernas ligera flexión\n-Espalda recta\n-No balancearse";
                         muscle_zone = "biceps";
                         break;
                     case 9:
                         name = "Pulley Rope Curl";
                         photo_path = "https://lh3.googleusercontent.com/QvXpMXs0NjtRIiXZnwU35dbf7uSugN_slFO9g75y0CsolA7GwZLd8LO-J5s-Jbvx3uqFF5YX7pxLzYBnQw_KtgcryLoVWWLXcCXNmRdLTj4RvWVPZmxfmD0BXlyD2mW2WNKGDATEzHGDoF6T8_cSFs5t2Chvqs6N_sHCfTxnixmEQjL8r89HPvbSFuz9QVvuyk8IQssufJew5aaL2k0L90mCQpPi82DnlMjuY46xAbGd70bTBMSmoqnbvYYXuX9UBV79JCviVznxo8eSTj7XGKTuI32lCF5Rdcp_Q7y5R7SxfduUhN8YoDjVcOC0MaFGWMWSUsXy5HXG_sBbUuDb3TvaygetDMjMIf4ovMpTTVFcICqGJmoqL_4Epy7jhWONYtKXxD_0Var_d3lb1SkgYj6JmU9CzvVIM09hLjWiUIF-pyg3hxs5s6pvgW0Q3lGem3FjQYj00rd9WBTbu_Fv2N91YMPLwuULlxBXm54bghfGTG8jpbEKrQBvqIjAU0Yoq6NmyZnbPYusEb7jDZsLf_8sZPbejFaFSdWAwxlvMru-MNg6Hfs_cbogZuQ0PBb9YELR5VITTLIbNPdFEgdr0_DjdNaejuFZnVh7OaOhMCXgmMffh8DZWAsDarNN28_pfgrbhcRqR9p2PWiuV3iWsDB_3JCAQk0LYl_ZAdcL5tYXkH1vvazEL8FE=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Piernas ligera flexión\n-Espalda recta\n-No balancearse\n-Codo estático junto al cuerpo\n-Subida y bajada de peso sin perder esta posición";
                         muscle_zone = "biceps";
                         break;
                     case 10:
                         name = "Scott Bank Z Bar";
                         photo_path = "https://lh3.googleusercontent.com/f8hV7BI_uAXfds2Pcsga-OoVT1Lv2acCSq7QTTigFf1YtXYu74PXunXisCWD81TRc7heC2RNqdFmC93TyDhcx4ba38iVOK-srSZgBWjBCCcGuLqZejntDiBfh0y-uq1wNet3iCkZCZhACufPyx1iAqoaFQihI5dRlYk17K48FFlr2vDSKb5w6WW-JVxUTbpGR1i4OPudManX3IIzY13qxaThv7BX9tFNw1bUzSy0P7ac2BUB_c0tnO78-acBo4dD3GIqk8bN23gFk27QA2cQqD4NmWGohAxnVRxrxOWpXE8YmUsA8lvR3JVxEAdxZXtm2m3_SceNDxL0kZ7-lL3M5DF50M31b8wJ-PI8tQt9atPQLFfbf_wBZInh9CXKr1OFLT6tUsgjN8t_SYkPR8O604SIOuKc3_fg80hhLGmG4fwzhigl1_3mbxYMYk7tG8VmZ2jStZvwfWNS8DvsDqhmb6PgY-TAXdfdhVfIPxBS0pxv168LuG7_8r7psozlh5fj8Dp2cmdoH4Oz7Hakb80LXSGiaYyfTxBtfauNVJSje9ytnpDmdVZcT-25IEAbnne62RpFxt7BYOItsu4SABkyhn5IZ2TgeTt5LUXHiLVxlAbFw-CF8yR9-aqjdNOwCww-PwKnMvixLmNolhVQRYxPG8dzKqlV8Tp3a4kdPlH3NGckaLXXrIn74J3l=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-No se baja del todo\n-Espalda recta, posición cómoda\n-Ajustar altura del asiento";
                         muscle_zone = "biceps";
                         break;
                     case 11:
                         name = "Z Barbell Curl";
                         photo_path = "https://lh3.googleusercontent.com/V1ArPQSqL0JYNoa7VSVytEuIqXETCcsHLjPiPB0hWL__0C9Q3OCq7HGKyjI5FrxtUcfGVW168EMIeJvRkv4ZDrut3F18l_7iq06zdcthAPGSpCQ4MHQA-CJkjZ-QT88EWndmYJOBjKI0QzurE_akbYbM6o18-3HTF0JNKXgGPDBzfr-B4Z5wNAv3FCWYErCzi_ZMbSRtNj_te2yrpohkxtDCayPz0nmI6j_vrWpK4RDBESC34XaetpPoNrf37ELMaL0AzD--8vJghgLWTzsUiGwS5l7gWj9-Z6VrZNFAQO1lCl6wvLsPoJPExv70JoJp2FrCNelXpgHdBKEE1HBeRNrN7mB6Pd_NEvP_3JWA-2Xb7BJqIkGcKtIXT9SlgmZVkHH3oqf1N94S3oW0ibhMJKBnDs6sT70nU5icrA6WgECSTcVjOCkh2B4FYo7TdYQDOU7efnJ4z2VwMMxNwu5x1dyKdmvcYR38UKlyNaa0etL6iLrgrphNMGJ9-fi_IUAiTithpZT5M8nDRVgi9QiRNWWd7McUBJWIHke_r0mJTZF6O4JFBvmd0-kQ1vsT0a-iYlk4560661oCROgPAa0YFowcYQJOxZ7pIob3X9IcCS3uBNc5qwPjhoTesh7u4nW-k2kmImijtrlPdpl-EIfxdY-yoNhVHMgbOHvkDdnXnfePWyQYSi0K1Mj1=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Barra paralela al suelo siempre\n-No balancearse\n-Piernas ligera flexión\n-Codos estáticos junto al cuerpo\n-Hombros estáticos\n-Agarre por el medio de la barra Z, palmas hacia arriba";
                         muscle_zone = "biceps";
                         break;
                     case 12:
                         name = "Rope Climb";
                         photo_path = "https://lh3.googleusercontent.com/3ykxf62mb7cQDO4i57Oo_5lmP_RJ__iyn_It8HabSgmEZqs-eoDIDTmDSt04ZZwWxo5iWExl80nLPN2e2xN5ICoJBejQt1b5MEVMeHXdehiMKGF_pWqv0bAMQf0WjcJkPcuc80npyAdrLygpB0CRhqDS4a5jSIkxg05aA_DHz6xMGTcTC1ZQ1OqyBzdgEN5qeBvR0bzLyIOFXINFYNW0ZVpAzQ85rc8m44jlLNYrDkl_IgxQ0VYb-HUaLtIz44I0mFKs3NXT-QG7_Sc1ZPX7bXeqAcUnnxz3eGDZ4bT1bk8d_VrWsxB56SpF1Uxbwk7vK6evjL2Zt8V_MkahkZv7IAwpmE1wZaZbGgK7OzpYG96teBJZknu_9lr8MxVJl0orZZL55OJff4wq4kvJNQ-M_Hs0_i2TPVq_QA6oLPAt0-XU53_gMfZhRDmK7eercw1yjlg7JY7YNVHhg3vjcTr9rTPOP4vjdy5l08F0_R2oRvAQtTNyb9Bx_TqjgqwCW2nijjjYVKi4sE5uVRDc4WM_hBf6t72GwZORe0C474JDCfU0GtJ7yTIc71QU5gLxr-9dPK1hgTfGwH54iDsI5Fyiai3JLzgZJfJkb2O4WqelVwJOia7tarkPCaaPXP5GYmkZSOEa_eHZRcWluu1SSIHJovZ7he_TSd8up_X8Tp5vy8CPmN9OkdxEhxpx=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Subida de brazos\n-Evitar mucho balanceo de la cuerda\n-Piernas cruzadas\n-Espalda recta";
                         muscle_zone = "biceps";
                         break;
                     case 13:
                         name = "Rope Waves";
                         photo_path = "https://lh3.googleusercontent.com/yNPYE11qCiF1WW_0rJdZBPKDhywQlv5akHCkMPfqK82-CjcwyNCRHiDKnSwXRryqtCJhIh2snZcP36GwPnZenuuQ09So_4YjJZ99jwUb9hqLEdPFhdgyPu2ljtzo8Mk1S_5V6OKYvscjXENPrZjPQDNiX9f-uxWGdMxnVKMrnjDG_SRDMNCFBG1na9aus7gVyfkbiK6qjocNWacz8Zk1b4Hz02U6rerOY3Ch7Zstv8cJ8mFxKNbvhFWQM0T-6PGsJcpgLpXMgqbHHWgYT9ltFyvmoUVTaWZ7NpZeEv6SEKl19kxPZvqePi4AsZumS_X6jPfW4BYRp6l0O38DD3rLf-xhZjlO_osgZXOG2kVYsGLjpnGzIS0_K1griJ0jUGWAO8WulmKo_TBSeHbQFt_1U6D0bewwWeRSmZoKiHls6HfQ25sTUiZr2Enf9722SPjyLr15Z8cHPBA2TAles6juGUujhz3rRT_0o88lHOkdmtC8YOXTKNnjzGELQCeMMz63g3OQMU93EIxP6T6Z37dCpXfeGBzRakIXSIEaAvMQykFFxbgKylhrsUouqIUgDkfOrHMsvjnI7VIvhQgiXzWDRSbdM_CVoNonOxWjU9vPJKS-ZEvaBsjHcvy3yLW0cxkFYnGkgpy_Aj5iFa_B1QUnNCMV6eBPxTZ_d3jDUJ_nTlrrzJEeuv6YGI_S=w713-h632-no";
                         video_path = "https://res.cloudinary.com/dlc3xhhq5/video/upload/v1536586694/videoGeneral.mp4";
-                        description = "La palma mira al interior, espalda recta piernas semiflexionadas no mover hombro";
+                        description = "-Piernas flexionadas\n-Espalda recta\n-Fuerte para crear olas con la cuerda\n-Brazos altura hombros\n-Movimiento brazos amplio";
                         muscle_zone = "biceps";
                         break;
                     case 14:

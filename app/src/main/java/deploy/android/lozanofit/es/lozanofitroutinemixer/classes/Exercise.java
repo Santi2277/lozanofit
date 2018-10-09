@@ -2,10 +2,11 @@ package deploy.android.lozanofit.es.lozanofitroutinemixer.classes;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 
 import java.io.Serializable;
 
-public class Exercise implements Parcelable {
+public class Exercise implements Parcelable, Comparable {
 
     private int id;
     private String name;
@@ -13,7 +14,15 @@ public class Exercise implements Parcelable {
     private String video_path;
     private String description;
     private String muscle_zone;
+    private int done;
 
+    public int getDone() {
+        return done;
+    }
+
+    public void setDone(int done) {
+        this.done = done;
+    }
 
     public Exercise(int id2, String name2, String photo_path2, String video_path2, String description2, String muscle_zone2) {
         id = id2;
@@ -22,6 +31,7 @@ public class Exercise implements Parcelable {
         video_path = video_path2;
         description = description2;
         muscle_zone = muscle_zone2;
+        done = 0;
     }
 
     public Exercise(Parcel source) {
@@ -31,6 +41,7 @@ public class Exercise implements Parcelable {
         video_path = source.readString();
         description = source.readString();
         muscle_zone = source.readString();
+        done = source.readInt();
     }
 
     public int getId() {
@@ -89,6 +100,7 @@ public class Exercise implements Parcelable {
         dest.writeString(video_path);
         dest.writeString(description);
         dest.writeString(muscle_zone);
+        dest.writeInt(done);
     }
 
     @Override
@@ -107,6 +119,90 @@ public class Exercise implements Parcelable {
             return new Exercise[size];
         }
     };
+
+
+    @Override
+    public int compareTo(@NonNull Object o) {
+        int thisorder = 0;
+        int compareorder = 0;
+        switch (this.getMuscle_zone()) {
+            case "biceps":
+                thisorder = 1;
+                break;
+            case "chest":
+                thisorder = 2;
+                break;
+            case "mid-back":
+                thisorder = 3;
+                break;
+            case "deltoid":
+                thisorder = 4;
+                break;
+            case "upper-back":
+                thisorder = 5;
+                break;
+            case "forearm":
+                thisorder = 6;
+                break;
+            case "triceps":
+                thisorder = 7;
+                break;
+            case "lumbar":
+                thisorder = 8;
+                break;
+            case "abs":
+                thisorder = 9;
+                break;
+            case "glute":
+                thisorder = 10;
+                break;
+            case "thigh":
+                thisorder = 11;
+                break;
+            case "calf":
+                thisorder = 12;
+                break;
+        }
+        switch (((Exercise)o).getMuscle_zone()) {
+            case "biceps":
+                compareorder = 1;
+                break;
+            case "chest":
+                compareorder = 2;
+                break;
+            case "mid-back":
+                compareorder = 3;
+                break;
+            case "deltoid":
+                compareorder = 4;
+                break;
+            case "upper-back":
+                compareorder = 5;
+                break;
+            case "forearm":
+                compareorder = 6;
+                break;
+            case "triceps":
+                compareorder = 7;
+                break;
+            case "lumbar":
+                compareorder = 8;
+                break;
+            case "abs":
+                compareorder = 9;
+                break;
+            case "glute":
+                compareorder = 10;
+                break;
+            case "thigh":
+                compareorder = 11;
+                break;
+            case "calf":
+                compareorder = 12;
+                break;
+        }
+        return thisorder-compareorder;
+    }
 
 
 
