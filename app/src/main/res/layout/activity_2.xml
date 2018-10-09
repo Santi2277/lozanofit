@@ -52,11 +52,12 @@
     <TextView
         android:id="@+id/simpleChronometer"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="27dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="27dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/freshman"
         android:paddingBottom="15dp"
         android:text="00:00"
@@ -66,8 +67,8 @@
         app:layout_constraintEnd_toStartOf="@+id/textView10"
         app:layout_constraintHorizontal_bias="0.933"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView6"
