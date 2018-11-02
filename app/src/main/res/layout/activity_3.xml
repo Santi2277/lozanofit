@@ -43,7 +43,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="-Barra paralela al suelo siempre\n-No balancearse\n-Piernas ligera flexión\n-Codos estáticos junto al cuerpo\n-Hombros estáticos\n-Agarre por el medio de la barra Z, palmas hacia arriba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

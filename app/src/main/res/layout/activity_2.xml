@@ -129,14 +129,12 @@
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="7dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginStart="4dp"
         android:onClick="goToActivity3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton8"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
         app:srcCompat="@drawable/ic_description_black_24dp" />
 
     <ImageButton
@@ -227,7 +225,7 @@
         android:layout_marginRight="7dp"
         android:onClick="firstExercise"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton12"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toTopOf="@+id/imageButton9"
         app:srcCompat="@drawable/ic_skip_previous_black_24dp" />
@@ -243,22 +241,8 @@
         android:onClick="lastExercise"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/checkBox"
-        app:layout_constraintStart_toEndOf="@+id/imageButton12"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/checkBox"
         app:srcCompat="@drawable/ic_skip_next_black_24dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton12"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="1dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
-        android:onClick="middleExercise"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton9"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton9"
-        app:layout_constraintStart_toEndOf="@+id/imageButton8"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/middle_ball" />
 
 </android.support.constraint.ConstraintLayout>
