@@ -230,7 +230,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageButton12"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toTopOf="@+id/imageButton9"
-        app:srcCompat="@drawable/ic_fast_rewind_black_24dp" />
+        app:srcCompat="@drawable/ic_skip_previous_black_24dp" />
 
     <ImageButton
         android:id="@+id/imageButton9"
@@ -245,7 +245,7 @@
         app:layout_constraintEnd_toStartOf="@+id/checkBox"
         app:layout_constraintStart_toEndOf="@+id/imageButton12"
         app:layout_constraintTop_toBottomOf="@+id/checkBox"
-        app:srcCompat="@drawable/ic_fast_forward_black_24dp" />
+        app:srcCompat="@drawable/ic_skip_next_black_24dp" />
 
     <ImageButton
         android:id="@+id/imageButton12"

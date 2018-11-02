@@ -7,14 +7,18 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
+
+import com.bumptech.glide.Glide;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Exercise;
+
 import deploy.android.lozanofit.es.lozanofitroutinemixer.sqlite.ExercisesDB;
 
 import static java.lang.Math.toIntExact;
@@ -33,8 +37,8 @@ public class Activity3 extends AppCompatActivity {
         // parcelable
         exercisesList = getIntent().getParcelableArrayListExtra("key");
 
-        final VideoView videoView;
-        videoView = (VideoView)findViewById(R.id.videoView);
+        final ImageView gifview;
+        gifview = (ImageView)findViewById(R.id.gifview);
 
         TextView text = findViewById(R.id.textView);
         TextView description = findViewById(R.id.textView5);
@@ -42,9 +46,16 @@ public class Activity3 extends AppCompatActivity {
 
 
         text.setText(exercisesList.get(counter).getName());
-        videoView.setVideoPath(exercisesList.get(counter).getVideo_path());
+
+        Glide
+                .with(this) // replace with 'this' if it's in activity
+                .load(exercisesList.get(counter).getVideo_path())
+                .into(gifview);
+
+
+        //exercisesList.get(counter).getVideo_path());
         description.setText(exercisesList.get(counter).getDescription());
-        videoView.start();
+
 
         //get level selected
         levelstring = getIntent().getStringExtra("selectedLevel");
