@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.CountDownTimer;
 import android.os.Parcelable;
 import android.os.SystemClock;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +27,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
+import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Activity2AlertDialog;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Exercise;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.sqlite.ExercisesDB;
 import static java.lang.Math.toIntExact;
@@ -47,7 +50,7 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 14);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //if exercise list (arraylist) hasnt been created, create it
@@ -224,8 +227,15 @@ public class Activity2 extends AppCompatActivity {
 
 
     public void goToMainActivity (View view){
-        Intent intent = new Intent (this, MainActivity.class);
-        startActivity(intent);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Activity2AlertDialog dialogo = new Activity2AlertDialog();
+        dialogo.show(fragmentManager, "tagAlerta");
+
+
+
+        //Intent intent = new Intent (this, MainActivity.class);
+        //startActivity(intent);
     }
 
 
@@ -403,7 +413,7 @@ public class Activity2 extends AppCompatActivity {
     public void createRoutineFull (int biceps, int abs, int forearm, int chest, int deltoid, int calf, int glute, int midBack, int lumbar, int thigh, int triceps, int upperBack) {
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 14);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
 
@@ -573,7 +583,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 14);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Half
@@ -596,7 +606,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 14);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -619,7 +629,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 14);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -643,7 +653,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 14);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -666,7 +676,7 @@ public class Activity2 extends AppCompatActivity {
     public void changeExercise (View view){
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 14);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;

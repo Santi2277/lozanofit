@@ -11,15 +11,20 @@
         android:roundIcon="@mipmap/icon_santi_ball_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".activities.Activity2" />
-        <activity android:name=".activities.Activity3"></activity>
+        <activity android:name=".activities.Activity2" android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activities.Activity3" android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>
