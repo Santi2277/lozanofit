@@ -36,8 +36,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="318dp"
+        android:layout_height="154dp"
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -45,7 +45,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="-Barra paralela al suelo siempre\n-No balancearse\n-Piernas ligera flexión\n-Codos estáticos junto al cuerpo\n-Hombros estáticos\n-Agarre por el medio de la barra Z, palmas hacia arriba"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gifview" />
 
@@ -58,7 +61,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/freshman"/>
 
     <ImageButton
         android:id="@+id/imageButton6"

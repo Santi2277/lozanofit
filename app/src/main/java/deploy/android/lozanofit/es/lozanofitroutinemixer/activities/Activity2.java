@@ -50,7 +50,7 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //if exercise list (arraylist) hasnt been created, create it
@@ -413,7 +413,7 @@ public class Activity2 extends AppCompatActivity {
     public void createRoutineFull (int biceps, int abs, int forearm, int chest, int deltoid, int calf, int glute, int midBack, int lumbar, int thigh, int triceps, int upperBack) {
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
 
@@ -583,7 +583,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Half
@@ -606,7 +606,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -629,7 +629,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -653,7 +653,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -675,8 +675,10 @@ public class Activity2 extends AppCompatActivity {
 
     public void changeExercise (View view){
 
+
+
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 15);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
