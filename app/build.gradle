@@ -6,9 +6,9 @@ android {
         applicationId "deploy.android.lozanofit.es.lozanofitroutinemixer"
         minSdkVersion 15
         targetSdkVersion 28
-        versionName '16'
+        versionName '17'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        versionCode 16
+        versionCode 17
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {

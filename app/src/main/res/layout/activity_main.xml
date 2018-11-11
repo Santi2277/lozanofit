@@ -9,12 +9,37 @@
     tools:layout_editor_absoluteY="25dp">
 
 
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="11dp"
+        android:entries="@array/routineobjectivelist"
+        app:layout_constraintStart_toStartOf="@+id/spinner2"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/freshman"
+        android:text="Objetivo:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="8pt"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="25dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="33dp"
@@ -48,11 +73,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginBottom="25dp"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
         android:entries="@array/routinelevellist"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView11">
 
@@ -64,12 +88,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginBottom="62dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
         android:entries="@array/routinebodypartlist"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton7"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/spinner5"
         app:layout_constraintTop_toBottomOf="@+id/textView12">
 
     </Spinner>
@@ -84,7 +105,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginTop="32dp"
         android:onClick="goToActivity2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -129,15 +150,12 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
-        android:layout_marginLeft="77dp"
-        android:layout_marginStart="77dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/freshman"
         android:text="Parte del cuerpo :"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="8pt"
-        app:layout_constraintBottom_toTopOf="@+id/spinner3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/spinner5" />
 
 </android.support.constraint.ConstraintLayout>

@@ -612,7 +612,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         name = "Rotaciones Polea Rodillas";
                         photo_path = "https://lh3.googleusercontent.com/S1uKOLs5BNZFdj1ROaLy6MajBPwT5OXgjJ0zs0Pqc8S9MfGqKUiX7N22MY2wNupX0oDUrrREd_Jp47T6p4PAqifhDCzOkav2tVE8pj8McuVc2NSXnWMzoSZdGAzxyT9QejXXovHM1Uocb0FZ7wHKOcAH0XNXEGt1dTxLGvz-N8mHLd3Jnt6I5RpKnxSTeKjXmEHzmLNo0dpsDZypRmhzqW6NIZKXonyCXoPZ_8vD8oIKDjy4Q7Ail4_25HD6uPMz6IJolWytYE6phWAin-j6S-B02xQhIbG9RG2YLKLUA7vLRY9hd3xbRYuZvM1C2ZRP90vj85lKzQ-ZzYzGQSB0z98o0gkyD-QEL9AD76uDzjVc0RzpyQPp4e209V-1BadY1yg8WcK8Wqe8uPWTgo3wbFeNYKrgTKdkAbsYgqRz15v6XM_2esZh4ZsRJNpP4irTcG_ggvAKiqFq9fycEqJMs2RhM_HeOokGovDWWza4uSnOzQYjeK2lyaWvWrWcAKCGw5-fdqtgFpYibit_L6f_koPM4Ccg9IjMdqpg50LA-Ey70yGU0noPoR1JdFU3I36X8Lw-ds7mDloYWahJE2gMB81fJB9qWR304H838a0p5UYuMmwqLvGNPMAyqaiu_ydH05fVbEb0Y7GaqWSwBCu-O5xVOf4avpxhXoevNFDI782PbBXlAHCk0qw-=w713-h632-no";
                         video_path = "https://media.giphy.com/media/25aD3zUdkM8ayNOECi/giphy.gif";
-                        description = "-Brazos estirados bloqueados\n-Espalda recta firme\n-La fuerza viene desde abajo hasta arriba\n-Cuerpo acompaña el movimiento sin perder tensión\n-Bajada controlada";
+                        description = "-Brazos estirados bloqueados\n-Espalda recta firme\n-Fuerza viene de abajo a arriba\n-Cuerpo acompaña el movimiento (tenso)\n-Bajada controlada";
                         muscle_zone = "lumbar";
                         break;
                     case 84:
@@ -1362,7 +1362,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         name = "Rotaciones Polea Rodillas";
                         photo_path = "https://lh3.googleusercontent.com/S1uKOLs5BNZFdj1ROaLy6MajBPwT5OXgjJ0zs0Pqc8S9MfGqKUiX7N22MY2wNupX0oDUrrREd_Jp47T6p4PAqifhDCzOkav2tVE8pj8McuVc2NSXnWMzoSZdGAzxyT9QejXXovHM1Uocb0FZ7wHKOcAH0XNXEGt1dTxLGvz-N8mHLd3Jnt6I5RpKnxSTeKjXmEHzmLNo0dpsDZypRmhzqW6NIZKXonyCXoPZ_8vD8oIKDjy4Q7Ail4_25HD6uPMz6IJolWytYE6phWAin-j6S-B02xQhIbG9RG2YLKLUA7vLRY9hd3xbRYuZvM1C2ZRP90vj85lKzQ-ZzYzGQSB0z98o0gkyD-QEL9AD76uDzjVc0RzpyQPp4e209V-1BadY1yg8WcK8Wqe8uPWTgo3wbFeNYKrgTKdkAbsYgqRz15v6XM_2esZh4ZsRJNpP4irTcG_ggvAKiqFq9fycEqJMs2RhM_HeOokGovDWWza4uSnOzQYjeK2lyaWvWrWcAKCGw5-fdqtgFpYibit_L6f_koPM4Ccg9IjMdqpg50LA-Ey70yGU0noPoR1JdFU3I36X8Lw-ds7mDloYWahJE2gMB81fJB9qWR304H838a0p5UYuMmwqLvGNPMAyqaiu_ydH05fVbEb0Y7GaqWSwBCu-O5xVOf4avpxhXoevNFDI782PbBXlAHCk0qw-=w713-h632-no";
                         video_path = "https://media.giphy.com/media/25aD3zUdkM8ayNOECi/giphy.gif";
-                        description = "-Brazos estirados bloqueados\n-Espalda recta firme\n-La fuerza viene desde abajo hasta arriba\n-Cuerpo acompaña el movimiento sin perder tensión\n-Bajada controlada";
+                        description = "-Brazos estirados bloqueados\n-Espalda recta firme\n-Fuerza viene de abajo a arriba\n-Cuerpo acompaña el movimiento (tenso)\n-Bajada controlada";
                         muscle_zone = "lumbar";
                         break;
                     case 84:

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //if db is opened correctly
@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         final Spinner bodyspinner = (Spinner) findViewById(R.id.spinner3);
         String selectedbodypartstring = bodyspinner.getSelectedItem().toString();
         intent.putExtra("selectedBodyPart", selectedbodypartstring);
+
+        final Spinner objectivespinner = (Spinner) findViewById(R.id.spinner5);
+        String selectedobjectivestring = objectivespinner.getSelectedItem().toString();
+        intent.putExtra("selectedObjective", selectedobjectivestring);
 
         intent.putExtra("listCreated", false);
         startActivity(intent);

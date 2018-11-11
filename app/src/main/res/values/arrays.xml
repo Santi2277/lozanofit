@@ -9,7 +9,7 @@
     </string-array>
     <string-array name="routinelevellist">
         <item>3.- Atlético</item>
-        <item>1.- Mantenimiento</item>
+        <item>1.- Básico</item>
         <item>2.- En forma</item>
         <item>4.- Fuerte</item>
         <item>5.- Muy fuerte</item>
@@ -21,5 +21,10 @@
         <item>Tronco</item>
         <item>Brazos</item>
         <item>Piernas</item>
+    </string-array>
+    <string-array name="routineobjectivelist">
+        <item>Salud/Hipertrofia</item>
+        <item>Volumen</item>
+        <item>Resistencia/Definición</item>
     </string-array>
 </resources>

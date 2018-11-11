@@ -38,6 +38,7 @@ public class Activity2 extends AppCompatActivity {
     public String timestring = "";
     public String levelstring = "";
     public String bodystring = "";
+    public String objectivestring = "";
     public boolean listcreated = false;
     public ArrayList<Exercise> exercisesList = new ArrayList<Exercise>();
 
@@ -50,8 +51,82 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
         SQLiteDatabase db = exdb.getWritableDatabase();
+
+
+        //get selected level and objective
+        objectivestring = getIntent().getStringExtra("selectedObjective");
+        levelstring = getIntent().getStringExtra("selectedLevel");
+        // Set objective and level kgs and reps
+        TextView repstext = findViewById(R.id.textView8);
+        TextView kgstext = findViewById(R.id.textView7);
+        switch(objectivestring) {
+            case "Salud/Hipertrofia":
+                //set reps
+                repstext.setText("10-12 reps");
+                //set kgs
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText("4-8 kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText("10-12 kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText("14 kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText("16-18 kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText("20-24 kgs");
+                        break;
+                }
+                break;
+            case "Volumen":
+                repstext.setText("6-8 reps");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText("6-10 kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText("12-14 kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText("16 kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText("18-20 kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText("22-26 kgs");
+                        break;
+                }
+                break;
+            case "Resistencia/Definición":
+                repstext.setText("16-20 reps");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText("1-5 kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText("6-8 kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText("10 kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText("12-14 kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText("16-20 kgs");
+                        break;
+                }
+                break;
+        }
+
+
 
         //if exercise list (arraylist) hasnt been created, create it
         if(!listcreated) {
@@ -61,8 +136,7 @@ public class Activity2 extends AppCompatActivity {
                     timestring, Toast.LENGTH_LONG);
             toast1.show();
 
-            //get selected body part and level
-            levelstring = getIntent().getStringExtra("selectedLevel");
+            //get selected body part
             bodystring = getIntent().getStringExtra("selectedBodyPart");
 
 
@@ -250,6 +324,7 @@ public class Activity2 extends AppCompatActivity {
         intent.putExtra("chronoText", chronotext);
 
         intent.putExtra("selectedLevel", levelstring);
+        intent.putExtra("selectedObjective", objectivestring);
 
         startActivity(intent);
     }
@@ -413,7 +488,7 @@ public class Activity2 extends AppCompatActivity {
     public void createRoutineFull (int biceps, int abs, int forearm, int chest, int deltoid, int calf, int glute, int midBack, int lumbar, int thigh, int triceps, int upperBack) {
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
 
@@ -583,7 +658,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Half
@@ -606,7 +681,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -629,7 +704,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -653,7 +728,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -678,7 +753,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 20);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
