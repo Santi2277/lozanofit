@@ -51,7 +51,7 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
 
@@ -288,6 +288,8 @@ public class Activity2 extends AppCompatActivity {
 
         //539 and 479
 
+
+
         //set CheckBox
         CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
         if (exercisesList.get(counter).getDone()==1){
@@ -488,7 +490,7 @@ public class Activity2 extends AppCompatActivity {
     public void createRoutineFull (int biceps, int abs, int forearm, int chest, int deltoid, int calf, int glute, int midBack, int lumbar, int thigh, int triceps, int upperBack) {
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
 
@@ -525,7 +527,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
 
             } while(c.moveToNext());
@@ -537,7 +539,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -548,7 +550,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -559,7 +561,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -570,7 +572,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -581,7 +583,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -592,7 +594,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -603,7 +605,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -614,7 +616,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -625,7 +627,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -636,7 +638,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -647,7 +649,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
             } while(c.moveToNext());
         }
@@ -658,7 +660,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Half
@@ -669,7 +671,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
 
             } while(c.moveToNext());
@@ -681,7 +683,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -692,7 +694,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
 
             } while(c.moveToNext());
@@ -704,7 +706,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -715,7 +717,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
 
             } while(c.moveToNext());
@@ -728,7 +730,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -739,7 +741,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.add(currentExercise);
 
             } while(c.moveToNext());
@@ -753,7 +755,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
@@ -767,7 +769,7 @@ public class Activity2 extends AppCompatActivity {
         //change exercise
         if (c.moveToFirst()) {
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
                 exercisesList.set(index, currentExercise);
 
             } while(c.moveToNext());
@@ -799,6 +801,16 @@ public class Activity2 extends AppCompatActivity {
         }else{
             exercisesList.get(counter).setDone(0);
         }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        //go to main Activity
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Activity2AlertDialog dialogo = new Activity2AlertDialog();
+        dialogo.show(fragmentManager, "tagAlerta");
+
     }
 
 

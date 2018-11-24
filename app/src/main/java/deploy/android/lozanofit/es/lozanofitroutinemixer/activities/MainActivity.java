@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 21);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //if db is opened correctly
@@ -58,5 +58,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+
+    @Override
+    public void onBackPressed() {
+        //does nothing in this activity
+    }
 
 }

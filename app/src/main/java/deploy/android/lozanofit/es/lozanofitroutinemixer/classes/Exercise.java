@@ -14,23 +14,32 @@ public class Exercise implements Parcelable, Comparable {
     private String video_path;
     private String description;
     private String muscle_zone;
+
+    private String level;
+    private String subclasses;
+    private String hip_weight;
+    private String res_weight;
+    private String vol_weight;
+
+    private String reps_obj;
+
     private int done;
 
-    public int getDone() {
-        return done;
-    }
 
-    public void setDone(int done) {
-        this.done = done;
-    }
 
-    public Exercise(int id2, String name2, String photo_path2, String video_path2, String description2, String muscle_zone2) {
+    public Exercise(int id2, String name2, String photo_path2, String video_path2, String description2, String muscle_zone2, String level2, String subclasses2, String hip_weight2, String res_weight2, String vol_weight2, String reps_obj2) {
         id = id2;
         name = name2;
         photo_path = photo_path2;
         video_path = video_path2;
         description = description2;
         muscle_zone = muscle_zone2;
+        level = level2;
+        subclasses = subclasses2;
+        hip_weight = hip_weight2;
+        res_weight = res_weight2;
+        vol_weight = vol_weight2;
+        reps_obj = reps_obj2;
         done = 0;
     }
 
@@ -41,8 +50,15 @@ public class Exercise implements Parcelable, Comparable {
         video_path = source.readString();
         description = source.readString();
         muscle_zone = source.readString();
+        level = source.readString();
+        subclasses = source.readString();
+        hip_weight = source.readString();
+        res_weight = source.readString();
+        vol_weight = source.readString();
+        reps_obj = source.readString();
         done = source.readInt();
     }
+
 
     public int getId() {
         return id;
@@ -92,6 +108,64 @@ public class Exercise implements Parcelable, Comparable {
         this.muscle_zone = muscle_zone;
     }
 
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getSubclasses() {
+        return subclasses;
+    }
+
+    public void setSubclasses(String subclasses) {
+        this.subclasses = subclasses;
+    }
+
+    public String getHip_weight() {
+        return hip_weight;
+    }
+
+    public void setHip_weight(String hip_weight) {
+        this.hip_weight = hip_weight;
+    }
+
+    public String getRes_weight() {
+        return res_weight;
+    }
+
+    public void setRes_weight(String res_weight) {
+        this.res_weight = res_weight;
+    }
+
+    public String getVol_weight() {
+        return vol_weight;
+    }
+
+    public void setVol_weight(String vol_weight) {
+        this.vol_weight = vol_weight;
+    }
+
+
+    public int getDone() {
+        return done;
+    }
+
+    public void setDone(int done) {
+        this.done = done;
+    }
+
+    public String getReps_obj() {
+        return reps_obj;
+    }
+
+    public void setReps_obj(String reps_obj) {
+        this.reps_obj = reps_obj;
+    }
+
+
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(id);
@@ -100,6 +174,12 @@ public class Exercise implements Parcelable, Comparable {
         dest.writeString(video_path);
         dest.writeString(description);
         dest.writeString(muscle_zone);
+        dest.writeString(level);
+        dest.writeString(subclasses);
+        dest.writeString(hip_weight);
+        dest.writeString(res_weight);
+        dest.writeString(vol_weight);
+        dest.writeString(reps_obj);
         dest.writeInt(done);
     }
 
