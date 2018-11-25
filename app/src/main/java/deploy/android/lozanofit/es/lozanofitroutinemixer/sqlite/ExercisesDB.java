@@ -566,6 +566,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/1sxVMlLwLi2O58000A/giphy.gif";
                         description = "-Flexiones al revés\n-Codos y hombro 90º aprox.\n-Cuerpo bloqueado\n-Subida casi a tocar barra-pecho\n-Peso: disco en pecho";
                         muscle_zone = "deltoid";
+                        level = "hard";
                         hip_weight = "0/0/0/0/5";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/5/10";
@@ -828,6 +829,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/4a3DNqo7CsUc63Arss/giphy.gif";
                         description = "-Agarre supino (al revés de la foto)\n-Codos junto cuerpo, manos en línea\n-Cuerpo bloqueado, fuerza de brazos\n-Amplitud de movimiento (sin forzar)\n-Peso: disco en pecho";
                         muscle_zone = "mid-back";
+                        level = "hard";
                         hip_weight = "0/0/0/0/5";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/5/10";
@@ -1663,6 +1665,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/1sxVMlLwLi2O58000A/giphy.gif";
                         description = "-Flexiones al revés\n-Codos y hombro 90º aprox.\n-Cuerpo bloqueado\n-Subida casi a tocar barra-pecho\n-Peso: disco en pecho";
                         muscle_zone = "deltoid";
+                        level = "hard";
                         hip_weight = "0/0/0/0/5";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/5/10";
@@ -1925,6 +1928,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/4a3DNqo7CsUc63Arss/giphy.gif";
                         description = "-Agarre supino (al revés de la foto)\n-Codos junto cuerpo, manos en línea\n-Cuerpo bloqueado, fuerza de brazos\n-Amplitud de movimiento (sin forzar)\n-Peso: disco en pecho";
                         muscle_zone = "mid-back";
+                        level = "hard";
                         hip_weight = "0/0/0/0/5";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/5/10";

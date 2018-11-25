@@ -20,8 +20,8 @@
         <item>Inferior</item>
     </string-array>
     <string-array name="routineobjectivelist">
-        <item>Salud/Hipertrofia</item>
+        <item>Salud</item>
         <item>Volumen</item>
-        <item>Resistencia/Definición</item>
+        <item>Definición</item>
     </string-array>
 </resources>
