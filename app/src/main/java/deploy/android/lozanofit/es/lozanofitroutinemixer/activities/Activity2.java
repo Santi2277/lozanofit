@@ -51,82 +51,12 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 25);
         SQLiteDatabase db = exdb.getWritableDatabase();
-
 
         //get selected level and objective
         objectivestring = getIntent().getStringExtra("selectedObjective");
         levelstring = getIntent().getStringExtra("selectedLevel");
-        // Set objective and level kgs and reps
-        TextView repstext = findViewById(R.id.textView8);
-        TextView kgstext = findViewById(R.id.textView7);
-        switch(objectivestring) {
-            case "Salud/Hipertrofia":
-                //set reps
-                repstext.setText("10-12 reps");
-                //set kgs
-                switch(levelstring) {
-                    case "1.- Básico":
-                        kgstext.setText("4-8 kgs");
-                        break;
-                    case "2.- En forma":
-                        kgstext.setText("10-12 kgs");
-                        break;
-                    case "3.- Atlético":
-                        kgstext.setText("14 kgs");
-                        break;
-                    case "4.- Fuerte":
-                        kgstext.setText("16-18 kgs");
-                        break;
-                    case "5.- Muy fuerte":
-                        kgstext.setText("20-24 kgs");
-                        break;
-                }
-                break;
-            case "Volumen":
-                repstext.setText("6-8 reps");
-                switch(levelstring) {
-                    case "1.- Básico":
-                        kgstext.setText("6-10 kgs");
-                        break;
-                    case "2.- En forma":
-                        kgstext.setText("12-14 kgs");
-                        break;
-                    case "3.- Atlético":
-                        kgstext.setText("16 kgs");
-                        break;
-                    case "4.- Fuerte":
-                        kgstext.setText("18-20 kgs");
-                        break;
-                    case "5.- Muy fuerte":
-                        kgstext.setText("22-26 kgs");
-                        break;
-                }
-                break;
-            case "Resistencia/Definición":
-                repstext.setText("16-20 reps");
-                switch(levelstring) {
-                    case "1.- Básico":
-                        kgstext.setText("1-5 kgs");
-                        break;
-                    case "2.- En forma":
-                        kgstext.setText("6-8 kgs");
-                        break;
-                    case "3.- Atlético":
-                        kgstext.setText("10 kgs");
-                        break;
-                    case "4.- Fuerte":
-                        kgstext.setText("12-14 kgs");
-                        break;
-                    case "5.- Muy fuerte":
-                        kgstext.setText("16-20 kgs");
-                        break;
-                }
-                break;
-        }
-
-
 
         //if exercise list (arraylist) hasnt been created, create it
         if(!listcreated) {
@@ -177,61 +107,115 @@ public class Activity2 extends AppCompatActivity {
             }.start();
 
 
-
-            // CHOOSE routine exercises number of each category (it doesnt repeat, it will be 4 if you say 5 exercises of biceps and db has only 4)
-            switch(timestring) {
-                case "15 min":
-                    createRoutineFull(0,1,0,0,0,0,0,0,0,1,0,0);
-                    createRoutineHalf("biceps","chest");
-                    createRoutineHalf("mid-back","upper-back");
-                    createRoutineHalf("deltoid","triceps");
-                    createRoutineHalf("forearm","calf");
-                    createRoutineHalf("glute","thigh");
-                    createRoutineHalf("abs","lumbar");
-                    createRoutineFifth("biceps", "chest", "upper-back", "mid-back", "deltoid");
-                    Collections.sort(exercisesList);
+            switch (bodystring){
+                case "Todo":
+                    // CHOOSE routine exercises number of each category (it doesnt repeat, it will be 4 if you say 5 exercises of biceps and db has only 4)
+                    switch(timestring) {
+                        case "15 min":
+                            createRoutineFull(0,1,0,0,0,0,0,0,0,1,0,0);
+                            createRoutineHalf("biceps","chest");
+                            createRoutineHalf("mid-back","upper-back");
+                            createRoutineHalf("deltoid","triceps");
+                            createRoutineHalf("forearm","calf");
+                            createRoutineHalf("glute","thigh");
+                            createRoutineHalf("abs","lumbar");
+                            createRoutineFifth("biceps", "chest", "upper-back", "mid-back", "deltoid");
+                            Collections.sort(exercisesList);
+                            break;
+                        case "30 min":
+                            createRoutineFull(1,1,1,1,1,0,1,1,1,1,1,1);
+                            createRoutineHalf("biceps","chest");
+                            createRoutineHalf("upper-back","mid-back");
+                            createRoutineHalf("deltoid","forearm");
+                            createRoutineThird("triceps","calf", "lumbar");
+                            createRoutineHalf("thigh","glute");
+                            Collections.sort(exercisesList);
+                            break;
+                        case "45 min":
+                            createRoutineFull(2,4,2,2,2,0,2,2,2,2,2,2);
+                            createRoutineHalf("thigh","calf");
+                            Collections.sort(exercisesList);
+                            break;
+                        case "1 h":
+                            createRoutineFull(3,4,3,3,3,0,3,3,2,3,2,3);
+                            createRoutineThird("triceps","calf", "lumbar");
+                            createRoutineThird("triceps","calf", "lumbar");
+                            Collections.sort(exercisesList);
+                            superserie(exercisesList);
+                            break;
+                        case "1 h 30 min":
+                            createRoutineFull(5,8,5,5,5,1,3,5,4,3,4,5);
+                            Collections.sort(exercisesList);
+                            superserie(exercisesList);
+                            break;
+                    }
                     break;
-                case "30 min":
-                    createRoutineFull(1,1,1,1,1,0,1,1,1,1,1,1);
-                    createRoutineHalf("biceps","chest");
-                    createRoutineHalf("upper-back","mid-back");
-                    createRoutineHalf("deltoid","forearm");
-                    createRoutineThird("triceps","calf", "lumbar");
-                    createRoutineHalf("thigh","glute");
-                    Collections.sort(exercisesList);
+                case "Superior":
+                    // CHOOSE routine exercises number of each category (it doesnt repeat, it will be 4 if you say 5 exercises of biceps and db has only 4)
+                    switch(timestring) {
+                        case "15 min":
+                            createRoutineFull(1,0,1,1,1,0,0,1,0,0,1,1);
+                            createRoutineThird("biceps","chest", "mid-back");
+                            Collections.sort(exercisesList);
+                            break;
+                        case "30 min":
+                            createRoutineFull(2,0,2,2,2,0,0,2,0,0,2,2);
+                            createRoutineHalf("triceps","upper-back");
+                            createRoutineThird("biceps","chest", "mid-back");
+                            createRoutineThird("biceps","chest", "mid-back");
+                            Collections.sort(exercisesList);
+                            break;
+                        case "45 min":
+                            createRoutineFull(4,0,3,4,3,0,0,4,0,0,3,3);
+                            createRoutineHalf("triceps","upper-back");
+                            Collections.sort(exercisesList);
+                            break;
+                        case "1 h":
+                            createRoutineFull(5,0,4,5,5,0,0,5,0,0,5,5);
+                            Collections.sort(exercisesList);
+                            break;
+                        case "1 h 30 min":
+                            createRoutineFull(7,0,6,7,7,0,0,7,0,0,7,7);
+                            createRoutineThird("biceps","chest", "mid-back");
+                            createRoutineFifth("triceps","upper-back", "biceps","chest", "mid-back");
+                            Collections.sort(exercisesList);
+                            break;
+                    }
                     break;
-                case "45 min":
-                    createRoutineFull(2,4,2,2,2,0,2,2,2,2,2,2);
-                    createRoutineHalf("thigh","calf");
-                    Collections.sort(exercisesList);
-                    break;
-                case "1 h":
-                    createRoutineFull(2,4,2,2,2,0,2,2,2,2,2,2);
-                    createRoutineHalf("biceps","chest");
-                    createRoutineHalf("upper-back","mid-back");
-                    createRoutineHalf("deltoid","forearm");
-                    createRoutineThird("triceps","calf", "lumbar");
-                    createRoutineHalf("thigh","glute");
-                    createRoutineHalf("biceps","chest");
-                    createRoutineHalf("upper-back","mid-back");
-                    createRoutineHalf("deltoid","forearm");
-                    createRoutineThird("triceps","calf", "lumbar");
-                    createRoutineHalf("thigh","glute");
-                    Collections.sort(exercisesList);
-                    break;
-                case "1 h 30 min":
-                    createRoutineFull(5,8,5,5,5,1,3,5,4,3,4,5);
-                    Collections.sort(exercisesList);
+                case "Inferior":
+                    // CHOOSE routine exercises number of each category (it doesnt repeat, it will be 4 if you say 5 exercises of biceps and db has only 4)
+                    switch(timestring) {
+                        case "15 min":
+                            createRoutineFull(0,2,0,0,0,1,2,0,1,2,0,0);
+                            Collections.sort(exercisesList);
+                            break;
+                        case "30 min":
+                            createRoutineFull(0,4,0,0,0,2,4,0,3,4,0,0);
+                            Collections.sort(exercisesList);
+                            break;
+                        case "45 min":
+                            createRoutineFull(0,6,0,0,0,3,6,0,4,6,0,0);
+                            Collections.sort(exercisesList);
+                            break;
+                        case "1 h":
+                            createRoutineFull(0,8,0,0,0,4,8,0,6,8,0,0);
+                            Collections.sort(exercisesList);
+                            break;
+                        case "1 h 30 min":
+                            createRoutineFull(0,12,0,0,0,6,12,0,9,12,0,0);
+                            Collections.sort(exercisesList);
+                            break;
+                    }
                     break;
             }
 
 
 
 
-        } else {
 
-            //get selected body part and level
-            levelstring = getIntent().getStringExtra("selectedLevel");
+
+
+        } else {
 
 
             String chronoCont = getIntent().getStringExtra("chronoText");
@@ -288,7 +272,82 @@ public class Activity2 extends AppCompatActivity {
 
         //539 and 479
 
+        // Set objective and level kgs and reps
+        TextView repstext = findViewById(R.id.textView8);
+        TextView kgstext = findViewById(R.id.textView7);
+        //get reps string[]
+        String reps[]= exercisesList.get(counter).getReps_obj().split("/");
 
+        switch(objectivestring) {
+            case "Salud/Hipertrofia":
+                //set reps
+                repstext.setText(reps[0]);
+                //get hip_weight[]
+                String hip_weight[]= exercisesList.get(counter).getHip_weight().split("/");
+                //set kgs
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(hip_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(hip_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(hip_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(hip_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(hip_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Volumen":
+                repstext.setText(reps[2]);
+                //get vol_weight[]
+                String vol_weight[]= exercisesList.get(counter).getVol_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(vol_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(vol_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(vol_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(vol_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(vol_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Resistencia/Definición":
+                repstext.setText(reps[1]);
+                //get res_weight[]
+                String res_weight[]= exercisesList.get(counter).getRes_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(res_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(res_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(res_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(res_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(res_weight[4]+" kgs");
+                        break;
+                }
+                break;
+        }
 
         //set CheckBox
         CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
@@ -354,6 +413,84 @@ public class Activity2 extends AppCompatActivity {
                     .load(exercisesList.get(counter).getPhoto_path())
                     .resize(539, 479)
                     .into(image);
+
+            // Set objective and level kgs and reps
+            TextView repstext = findViewById(R.id.textView8);
+            TextView kgstext = findViewById(R.id.textView7);
+            //get reps string[]
+            String reps[]= exercisesList.get(counter).getReps_obj().split("/");
+
+            switch(objectivestring) {
+                case "Salud/Hipertrofia":
+                    //set reps
+                    repstext.setText(reps[0]);
+                    //get hip_weight[]
+                    String hip_weight[]= exercisesList.get(counter).getHip_weight().split("/");
+                    //set kgs
+                    switch(levelstring) {
+                        case "1.- Básico":
+                            kgstext.setText(hip_weight[0]+" kgs");
+                            break;
+                        case "2.- En forma":
+                            kgstext.setText(hip_weight[1]+" kgs");
+                            break;
+                        case "3.- Atlético":
+                            kgstext.setText(hip_weight[2]+" kgs");
+                            break;
+                        case "4.- Fuerte":
+                            kgstext.setText(hip_weight[3]+" kgs");
+                            break;
+                        case "5.- Muy fuerte":
+                            kgstext.setText(hip_weight[4]+" kgs");
+                            break;
+                    }
+                    break;
+                case "Volumen":
+                    repstext.setText(reps[2]);
+                    //get vol_weight[]
+                    String vol_weight[]= exercisesList.get(counter).getVol_weight().split("/");
+                    switch(levelstring) {
+                        case "1.- Básico":
+                            kgstext.setText(vol_weight[0]+" kgs");
+                            break;
+                        case "2.- En forma":
+                            kgstext.setText(vol_weight[1]+" kgs");
+                            break;
+                        case "3.- Atlético":
+                            kgstext.setText(vol_weight[2]+" kgs");
+                            break;
+                        case "4.- Fuerte":
+                            kgstext.setText(vol_weight[3]+" kgs");
+                            break;
+                        case "5.- Muy fuerte":
+                            kgstext.setText(vol_weight[4]+" kgs");
+                            break;
+                    }
+                    break;
+                case "Resistencia/Definición":
+                    repstext.setText(reps[1]);
+                    //get res_weight[]
+                    String res_weight[]= exercisesList.get(counter).getRes_weight().split("/");
+                    switch(levelstring) {
+                        case "1.- Básico":
+                            kgstext.setText(res_weight[0]+" kgs");
+                            break;
+                        case "2.- En forma":
+                            kgstext.setText(res_weight[1]+" kgs");
+                            break;
+                        case "3.- Atlético":
+                            kgstext.setText(res_weight[2]+" kgs");
+                            break;
+                        case "4.- Fuerte":
+                            kgstext.setText(res_weight[3]+" kgs");
+                            break;
+                        case "5.- Muy fuerte":
+                            kgstext.setText(res_weight[4]+" kgs");
+                            break;
+                    }
+                    break;
+            }
+
             //set CheckBox
             CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
             if (exercisesList.get(counter).getDone()==1){
@@ -384,6 +521,84 @@ public class Activity2 extends AppCompatActivity {
                     .load(exercisesList.get(counter).getPhoto_path())
                     .resize(539, 479)
                     .into(image);
+
+            // Set objective and level kgs and reps
+            TextView repstext = findViewById(R.id.textView8);
+            TextView kgstext = findViewById(R.id.textView7);
+            //get reps string[]
+            String reps[]= exercisesList.get(counter).getReps_obj().split("/");
+
+            switch(objectivestring) {
+                case "Salud/Hipertrofia":
+                    //set reps
+                    repstext.setText(reps[0]);
+                    //get hip_weight[]
+                    String hip_weight[]= exercisesList.get(counter).getHip_weight().split("/");
+                    //set kgs
+                    switch(levelstring) {
+                        case "1.- Básico":
+                            kgstext.setText(hip_weight[0]+" kgs");
+                            break;
+                        case "2.- En forma":
+                            kgstext.setText(hip_weight[1]+" kgs");
+                            break;
+                        case "3.- Atlético":
+                            kgstext.setText(hip_weight[2]+" kgs");
+                            break;
+                        case "4.- Fuerte":
+                            kgstext.setText(hip_weight[3]+" kgs");
+                            break;
+                        case "5.- Muy fuerte":
+                            kgstext.setText(hip_weight[4]+" kgs");
+                            break;
+                    }
+                    break;
+                case "Volumen":
+                    repstext.setText(reps[2]);
+                    //get vol_weight[]
+                    String vol_weight[]= exercisesList.get(counter).getVol_weight().split("/");
+                    switch(levelstring) {
+                        case "1.- Básico":
+                            kgstext.setText(vol_weight[0]+" kgs");
+                            break;
+                        case "2.- En forma":
+                            kgstext.setText(vol_weight[1]+" kgs");
+                            break;
+                        case "3.- Atlético":
+                            kgstext.setText(vol_weight[2]+" kgs");
+                            break;
+                        case "4.- Fuerte":
+                            kgstext.setText(vol_weight[3]+" kgs");
+                            break;
+                        case "5.- Muy fuerte":
+                            kgstext.setText(vol_weight[4]+" kgs");
+                            break;
+                    }
+                    break;
+                case "Resistencia/Definición":
+                    repstext.setText(reps[1]);
+                    //get res_weight[]
+                    String res_weight[]= exercisesList.get(counter).getRes_weight().split("/");
+                    switch(levelstring) {
+                        case "1.- Básico":
+                            kgstext.setText(res_weight[0]+" kgs");
+                            break;
+                        case "2.- En forma":
+                            kgstext.setText(res_weight[1]+" kgs");
+                            break;
+                        case "3.- Atlético":
+                            kgstext.setText(res_weight[2]+" kgs");
+                            break;
+                        case "4.- Fuerte":
+                            kgstext.setText(res_weight[3]+" kgs");
+                            break;
+                        case "5.- Muy fuerte":
+                            kgstext.setText(res_weight[4]+" kgs");
+                            break;
+                    }
+                    break;
+            }
+
             //set CheckBox
             CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
             if (exercisesList.get(counter).getDone()==1){
@@ -415,6 +630,84 @@ public class Activity2 extends AppCompatActivity {
                 .load(exercisesList.get(counter).getPhoto_path())
                 .resize(539, 479)
                 .into(image);
+
+        // Set objective and level kgs and reps
+        TextView repstext = findViewById(R.id.textView8);
+        TextView kgstext = findViewById(R.id.textView7);
+        //get reps string[]
+        String reps[]= exercisesList.get(counter).getReps_obj().split("/");
+
+        switch(objectivestring) {
+            case "Salud/Hipertrofia":
+                //set reps
+                repstext.setText(reps[0]);
+                //get hip_weight[]
+                String hip_weight[]= exercisesList.get(counter).getHip_weight().split("/");
+                //set kgs
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(hip_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(hip_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(hip_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(hip_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(hip_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Volumen":
+                repstext.setText(reps[2]);
+                //get vol_weight[]
+                String vol_weight[]= exercisesList.get(counter).getVol_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(vol_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(vol_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(vol_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(vol_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(vol_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Resistencia/Definición":
+                repstext.setText(reps[1]);
+                //get res_weight[]
+                String res_weight[]= exercisesList.get(counter).getRes_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(res_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(res_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(res_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(res_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(res_weight[4]+" kgs");
+                        break;
+                }
+                break;
+        }
+
         //set CheckBox
         CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
         if (exercisesList.get(counter).getDone()==1){
@@ -444,6 +737,84 @@ public class Activity2 extends AppCompatActivity {
                 .load(exercisesList.get(counter).getPhoto_path())
                 .resize(539, 479)
                 .into(image);
+
+        // Set objective and level kgs and reps
+        TextView repstext = findViewById(R.id.textView8);
+        TextView kgstext = findViewById(R.id.textView7);
+        //get reps string[]
+        String reps[]= exercisesList.get(counter).getReps_obj().split("/");
+
+        switch(objectivestring) {
+            case "Salud/Hipertrofia":
+                //set reps
+                repstext.setText(reps[0]);
+                //get hip_weight[]
+                String hip_weight[]= exercisesList.get(counter).getHip_weight().split("/");
+                //set kgs
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(hip_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(hip_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(hip_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(hip_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(hip_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Volumen":
+                repstext.setText(reps[2]);
+                //get vol_weight[]
+                String vol_weight[]= exercisesList.get(counter).getVol_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(vol_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(vol_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(vol_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(vol_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(vol_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Resistencia/Definición":
+                repstext.setText(reps[1]);
+                //get res_weight[]
+                String res_weight[]= exercisesList.get(counter).getRes_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(res_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(res_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(res_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(res_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(res_weight[4]+" kgs");
+                        break;
+                }
+                break;
+        }
+
         //set CheckBox
         CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
         if (exercisesList.get(counter).getDone()==1){
@@ -475,6 +846,84 @@ public class Activity2 extends AppCompatActivity {
                 .load(exercisesList.get(counter).getPhoto_path())
                 .resize(539, 479)
                 .into(image);
+
+        // Set objective and level kgs and reps
+        TextView repstext = findViewById(R.id.textView8);
+        TextView kgstext = findViewById(R.id.textView7);
+        //get reps string[]
+        String reps[]= exercisesList.get(counter).getReps_obj().split("/");
+
+        switch(objectivestring) {
+            case "Salud/Hipertrofia":
+                //set reps
+                repstext.setText(reps[0]);
+                //get hip_weight[]
+                String hip_weight[]= exercisesList.get(counter).getHip_weight().split("/");
+                //set kgs
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(hip_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(hip_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(hip_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(hip_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(hip_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Volumen":
+                repstext.setText(reps[2]);
+                //get vol_weight[]
+                String vol_weight[]= exercisesList.get(counter).getVol_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(vol_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(vol_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(vol_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(vol_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(vol_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Resistencia/Definición":
+                repstext.setText(reps[1]);
+                //get res_weight[]
+                String res_weight[]= exercisesList.get(counter).getRes_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(res_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(res_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(res_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(res_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(res_weight[4]+" kgs");
+                        break;
+                }
+                break;
+        }
+
         //set CheckBox
         CheckBox checkb = (CheckBox) findViewById(R.id.checkBox);
         if (exercisesList.get(counter).getDone()==1){
@@ -490,7 +939,7 @@ public class Activity2 extends AppCompatActivity {
     public void createRoutineFull (int biceps, int abs, int forearm, int chest, int deltoid, int calf, int glute, int midBack, int lumbar, int thigh, int triceps, int upperBack) {
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 25);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
 
@@ -519,9 +968,15 @@ public class Activity2 extends AppCompatActivity {
         String muscle12 = "upper-back";
         String muscle12count = Integer.toString(upperBack);
 
+        String query="";
         //BICEPS
-        //SQL binding (attacks from here?¿?¿)
-        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' ORDER BY RANDOM() LIMIT "+muscle1count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle1count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' ORDER BY RANDOM() LIMIT "+muscle1count;
+        }
+
         Cursor c = db.rawQuery(query, null);
         //add exercises to array list
         if (c.moveToFirst()) {
@@ -534,7 +989,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //ABS
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT "+muscle2count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle2+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle2count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT "+muscle2count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -545,7 +1005,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //FOREARM
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT "+muscle3count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle3+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle3count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT "+muscle3count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -556,7 +1021,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //CHEST
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT "+muscle4count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle4+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle4count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT "+muscle4count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -567,7 +1037,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //DELTOID
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT "+muscle5count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle5+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle5count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT "+muscle5count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -578,7 +1053,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //CALF
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle6+"' ORDER BY RANDOM() LIMIT "+muscle6count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle6+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle6count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle6+"' ORDER BY RANDOM() LIMIT "+muscle6count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -589,7 +1069,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //GLUTE
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle7+"' ORDER BY RANDOM() LIMIT "+muscle7count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle7+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle7count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle7+"' ORDER BY RANDOM() LIMIT "+muscle7count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -600,7 +1085,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //MID-BACK
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle8+"' ORDER BY RANDOM() LIMIT "+muscle8count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle8+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle8count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle8+"' ORDER BY RANDOM() LIMIT "+muscle8count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -611,7 +1101,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //LUMBAR
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle9+"' ORDER BY RANDOM() LIMIT "+muscle9count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle9+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle9count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle9+"' ORDER BY RANDOM() LIMIT "+muscle9count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -622,7 +1117,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //THIGH
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle10+"' ORDER BY RANDOM() LIMIT "+muscle10count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle10+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle10count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle10+"' ORDER BY RANDOM() LIMIT "+muscle10count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -633,7 +1133,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //TRICEPS
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle11+"' ORDER BY RANDOM() LIMIT "+muscle11count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle11+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle11count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle11+"' ORDER BY RANDOM() LIMIT "+muscle11count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -644,7 +1149,12 @@ public class Activity2 extends AppCompatActivity {
         }
 
         //UPPER-BACK
-        query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle12+"' ORDER BY RANDOM() LIMIT "+muscle12count;
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle12+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle12count;
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle12+"' ORDER BY RANDOM() LIMIT "+muscle12count;
+        }
         c = db.rawQuery(query, null);
         if (c.moveToFirst()) {
             //go over cursor until the end
@@ -660,12 +1170,20 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 25);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Half
-        //SQL binding (attacks from here?¿?¿)
-        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT 1";
+        String query="";
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"') AND level LIKE '' ORDER BY RANDOM() LIMIT 1";
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT 1";
+        }
+
+
         Cursor c = db.rawQuery(query, null);
         //add exercises to array list
         if (c.moveToFirst()) {
@@ -683,12 +1201,18 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 25);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
-        //SQL binding (attacks from here?¿?¿)
-        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT 1";
+        String query="";
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"') AND level LIKE '' ORDER BY RANDOM() LIMIT 1";
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT 1";
+        }
+
         Cursor c = db.rawQuery(query, null);
         //add exercises to array list
         if (c.moveToFirst()) {
@@ -706,12 +1230,18 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 25);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
-        //Third
-        //SQL binding (attacks from here?¿?¿)
-        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT 1";
+        //Fourth
+        String query="";
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"') AND level LIKE '' ORDER BY RANDOM() LIMIT 1";
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT 1";
+        }
+
         Cursor c = db.rawQuery(query, null);
         //add exercises to array list
         if (c.moveToFirst()) {
@@ -730,12 +1260,18 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 25);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
-        //Third
-        //SQL binding (attacks from here?¿?¿)
-        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' OR muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT 1";
+        //Fifth
+        String query="";
+        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' OR muscle_zone LIKE '"+muscle5+"') AND level LIKE '' ORDER BY RANDOM() LIMIT 1";
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' OR muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT 1";
+        }
+
         Cursor c = db.rawQuery(query, null);
         //add exercises to array list
         if (c.moveToFirst()) {
@@ -755,16 +1291,21 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 24);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 25);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
         String exerciseName = exercisesList.get(index).getName();
         String exerciseCategory = exercisesList.get(index).getMuscle_zone();
 
-
+        String query="";
         //find a new exercise (different from that and not existing in the list)
-        String query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+exerciseCategory+"' AND name NOT IN ('"+exerciseName+"') ORDER BY RANDOM() LIMIT 1";
+        if(objectivestring.equals("Resistencia/Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+exerciseCategory+"'AND level LIKE '' AND name NOT IN ('"+exerciseName+"') ORDER BY RANDOM() LIMIT 1";
+        }else{
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+exerciseCategory+"' AND name NOT IN ('"+exerciseName+"') ORDER BY RANDOM() LIMIT 1";
+        }
+
         Cursor c = db.rawQuery(query, null);
         //change exercise
         if (c.moveToFirst()) {
@@ -791,6 +1332,84 @@ public class Activity2 extends AppCompatActivity {
                 .resize(539, 479)
                 .into(image);
 
+        // Set objective and level kgs and reps
+        TextView repstext = findViewById(R.id.textView8);
+        TextView kgstext = findViewById(R.id.textView7);
+        //get reps string[]
+        String reps[]= exercisesList.get(counter).getReps_obj().split("/");
+
+        switch(objectivestring) {
+            case "Salud/Hipertrofia":
+                //set reps
+                repstext.setText(reps[0]);
+                //get hip_weight[]
+                String hip_weight[]= exercisesList.get(counter).getHip_weight().split("/");
+                //set kgs
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(hip_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(hip_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(hip_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(hip_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(hip_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Volumen":
+                repstext.setText(reps[2]);
+                //get vol_weight[]
+                String vol_weight[]= exercisesList.get(counter).getVol_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(vol_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(vol_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(vol_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(vol_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(vol_weight[4]+" kgs");
+                        break;
+                }
+                break;
+            case "Resistencia/Definición":
+                repstext.setText(reps[1]);
+                //get res_weight[]
+                String res_weight[]= exercisesList.get(counter).getRes_weight().split("/");
+                switch(levelstring) {
+                    case "1.- Básico":
+                        kgstext.setText(res_weight[0]+" kgs");
+                        break;
+                    case "2.- En forma":
+                        kgstext.setText(res_weight[1]+" kgs");
+                        break;
+                    case "3.- Atlético":
+                        kgstext.setText(res_weight[2]+" kgs");
+                        break;
+                    case "4.- Fuerte":
+                        kgstext.setText(res_weight[3]+" kgs");
+                        break;
+                    case "5.- Muy fuerte":
+                        kgstext.setText(res_weight[4]+" kgs");
+                        break;
+                }
+                break;
+        }
+
+
     }
 
     public void markDone(View view) {
@@ -813,5 +1432,100 @@ public class Activity2 extends AppCompatActivity {
 
     }
 
+
+    public void superserie(ArrayList<Exercise> exercisesList2){
+        //"superserie" biceps-chest
+        int idx_biceps = 0;
+        int idx_last_biceps = -1;
+        boolean firstbiceps = false;
+        int idx_chest = 0;
+        int idx_last_chest = -1;
+        boolean done = false;
+        boolean nextbiceps = true;
+        boolean nextchest = true;
+        boolean changed = false;
+        boolean firstchange = false;
+        int idx_limit = 100000;
+        int swaps_counter = 0;
+
+
+        //while there's more exercises continue swapping
+        while(nextbiceps && nextchest){
+            //find next biceps
+            //go over all the list, get nextbiceps idx
+            for (Exercise tempexercise : exercisesList2) {
+                if(tempexercise.getMuscle_zone().equals("biceps") && idx_biceps > idx_last_biceps){
+                    if(idx_limit == idx_biceps){
+                        if(exercisesList2.get(idx_limit-1).getMuscle_zone().equals("biceps")){
+                            int position1 =idx_limit;
+                            int position2 =idx_limit+1;
+                            while(swaps_counter != 0){
+                                Collections.swap(exercisesList2, position1, position2);
+                                position1 = position1+2;
+                                position2 = position2 +2;
+                                swaps_counter--;
+                            }
+
+                        }else{
+                            break;
+                        }
+                    }
+                    if(!firstbiceps){
+                        firstbiceps = true;
+                        idx_biceps++;
+                    }else{
+                        changed = true;
+                        idx_last_biceps = idx_biceps;
+                        firstbiceps = false;
+                        break;
+                    }
+
+                }else{
+                    idx_biceps++;
+                }
+            }
+            if(!changed){
+                nextbiceps = false;
+            }else{
+                changed = false;
+            }
+            //find next chest
+            //go over all the list, get nextbiceps idx
+            for (Exercise tempexercise : exercisesList2) {
+                if(tempexercise.getMuscle_zone().equals("chest") && idx_chest > idx_last_chest){
+                    changed = true;
+                    idx_last_chest = idx_chest;
+                    break;
+                }else{
+                    idx_chest++;
+                }
+            }
+            if(!changed){
+                nextchest = false;
+            }else{
+                changed = false;
+            }
+            if(nextbiceps && nextchest){
+                Collections.swap(exercisesList2, idx_biceps, idx_chest);
+                swaps_counter++;
+                idx_last_chest = idx_biceps;
+            }
+            if(!firstchange){
+               idx_limit = idx_chest;
+               firstchange = true;
+            }
+            idx_biceps = 0;
+            idx_chest = 0;
+
+        }
+        //search chest idx
+        //while ()
+
+
+        //"superserie" deltoid mid-back
+
+        //"superserie" upper-back and triceps
+
+    }
 
 }

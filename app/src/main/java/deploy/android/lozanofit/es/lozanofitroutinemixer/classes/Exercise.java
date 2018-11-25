@@ -221,10 +221,10 @@ public class Exercise implements Parcelable, Comparable {
             case "upper-back":
                 thisorder = 5;
                 break;
-            case "forearm":
+            case "triceps":
                 thisorder = 6;
                 break;
-            case "triceps":
+            case "forearm":
                 thisorder = 7;
                 break;
             case "lumbar":
@@ -259,10 +259,10 @@ public class Exercise implements Parcelable, Comparable {
             case "upper-back":
                 compareorder = 5;
                 break;
-            case "forearm":
+            case "triceps":
                 compareorder = 6;
                 break;
-            case "triceps":
+            case "forearm":
                 compareorder = 7;
                 break;
             case "lumbar":

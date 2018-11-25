@@ -521,7 +521,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         vol_weight = "0/0/0/0/0";
                         break;
                     case 46:
-                        name = "Elevacion Frontal de Mancuerna";
+                        name = "Mancuerna Elevacion Frontal";
                         photo_path = "https://lh3.googleusercontent.com/ChuJha1AaU4qw5n3GICZnBXCk476NopfphD45EDOA2K0Q2zFLC7fYVj83cDlHpMqUpZZq2oGwdRMoZ57CKIEwnui5WJ7Shw2EOqLKT1ZjAdNaCpRbi3PWeUoebnM5FS61BvqFNg-sdDaQ58GYkerNm1LI1-coBkv2hZyFFuF6pm1WmkVnBAjFTfcgsTO0qEbW9avhpzczJpPOOL_4EKrlxTFDORwGsnYt0YzC1sW4aORNZo-RU6QBGBMSRI7yjWrxgKRRdvURuqs4iD1KmN__t0fmu1LOuxit3a_YUbhZkXEFgSbY8GYCS0rCGL_v6My7xyxGOIHXvc0z7wQFjycSZKao1Kh_dBAaaEdES0CTv5QMpdOnhgOe9o9IQXW0v67pA4WNF2_IHi1PaaxhsuzKW4eta8mKIcFPtWDBmpXbqI_ymtVSMVD2rnT8B6APE0lCR61h7iWKz_V2YmD3lwlLelOzpjBqVcR1HTNGmbFbpMgo8vegWBTAV6-znPrmfLYnObT3cqaaqSiuLtSDfFFDu-66uDN50b4caliQ6M__69fE06wOYoyHo7t1YRD76fZPV50IIksOBv0HEEPIhqOZUbfyTldDDSMewIygNSWJGBHUklrlqvloaOlEfbMQ8zI_OqSKzDCm-o1OeyD-hVP2LC-CAOKJzSHjz96oqmqo2EdbE3IwoXICK7a=w713-h632-no";
                         video_path = "https://media.giphy.com/media/vRMlxt9czytSmsEnn7/giphy.gif";
                         description = "-Espalda recta, piernas semiflex.\n-Brazos rectos fijos\n-Subir mancuerna (límite sin forzar)\n-No balancearse";
@@ -1013,7 +1013,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         vol_weight = "17.5/22.5/25/27.5/32.5";
                         break;
                     case 95:
-                        name = "Extension Polea Manos Abiertas";
+                        name = "Ext. Polea Manos Abiertas";
                         photo_path = "https://lh3.googleusercontent.com/yc5Cbn_RjVHo9x4U4cbCZcBZ_U4RDFAWGug4zvyCNlx_nuaHfCc5BadxaWK55h9ph9SlU-8yZnoBFuVl2N8OJFen5vQUjFZF90FG7hlT5o--S1rEuw4vA8hqQAvBjCq-GqOk-oYMuuX-v4q8fIAxyNYOLkvxYmjKoVzjVRsbEcgo5g5xxp9_8xn_EZVflDSWlSEidq25goAS6rpoLmJeW0z4M4hLXLkT5x_NajQFrbsxyUE0TQ9tNTgcIQnA6Svqk6-PcqE-Yzcl4l00zUkhCOw4Z1QVYNsGgKhKtAo4tF1UVNeNuWMmP8NRJyPH-_Vq713cchDarC4gK9mFMn4JAhZfM0cHUDvVJ9TN-fj-Y4OEqxiSHWTh5vrZu7ySn_a2EdgxoHcIRXolbWmP4_QfqSFaX8E2zYJCjdjxhGPNDnsvNQdYMF6pLPpbQb4FSHa4jmAMip47kWpd67xCr_R-XizCmVKywoN8D3QKUsaVu7zeAs9k3MppcijrFzKqC8jsHTvLAuT7B4iukcIeBMKb2ePWM3QCWZ74Yls6IGD3wi3ZIFuacu0Jm_fy8P23W6zzXUJLij6pX977As_ZgePY1Lay3uT3jEY3Yhqe2nixJXs5LtCasWdCDSN6cdw1CJYR5xZnvV-Kfb0cwFKstrNd8SJz2_WyqqDTgylWnhzLjhdjr6F-8EUWD8Uu=w713-h632-no";
                         video_path = "https://media.giphy.com/media/30pMgYTJWUImJK5ykv/giphy.gif";
                         description = "-Manos abiertas\n-Codos pegados\n-Espalda recta, piernas semiflexionadas\n-No balanceo\n-Movimiento controlado";
@@ -1093,7 +1093,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         vol_weight = "0/0/0/0/0";
                         break;
                     case 103:
-                        name = "Subescapular con Goma Elastica";
+                        name = "Subescapular Goma Elastica";
                         photo_path = "https://lh3.googleusercontent.com/OUXLEojbdLdTYpozHqm9LKv6yptF1TttYX4MrQkuKRaSbUNH9B3uhSLFbTr5u8MhRMJ616GTb6ERAzFJyqUUHVVmwXuL0pygIAL4zzAZc3C4hVctX0juE7bXJQFAM6I5x4HRrirF-GcfGJrTw7rwac3WwSXSDEWBwzcGW3PTRMOgDzaINhr0iUjaKOuPlvwW9qtlWAx6p286pfvsgFfVeqvTsE5aXR5otUp8v89rfDJbn0dJSnwoAGoRj2PAduzwkBus5BVWtXsn4-Mqy5mb2GW2J3sL_7TbemyIIj3oiOWigpGiAQXj9ZZ99CvbAHIGqAD9gQ_BIsLt0xcvUMJ7KUDx3ZsAyzMfzl7BMkORFbgMJJLuZdT82moCfQ2VibgB_8jxQ1h7UJ7WvT86ODRTKwEugcywfuous52bIgKORaOi-6NyhTwBDb6TjJbzMU2XGAghBz25eoWBou6RIsuplMY4p1N0mpix2pIE7JoypaGSIIvmnhL5sgiqAAhMYOztsp674Hbmm7IIg6mreS7Ulv9YLyLRpNjH59etI559qu2gN71ypWLMIGi73m0LJgmLTbno4T4AZ3SgMnuIXkQiXZ3abuZqg8HZP9gRs1vWiTO9Qy3syOIArZ8dsPjvpv3pMlLrimJfPF32TYR_yjFDziLTMkvn5BoqnVFBWSUf95QWMqClX1U8JRLe=w713-h632-no";
                         video_path = "https://media.giphy.com/media/9A34Cep8gjmptKTkqf/giphy.gif";
                         description = "-Hombro 90º codo 90º (inicio)\n-Ir a tocar la cadera contraria\n-Progresivo, vuelta controlada\n-Tensión inicial de goma, no balanceo\n-Nivel alto: +separación y goma +dura";
@@ -1618,7 +1618,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         vol_weight = "0/0/0/0/0";
                         break;
                     case 46:
-                        name = "Elevacion Frontal de Mancuerna";
+                        name = "Mancuerna Elevacion Frontal";
                         photo_path = "https://lh3.googleusercontent.com/ChuJha1AaU4qw5n3GICZnBXCk476NopfphD45EDOA2K0Q2zFLC7fYVj83cDlHpMqUpZZq2oGwdRMoZ57CKIEwnui5WJ7Shw2EOqLKT1ZjAdNaCpRbi3PWeUoebnM5FS61BvqFNg-sdDaQ58GYkerNm1LI1-coBkv2hZyFFuF6pm1WmkVnBAjFTfcgsTO0qEbW9avhpzczJpPOOL_4EKrlxTFDORwGsnYt0YzC1sW4aORNZo-RU6QBGBMSRI7yjWrxgKRRdvURuqs4iD1KmN__t0fmu1LOuxit3a_YUbhZkXEFgSbY8GYCS0rCGL_v6My7xyxGOIHXvc0z7wQFjycSZKao1Kh_dBAaaEdES0CTv5QMpdOnhgOe9o9IQXW0v67pA4WNF2_IHi1PaaxhsuzKW4eta8mKIcFPtWDBmpXbqI_ymtVSMVD2rnT8B6APE0lCR61h7iWKz_V2YmD3lwlLelOzpjBqVcR1HTNGmbFbpMgo8vegWBTAV6-znPrmfLYnObT3cqaaqSiuLtSDfFFDu-66uDN50b4caliQ6M__69fE06wOYoyHo7t1YRD76fZPV50IIksOBv0HEEPIhqOZUbfyTldDDSMewIygNSWJGBHUklrlqvloaOlEfbMQ8zI_OqSKzDCm-o1OeyD-hVP2LC-CAOKJzSHjz96oqmqo2EdbE3IwoXICK7a=w713-h632-no";
                         video_path = "https://media.giphy.com/media/vRMlxt9czytSmsEnn7/giphy.gif";
                         description = "-Espalda recta, piernas semiflex.\n-Brazos rectos fijos\n-Subir mancuerna (límite sin forzar)\n-No balancearse";
@@ -2110,7 +2110,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         vol_weight = "17.5/22.5/25/27.5/32.5";
                         break;
                     case 95:
-                        name = "Extension Polea Manos Abiertas";
+                        name = "Ext. Polea Manos Abiertas";
                         photo_path = "https://lh3.googleusercontent.com/yc5Cbn_RjVHo9x4U4cbCZcBZ_U4RDFAWGug4zvyCNlx_nuaHfCc5BadxaWK55h9ph9SlU-8yZnoBFuVl2N8OJFen5vQUjFZF90FG7hlT5o--S1rEuw4vA8hqQAvBjCq-GqOk-oYMuuX-v4q8fIAxyNYOLkvxYmjKoVzjVRsbEcgo5g5xxp9_8xn_EZVflDSWlSEidq25goAS6rpoLmJeW0z4M4hLXLkT5x_NajQFrbsxyUE0TQ9tNTgcIQnA6Svqk6-PcqE-Yzcl4l00zUkhCOw4Z1QVYNsGgKhKtAo4tF1UVNeNuWMmP8NRJyPH-_Vq713cchDarC4gK9mFMn4JAhZfM0cHUDvVJ9TN-fj-Y4OEqxiSHWTh5vrZu7ySn_a2EdgxoHcIRXolbWmP4_QfqSFaX8E2zYJCjdjxhGPNDnsvNQdYMF6pLPpbQb4FSHa4jmAMip47kWpd67xCr_R-XizCmVKywoN8D3QKUsaVu7zeAs9k3MppcijrFzKqC8jsHTvLAuT7B4iukcIeBMKb2ePWM3QCWZ74Yls6IGD3wi3ZIFuacu0Jm_fy8P23W6zzXUJLij6pX977As_ZgePY1Lay3uT3jEY3Yhqe2nixJXs5LtCasWdCDSN6cdw1CJYR5xZnvV-Kfb0cwFKstrNd8SJz2_WyqqDTgylWnhzLjhdjr6F-8EUWD8Uu=w713-h632-no";
                         video_path = "https://media.giphy.com/media/30pMgYTJWUImJK5ykv/giphy.gif";
                         description = "-Manos abiertas\n-Codos pegados\n-Espalda recta, piernas semiflexionadas\n-No balanceo\n-Movimiento controlado";
@@ -2190,7 +2190,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         vol_weight = "0/0/0/0/0";
                         break;
                     case 103:
-                        name = "Subescapular con Goma Elastica";
+                        name = "Subescapular Goma Elastica";
                         photo_path = "https://lh3.googleusercontent.com/OUXLEojbdLdTYpozHqm9LKv6yptF1TttYX4MrQkuKRaSbUNH9B3uhSLFbTr5u8MhRMJ616GTb6ERAzFJyqUUHVVmwXuL0pygIAL4zzAZc3C4hVctX0juE7bXJQFAM6I5x4HRrirF-GcfGJrTw7rwac3WwSXSDEWBwzcGW3PTRMOgDzaINhr0iUjaKOuPlvwW9qtlWAx6p286pfvsgFfVeqvTsE5aXR5otUp8v89rfDJbn0dJSnwoAGoRj2PAduzwkBus5BVWtXsn4-Mqy5mb2GW2J3sL_7TbemyIIj3oiOWigpGiAQXj9ZZ99CvbAHIGqAD9gQ_BIsLt0xcvUMJ7KUDx3ZsAyzMfzl7BMkORFbgMJJLuZdT82moCfQ2VibgB_8jxQ1h7UJ7WvT86ODRTKwEugcywfuous52bIgKORaOi-6NyhTwBDb6TjJbzMU2XGAghBz25eoWBou6RIsuplMY4p1N0mpix2pIE7JoypaGSIIvmnhL5sgiqAAhMYOztsp674Hbmm7IIg6mreS7Ulv9YLyLRpNjH59etI559qu2gN71ypWLMIGi73m0LJgmLTbno4T4AZ3SgMnuIXkQiXZ3abuZqg8HZP9gRs1vWiTO9Qy3syOIArZ8dsPjvpv3pMlLrimJfPF32TYR_yjFDziLTMkvn5BoqnVFBWSUf95QWMqClX1U8JRLe=w713-h632-no";
                         video_path = "https://media.giphy.com/media/9A34Cep8gjmptKTkqf/giphy.gif";
                         description = "-Hombro 90º codo 90º (inicio)\n-Ir a tocar la cadera contraria\n-Progresivo, vuelta controlada\n-Tensión inicial de goma, no balanceo\n-Nivel alto: +separación y goma +dura";
