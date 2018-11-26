@@ -16,7 +16,7 @@
         android:fontFamily="@font/freshman"
         android:text="Informacion"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="10pt"
+        android:textSize="14pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
