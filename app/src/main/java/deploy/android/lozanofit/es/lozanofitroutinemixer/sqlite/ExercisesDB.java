@@ -24,7 +24,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
         //if db is opened correctly (COPIED FROM ONCREATE METHOD ABOVE MUST BE THE SAME!!!)
         if (db != null) {
             //Insert 103 exercises
-            for (int i = 1; i <= 103; i++) {
+            for (int i = 1; i <= 150; i++) {
                 //Create data
                 int id = i;
                 String name = "";
@@ -247,27 +247,27 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "straight";
                         break;
                     case 20:
-                        name = "Piernas Estiradas en Barra";
-                        photo_path = "https://lh3.googleusercontent.com/p5XGJpgc8kmezFEDvhgAG_j8L4lXnhEZjibgCdAf9H5bZE5xQMK_IEO4-9D2dPW8M2UvUuauluIdwsnCUpXaOenFmz3qIMoP-reflbWu1a1pIGXlBEI00aeChT2Tneh6uRrb9KzxXafjrmrc9RMNcoPrNBLfmXweN5etj7C0fpdnzfswnuHIWuSRtvO2gRkH4g6KQN-g5NCeuHZjD7pq-ORSi1PEY3YcT_8-7tDJFDmpIMNUQGZyjJVZO9uELxxd6m9bCVemT2Q3dEK7_btdR31-9YPaHl2rPktiwu1es_xplisxk3N9FritUfxk4ormr6iBowXYuchQTw0qR6dEJ1j2mS2iY87-q_fefUzATXH-xJBEkNw0bOavOZR7Y-XeRIPIzsTX-4_MNeztcn0dbTr_ia9oxw3NLiscKPYip_7u7nRDI1Or7yKRXmVUBv5T5d0gzcnK1B9jknKiLv8z7x_vid9cc8_FAUpmkQZCK2m64mkNiL39G2GK58Kisez6viOv_uqArmS5dNPRk3JQFrR9CbRfnAI-U9mE7AYmaDVEFhFYt90vdhsAtEp1FpRI_M_sUHLR_VOj3YpYCgVtTCKGmXw06AV0KKHatD242stizYxzOmiUjeDoZ-TW7jVhjcDofC4UXSOtLuQJ6WowiKcdBNvcxYI95Z2Gz0v2285pVyBnxtezxG5T=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/QJHwM8DUV6nwM8Zivx/giphy.gif";
-                        description = "-Agarrado brazos estirados en barra\n-Posición inicial piernas estiradas\n-Impulso de cadera\n-Resto del cuerpo fijo\n-Peso lastre";
+                        name = "Pies a la Barra";
+                        photo_path = "https://lh3.googleusercontent.com/WrDUMaomMIRl5eAiLxWzkL0IoY8U4_HJ5ZhS4c7LKIg7jcHt3mUHVkuAlWGsgRW_XML-3FwbdokGyg4vzTu-xY95yyhyokF52Lgo7O7CAmGwygrKNY8jpcPRFvmbMBbmXnsj69JeBwhyeXMWsafjFI21trZelSPlGXpSUI-YIC_SJ8w_PvIkSA2YxJcqibyhyzc820krjnGnFdv1_ZluodLEld2M1LyJQnZgohYVVs_SkS5BqsdqlipSGcpzlLIi1TamXlf_AvpANfux5dkdC8CxTd5pGnINSUJ2E2GTtcL372eUYU0R7uBiSmvPQGhjjwSQ0B5ESkVo2AUJwjFMdmjOQYpK7BWqU1d4pgm1AqcwwtP51hGqyDnOh-2lNlw11NgW4d80TLVBQbwtx6XL1bttPOHEw9oCiOQ2ciQBAowTJRJDYucViXem8HkzhirZNkz4iTU3PZ3UyqJJ__b_Nseabuxso3WUdPopB5RDJrVCaHA-EHziUsjuahDWRACpUzqL7jb0bGYLogU3dR_bUQOaP8g-byoRfYVZE0VjT7hgDuz9xnB3g7Mv2Rdr35m3Nw8ZrpGpfMpMGzOapsymDG2-GTrMr8dhzyHcGnQlCmLMjuC5DzH51htWQtg1Ti663wxkeBA0L6Ws-nLCGMiXuQIQ=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/oyiXMbtmK5PIecyd0a/giphy.gif";
+                        description = "-Descripción por escribir";
                         muscle_zone = "abs";
                         level = "hard";
-                        hip_weight = "-/-/0/4/6";
-                        res_weight ="-/-/-/-/-";
-                        vol_weight = "-/-/2/6/8";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
                         subclasses = "straight";
                         break;
                     case 21:
-                        name = "Sentado en Barra";
-                        photo_path = "https://lh3.googleusercontent.com/zAwEJShLr0Ylh70mc_p_fYFyVGuuxjP4OISNm8udCl1WLWv1Nj_fn5O6cBUKJQ2wakH-mMrBTDMRlSZ3vsU89vV62R8-sg29LCKUN-Ln7gIX3Hb6Tdh6NY1_556U0irK5dGj8bzlEqZ7JkfeKp963AKv5FfChOH43bzQEhwQi1tmCRXdLUy-k_bU6P3y2DKJ2xqKYy2jIOqtIjvU9m5iFykNN1t4o_yj7sLLlIwM3n6UkO5qLiTz-93-Ld1FI69D-u80thHD4x3WTTSccA2SyhGrg-NgKKuMPLM_BogjB1CHRPFn4sEgMNocuAc1w58Aj06n-GS2ltjg-o71gK9Th7TS7RH9rhainycQe4bC4zRh2iwGPmpYrxnBAy7u99-T2pSx7xOTNi_hJMgogaHELI3v0Bj6sq6U476NvcwDkHdeLZUGpYB-1PwclqcVMVxpKGm8WhtGdG_Pp_EzuUFrOioup7_f0TKDKNc_Ds9FXAGHiaYicymzDoDV-h-WWYV_f3H2aQejSDzMrp71ELCfHDow316k6esyutMayRpTgeYa1zDOlHLlKqyffKVZB2ND6J6bTEJ1C7LMd4OhVf-uJkN2w9h8UYrY3vxEN6TGxW686Esy812OXD9iZpTrcGVsVKmmYv5Whq873ee67SUEh92PmhunEcvmSQr-ja3wEhXwYIkcpPefPFaa=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1BcgDvfn1aT4l18LlT/giphy.gif";
-                        description = "-Agarrado brazos estirados en barra\n-Posición inicial como sentado\n-Impulso de cadera\n-Resto del cuerpo fijo\n-Peso lastre";
+                        name = "Sentado en Captain Chair";
+                        photo_path = "https://lh3.googleusercontent.com/aVFNNzAkaw8M2j2fNjBAvONWxTVLwh_11r1n04F1Dbp3ZN5aKHj8TfJPwVC4tlYf9i4UhfDWnsPuKVE966gStFeno3FZw-Z53CN9uAaXEvlP-u1QPjoKZAkWIZsE6SNsLiaqs7CYsPpEB-TH1slpkzNMl9iUA2Xu7gMnikCeDOBhillo5N0pnc_j--YQYW1mY8mWBtCsgupajcbocrnAukEDZT4YTFR-OcVRx28dnCc3zEZfzUK6mJDvK1VD9hJDrUKRSO8oHvyqi0xUaK-gr2qU1NOvuEMDKOYdQcQLWr_ZnlCalr5u_RlTY1AjM0HXUUyxiG9r1-_jatlpgGuvzqXOa_g-OyNvswhY_K5aOLmh3kUNIP5KvyXdYwfBFKFw05nh2ucqEazWm49KgocKKNC8EAdr_WqCGp4uEOadl30O-bysERCjPtveU3_yBlnvx03Ffdrmw-CvoNXSq1guDNNCCY3eoZQAQhyPvZmHL8i3L8fnJZjKGFWDETSb2aGRyXBWuqLzMmLGDmZgPpvgO0_ochxIMkL8rxuI6eF5WLPofVQKUmjKGRrEPBPH98vIK-cBVrbiewWB0KTfA0RvmkCnDs8AvodnkUZXEUjfG8CxPkf3ZN3CaNdvCSaIfVjjW_wxs-f1iRzLs4omy65e0KQ3=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/9r8HDw7mVePKVERYe1/giphy.gif";
+                        description = "-Descripción por escribir";
                         muscle_zone = "abs";
                         level = "hard";
-                        hip_weight = "-/-/0/4/6";
-                        res_weight ="-/-/-/-/-";
-                        vol_weight = "-/-/2/6/8";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
                         subclasses = "straight";
                         break;
                     case 22:
@@ -371,41 +371,41 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "oblique";
                         break;
                     case 31:
-                        name = "Flexion de Muneca";
-                        photo_path = "https://lh3.googleusercontent.com/fsoPalgmg97dXnDhDpkelSPlwOLygit1I7nJMf5wDqn1a5IoK1S3x9mckx_8ixrUxGoA72YgzuLr0fKzcDgZTXlDj2znyLVSHHc6hnoNIf2NmVQTAIg2gVdalo9S2Fx4Ej7Vx6HRnJkoC3URQQzYUcKYp0WpKHOSzDtI-LtD3SPUSJR4ncytXdcl_WM1e5F6rqzA8fjXyv3F5MvHYqklnY0mMCa6HCrQ5SKePtYL2BsOO_-LKEwyt5nBCcE80U-VkiS6gFKxbI-mXclPfvX3NCHiiGfw0eJKFfHEHnjx8EPMAn2_wlUsyTGdyfJcM5VHljyOakJlQN53ZGmJ85USFRiuslM487ySt1i3NGu84sEXk1g_XQbPPuGj07faL3mdhp9ZAmVrKaA6A2RKuKwtDOskV1aC_50RjgzktDvdcaCVrb4qCFJQpVRBQgwznx32boRwZbMR9xcrkrCCHBX6sP4yjnUKXqtPUo9W7KxBDeP8GtTUnHmT9xnICl_mcGo2yHn2EuxviXtXfc-Z_BwIa9GH-Cy8BoAgTWU8R1GAYTU2Zl5q_8lL6-jlXVODB_dkmmsbNhxYwKudfm7KTPBslXevpI9WOXwibpaiCHCVurFlWqLY1s9jTaciPxs2or63JWKNvHMdUsOzECGU3Lk-BYo_ux-wKgKTZIyf7B3Kj9mUUjix58s0btuh=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1ZnBAWjjXlKWMF0FZw/giphy.gif";
-                        description = "-Antebrazo bloqueado\n-Posición del cuerpo cómoda y natural\n-Se mueve la muñeca solo\n-Palma hacia arriba";
+                        name = "Movimientos del Carpo";
+                        photo_path = "https://lh3.googleusercontent.com/OHn2C_HZWXN0JEFohaF6S1SFXEOVBNGvYqVnZl6w6ccmQLgB5SOSlRfZ1N2xQxaZKlm6BPocdvCWiDtJsO_T6pzBRogUBShLIDeAVuOPoCj38S4zJZnt9WDNDabPOnNn-2GrUlPfTIgkiwLmdeUbm99UppBmd6uJSJ-J8DZGyI3r96Hm9UCcGNhAqmDtUy4vIHBmqBHBbpBYfboAQoAfDH_O0rppv454NFtpIdwDos6neLfpnW87gXDW27nxj5yF04X2aVWwXYIu2eiYAiYq2Khc67_qskOlI7u3xNYfkgWPMmPFs5vcQrvYpgELCwRePzOMwCPpJZJwqXKpNWPRjupn79Osbhjk3GGWgA2YQobKCXokvtM8pyXnRe-prYdVijhzsPm6eWkKDzp4xeljHKOoCL0FjqI9nNtDjbnwH-GDhRXw0BYAexNdlI1uWXAxral2zIeiVWUwQ2-4yB-3HwwOkPz17IhR6ps8RMy8Z9UBE2ZPlFC5jVSHupVhL-7XGZIZhJG-6Uon_vY0kKQJIA6s0SywLfVkR8JtW2I6kurqKJrP0wWSI1mqxmbmQ8nwvBMwDCF4fjjvvH-Ug0bxEdIIu7-QrzYHR0sFlnIf-wVHJWBqV3zZj31o6yIwg-QiL--qRA13vVF_1gr-Xwtxi7Wo=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/28hFzCXP7glsyUnXcc/giphy.gif";
+                        description = "-Son 3 ejercicios diferentes\n-Flexión de muñeca, Extensión, Rotación\n-Hacer por separado\n-Se mueve la muñeca solo, cuerpo cómodo";
                         muscle_zone = "forearm";
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
                         break;
                     case 32:
-                        name = "Extension de Muneca";
-                        photo_path = "https://lh3.googleusercontent.com/VT6FusoC0wkdzGgADsh9VMjbmpVcyT0P-RxinlNMHrQpcg1dGjiIg6aOx4qLeIB1kfXXavTCp_N2hcfhxPrIlVBSwnB3oVSpBIfCnxkbB2i1odJKzTRYwKVb5jZAirztTbMLMGHJKqS_Xf1u8UtBhaSkRMkIeXtFjWdpkSMN9daB0y9L8RuimjwesIrij5FDv5E2w-knPgN6xBhcGuyy0cF8X6STtswOyvKM2U9jUyvwgxbbw1km1SO8X445cgHP-CETcYBxPVbyvYj-vs9udGH5d3tPQtHxZg8Bx7sGakHgkGFajrolwDhM5uLZj3gOzs394a7JjjlnWuZg6i1uRpgJyYUrdte6PtY7J3Um2Z1DMJbvRDoqGRU9AlkEiqoPVcyIDHHdTqa-LMHhkAmkAdSFP4kubpZkl10U2OokXHtZpsz94fpiIpw5sRn5cqMqoCFsJe-tfQ7mCXYqJEbIHyrqGee5M4zen32bXN7KiBsxG4vGV09RJvOIfQiuxPMhMTUtsRAFbP8tGiQmmV6ZC0BD0aICGnt844Hxc_oN0WHM3aXaARaKUx40NGsnTEVSqN4m_LuCibKpzNHBrS-j2FNfeXoS8qRIc74xbFn5YvuPVU7_gheyXQ8qQ1vI87lXhVJ3scUsapRV9XjcZ2bOhyCJ275dIzFZSvzkpfTYhh3OcTxV_8anW31T=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/tJYdAoXnHjilIWNZAl/giphy.gif";
-                        description = "-Antebrazo bloqueado\n-Posición del cuerpo cómoda\n-Se mueve la muñeca solo\n-Palma hacia abajo";
-                        muscle_zone = "forearm";
-                        hip_weight = "6/8/10/12/16";
-                        res_weight ="4/6/8/10/14";
-                        vol_weight = "8/10/12/14/18";
-                        break;
-                    case 33:
-                        name = "Rotacion de Muneca";
-                        photo_path = "https://lh3.googleusercontent.com/VT6FusoC0wkdzGgADsh9VMjbmpVcyT0P-RxinlNMHrQpcg1dGjiIg6aOx4qLeIB1kfXXavTCp_N2hcfhxPrIlVBSwnB3oVSpBIfCnxkbB2i1odJKzTRYwKVb5jZAirztTbMLMGHJKqS_Xf1u8UtBhaSkRMkIeXtFjWdpkSMN9daB0y9L8RuimjwesIrij5FDv5E2w-knPgN6xBhcGuyy0cF8X6STtswOyvKM2U9jUyvwgxbbw1km1SO8X445cgHP-CETcYBxPVbyvYj-vs9udGH5d3tPQtHxZg8Bx7sGakHgkGFajrolwDhM5uLZj3gOzs394a7JjjlnWuZg6i1uRpgJyYUrdte6PtY7J3Um2Z1DMJbvRDoqGRU9AlkEiqoPVcyIDHHdTqa-LMHhkAmkAdSFP4kubpZkl10U2OokXHtZpsz94fpiIpw5sRn5cqMqoCFsJe-tfQ7mCXYqJEbIHyrqGee5M4zen32bXN7KiBsxG4vGV09RJvOIfQiuxPMhMTUtsRAFbP8tGiQmmV6ZC0BD0aICGnt844Hxc_oN0WHM3aXaARaKUx40NGsnTEVSqN4m_LuCibKpzNHBrS-j2FNfeXoS8qRIc74xbFn5YvuPVU7_gheyXQ8qQ1vI87lXhVJ3scUsapRV9XjcZ2bOhyCJ275dIzFZSvzkpfTYhh3OcTxV_8anW31T=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/7OVQTNQbAjVeCFhmd4/giphy.gif";
-                        description = "-Antebrazo bloqueado\n-Posición del cuerpo cómoda";
-                        muscle_zone = "forearm";
-                        hip_weight = "6/8/10/12/16";
-                        res_weight ="4/6/8/10/14";
-                        vol_weight = "8/10/12/14/18";
-                        break;
-                    case 34:
                         name = "Flexion y Extension de Dedos";
                         photo_path = "https://lh3.googleusercontent.com/qBM6Nsyl1hQvlP3D8ccjCrhDsc-dG5D7SptavRH0jvLwiE1pNfg1xnFD4b6I1coPs15oxLWTvYZgk2EG0qpglRdRhhVYdsVu30Bei3TYJTyUeHf2y43RRoIBMMstqZ4IqjfDka_Ea_qou4sSHXr3Z1TqJ8UxHXp8XWNODdojRWBx7WZKHhEjYJsAdgyJVKypgGX5wS5QNVOr2QWyZyiIg9K7nyJXoiKru9bioKUlLVKVxCbKcqlwPPAIurnhK_yKczp1re093HzDlCjZGsTCAHTlFpTzGpLH_6_bzYWCMKs4m-4p1scgqgINH-XZ7LclnbwQ2gUV5qhaLUVaiTs6TeTAqU9gNFLfS2T-hCBPDTD8Dei4wvSn3nw7uPy8SCxJfHlrwvpWwRZ1lPE1oSmVLL2Np9ymdRA56n0WeFnJuXxVUyrCFN89wDtPbr2pCUv0PPKJvUTFdlAdRmlZHsF9thU7TKnyHs0k4ZU3YywbvPTpBes2jdS1eAUteNj0W8UdjwNS635mLYSUg6JEVbcqx8oKhlLbuU1l-OpQBo5yH7OQxH3xnU5IjwKf4iwGaFhrp_kwsikiOYCeLVmcdWM3lPKL5MriderpwsjcxgL7wf9vwJ8b7M9NMbdG9yw-H2qSN2eEoyM3vzEkO2z26Xv3GlkYd2qzrShGSM1ojpWJYeBcwPRAuQn3lO0J=w680-h632-no";
                         video_path = "https://media.giphy.com/media/oOBv4TkeywxU3sdMRT/giphy.gif";
-                        description = "-Si falta material, cambio ejercicio\n-Apretar pelota, estirar dedos";
+                        description = "-Si falta material, cambio ejercicio\n-Apretar pelota, estirar dedos\n-Otro producto similar: powerweb";
                         muscle_zone = "forearm";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 33:
+                        name = "Press Declinado";
+                        photo_path = "https://lh3.googleusercontent.com/nTarKZ7nwyXa1kQTDmvK10Z2sK5SDUzIZdISi5gEoqfWYJfWDd_2lDcGssmbq0hPTSWH0zPT7rZNeorqRTsWzeu7NMJFJVGX8_mH9h1ufWANdmSG1weUpO68u4LV74O6M38zIdyNZTEZhPbB2-8lhzS1DI0hkuKb76ro_2HUEYwJU4WukHYXZNf7fjj6JyVxsQlqMjy8UeUKRIEFhbnNeLa5xCkL27qoyqeJ0ugL9N1AFOurI704NcFKOoHWU3PFM5C6bJj7ZLWk028Ic_2sUrzHye6bL-SmqkVwiYZNw3fDHj-3JFOyzd8tq5ag-IzSFWFXRh7_twSNnwuj6_AxfaFPAel-IZn4i6tVklmpRUBB-7HzVESpnouRi3-HplHo_C2h5JlSpu3UNu2XGHTT1bS0VDf5Zi56uqpQUmQjFEz9E8bQ8qXJnS3f6GP_GbRWxnr968EPK-fGcV5-lrsMSTUU0uvQWq_bqkw0BVQMEHGX4QuGfVYZWYAr1rfcmCQaG4VxepD8fVAEkf8DE1JGhhqNsl6DDxWzpvMGzBdCniQvX57lr50gxcpBIi-0St4jp7LoV2IxVYGxzX4FKqI0wfkJSUoBvh37QvaJGh3zHFpoRMMgpsyl-hTt-Cf43pAvLBX7ewnO4-QymKO2BodM1ddx=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/Lp4c1Ofp6QAaIk1TMF/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 34:
+                        name = "Fly en Polea Tumbado";
+                        photo_path = "https://lh3.googleusercontent.com/jh4CMol2iGtE9mf4cloL3A41l42EYqDy1oFIRSOgGwmwfwD41y89ywppmQX0mQXF6x3PN5_O-iSpryo8GJJIiBxCKz3EnWQnlsgIRw31bL9VdNc-__jKblO_hX9Su0SWAHaP_YJE3Tvzf1zbXwYoyivjHW5mY9MljHIBOdqxThNvvH5Sw1zFUi1ndqkkHGfn2fimEo5ZK9gEFiNoYopd83n9jPZtCm7iv4Ezb0Qu0jIShZxIu_pNxYpVSs1vJyBfAmezYJZWPdxfrNTeyCdPlDN3_ZxzIp8GT8ufg_K41K389HXb8xI1KhjQYN2zKGYx4I_dsSwXTtTnooEBm3HqwemfiXo9R6KCLVBsplyPpt4gSsoq1Av_T3g2EYq0y2DUhtGOh0kWOKAWQC022Zsg_K6wmvwBSc-AoZSjN0jMMpXJriFanVx1hvI6A6OVBt8G0GnhZPhwS17XCBdwjIgWBRlChfNzd77mOr16875m9dhUHnYVZqEz0xutE5gRwE1MpaP6FTIpodALxwacsAcELRtnsEyxCpbcEnzoSr2nr2K9CduLP7SQH5TsGwDFD7_FUs0n6ASpVUyNndMhNsga4WbWCoOwxlIui9WfxmUhICpNz0wCJrClnXKJjdZZuyA_C86Al6LXOgPvvDWeLioRXxgU=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/khNNuK9Xo1CtBMHopU/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -1104,6 +1104,477 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
                         break;
+                    case 104:
+                        name = "Biceps TRX";
+                        photo_path = "https://lh3.googleusercontent.com/hOoYRUW3TXgwrWKgtU0CWfcESQEkg__lowshrqX-OusGeyrDB2Wo_8RGF9nOKpiHeuE16DFoPPtApmAnx95VXhHL-dxpeVCNHrFMtP17Eq_EpYFwBN_-1u98rx4AoMDQMnko14AbdgpUG4e62yqEBn7DAKJQuxB5rKrD5k4WQYaaPqyFbtUZ-T-EWCcyDoaNO_EQS1D-EdcRO14NnWYeW7UFk1fLvnA_IfUMlIOpaTtoCMxncXEaiMxEtb5GloCSQHz5ziwtMueiIxkeeK4cX2vNb7hJ25O8892DVzMklZnzoNY8m_iVkpqm2-jVf7ObtAa_BxkCsizZNSIQ1RPh2zDrMo2eLJNIGAuhMC9fZC1XNFFNW0WYmWEhRZMcrn2nQAZtfh3ix2YRYMa57mpdVkjZAFWD8Zn_Huvul17CF4frgV1ktxLFophG86Heqrp88A95uVkvUrrsSYRazzDIQNcO8OdCXqNjSStlbOQg5lmGdFwNxYeOevsFeTvVGpXCypOFpVj61IANMPW5M4gcXAderwUW8snpcC9FGf3oVrj7uzyQRbKPbQOdiVz922zQ1pQ46NpZVJD2pDoOC7kEjaEkO5aL8FK1uZDt_eu44KiQ9K4FXpiFzjpathtZPcsR1rgqi3LGRejxE-v1EGNgZ0IR=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/mxw6MEQJ6gymq6A3gW/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "biceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 105:
+                        name = "Curl Concentrado Polea Alta";
+                        photo_path = "https://lh3.googleusercontent.com/QvgZl-B8OV0NfBOtNne-SzeAvORfE2dNROVFdfOODhWDHDRwYXAS1NVOATPAtARZJJdkJMn3vLryPvqqqZ9NhH_sP-IThcIEmB7ak8iQdy1dKxgoU4H5nM8FCy4yBSeO8OjHh3VJOqVPZhB1QjT8dR5ISk0UspLWR3ID92PGbeN_sOC0s9AWi9uZM248c_y6i673CwZ1IdRiHqxbznR9Fc63w7CQj9nZDoan4SES2M5YdsH0v_4qI2nsSohKssERwvFUWHVWUuGSq4PR_85wKSgr0CsV1x1ATjR2tz7wIi8wvhYsxXGs1_aiEo4idkZE2uKVvTsxx9fkAG-UmrClLDKojJRGug9eX_dHiDGIFFNKeuJGGa_UJPLGff39vtn8fB7k-55-xyRSU9Wg-mIIrcT4eTHJRNuPx4SYDS-1PFILxhr7vnZZOtKElEW8yPzGptTqH84K4miG_Q_a8y5CetObsD4cBdJA5d7CpaiIaiDeMI858O8uIr2b80pWDl-AYWTHWDbqPSVZZpiZ3oxRe1L8vCW0Q9wrtrtVo-bN9tt6mt0St9cv88DXza37IlKKff0hJ9IMXzVll8LTPPKyi-gw3blDMVEyrmfxhp_zhUFI59VqdX4xs5iZtW4ckx2yvCXTFdTpMC1JGjan04yAlwvd=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/8FJsTdcvExMqCaBT0E/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "biceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 106:
+                        name = "Biceps Curl Polea Barra";
+                        photo_path = "https://lh3.googleusercontent.com/JyqeadFjt7hGejFSsx1fsPAvU6tPTEEkWVnu6pzmO5kkF3HWFrS7Vga9B1_bHhVxi3r2D3Xyl4mONFRooPD74kO28FpCvlu7QAXlZJXbUmdtWNvhds7VvsP9DoVMz6lmfUPXJ74W1AsbrV0VSJj63Xry-cZlMbAS31nAH274H8gDwc3RrzKa0dtGjEFuWHNDGSKBtuq6b_SA-eLtXKYe4cO1vpmM7Qi3NFs_lIcncZMcFYb1OmJ5Htmmjbddia2QekEXkRv-9gM1e7tq_jD8S8yGsbQeldxwjXfCOhNZGXReEfubrdVciuA-tdjqdblRMcrjcrfKdoUiXTkeIh35jM1tcLOzD6DdSlr0eHcS2KvLJPZx9r66HidXvwStaoJZSXdMkAl6MHdPROy5Omlj02K09fBRajdCW38eV_aRONMz2_WvokSWdD_jX3eJqA-aoSK4hy8ZUr5fEbXrE-Di0XzdWsvOuvVTkCwi8qc3qj0nLxKXSjkhOA8bf1PKmkJeen_aeKAogpR509y2Kr4g_GfjuVZTfBdkMHB5b9wFlgI2Et6RG5Kj2Ly8TeWShInqGI0HJKZxNrsww8jsLxEKQZFXuLF3jyolMX5lKd6dDq8tHXlG5_QPF5bA-claj9s-AYgPxGQDk9X-bxlnACLTU39f=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/fWgdQFSFuU3JZm75jF/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "biceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 107:
+                        name = "Biceps Curl Inclinado";
+                        photo_path = "https://lh3.googleusercontent.com/Z9VxJmG4q4kXDRkJaiyRZEocuUYTiDQN3BZ6xxP5AgW-pmKNcHkLnN8L4a2x03spyVZ9PP0oP3h3x8h3Iw4-CLn8Kp-hRSTzem7T7MR-cB_Lnck0_EUHPkkKvk__veAfFSbkooisJgbHAs1PXyvg8SklngYF2UXnAyJJFYplHyfV48rtIKdWxFpbsKkoXpBsplauy5GRouqehpOJgRfsDafsogI9__8AwKrwcY2G9il_phjx9DEvz2-rxJs2YeTabw1id2smbw62jvEPUAE7C3heliqWYLRIVkwb6RZjdhg8ATMFzn8d6_o1xnPLVdOLuiz5JWiTilE9ichd5O_YyeQMWk5HBi_OOTMf4AHlGJNwgtUjutpvIYbDP4Pgk1pFn9Wbd7sY-izk_9v386SWVufdR0RZ6ZNc2HImhjeT8kggAA4GfoYWzBxGgqkYWaXEYVBCRFgw83TefcTDiaKv8DTEIfuJ9NIv-wksrcKPS0pFier5EwiPEWPnx_0ZyR5rKIjxUCvfS5Sq4owySjhdCbL6rYuBk9l-psv5U5Fzw5GPuQQDViQJlEnChyXzdseKOZMVndRm4HAlXDCU2advcav-QpCgFHni1_bPDe-jH4onD7J9EULvSa_DzmSVOQUdxdom5529P9A1myzCnH9esOXI=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/Zv9uPsqqBpYdzHDBWV/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "biceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 108:
+                        name = "Abs Declinado";
+                        photo_path = "https://lh3.googleusercontent.com/xIVXCHXw5jP9EVbjN6GQPZsQlowTO0ovms6ZcFVL8NsxU-vkKt3ZTHSMJbX3hEVE2UiLUPGuh2NDdN8wwr-PcwmhcJQsL7jkbelhfbWwSXGQwJs_q02jJW2ElQidvtvmhIOpBuW5_r8i2bGZibzEUxcV-2nB4vAscflOHDywiP9_hBKjAGFBro8e1td7_yT3ET--N_AgT03OREdhwTShJKrjQYJEmWcSWrRzXMYCHXGjWBGr17idk3QQYQ0c1kR0ElRAygidujbWkRl97FGp0IVojl7iohCP56AHglxMIca2SeZarl9V5lrWxR9M288zO4K5fk2CGhvITtUi5jnCP4PCxzv_wmLDNuD1lTdPmBQ3FLzQAlQYbthe_zwjDNlbdW5FnwxW0bQLMt9KM7dhrQ-9UK2L9j7_asLZcd4rvGdPnmERAU0uscxBNXqFpW1wzKXsT8kYNPgV4DwBiOT2GJm-m_FO1uba_g5QzQlN2pqMDf2PvFpnAa7NvAAILnOKL4tuEW8TimDExcxUiPZGSu7bQyHkg-pVRIlQQ-YfA00vDWqEId-sXQ_E3HqcC33wIn4896CVxJne2bcufo91fWNlrEbMIQE6Qre0ByBZo9WIKZc9Kgfe-KrVIMy_4g7zIBpRKux2BpWjOOEXPfXwnZ0o=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2A60mcadGXJKxaMGZq/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 109:
+                        name = "Abs Declinado con Giro";
+                        photo_path = "https://lh3.googleusercontent.com/yE5LmY-4GPa4HfOCThApecdt3p3gh49dQCMBoeb28ac5sANpM7vmudhVVFuP_qmZQ39SStMZ_IhK7PFFAmwFSTbR8LF7gjZw7m9-yNH1IsHZdaHjDwpkwhLFv6lQr9sMUd8p-zii2zphspNbag4QnoFkBi3TdTXnYxDzWifcuYLujChyYjALMXyfieJb4teXHTYE_BhKzus7dfLiWTQbkSrcdB74RQxsCPFWcT1hNkKQO0p27TnjyRAxwBW89chjNcYGu77-1c_vWjiAA1uY57HKd8yzeNw7DQuzxFoPy_uxnjiTxh_ICViTfYyV-yqMQYSMsbGrNFwRFVYJNX6NrHHsaGBIdD7x9H4irVQxuMpzLF7QIlp3T5PRKGbtVm0NP4OL6nQSY7IHVfuggmhR6O563V_-xtQ4fSh_U9IC47OOXEO0uu0zdgO-N56mGIgNxMh_ZwI7IZS23DtQp3m4769F9DBy_IurhbrUl3NZ_Ofez8ZqHaHMByMDMR0WMAjjOzD72Sm4ReBmy-COj-_1XdH7Q__XAmsZO3rYNAwJXWLs6LvaDYgqanivte-L60B0zlOyss85Y2R-B-CK7qYfK1WVEm6xdcbADCi6CQLAxQMgPaSDH3NhtdC3k2ez4m3kexbykFCgU7j3md0pf81y9LbA=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/9DrmXHaTo0ahiG1Mo5/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 110:
+                        name = "Abs Invertidas Banco Declinado";
+                        photo_path = "https://lh3.googleusercontent.com/hrWKlidGfvXA2nd5cDRTwIQNjfEJ18v-JJYzTqgY3jYnoFHvheZLIl0fHU144KYiBnR5Mp_rg7ldcl0Os3UZ-AUazhDP-KMeQfrJM7Cu7IiPEU6H7ShfEHdL9AbXM9mOi2N6_fUujO3VoHJOlB-lhGeN1OorPmF7Qf-wkzFZnFgtnedt2LgjH1mRMm9q9jQNqtAvA9rsIlDp8BNINxO-IlCcTYcjbH38gDGtRM4sb7YIgoPfYUXnRfikJLPLA1TzpLXkEKzRdQlhHA9ejXICGe1J0lPHeZqc9HtI2FkrZ2Jo0pwTkiTsd0K3x7BtxHLfy_jpBPfTofz8c7V2dJXyQ8JxxxO6CxoJDbPD3tepu5LsdvjOIgkPitJKgXcl7ywAYYmDImDvWG_rLyyBfD3LS7UVjHDDdXoOo8d7LvS8syaI978gLv0zPRsaEpRfcvyfJm50VqOyev3CXX49DEgQUwki5G1JOm9ljZuwTEd1ipFv1Oap4GM5QIlIDPrRquRmDJdEVJSP9HziFIxAxlmO307BoFNHwLrdUxuQTs63snBw3ge6qKKpEpR1XST8wJJIbjIPhogiAUg39O3gqmwLcj9x7WS0R_9VpS0fT_Mls2WvIdic7ftV2R4nvaq_xXnSE-RqA7Rhza_lhrHXVdwD4II3=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/PP3sY8NqawBgQuaT7l/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 111:
+                        name = "Giro Bola";
+                        photo_path = "https://lh3.googleusercontent.com/N_kAexHmDeMtuuNkVlekXlPGvPbUh-MJSXyvmmXSvheOT1jMC5QnjOhuxONo9KY2hKjT2W7QPNnLPcoMki3w-gjwZCtcUFC-7BblfOJRBhSpVvKzL_Mukbk1rkUcbAlgsJAcxqVB8p_wer_gCdsUUwSBSOntImJMywo39Gb3LEc5OAXcvGXW58_hnPxX4W1NWuVYZGncSEWYehUXQmf3EbmTPGU5ZXC8Ki_rNxQEb3sFnYI0G42MEo3m5PGGuomTzo1Lfs-Zd8a6ladjpIn3VZF1w-PlEeRwr_BhX8W73YUqZLrNy2I-ZxQXcFADnnBj0cZCJ5BvfvZHc05ndc5bPiR0cW7b3forz3gi-4m8G8ihSzAeZBBP4rnQRa_J0-Gc4G0mxbx7SmVcx_0mgaOTQw6_OojvixdQCMWn1zauCVvE9OobKrDs4U89e2tWDG7LJnN2AZpEgRVPUJVryBqgDV38FwmLtJBem-BxW7B0P5PHr7FT3mBc43ZoP4y7Ddh4uHHC3E6vyjh-Z9lhDcor4oYgpnIpvI0arxi2puKKw1wIgoZUtKsI8nyHkN6PeHcg2BvwtD-zGXZmcCOWgHRB5Lbi1cecFknO2Lk5rXJHyENK3Zv3eJPJ7CGJZxCS0Osy8UJBYWOLXxnq9AJZc3cjEkxw=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/61VQ740tYI7DcZ28F6/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 112:
+                        name = "Abs Peso Sobre Cabeza";
+                        photo_path = "https://lh3.googleusercontent.com/trbtH5qqnZ7F-VCDDXZyvds55LrHfVL94xTeff58WsNfi-bm9EsrJwouEVHtwmpQaKyYbPExU5ho2cMTx9F_EtR8bdS4dmIs9VTZfGLVXiF-elBUYBXdkTZK6Lad13Vb-ze0qDoFbQJxL55OByG3mdad5ZaAgqnzTc9a-AzKoAhNG_EOI9SZ7Hp8U6aV5jXmTHyBRdEr8gv1thVWm0ze-yRe1N6RFjqEEgbLqIyD67-u4JpFKuG8hCSgnurOr2z8q_lDFEwBhME2Wu7QQ0Oepi0adMVtCu05Ft9I1l5gKm2Ue-u0DDxVmYYacQEMxAmtiSYF0NrfAFuL0-UXzbNe1UBzMJ0bI7Qrw9T7IwpbP-IDZzBfynlTI5UHqflWb9hxX1ydC60ZlVUBe3zTYl58oJ6aahTkr4F3ja_zswyeKEO3NnZvrQ6JmkhdyJujwDZ9PNugiWS1h3FCXGT6erK751TW_CRMyc0ebfL46pH7bwwwGH0r7cXS7H54WUHS_Ulz6iw_toqLMlQTlhqFaQ15oRSmF-bCeWkEjBHTJbR6iyCnfcWCNJ27wjyBRI-2o27ePHPDnUGUXk-fzeKIF-eSpK5Et7mzPw9B7ipSMpKNKDrry-VYkypfmO-3nHx2pbjRy4I-k4Qg6gkZMmFrI1RGfcOf=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/fteghURwSXnjqj9ZoG/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 113:
+                        name = "Cruces Polea Baja";
+                        photo_path = "https://lh3.googleusercontent.com/WdM0d0FzUuGPzpnxCu7ZiQwDqIdO4r3hBWzMyy5dwnIOaNsUq-wi2Q_wKyPEf17zXjrur69ExoQIKuTxQ0jrw9wYLtaDEZPK808RcJI_gAbu9ofo7VEuGNJ3ESuCDSawrUapaWBbawbRMQD81101APgOzqCQRu6u6yeI-yfelO0oO-s_lLHXo-SivMIJG4qb1UN5nA9bR2JNGR9K75fVcgd4SWcM4bqoXqvt_uYaU5ZYrjY4U6ZM6jxIYifoLmxOuecm3_IZmQHh4RJMAEmCBn_WO7VnIaQfwN3WbEN5c-7YgwpyfSZMsU545cgIncYEZ4r18K8jydqmKKJiOioZTxym2a1KSwQZyTYrcvwa8dG8bHq9LeZXmbuD3cYiZ5X2d58eeyezzwuGs2iE8zcU_rwP3gB4fDtwiaW54XcqGKbCNVlgSrhebz2jODTpwDwpvMPiVrur5WunhDPwhWIcfd5hSzLraNpB8d9Fj1KeEU8o7mSAKSypWo8wK4BrTFxKcgdgAKVAsaF8uX8gggvZ88f4eLV25fL0Ezb2HAAqzyFIiQsJAfyKw4fXnt3e1lQziPl-0h4L4Hct50O9FWERxBBvAPO4VaHN4cU3juQqD8dFfCPwzuvkZnT0myr9B2sUsoJE0spsb9pqg0AKaiVItUB1=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/7E2rsOxLJ3K9zo5qMV/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 114:
+                        name = "Maquina Pectoral Superior";
+                        photo_path = "https://lh3.googleusercontent.com/iEGQvYIpKb0o-TnM9NRxCk07661dqgyie_uRYhu65i1ZdXBqYcdoWS9iyh-G4MMEObjyr-scXrrcSyVV4hccQYYHpJr4UEYNBJDvgHwji8znqJFRDHTqDDAuMbKthmYiQdKSZ2Rc4X813Mw5mRCjg6misRei-Th1HAuDC020XTOBZsnHD5-Ls8dqy_kBvMNyTfX6-nm589W7ds1PIRgN7pKB-GHrLzCNEi-87pEbG4wgyz7XsEnnBPFhIUu8m7Zbz_YgULt50hJ6zRE3dPE-ZbfdcDDUq7W6QgDXpLgsZ1FWR-o99CHact6FfTPMC1BzEEs30XXkpIeAdF74rctvc_RQHSnP8bOUlWCWGwAAYqmiA7Q2UUpTf0mPF8UkNYQN3oyy_MATwExhty3fdh4kxXfWQuC9wi_5D35SUFQ7cnYFeGlM4Gf7x81Z5iovbyHbyk9VwH105YnS8SHcel3-uhKv2RZRjAJZS2PFnafVsKclXLwBADKP1LzqNnD5_R_uCg_7npvqwTTE8rKjlQoSFS4PRVJaiciDOgcrWC7GWmLV1XjVEgQgdcZQnibS1e9aVBTH0xQzOdlyEN89TQGzSZ459REB1fHgtD2-4dD0udbmxQG7O2jKulwR4ztcVhpvrY41p0ICNhQdO5blfGelXW5D=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/TgIYDZOBGtrwAzBsFx/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 115:
+                        name = "Flexiones TRX";
+                        photo_path = "https://lh3.googleusercontent.com/Vqkrw4zP3upLa7BB__vTI4s1t2H1pR5X6pyXXxb4pznEwcHRtdg4Rk86GJog8_d5hV1gWlmsbfEIkoSH2SjzAQsS-Ue50pR9knQ7q8R078LQUZUskdB3lUrMzb4t1I_hDsgzVX_xsjv6BCJiTfepeKTjI7t6IUDzCVKAicIm8zdj9OKLvt6ITbABvyIyKkKjELMzqmGpMIxl0NvX-n7ll9Ye9tTW5X2D8SjzH8E83xZZ18DEU3Fb_x_vVUIfiWhPNJP4bBRy8_8DGE6z0X9lTJTQ94zpXdvW4TbrMYhfCpdOVSifNDEkoLyJ2-T06JoyRHtTMWULgW1Z1P_T9VQ64TjJmNog7ArAM4bimowENQULj3LaL-xz3-uD5_s01DS4reOtdQzUK0kkYZtQNsJm-XjQR9ZyDKWdj3XbxrF31QGB1sdXzImfDUzdDJTMTWKFpHLsAOOVndYUV3fBszJFNPOjWD9JYSNvNL6yUTKUndY0fxqm4ruwnleiOHecrpa2yL3Pofi8-RxWAlWb4rRgkRWz_uH-srvDbR3eiSMaJznStKstoHE61SbplX41MS-WbheF5uePGqEzZ1qPvlPh0HQHz_MwBRRjG2JHWbPR_sPI4y4fq6GJ_jX69xsXUxYWl7ZbtX0xA-PQzTSRYMqUAwOv=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/oxYnbMISU4JiLFxuDq/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 116:
+                        name = "Press 45º Mancuernas";
+                        photo_path = "https://lh3.googleusercontent.com/jKub1XesxZ9SDX05yHDurq3MQSnrJk5eS2RPtr4j1zLxaqHqHYcUFUZd_SbQ2-IiTowWTACvoo1bfJvyMzyDUShheODev46HH4YeT51DGbQjIAzFHmtqm8gxZLQLUscZRoc1ADl6i5BoYgqVX1tUyryofgICBgSJgyXNYLXAPU4yiiaWHSyw_x4yNPN6GWMUJtqTFwrNd1TupV6ZEwamAtx9YLT5pkT-MPaxgbQlVuqJY_eBW1dLp0nySAI2uG2fQ31iEDpryU7v2dIrEL5u1wu2ARoEjXSAHxsSHgqRuHha8vuVgpJ8Uq3x65p8ij0dFLH-oYhiw7Qywl2yI7VVdDvJtbjyRwEq5EMAKHCAwYRypxBRjTyG_SqIMgvVgsBBr6ichq1kWDmmxhUh_AJultPTSYfp4vkjUKfAghDewFwL1X81qj_cURmOP8eT_KmjrUGM4bWPxAPNUAwqHk_1_6EtPnxhMXoB8Rxvqt-Q_FkULUI6C4YRPUTshETndQv_cCsCuXAdg1Y68zLgMsul4wSH5StwSjrHfZUPdvrlRVVHgrfwxlT8K9Jr52prIVVMDcL1BziVcyAQGb7lfUhgu1XRalb2VLdkP0wX3pd5sXSf5W682Hqt1VqmD9I92ZNzf26BbZkX1KH_O9bTrhDX59v2=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/V9QhTjEQbBySzbJQ6w/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 117:
+                        name = "Maquina Hombros con Codos";
+                        photo_path = "https://lh3.googleusercontent.com/-_GTiHZEoQ9sYwdmeksfjBsoBivKtR1Hnc07j0OXXrGYzjhtdiR7mfiFMHPA0dgtxHHcqKTQTewvqaMylmYFE4hG_YD3A9kNL4SavaUdKEsITwuXpx4wlt366DljAra_4MNYvAapR9eq3kybtRwmtpvoZZGFK_RLFXDoimi4dalyfbHvab0n_6gbX9630uTlyTc49l8C5IULMnUjp74R6b5eeON9Wvl-hqXeOIxfOUZPK1Pk3x2PwH12tEyGebrVJ2jGeCBt5FkflBrtpiqMPxQhAggVBE67c4h5Ystfu7-SIxnYp7tadhJyM51usaF6x8ME1bu3eblaId6UEXkguQqAt6iWpRAe4F82CTaiJy0DxrwqmA1zJ6wk2WBiy00l2GrS4odJ81Bi65r3xftYqyBioZDIoydTK4VTRpSsT2Dq0ASZHhoMaeVDLUuMst3xl5VNm7-dTObfBqmGUGG91uFoi-ooDusO58h1oWlMHRtowxLBoq71edeviF-hAfYP1v7qopivKTTUo9qt0tgcpQhhA0VcwbrFBcNsiBAqKvUT3cyF7tX9JSOKTPXZXaGJ_znphfrUFcV_cJgnT4k1n5D5paKYVXbLiPPNtez8uFq-dFN7jvJSCAs_NjiUbFp5WP0x9dGBi0NG41ZJ2nyLAotY=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2bWSeoXmRSUwxjw00z/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "deltoid";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 118:
+                        name = "Fly Reverso Inclinado";
+                        photo_path = "https://lh3.googleusercontent.com/1GpPkX7HeZfdoxFrXRxPIc1ORBJsV028uEV1vBYrSU1EMAEpWVDTYbuJGrmxgGY6SYPq-tHXkrmkost51Hkgqb6Ce8HTHAeYHfETiPCDtclsAX5eGf8auLqZUl3tiJXr188-ZQDBbwsem3lXFWU50ZUJmIZYylzXyqmzcu6KGAZY0T39Ay8-el01PjEMm3SzLxE8dh2dF5oRNEhRTwznwGKuLrJjKmpCI0DkTRT--F6J1awb_NiJJR9IuxOhsbnagC2nx1_w88FWEviA5s9rBv3PVEt5Zvp1O8GpOuW7vvn-bQmjP6gDXPSUueWT6bSunZcU61b_W8vNmAHMpsDHXiOpPu3Ewx2g59Z31VyA3Yx5sPcqvIvyLE5YTXIvyYlX5JCApSok0kdZgyToj4whG3oboUlMzWgOPIEheO3q_5gJiCO_k1dVjPAXlTco5JhRiPtCkYkU4GbqpH2laItO2ntTNfSy-G9AIjyhydWFYyfPfXTbFMXYPHdEuAUf3Q28K_m92UBXgr_9Z1PKUDPMTfKcCqpwMXKIMk2P9VUrENXFyBCh2-cXjhn3SeixDOWeKv64aN7LMPTbj0W6K1-TOJ_NSQrmDmMBb_XA76_g6q59gjk6AWgKwK5LOkMk1lM3dbE3ZSjCfZW__rDX2nzUdUSm=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/5vUSFFWKQA3j5hSAF5/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "deltoid";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 119:
+                        name = "Press Militar Barra Sentado";
+                        photo_path = "https://lh3.googleusercontent.com/vJMENReIm3Ym0iOUK5HutTctyH9chKJZr-aXOD0QhEfbQCqBzZVEoV3DJYWC95yVzXD7cy8E3N6-GhARJLVvYDCusYKveqMvsfkiPpQjHXuUqWVTgVsMVyHHft_s0YqwOSJ0XyIckjDXgzMdBMZW35HLGxNZ-a92xGDEaH20CzAOpg63Eh7nGSr7nY4XdWSCeCAD_BZBGhfUTb3e7fD6fHiunG9vlz8nVeIrHKcyyHAOZUHM6ybFme1dOKP6vTSPqno6mB1i1BceXl6cNehDoGZkZ2j_ivmR8T9Ikieap6zmYuQU-6YxB9YZuynoGxRBXYJ-pAgoAbijmoxnHI5tPFTcM4NWso7rXdjGrDtc3xYxf243TdY1PjllPyJRRrf0xyWTIZtLe_Vj5-Jjz2PTzz-lVocektLYnigealcbJAFcdeFnmh8ex2y-sQ_k_pEh_9lVWZSFaItLRR4WLkljHnW2ssQPs_jwcuCE8cfNlm7LUtaZGSfT0Ll9-97lJcx40pITBRmZwtFIGZqrFmGUf12eiv2dQk-2g4r8HBJUKbTyRXeVHCAEXQd74objlGf3kG5KJTHptG5xE5v91is7FqjcSlWBJJiisLMGLXWE8hhoJpL898nfeWoBxdlTZzKgil_l9litrAX_lZ16ekWERo3l=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/xFkh0qh9GjLnaxg2Oh/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "deltoid";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 120:
+                        name = "Push Press con Mancuernas";
+                        photo_path = "https://lh3.googleusercontent.com/z16H2L-tUv8sMTRr2xikCHiUltWcdv-LpwM058v6XB5mQ_RYGrmgUj7odwBL8OE5rDF1ZvBI4G4Dk2_78Pu9mS67Eg7thpipZ0UhhbU4-cpOAe1Ty1Oulcj0pDadBLby4Yqp_Jb3S7ZC-mfFdFhiXmWHN97To0970rfpJb0uQ_u1h9Z1PLZe_k0CeCZTe0Y_F6oYDj-cXhyM8tnqGp3agDzvcy9qkb1vtylgPn3496Pt0R_C_4xn9omzSLhcMeuGBiaPW4KisY0luL-bxQEyu1610Hpi80MCWNmnjD-xQRwyniONEm_5gIDiL88ochX1BB-3bSaZHQZ4LUk14wjc-gReTc83JG-fWr98D3Stc-MNGQkazo7Pt722fnbb3ymrnTA9XLh8iT0X3lluYzczBcVqb5j4uOIo-y1NQYaVVPN5QyxKgOFRHf2U8BYjkpk1bzgp8APO_Cr3YUO1-BHtMOgl2ytNOUWqn6EJ4csSLhCzBlWJjritH2QdVrtFDdpcciiXvM0sF_2NzYOb6F1t2E85p-QWDhLzOuWHGgUsaujJEWIuym3-NKte4FcTbbWex98sJtjLOSpAhbVWf66Au4KXyLOcM31JVgpsvIg92oZBAJmTp3dL6jJO4VF512_MgBr8fu6VyLj2F9lL47mSnWu2=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/BpDPkqQDNz8xB8l3AI/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "deltoid";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 121:
+                        name = "Elevacion de punteras ";
+                        photo_path = "https://lh3.googleusercontent.com/bKR4aVEBg6-698SCpYedqqX8lW15QFyqCNg9s98i3AKjcYP4K0rnaPV2whhkcrpQAuoqreDWKEgLivibkA3bjGPlpeMB7kD1UNkHKGZmDOtxRgls0dQBRfzcJyhj7wjy2lrtyZzTjFEpkIrW30tM6pbwU7349SRdWwCjaWIzSkOp2o7CdlUaxA_7ps7J_BsrqnMQ6DjdXvQNBxJliYij0mAgBRo5Yi1g6X54NdsbBdd9pNaN3Dh_8JKGPgmuIIJbdYRl1I26kq1zbOOsS4S5iXMEhQarvx_6mSsZzzv5HyIcKzuR4S2Vura9kQABwYdefEw0dR0cfyndBjH7gSO438rpPgeCMoMr6u-BD0eRJljamt9hgn2mtjQxaCmKR0gD0SrYB8HYziFIlQgROIkg80p06RPAC04UTRfALs3nlpprWfELQaPdfelD34UUVDICXuqyIpporf_KFOlHHSMtFDS4hl8LG27sPlAleqgx7TvfBOrum4NIUpC-5OyC1sBsKgE2v5762YCgR1UKU4tB5GPnP8vZyuKSvSQyAjvNgk_oPiQtuUDKcMKDZSOspikMnzPY1kyKonfglNT61EnhHS7uEjTKpI0A-p7HsjjSgKQNFpvYE0XI28sw6tlp_pwRMpXTVeVMeRy8Vpl5rNkrsT4D=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/igGDYnbdf590kutIgk/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "calf";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 122:
+                        name = "Box Jump";
+                        photo_path = "https://lh3.googleusercontent.com/tv_cTmPlVWga08kBmdjiRrLoOe0Ktvms828GRX88BXntNbhzrEo-EC3iVil-U6Hd8MVdHaOk8Ez7fwidjMy2uuO7DHpROTzg6bQFkHhtb2Bp7vx5jfprWBGpaX8Qh6R5oZjGn5LjP7LxDTsAJVTAl7iP5rq_JLz8FJTQh9CmBCStT3_72OIhCuuncuSBGvIdurKhhg5MSw_xOJjp75t3u2gMc74C-qlzuhhnn2eziKHE44mzBEHbj1dhERNx6en5mnpqnNnolYOjBjbdTjrjX6ZTRJ3uwcM13J-CJGC89cUFjd2vMU6_7LARm4XIwngwfRB0Wzj5h6rAeYvS-wS46V2krm8Rq_N6irarjgasbL1qmjMkrfF2pTOheycWxh2CgJKlxPkEWRwD8IExeUGKNj8n2KWyIEVILxeBEq07WmAAXgYT-bgneqrI3lx-LE8HD_J12VDDw75m6b6h7CD9PxL2-iaAlWtQAKr6h7MEIJSey2JyvTbE5su-2IGjd_QX95bq5-GB3kO8FCdBPBfrS1E3ucjVbOPc2-cCZdltkbFb-g-gCPxe--rnZmoN1RJZFJ4ZSmwmWcE7jcD6Bzdq0-seDEHltOwVTGnveUjDiML3HmF5nHk5bWxhYfGEid-wekMv-j2JxGsNJA6SlhdQ1Yr6=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/3ohbdTPkVZ6rNwU3eA/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "calf";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 123:
+                        name = "Maquina Press Extension Gemelo";
+                        photo_path = "https://lh3.googleusercontent.com/tG1uBjqWcKOQOR7HSE00D-vpZeQSYMyTbyMb5ibV2fKyL7HgX7WDLRRxrRwQs_lu74yjXrnYhMb9BVRYPuBEu4hoZqn7sdKPL9qVuiMWDIH1_h5MnbrCUrnTMYPbdeqOoMsXNAcNUk8P9LHjTfrDUbFlj8xzqEygFnRs1FJ7lFekFu1IEBTaIDRb-ZXp4Ux_9RNaqu0wJfrkoq5tf7fJcl7WyKzFshA8HFlHxz2QSIbfbPVZy9N8DRl5fF6PaNqKY23TfOd2MtmzS3NEJg_EBVoudtWq52Ly-ab0zzjWvXv8ifVGKtPN0OaVGjofslFPafddFAOM8ukseM19iQUnRa9hGPaGeIw1IPFfB_0G73b604rARD_r6hlHkk5QApbNl6AL-vK2LZqIMYdmnJiRYoSMnhcUvicJJ8GOUbDdGvsp1BFf0Npyewe0O81TNC8lFv3cH0Gbrp2DOqc5c_jXzzYG6IuCbRB0wr-BKPws0ER-GLl53jcWUhEFE_cu-kZEnvu6IFoux6ObbpxELXgWThemNP4ecIYgTH_AJhb6-oky_D9HwBY3Uj0uE8atv-o9ga2X71sDlaSCgj4VJN1Irat3CWj4lETKOguzWXgw20O8HQGqhDIzUcEsg0vtjTTEgAPA3fX67KzV1YoVqHcoKXC5=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/cY4J3pKEhTnzHm6V5Q/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "calf";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 124:
+                        name = "Maquina Press Extension Soleo";
+                        photo_path = "https://lh3.googleusercontent.com/KbjLyJNvMpzqa9o_7-RbEc_CFCDLxfSyTB8bl8d12lG4Nmr0bWhiexCUfpZXv-R82HkM8e4Q-vM4S1h0HjGCk_XdFOw9BSoDSj_zdHr9LyL8d7GQB_Mz9pDlQeWNfH8AuZbH6iH1qPJzOy23SZYNRnWMnjHfMXDWxUNRuirCXTZO_GReePfEm7fDGoQv474AjiwVGa-1mbn5ZStRnlY9ziWBxq0Qdg_dsRcayS6ST6Ew4CbMY0282u7BixjLmrS3rYqa9KRB74gZ5ELKqFHdk_UF2KxgOWbQwatK3JJnz1Y_EAUp04MdHrPAKMpYv5sTocLyrxpO5z_YqpEUw4byRCme8EQNoLFmi6Zd5jpRwWCIkOfIilEKNMmydmAKuqbcjuf0EojPOK5lbvsn1VOpHq8_IBqUkBQsjqEYpI7ascgresW984PCw-MpKz3yDIH_Ha1vKStNlkSaRg3WuZpvgxWl2-sjg5Ktyr6nysJ40OBewMtUixwxJ-PyzFno-11ouUQUeTGJefKPJEzVlZV5gWnjhlB0o2RKyxmkpa-3bipvMTaARnmztQOPUB1Nni0QnOd-Idq6LpWKHd4rZ9-114HAD7Ghb9Z85JnwKvQh2Q1JpuPpOXFRSQEAK-qJyui_fSqsa22ZmiQaRqA45YXBjqpW=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/1XhrlvfIGmtM3oY4ZD/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "calf";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 125:
+                        name = "Paso con Elevacion de Pierna";
+                        photo_path = "https://lh3.googleusercontent.com/Q9Z6t_WLU7dCowJT5RpDxct0dVe675DaJvIjINQBIKMGT1N-SdWAOmwlcrbSeuNl2pZmT-UlMLWiSdRgLcc9MCubWBl0o2VSNVLgCQNtEZ9H1uLi96lie-j-6vOAYfcX7uzcXKhtCOaoIv_Wa6MlDlrhwZpqU1XnZecJIBtQpStALPtGidJlM6q1cOwcFFHHJct1Q1qDp-9ypp6-M_B0a3OS2dt5Tw3WQJ-UsjtwZN2VJvWQG5WXb2O4A-VBZuU15AOPKoTDf5iIxm33IIp_nVQlqFoMww-CbvguqxfllZblr5CZt9l9Oq21A3j4da-im3PB65gHrS3SpkZfym8Gd1SQHsafp2hFxo0eeFGL2jKDcczF8bqyC0iO4MB5-kwC3UWNWceeJm3bqQMvHHQ6QMUgYEWu2pxmsGBi-OaRe3KlsaqaDXb7NxeRtVmCw0gZuKM2kf6Iv0erEiSdpFnUmNjWVjP-Ucz3Sv0wc-MOdWaptwe9_SCImYJkLlIuwhupzkSM2gJya9WZlFV14faZoTkEwyMAtlKlW3Bu-MGnko7h3WuhW4PfuJsdEdAXyCya1Qxr181ckBfyQLmiD6D9i6LqDlawRfVi2OvFQcKrTZjr5gVlFQ5KOuTs60jli893Qo-HKYlhTeotorTeB1dC8Zl9=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/oxZBPjDe1Y8L1AIeIx/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "glute";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 126:
+                        name = "Peso Muerto Sumo";
+                        photo_path = "https://lh3.googleusercontent.com/wiotV69miQ0FvqcWJrYlhbtipsdca1z_Z5nI8EFWsYX2MW1uoPkaqsSktOFk9m38o5JiEHnDR3aRmhkeEnWgFZcp38MrWNzjaX9ok3VxxxeTKz4AEuqz8yP_cPkI4hkenUja2uB4LQhvyDyJPrhF_Onhzh0t_JGWuI8TtwigDSEmrfS741mFooHqej-Z-mGCbXzKXe3UPKCVRXTbq4jUSyeWe6svVBRo-ZJsNscC6FsHaTU1E1Vv_PIEp77CyKGIT63coYSnotvsxFHP2P8f1kY83991_SC71wL4ciSb4AGMXSbUuSQJw0Iow-avydWvF73T_HMLtO8wyIEn3vjIlA4uV2yOj1OZB3_nbNLWPS7O0n5q1kxqvOONeQqmaKPVsT5mOZ4d8zkC_HkSKwCB7zW9xDfkZnldfvRAhLL1ypSRwo5NaVjB5eesUoEO0bX0ndcoUX-7WBFf30EM-HVy51XK6n0X2RkNDvxBxoiGYYDDd1tEHNOj73za-7bX-P18TGuYAcatqfYn6tK-mjcVPAAFiT3cr7FKjqbggHc5i3m5U6Ex9Eg_q1d0qU88Zem_c-az8ewbZHn1XICMM7EAanqSXHokgMnnHTxjJdv4c7kqLeU1NQhphCGm1FQ9FogYznyT8yy67a46Pm7JCbGTvb-W=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/jVc6rROm00jQiDLNWd/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "glute";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 127:
+                        name = "Glute Bridge 1 Pierna";
+                        photo_path = "https://lh3.googleusercontent.com/zecrFhyPXaqQEv4s_7jXUpndJTQ8OjER1EEx84sf2JRtAO_pd2aneN17KwGg72DVYhPK8aPUpww7qZyZPo3CA0O3VICo41EWuImCPZUZz7TjfoJKHwZtsFOWJ9z3xd16edei-wjR_WsvZZcyweHoa5-c6bf_Q6X0_bGwqA2b2T8LIQmwTD36RhHaVL4JT4TzXVXnSURJ5Ip2uj4FMYPzb6rlJwIkEpDtS45GvZCbwy2BfT_mfH4sX3lEn9erLtfE4jTLJbPNZW_QPP_8zb7b74-xBYSKEVGrk5zAHboKnRf3Kv5QT-UGBBOZgy_arvmR-tXg-WOBucop4tkyWQP9V2OlCW9oeezmNqLFYxQwxTruuhYDQvJ9DP2g1Pz_ltUV1lu0rz9WUD6atPOlg7qKZgReaqT_-1-hs1sgbJ0-deX-mXeuMBXIjSQtq0B7EWisfgn--Cjt8nrYZzU9DqvUAtxhoHvOFTGl1DyKDbrssoN9c8e8-XJiYwUCuvzRoWE9hYy1RnKKQ06HRey8e3mTcGBrvTTUiACcGwvJXTvFihnUAqnsWOT-9NQRarStUJEjXH9TY1nb3sJM-QwQTz4kjp8HAJCunBC-m_CY5_dQ2jby5OeGN6uXi9zK-mY7T3vun408ibOBz7tXhGDW_F2TglEP=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/l76Ix9dqzxUYteNfqD/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "glute";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 128:
+                        name = "Flutter Kicks";
+                        photo_path = "https://lh3.googleusercontent.com/9HejaUy__qfCNTcUfYnhAVvVrMc8FyYPglnUCkSEVm_AlO2dfO5_9JXSyIaCNnvAaK3UUnU7D6VlDKe9o0bdE0pZeJ8u7QkxU5k4uxjO6UEEjM7xgkjzvo3GxccUK4qhOgYsc04bZkmv2NZnaaUHe7Mp5L47Fo_wAfyFEwHaB6L1rTMyGqt-7D_rJXVU3e8Me9zbOTBqWZNz-QCs_eErewf-hIWorCOXChO4xUMNVHI9blIDjcqHxaC2zY96OWJK-JNjY1wETIVPN-jfy02ozPZAxejthyUXFeDpIH84q8FWzJYkYACZTlZpzP11_LvImbRlsNgnDtFEGNwDPhqY0pl2A2I7hLmwTtIqcKIaanmANRFqP82hp4OkbkjCeeB-faJFZBl-RiY0MFORfJWp4zESovJaPpPDNnevT3nPW3QrVnncevuw9vk-HEIY8-bgZUKfQ5OFi4Q4Z_OAbv1OehM8cdKjnf10uNHycRDCCLftHZXq7v4Jwg1AxZ5PbFbu2_hCR3BvD4Ufvghiv6ocgGqVsNF6CNBFxwYUti6bKz297m8VY2bB-7OWiaT3WNIQzlCpKublezYyrXqF4gFXVusv6f7NhPaU381m0fF869GbxtnRfYN3QMeIvXEmSHw34_hBEZOB--eGC5sFa666-gpz=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/5toEg8oq3Octu5yTCX/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "glute";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 129:
+                        name = "Bajada de Cuerda en Polea";
+                        photo_path = "https://lh3.googleusercontent.com/Vu3FznNEsG0KFaoNseI_hGEJfLuvzrTntQtdP15br3NB8-_E-FIaVY11eeJw6qXzD-q528aGZOEWIUAOnwFueYnmeEEJblpX5DCq-KBPbwfIEWeEF3UPIsqOqx256wnO0WjLDgAzU7WllB1j59eVxumnYCgfs-pps4KI3TscI2ZqUDb_m3tmiq_Gmy4viwrh5oJyDeKR2hxGMFa_LDK-yp6zjqDylEhGZwxy53SfLr2TaMJ6N4N8wF4Tn0A8wmS02lG-rlztOi1t-GUN1CUTZa68O1NhZD6oI-_iMIYaV6mhgkt3neG3MIhE2iqN94Bt6o7zKz5VpkfFHxokkuddDcsHOqpgvW0j7XTh99FLFInLkvB99vsXhq1qaLK5o0JCrKs8qBJUkJ73-REOhg_N7BIj07zzbE_bsyHVetC9iM3LYN9vG9wW6CQCiYzeIpGJrA_eGaiYpcv5MQZUOv42P-iuXudu6ApyvIcUdv9dU_0qKkVIx2UShSSKwJEpXk65vtbrykc76L4y_PGzrphbNHg7mkW3apMNOarZrefz2ZarV7PwdyfDHOxuBvOA3qCd7IkXKZmYfzNfH4csPXecOTIOXZaCcdEr2kZusuiOsSG1b4Mji4JiCIMHyvGiaQSXutDiAm2g5ZiPRKC5wis2QWMr=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/1gUW7Ljv2Qi9MmmQyN/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "mid-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 130:
+                        name = "Remo T-Bar";
+                        photo_path = "https://lh3.googleusercontent.com/5MDzFRzmf0jdbHc3Ezn3rn8rKFvY3CxKrrHLub7zPxT1kchMduhgn8AduDBa2Rp_dxk37AUzblBRcQzhk_REIhRvMjmG45cWUIfFcUTiYUI2UhXvz28DA5KBm_L2HZMWKZXIvYTOEns-HyZ-mNQttj_2jhT7KjS5lYPFUv898TiHD-Hfvc9RhZpQtZeRuH2KFR00HV-8uymzQcA5CjLArdV1MZgHbeF9JZ6bDnIyZuT4HT9YTtrB9ksXOmJFAWflhGWR_NBDRhyvqgMsBmFMrVmI3hEHjxD6SkI415pK5rq7-GBLauFQKSSUXHxcYF5hB4Rd3OH9jqrDHNGCX8GiO5w84TBeQFCksQXFOGwjYMG6yCmdT_1vrYoxHJnbmkxn6gwqZvk4Lrk6iJAziNpdfj-nR6e0_Y65IvzkP9nAod6xexx1OYbVNL7IoprqsPQL6pQRal4lqP1QzgSqtVIdO5U0VKGF2yNvt946hcZ_ejKQW2j73HAw-SIiTZcrmUlnMAtxYo9zWUnaDAEjlkDyq__HsPp81Y8Sh8xsI3loF7Sl07qjTFflc-BgHK9xTxSaqV2ouYbp78JwVSfVdR7cQWOjYOT4FQ0yCXvfFFF1suzxuNqa_s7jROWMNPKKdUppxg-Eh36-t74KhY0zNhS178y_=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/1gUWdeaxbnV5eo5voP/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "mid-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 131:
+                        name = "Remo TRX Invertido";
+                        photo_path = "https://lh3.googleusercontent.com/wNIOCBudZE7mzDa07nGXE4rfY1MZ3rzCMVX-RugqEelwVFWInLnmhziLDiAqND9BKrAR3ovq4DEiBJTYjghG2nWVOgLKFuRQsnJTKMMs7yltPVoYbBUZxnntNCgCDQyLxwCTcuM5ljnephqYpcQgWT_jI8pBRAVEdCHmM5LAXCVXtj-0eqo7fZovc_pSJ0JtWxZA1VmgRG8GOeiTAi_rws_bZAsonAegPvj9Vg741jmbA_4xy3VUp2fvEUJDbvb6kIRoLGjsfJfUsF7B_rcJSJjIvpN4SvvCg_ySCd-rLPcGLZmFFo5mXDW3y7bipa3_FZOz8aamq-JMAwWMzOeL_UM4QEpJBPISzgtfyc5V22lELpsl9CBUhyc57CGN2mUpECrffC0avZso-oRVnSV0Nu7nlLNueCKjnK0SULX4-RuT3aSFk4zwi9cJbNcqfHsq9zIN_Xl94PZoAeFv6hJUlHrfPi8k1oWAZXQlqgpiDcwHaDQL6_cUNDS7JSJzB_6ct7KCHNxG_uKrmyS3LoX8uJCJjzoDeOdH-Ry4rM0eDBr9--AQ5xJujt1dENVeQnPaeRhB9eXcmLT4OCCeMoXj9pVz3fwtFnU-I2WExR_ixsm6LQNphYejOyr-wV8hmVsOLW48LY4-zH1-Y84YGgJTAyo5=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/8Zef9CMPBlRiFqySOG/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "mid-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 132:
+                        name = "Remo Mancuernas";
+                        photo_path = "https://lh3.googleusercontent.com/K6U3Z2OGZNMfr3aNt-mVpYNNo4-FH6t2LMhRD8aCKUfrt84Ni6z859yXYS15oFn4XiD5xiiHsZMF_hIjvCWCzIR8JRONFTiCWdExHrMt5fqwVSbvBAia2J0fQ_qVWleIB0PfFrWYopN-WT0IbtfCt1mbfi7jIJg7UZatWezHXzpgQ7cSfvH0o2hew-b3SfFwiFMv4yrkcp5nO3An596cT43WOZT6_vEBkXx2S2x6cyD6BQIRW-bKzoigByy35xYOwZMH9fomLcGOuySXk80Pvee7j-GXjT8inCQfZZcNQhfjiISVASd_2fUva09u5e9IYXmiPu3T0wzUAwiXyUnyQjAwjOi74lMdKTpHI0lzohXBo08c7nDXaFvzcvQGnbBLEbQEqzQFIka0x_IOB41prWbx3FVhErP1moU_l6qDf1DOJnBaoF_IRiuEJfH7MKCj9TEX8qO8lDhqYC3VdCip8BL-QYrlzp7fjwpmTghWcNrv9ZrC2CVSqmtkNR3T4mBaesjl-dSmcYJWTmqDjhco4KZCdGQveEZNqjdgwUmgUOTNXnVckO0VZ3tgziTYq17qvHs485FrJOUoLZYUJ3JErG7fxGT031aE20dfjHo823Wumtm2C2B5pJUNk88l-A-U5xDPK_8AGyD-J7g-eltvg7mZ=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2mEfe8ryXe5vv2FYd3/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "mid-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 133:
+                        name = "Maquina Lumbar Girando";
+                        photo_path = "https://lh3.googleusercontent.com/lhbTLaITXokzxm9Fy6IBe2Fmk8R8mYplbZO6TNlBv-ZHOGVHjpI6GEja6jPeOPY5ToHPngWq6tX0Lg3cLAg_Y2JqifVUng5Nip0grUqJBWNioS5G9-gMmKkxkZbKQXUbrzfZhOsMQIvIV6uzwWjn5MBXCYAQBvaYxC2EoUOYpYng6hG2JEHhr7E3Un1ljetpHd0ZjAWTLLJolP3CDLCNqQtcQkP4pe7aYyaDnw7F3w4JEe5H94k07lAbxFKeDOsEpMVJMhsz2xBs5qBZyNAUf_RlH7_wp1g27LePH-bq69IQ-bXFkZjo-CqetYcVJU__a7E_ZuVPaz-NO0fywjYs85zrL5Yd5kFDLJ0XN3VeMOHCl6N90B-Vbi0TvONKG137O_RGBj6hrb7AajzWtIS2Ax7e69tJmksZxhsjbFkt2qxiaCHpqHHP1s_wc5G_XpnxD7m8Xvw12g-odpngepjxi-Bh6vsDT0QbBrsy0mhEiN8TBnIsx1ZW0IXVqLgmfxFAAvp0mE_QPYHS__nnlWMSxCsHS1IyJVJRMErJze6wmt0Dz8bngfl1RUZBrOs9i6idNROp8s0Rze_45_RZiku119VkYvA6kshWdk_PptKUhTK2YprBVJXdgarzgCzFUardQzARpogpSkAoK6Jkw-pViiwZ=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/12PUH4DfqiyDZgb5Ip/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "lumbar";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 134:
+                        name = "Lumbar TRX Isometrico";
+                        photo_path = "https://lh3.googleusercontent.com/raGQIUCI-WeparnwM12NPHF_IxuwH9NIpLqE9Klx9wBDqAOqRjtnp1M9TFCc52RTbE5nMNyNBj-gE6YYHqq-1qClwidOoTWJt5Oz1uGCJ9V0UtHp7QRosyWc18_O9uBRF2q-ynyzP6T-nac5d7cgogRUp2XvwhjQDhRYGDL0aynV3Ftp3E9zlGA7UioaKx2FoVeF2KtCniWlZuFlX86ZppIBhMHRPelWcJ_bG-nUGeFgsC4ZUiXrtpEH5ABXfvHTWBCR7B4fylgHsg1V3i2hngyWgy5AWzUdPcoChLi4wUzs_EhZXT_G5XoMVpsL0tRtPGe0AzkJz-alh9_xF6BFHoNTJoZl_9cJ1Btt6kRRObqCYJyA1bxxaqwpPhF4cHEG0wFyHA8y-KrDPHWRzJ0nCNJ8DOIgK-WMGuB8_EdnfEE7EST8cv8qXwcsqh7XEJdRV0bmjB_y94Ye-42wssbFsfbDACZUQsyv2C-szVxUauPvOK1LhggQE9vyZf8jcZlciP57PD74fo4s-Wxf2iNCoP1VBi15FoDjZhhllrHCYbuPO0EB6qTg0jFR-AcQgh_4-DVF2mQef_Jc9SndkWw8hBBXDwCovs0Lf-2WqdIJRV-3yUhF6I2WLEZ_dcrSTW5fP-00i60Tb_N-FKiNZgyVQYnW=w713-h632-no";
+                        video_path = "https://lh3.googleusercontent.com/raGQIUCI-WeparnwM12NPHF_IxuwH9NIpLqE9Klx9wBDqAOqRjtnp1M9TFCc52RTbE5nMNyNBj-gE6YYHqq-1qClwidOoTWJt5Oz1uGCJ9V0UtHp7QRosyWc18_O9uBRF2q-ynyzP6T-nac5d7cgogRUp2XvwhjQDhRYGDL0aynV3Ftp3E9zlGA7UioaKx2FoVeF2KtCniWlZuFlX86ZppIBhMHRPelWcJ_bG-nUGeFgsC4ZUiXrtpEH5ABXfvHTWBCR7B4fylgHsg1V3i2hngyWgy5AWzUdPcoChLi4wUzs_EhZXT_G5XoMVpsL0tRtPGe0AzkJz-alh9_xF6BFHoNTJoZl_9cJ1Btt6kRRObqCYJyA1bxxaqwpPhF4cHEG0wFyHA8y-KrDPHWRzJ0nCNJ8DOIgK-WMGuB8_EdnfEE7EST8cv8qXwcsqh7XEJdRV0bmjB_y94Ye-42wssbFsfbDACZUQsyv2C-szVxUauPvOK1LhggQE9vyZf8jcZlciP57PD74fo4s-Wxf2iNCoP1VBi15FoDjZhhllrHCYbuPO0EB6qTg0jFR-AcQgh_4-DVF2mQef_Jc9SndkWw8hBBXDwCovs0Lf-2WqdIJRV-3yUhF6I2WLEZ_dcrSTW5fP-00i60Tb_N-FKiNZgyVQYnW=w713-h632-no";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "lumbar";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 135:
+                        name = "Peso Muerto con Barra";
+                        photo_path = "https://lh3.googleusercontent.com/EdXCvslIWlI7K6zckPUtmHQuW5f4Dc2Qhs6ajgyi0RAOdzn2LdiKfyiCciH_tX-zCZ5XXJrQPxxoUCzc2iz4UZ_G8J7aKUvUeTLSzuNQtpfged9pjEH9PWxWdtiZqghZD5548CBAeEHbeII9Im2dGhb94Xs6V8Cawr0LzwR19HLH1QHBacvYGcnubDxL4qDMBHRtmtUKzLvpCU7eRI3QjbUnPaQf71iURKkxX6v1XH1jcn-xZZ_lzaO4ubivoiu_ygMhX4ydTmcZYRKqclhT5RL8CJoxxofYbTQoMiAFDAEGuX0KYR-c4RFzNICzFkSdYNqFYvCTib4_SQ9iosbmUEacJGgi45FUAUqeBGVSZkTvWwXuNtqG7cF6JZTJd6s0I81EfAcSuBzCqMEU92cb6wngKLV1XTenuVb9g0R3-8l7tHIHU1PeIEL56rZ6Zk60PvyoTUYZfTSvDSTfCJfh9GstuQAnufhxNAv3nYqKwI99aIH6wmdQ3BWoPFjyWuyg_68BBx6NYGqFgHk5_GuRDjoWWEq8sdOp3THYt6KKPh28USQB1y8K8vSz-u56XHWue9QRXJ9Dulypbp4EZtOk98vXgGprqLZ1RBchAu72wqeCi-tP1mTfI7TSwG7T_oFNqe_qI8guz-dYM4ibJHU9Ofry=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/yMzm6l8tID8C74uhwn/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "lumbar";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 136:
+                        name = "Extension Lumbar en Suelo";
+                        photo_path = "https://lh3.googleusercontent.com/J6Ko7uJl08srwjSpdxV_-oYHlHf0dyojBoIFTJVsXGA5tlS4e4T98x_jHnLbzh0sm7TYlWLBzRLW08GpWNNXVx2pNraOkssMpzAyOYhJfoZ7fqp67sIRVvpMibgxRNUj6lAFrfxDf77_xLPk-spGdutH3qj5p154gruCcMzGqHGjJQtMdNS4rtoUzm6Dlj-qpR4ARygDBaTgmDVSxIGfNwMVkWHSlFIq4-VMdP6gGyXDx8o1PxfIVs8qbLsCQRy5iZ3wfaHc91z93CFyWm0FMhjY4iO_kGNqmppExb6B2Ny-tvrm8uiF1D14nRCT3zgIYYHEWtctGlPkOv8dvugawNW6TXE78ztLvjkvoEDHIMmXosSQ8EBT9BPbCEjRHwiJgUyTa4AsTzq3_pAq1LA8cBmtEYZIN3FQ2LE0DGLDel5EBBzjQPydnSRIVRVhjHJtu7IaMUeH4O0Vo-HV5Ph8k4UoXS9F1qE2KVsyQjKamP_756P8sEqmNAu37LE5Vn3wRTX6RggaRKhpaM6tEyfk32twRRFy980ccW3UFONKysDfJLcVJRvkQzKWBU6xmZVXUdg6UgnwNwD9Z0mosEr9E_h7n3CKu6BzCtAvvLlduyNttkClp5NIqTpude2h-QsJQhbrjJiFuWnXQsgakjAeYUMG=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/vRHPj45jrIIBBVHHz9/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "lumbar";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 137:
+                        name = "Aductores en Polea";
+                        photo_path = "https://lh3.googleusercontent.com/i9d-sXKz48w3muDl81fvLm5-zW4iAAfjO7dVoV3tHRHXe92MUuN_Swy4AJJCIiXMxxEywih-ey2ZAYAK58SjA8jViaVqsTPUBDwZ_se06glw1UhqbFz2t1J6ckHrXeSpDNsK1fiUAfLMLezzqdIlRc0niUX6k97LEkiY52-0A1aB5mFFIJ2J2MkYc2Da-XpUlwEatbpTGScIhOFdkfHWQHlIPZCidqLD-kyQImDoYoc4ODo3CjyLTRgkvXbK2G65ocwee8VmEsGPLDDDjxpNmbxAf2VvUsAEzwApC8aa_0y-8p6ws0MpGWUhZ1vZB3i77h6FBsZIh7wWQKwLn72CH-TMM5RGrDacUKrKgawH4RPqvuzVdedUkCLAWeVQfwe2aaUagjiNzJa_ZnKHBwC28d1uk7WcPsXocwH16STKQfuEdWoNhCXAsdGVdZFEu5JYsa_pe7RpCFKxPssGhlplJ7Rx_9bRSHs7o2McwD5sr1aoOPoq6OjaGQ4d9BQ4fPabSArbLepnV7aL0GcYtpV39jNAPZPyEW5hARZPU9gRcJWahxc5XRxFJ3bxiVX8ppqCC05P0wjkdi_tgo3ztj24l-tbb8Bni1BwbSCul1sOwxLEvBm-MNYZJWTzndluN7_l60SNd-cNQa95Bdi9kcyt3doU=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2zdVi3zVbjIiOvyY5L/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 138:
+                        name = "Abductores en Polea";
+                        photo_path = "https://lh3.googleusercontent.com/Z-A4oOO7xZwWQO1uicZBXMoPVx4J_EfmQLQxQJ9mwqhv5is6IumzPo52Dyg_gHXUUm5lLv4xnmtpoJbcI7cnOLpgUgWpymGn0FlLCVhUYfjG3bQEsfuNUThQvWLGA8c-pl1RF2EqBXNuPl0K66IfDHDu3wgWD3GSZ7WsuDklr3VGJ_8gc4E_AnqzVYqmLXE3IkGQzW6pU3-NlJfxqP71bZvOB5lYHvJSS71EWy2PYBtjg__L9uAjftCJx-7K0nSisGvaTemQYnMpPJaMWG2tv-ONZFAUFFifLmOzQniEE4nm4IU6dByh17M5EGsOKJKO1OmnNvOev02j258Hww_wGRQdY6sNUiggXCvGeSg-IgJMtPeEZdlb5J4HlupjRVCocy75lA7KnUok_ch3gEjvb6hUDJ16s1ar8HguvOXz5nJGV1YSqcXeMXyfhGRAvK5ZhzgdyueAcSPbkksQnukYMu_Ecfq37xiOCuBO3KGXU1ybU3drzb7uHsAtIaZhpZ-_FDwE7LSzbynwATIyW0l_UnuvpTU6vub-9tVUD49sKqJ9Tf5EOYYxvbVZ46zpQvk8pmYR_FL2Lk1oVBwZSYWEy2H-8l2EAZbs2oDYy8pgi78KBN7BY_x6JvxY8555fyTmLN7GsJ5a4iUUPBJ06kFraH7W=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/NPHjDsNIFje7CdO6pi/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 139:
+                        name = "Maquina de Cuadriceps";
+                        photo_path = "https://lh3.googleusercontent.com/jbgEm1o5fKY035i69XBZjlN-6sDcS6JPKbFsDlrS-pxefTLN83YdxUhfg2FbQB3V_EcKiCRqztxBV0GK08yJSQ9m5c6ymGwpFIWjc834xDtm9f3oSxsVh8bCPIhTJpm2VhS8y8v2AE-R8kG2uex9n4AFEy-VpeU6zUze36O-g2IkRVu4tzX8bhn28LnDkYNLn4PjV66rAbnOGiBlwOBKqItRmo06YVZBpoIKnQq3szLlpf75nSI9B3uaKtl897rJUsVoRKxque2eyF-_9q3y8u7n_ny6hrjiy6yVL0rFOAYUJ0el1ZcH3Wd-u4hPAx4lonsl6tyzqMP7O71EMzIshKrv5nEhl2aKzV_N0PFcoydfZyY0Fk38SoX7cAIt0VTvlU9HCVORUpzUOKrw8WuTkMx_LVfEKTtlfJ03-mgzLwrV2C71Pa7Y1RQ0A0gMWQTR1_4icIFQWAPXBbNdzrjvh2DUD6QA5tROPL7iuDMaoilm_uoe-GUTDGMjxKtVN8Vz2ohhI5f7LkERZwo4Ow7yizczL5WI6Ngx0C_pSGdooNh5s9db402BelTKKvFk1bcvhw89tMiy0CVfEgR6XgWIEaCubrKzKdNkJyfWMZyWy8PLCEHG0uZMvui12Xy4NJTAm9If72R1xf9sZ7ITxNu6wywv=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/5zw8PEt9LisjDkBsrS/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 140:
+                        name = "Squat en Fitball";
+                        photo_path = "https://lh3.googleusercontent.com/MKm9RY7zZ_4zPsdcBa848pJexKBsQMAWzhVbm2-0hL0MII4zSHaM36iVe3wJuDa5Jcxwonl45jxedYHrtHup_pbndDL-ke6suV4ciEyY9C0MrPWDLXaU-SmNjTzYJqZkqMoc83qYP4m1yecz4yvGzZcyUBJgf2jPhqQDLYQv2srA9QTBwvMs2U8AXFSpuAhorBbExWIQlNhyXR8XY-HdY1_bR0UFByw9xmMyR1hHywOZWjU4q1mf4zSXnqtIJcglykHcDy72f8uwAGh4Y32xt7Q-7ujG3PFmNrCVsoWuZ64flpD8A3qBtUAxtYJQAMwx2tZ6S85OVliQ4dwLQimjjffFiPabj_tQlrCxlyt9QgcxMMH_toUPSq8Th8xt63dsd3FgOhblOhGvuDsKChDWfSQlKVFOskZEraDKF-EFpiU-A980FpHWkGxWhG5mCbsZybozNKsMPiLfF-ik7uh1d24SFyxfNZXlN0szax2QFjKQbFpTi2B_Qyxo6m6OZSh4JoACWXDAfk2dBLnv2m58HeMdKUOKymFp6R8W_fm8RHwGd6TDPmTn30hr5IGThS4hZ8nrF0ymsiU13lu1oh89D8Zohd9AYC1jrkmeZw9m5zMHWuMRmYcquFE5OMZi7gj5H0lG3QlUj3eQzs6Dx0-0Mx9q=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/X9i2BF4fJ3kD77ImLb/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 141:
+                        name = "Fitball Squat 1 Pierna";
+                        photo_path = "https://lh3.googleusercontent.com/dk4bUOC5nub1aVra4HC6vP-cKYhpFbP2fmCKFDFF4EJdqjVu6GrUpWsnRjn-DSGVY5D0hnp-LsQ-OrsM0UpPYgkIFgjtu7yXbU7VVBRrv8CRgffW0HHI5zb3dwcTM5beyMY1uPlfzkS976bhY8R83_sHoHi-pbz9fKjI9e-l6gkSYJaxO6fjssc51c1UiSXMerpZAGMFuT2dq9bQt1dCAEtd6ziAALbTcvSeyyt3UFhYDUwmzbmKf16qbvd1QSXBqc8M2bF-XyskVnJEnSr1KmDpCNM0rlZhivt8B1VjOMKkMZZb3eM8_pPmS5AGzIav1FEG1z5INBZuxMxZQ9_n7wr9dzeP_skxJPV8lf5It3Q5llMfAmO5vMSxB46464eeXuDawxgNmCQOITXWCBcjiqsyGaqyanoXnyPT9WvBs7T5b1AZ3xtKglc8vkZM19zxkzHvgS30jTQ28kM3XmHqjFNYBNwHVnvLrcDY38DufOB8WJF15sbS9KTnzyMWelANAi7U4IIVGTkxh-uIelc6U9zUjFRE_gKee9FqkGPILSoDxXHc8eVzOmMXUs6_WY15t9twRkyA8segfbE5yPSQ6SFwsBKYsrDl1_d6y8IIF1VNTBLRiQpTpPqOnRBvwPfT46SXJ42DZaSMUcpqyydJLdZn=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/9J8XZah8QEbUOButZo/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 142:
+                        name = "Extension Barra EZ Declinado";
+                        photo_path = "https://lh3.googleusercontent.com/q3ZH0Wsa7-DNsoARcgNWJpes4854HIahnidXOXfJA2TAm2IueMr-q3RoAPlVon9CVuqvZuAdZuCNz69F6XcZtAmDzR3lo-MNE_C1x711zOMsTIzAn8kPUAymOe2RSVs5TKM1VG8hDqDnejDxGSg7WYzDufYAR6oQHY5aQiJy5WCp7KTQezGoVP7tTGFLTaMZc3XNkt7u3mdRx2G9Q2noHppFRHK4TalG0mLQndXB_1I9nMvs-Sl9WdyI9R0B8PIIa6JcXCysacCmCmNaBHsWYisoWFiCHZbLwXsQnEl2ZKM50wXNrAezLr289mv87y4vi7zD5gHOONqu9zLwro7k_DmiVWITbjccRNmNXbNOvZFP7fHU0N9B6QIj0zPOKmwYn9wVp6WTkdQCF1l2-c2vO9NJyV3Y5T9bWf4jdy0y-MY7yKjIAilcQ-W-UwggeMCeAl3i0ZDV3IijqkYxwWeCcBVeh-bTyIRhUPEgLdBuZZWs-ZrlcFRVI7bcaZPipJofleAbo0dsdOvA9o1txWAWMB6iA7vc_RxbQylwcx26J6C8_Ql5iuW795W4YM2qNBtKCBeQHIiQSRri3QJqvL7DrQlHU5zmmQrPX02O8O5_5dXwVl7ZDsVv5E_PsxRQQK7-t6T2mMhg-VG6XUbrLNMLou7i=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/7Tl49qaA5QoO9YCP7x/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 143:
+                        name = "Press Triceps";
+                        photo_path = "https://lh3.googleusercontent.com/XjoUIqWC0i2wyUWUJHEduqnN8CfND-C5h6Ghh136A2sLsAsld7jTh4pwxnazMVmfT6zoNzShh5HF0jgPx6sHqtEBRFxNdow5uZSLsYF47y-t_dz1_KhSgtxXVmZMusXmDWmTeVMMOG1IPtsU0Xm6ioW-NJQ6mBeUxFXIDxZOCQoimYkz_CGuJn5p4e4Q4LeXmJ5meSqpanDOAYWJpv5X8qCnLRV7vpSuPhjCKXFQYhNfW17NDstuAvqgD8ZZjJgERqQz0Nzi1Yfxi5f8mHfT7PydjtBOaYHznNU4s8Yhe5qltcB2L6NNf5n5XiEQuxjZIotcoPySeuYFs_X3Ca3eIIlQcFuQKgHAXFnTcuw0EwSwpn3k_J7Rx0PLe-LQYhbspO1xap2a84ik5IX4FqNns4ir4HJDJUp6oeTTUsju90TP329F50g2FCGROg5uIXuhwkXIuWEX1JKg5SCehGVah_3ATIXQ1mRYLS0092l7ez7tbUFHQ_Z_45XvnerK90Ect6vaKUQcOOh4Gucrb1cQSWxDxtvRz087Ejo7BbRmb1k8C9fz6ZlD2tujewOkBlKrGCmNsqqppklp67lZ975bit7Ex8wRB1Xo8MM35Q9N011iLN8D0kriKoO65QH6DysI4B09hhQ_gqVpG3TA2ZTtYkDR=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/uU8UjZMmcJDQv8gEqx/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 144:
+                        name = "Triceps Polea Barra Supino";
+                        photo_path = "https://lh3.googleusercontent.com/ov_OVt4hUp1BN0Z5JB99AwPmlkovFAbf2FSyjDGDmPtIi8wIPAa5rpQF9aU6RASn5XahUnHQgESw1o9F2mkx9vDLzTUENfN1V8mT44zjyEq1ZmMy9IXzjOAHkSU5LBBGLydgd1fDc-blvjtY8lMmv_pu2jacAJD5LLGQZRVOwFaEr-tkACpfEw6oYpJslH8a-_xUV-wDqJL2fbKWSVmYCZ4yseWm4ERB5gE5E9LV0WF485Gg62UzMgZdrMkt9Fp8lBrhFSett0HWQ9xdij-EARZ6UEWB5978sTjlD540ELAlimERQzJTuZbXB4MDw3fC1JXPDaubFQrTpusSSxjkGQAZ_QijMr6xhaNZSWqKA-DA9QP8bbM65kwb2FIiCOiPxF7ga1roCbJ7pwBCS4D-Mgtg_blcv8CzrgtC7Lhm67AMiPJukRes2SR6byvyBEQNW1_ZvNT2zhqmtSFOZwJKwh2sG74lGfTRqzf__e8bPgWvZd8jZ-7qpXx7KUF4SM_8BM7fvva3WMd87BgO7RaVeFdZD1_dEnVSExGW4ojWn9Yuce_DQimpMTFwqZRBj6e4mRDpzAiGQYX1oVmthZCp8-CWkTD1ULMyeRMEksnF4yBBlQKePHYnuQ10wdigNrmPmnzJFFrETTnQ8gk6mBn-xda9=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/8lPMWahnH18U4pLcJv/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 145:
+                        name = "Dips con Banco";
+                        photo_path = "https://lh3.googleusercontent.com/2FMIZudtWeGicUbOtFbZ66X6WBL0MFLJkN7_PqmUJMdtel0-6XXI1SOdeSEBRT9QNRZ8SnBpPwNwBlRqKmJPn0jI4pa9qJv3P2nChSFVr2KxfPCjzEdHq8CZEOhLD0CiBMiZjyIUbITIGbM2mc497zV4YtulEDRp43t6zncvjqT5jFxFN9c44DZkDK5aLzaS3e-rzAjRfHEvpx2UMGZAW_DjJ8cvxKSnB8R3FqBjJSyN7FRyK8-kjVFFfK8duvfYzd71h9qlh_vkOSrCenT-nuON4L5qnvjEMk3d32lM7QAzRkTfEHmu60e2BRj-Pfifx0g07QnpvNzn6qtTUPZb_1SqF_HMF7UQyiZpHJiNDuj4GtEva_pK1qGoVdYyE5R_Kzyiie0RCQT_69XevGrZNXML-RBPFq6eqULmrr0WvcGqe-MqQMzE7dpaZUVNjVhB4ZXs4huMXl9rg4Elco7O1eYB-F-zbxW8VyYuFmaSEQLl5PGfcT6I4Nv4wpJSCccqs5aE0ilIL0Pv9c7MRnD1dI2eVThWVdasqPBLHU0yS-MguDEkT6UV1QWxyXtvbWfulXMUSaP7kqQBdJc3D7je1PtKI7ePxR2HKZLOg5UAjiTEm3LhCParlHkOQAoOUlDOKUZRFU3kNP8XOB84v3gOWwgU=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2yxNfyGU8qeQBaTnkt/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 146:
+                        name = "Ext. Sobre Cabeza Mancuernas";
+                        photo_path = "https://lh3.googleusercontent.com/g07X-yvmKrklroLfTJ4L7xgKNVqf80W-RCQmWFiET85cnlail4CtZOw25koMT9qGwxtseMoF71M37KLOW8PxvFSYnyTJKG8SbrH7rw7pWzmqOGHrPY4ka18VGZf5sjwL2zPhKggzFQrSbnlGyrsO_Ho06B3suDoTefIc_68BWgazHpQGcw1aK1aZEp3IHEu1SD0oG5STKCf2meeROydk-G1EvaT2ENWEEynQEqsziX4VXx9wuWhE94naZTbTHc7j3yHdP_Mxcf3YV04Z3Rx-g7iMAaV7pU5DtgrnKhqzzR1rXvzafWXrai1qwrnd0ppJjqzhOFdfgtyhzBsBFYwmF11NKmSm0atsVT0wuU_9DfaJeUOT93ia43xY9wsBHpW0ZJ2SviS2JQqPj4D--c5YDsujXw7pcWLItgIbDqSK9Fma0iCjYChfd1qI2rLTYvOflxnbfUgEbD-K_OScDFeeBxsuBmrQF2YKAlumb4eV9Q1e_D539t94bRjeS8ZZG_1dw2calIC3KMTkMxSuWsgztxdVDTXlEc2cnsz58nyi1sRTw3goR0mUQ8dj5KIflJtWS-4hBMGV9WMOZq78jyJNdVjVc5zji7fIID4MjMk1qGNlkoV0CXVM0xlOyhNvK21aHhgOMr1JppMSsVlOej1ejnWP=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2zoCeuXwuprH9zzPhP/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 147:
+                        name = "Triceps Press Agarre Supino";
+                        photo_path = "https://lh3.googleusercontent.com/7ufNJO2D1-aMH-61pZXBLNW0RMytmJta86wLBr7Ju8jwJ3CQTOzFZE3Xhn-lBwS9iAAbZu9jn5VUh76U_t9nHDmpQwatKiuV1BWPmdqVJ8adFqmm_3-HouSHufYu3EXdL_VoQUr5m-prkwhUOOUdJtgEKxaaCtQDmn0Sa5KBRyW67lYgrUjWidUn4IBMp79yofn9UTnAfd37xtuPOHqvPY9DEtSyZCrw-RhjYHWFxWaSL6Psfn3SqRZMTnnHjYJNT1Ll1v5TiI2JXwZpSWUQsALM_xecmZ7k0MGNQ6sPbxDxiJ5KlGdfdxRiqp8hM5xoCgIepgh8-_lnTmRvV2vRyno-zCQkiUaSChd1ANlK_eP2xLUsfZjU_Yd5YCWnysdjTPA2dyzxMJUU490uo7xB7D_qvd7_S4jIKTldRg6gjvMXJ0n7Tjzl5sfzt1vgCyNsZI0x6sflF_aGx7a1Mpqwd2sTg1aj81m244cDE6TEFghDIvXTGv0yFzmFoGaO6s2LcVRgP1N7b5TbbOLefiS1RvK1DyQJl7jJxuYX-C0zfCk7QEzGcvJZkaNXqJXjw1PVsAKXF1dwo0PMagq3ypPYHUdzpUPTEaT9Cj17Znkk3M5fGAVZDFnZh6UXNddZWc41tbz7WVF48Yp1vrVQv78OsRJQ=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/7FgWqCdOBfXk6tiHBv/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 148:
+                        name = "Rotadores Internos Polea";
+                        photo_path = "https://lh3.googleusercontent.com/2PxZaqKfqUg9mtl_oMD88mawm84FR2f-njRoneNIHwL4chyFDZB2UAqaxny5HCw6jyF4IMQDvZb9PLZdl9rvWMb0jeKrbzQlwEI_LHO-Gpu-3e_sPE1tvucYsvQq36GdVRWqwIrXSzFTN0WYoG_r831Y7Q8GZ84Yy5aR9kx6KFdgSgaa57jT0c_h-DVqhr1H-T8ZD2WTJVHO2D7TwGLTDFNnGsYF-ORRsNpVo7HEBrR6nU0NnU8V_JJYi8yk851aCYIhsGANDsgrEYWWQIGc8XMB8akjMysPbkXRx9u8mHDkF9Q93fnBvofLt2bMKVN6uI-RsjLQG_Kh3VvPo5kYoGI-bLYi-KLDVCEHv-XsrHf1UzatOyKjhZiaIIvGPaN-jremDqhnQ4mxbFEAHakHvtoPepO4rFHGYfozac6n4B7RrVLfRyDg1rGbuv7xQLJ5ujmgFJmmrHcadi8bOo5--0T1E1b3oRaF2T82PT4Bl_EyywQuWpzs6MJdinWjVYlY6YZ3NOwm4nBDWyuenYTlrp9S8v5u-XV1oXyMtbPd3lmAPzbL2x4aC62MZIjB0ywgRIezO6L__7W0dhFJo2msABma5w8xlsIq1pANwH8lLto83dHxXEhsc44IDofzGBae8xX_E8Xz7CNdkah8BOo-X30w=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/3xfoP4uynxy2uIDiej/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "upper-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 149:
+                        name = "Rotadores Externos Polea";
+                        photo_path = "https://lh3.googleusercontent.com/iFmDu70rEx7SWl_OqCXPjnWawHaDp7hGZPSEwksvO4DS4QS8t0fLDrSbeHsAeq-nlDknHRgnyhFvMHHArTHwrvbZ_jvhKq5oXIXngfsYDiNWXbaxEDAwlcyMoHO926WbBaNzenWDA59gyDb0eUakwFhfBaLubnZy-wZ4l2TWVHBFDdYceuc0nHFSxvWKuwHiYq2TGy4HLXnLEbUV3Yq7JpXU98j-M3NniZC6Yrtm4HgvlrsL5wemzf-vynFg7ToRDKNpwpK7-4A5dW7HL5yIbR5Pe3xjhSXpsyGqJFodV_VcMgxfrRxNLyMFMcmULDmcJTMRrlmqllnx8tWaOejEqy3RyYxqxOFXEWypeA9wK5yrQQtAUoHS9-xgFg7u-gL99caBUNdu6XvuyUrzVDdJUUIYbmcOKuM7yEDNIk-WsZXnkrekIGBTZ1Me9yySEiyLfMB4A-XlDL_D7GSmXVt3CbnkXtNUX5bbUIUqAKe7uaxSWX9c3z419PDfGSaqU5yYiuHld2DDfADAlvWCbdmmM8bSI6FGAB8Z8iaTuJzS5C7YgB6aM7EXNnLFFoFYH7T84vCNwxAoM6QNN2y2OT-wALeaLcP7HxEJHNCp6lo8c5Qksh-d7RzyM0wydO44oBk8aA_Ya-yGfSJ1_HaJbLDufeA8=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/j0NIgyrhWndODoblPI/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "upper-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 150:
+                        name = "Supraespinoso Polea";
+                        photo_path = "https://lh3.googleusercontent.com/SH181_V1CE9Ma2Wx6CmdBJUFvuuTdzLaJh45gUZzLnUXxznoYEqvNFWxHuhCsEkjZzPK9fsY78Ivv8Lw7sX2fU45EOWTRBjMTsoC-5Kc-knkpZuHvhXFaMOpK1fN6ovfVaYPIJDUcSCjUZxz_bQhzBCs0WQpp-WOmxmQlI-0RqCzq441As8F4w1e8eKeUy_KlGoYHF4phWIBEtmxnPMbiZaotRcxTugxXpl5fzWllaRsgdVmwZfCoL2t658BgRTCrWj_FJKUYeelXHl_koakgf5nohPBOAkaRmg04N4sKYBod43HH0Y08gOq9F0OyBqht_1Ec7Mp3cOyTogAwZ6h2IZT4e4mXrRDGmAVi3J6fqP8oHgtrr2p__ZwhsdC-gZrOHNHsMglwqHZN26cjLeUh8ke83KiVy_H4CYKVyan-_NtEDf6w4bBhH_R_Y034TGsflMRn9KVLjvz5fOTvsjJmlZOcQSdrC23Zq-tC6OdFEM3Qawt48hFNNLzjYzNgIZC9cSph5fa6E6hk0aGHxphWqtXZsJjr7wyyB0EVKubfxgJCgrWSXw6F1z8rPLaDpZX43SHiTlDra6z9Gl6_tkoNJVdpzh3Mwlt_X8uxLwX2YJFrRnewvm9KHe_KQvmk8Qb5vf1_pviNmHA3r_WwxBn4aDP=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/X8JjbYywM6iHynvnpW/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "upper-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+
 
                 }
 
@@ -1123,7 +1594,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
         //if db is opened correctly
         if (db != null) {
             //Insert 103 exercises
-            for (int i = 1; i <= 103; i++) {
+            for (int i = 1; i <= 150; i++) {
                 //Create data
                 int id = i;
                 String name = "";
@@ -1346,27 +1817,27 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "straight";
                         break;
                     case 20:
-                        name = "Piernas Estiradas en Barra";
-                        photo_path = "https://lh3.googleusercontent.com/p5XGJpgc8kmezFEDvhgAG_j8L4lXnhEZjibgCdAf9H5bZE5xQMK_IEO4-9D2dPW8M2UvUuauluIdwsnCUpXaOenFmz3qIMoP-reflbWu1a1pIGXlBEI00aeChT2Tneh6uRrb9KzxXafjrmrc9RMNcoPrNBLfmXweN5etj7C0fpdnzfswnuHIWuSRtvO2gRkH4g6KQN-g5NCeuHZjD7pq-ORSi1PEY3YcT_8-7tDJFDmpIMNUQGZyjJVZO9uELxxd6m9bCVemT2Q3dEK7_btdR31-9YPaHl2rPktiwu1es_xplisxk3N9FritUfxk4ormr6iBowXYuchQTw0qR6dEJ1j2mS2iY87-q_fefUzATXH-xJBEkNw0bOavOZR7Y-XeRIPIzsTX-4_MNeztcn0dbTr_ia9oxw3NLiscKPYip_7u7nRDI1Or7yKRXmVUBv5T5d0gzcnK1B9jknKiLv8z7x_vid9cc8_FAUpmkQZCK2m64mkNiL39G2GK58Kisez6viOv_uqArmS5dNPRk3JQFrR9CbRfnAI-U9mE7AYmaDVEFhFYt90vdhsAtEp1FpRI_M_sUHLR_VOj3YpYCgVtTCKGmXw06AV0KKHatD242stizYxzOmiUjeDoZ-TW7jVhjcDofC4UXSOtLuQJ6WowiKcdBNvcxYI95Z2Gz0v2285pVyBnxtezxG5T=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/QJHwM8DUV6nwM8Zivx/giphy.gif";
-                        description = "-Agarrado brazos estirados en barra\n-Posición inicial piernas estiradas\n-Impulso de cadera\n-Resto del cuerpo fijo\n-Peso lastre";
+                        name = "Pies a la Barra";
+                        photo_path = "https://lh3.googleusercontent.com/WrDUMaomMIRl5eAiLxWzkL0IoY8U4_HJ5ZhS4c7LKIg7jcHt3mUHVkuAlWGsgRW_XML-3FwbdokGyg4vzTu-xY95yyhyokF52Lgo7O7CAmGwygrKNY8jpcPRFvmbMBbmXnsj69JeBwhyeXMWsafjFI21trZelSPlGXpSUI-YIC_SJ8w_PvIkSA2YxJcqibyhyzc820krjnGnFdv1_ZluodLEld2M1LyJQnZgohYVVs_SkS5BqsdqlipSGcpzlLIi1TamXlf_AvpANfux5dkdC8CxTd5pGnINSUJ2E2GTtcL372eUYU0R7uBiSmvPQGhjjwSQ0B5ESkVo2AUJwjFMdmjOQYpK7BWqU1d4pgm1AqcwwtP51hGqyDnOh-2lNlw11NgW4d80TLVBQbwtx6XL1bttPOHEw9oCiOQ2ciQBAowTJRJDYucViXem8HkzhirZNkz4iTU3PZ3UyqJJ__b_Nseabuxso3WUdPopB5RDJrVCaHA-EHziUsjuahDWRACpUzqL7jb0bGYLogU3dR_bUQOaP8g-byoRfYVZE0VjT7hgDuz9xnB3g7Mv2Rdr35m3Nw8ZrpGpfMpMGzOapsymDG2-GTrMr8dhzyHcGnQlCmLMjuC5DzH51htWQtg1Ti663wxkeBA0L6Ws-nLCGMiXuQIQ=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/oyiXMbtmK5PIecyd0a/giphy.gif";
+                        description = "-Descripción por escribir";
                         muscle_zone = "abs";
                         level = "hard";
-                        hip_weight = "-/-/0/4/6";
-                        res_weight ="-/-/-/-/-";
-                        vol_weight = "-/-/2/6/8";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
                         subclasses = "straight";
                         break;
                     case 21:
-                        name = "Sentado en Barra";
-                        photo_path = "https://lh3.googleusercontent.com/zAwEJShLr0Ylh70mc_p_fYFyVGuuxjP4OISNm8udCl1WLWv1Nj_fn5O6cBUKJQ2wakH-mMrBTDMRlSZ3vsU89vV62R8-sg29LCKUN-Ln7gIX3Hb6Tdh6NY1_556U0irK5dGj8bzlEqZ7JkfeKp963AKv5FfChOH43bzQEhwQi1tmCRXdLUy-k_bU6P3y2DKJ2xqKYy2jIOqtIjvU9m5iFykNN1t4o_yj7sLLlIwM3n6UkO5qLiTz-93-Ld1FI69D-u80thHD4x3WTTSccA2SyhGrg-NgKKuMPLM_BogjB1CHRPFn4sEgMNocuAc1w58Aj06n-GS2ltjg-o71gK9Th7TS7RH9rhainycQe4bC4zRh2iwGPmpYrxnBAy7u99-T2pSx7xOTNi_hJMgogaHELI3v0Bj6sq6U476NvcwDkHdeLZUGpYB-1PwclqcVMVxpKGm8WhtGdG_Pp_EzuUFrOioup7_f0TKDKNc_Ds9FXAGHiaYicymzDoDV-h-WWYV_f3H2aQejSDzMrp71ELCfHDow316k6esyutMayRpTgeYa1zDOlHLlKqyffKVZB2ND6J6bTEJ1C7LMd4OhVf-uJkN2w9h8UYrY3vxEN6TGxW686Esy812OXD9iZpTrcGVsVKmmYv5Whq873ee67SUEh92PmhunEcvmSQr-ja3wEhXwYIkcpPefPFaa=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1BcgDvfn1aT4l18LlT/giphy.gif";
-                        description = "-Agarrado brazos estirados en barra\n-Posición inicial como sentado\n-Impulso de cadera\n-Resto del cuerpo fijo\n-Peso lastre";
+                        name = "Sentado en Captain Chair";
+                        photo_path = "https://lh3.googleusercontent.com/aVFNNzAkaw8M2j2fNjBAvONWxTVLwh_11r1n04F1Dbp3ZN5aKHj8TfJPwVC4tlYf9i4UhfDWnsPuKVE966gStFeno3FZw-Z53CN9uAaXEvlP-u1QPjoKZAkWIZsE6SNsLiaqs7CYsPpEB-TH1slpkzNMl9iUA2Xu7gMnikCeDOBhillo5N0pnc_j--YQYW1mY8mWBtCsgupajcbocrnAukEDZT4YTFR-OcVRx28dnCc3zEZfzUK6mJDvK1VD9hJDrUKRSO8oHvyqi0xUaK-gr2qU1NOvuEMDKOYdQcQLWr_ZnlCalr5u_RlTY1AjM0HXUUyxiG9r1-_jatlpgGuvzqXOa_g-OyNvswhY_K5aOLmh3kUNIP5KvyXdYwfBFKFw05nh2ucqEazWm49KgocKKNC8EAdr_WqCGp4uEOadl30O-bysERCjPtveU3_yBlnvx03Ffdrmw-CvoNXSq1guDNNCCY3eoZQAQhyPvZmHL8i3L8fnJZjKGFWDETSb2aGRyXBWuqLzMmLGDmZgPpvgO0_ochxIMkL8rxuI6eF5WLPofVQKUmjKGRrEPBPH98vIK-cBVrbiewWB0KTfA0RvmkCnDs8AvodnkUZXEUjfG8CxPkf3ZN3CaNdvCSaIfVjjW_wxs-f1iRzLs4omy65e0KQ3=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/9r8HDw7mVePKVERYe1/giphy.gif";
+                        description = "-Descripción por escribir";
                         muscle_zone = "abs";
                         level = "hard";
-                        hip_weight = "-/-/0/4/6";
-                        res_weight ="-/-/-/-/-";
-                        vol_weight = "-/-/2/6/8";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
                         subclasses = "straight";
                         break;
                     case 22:
@@ -1470,41 +1941,41 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "oblique";
                         break;
                     case 31:
-                        name = "Flexion de Muneca";
-                        photo_path = "https://lh3.googleusercontent.com/fsoPalgmg97dXnDhDpkelSPlwOLygit1I7nJMf5wDqn1a5IoK1S3x9mckx_8ixrUxGoA72YgzuLr0fKzcDgZTXlDj2znyLVSHHc6hnoNIf2NmVQTAIg2gVdalo9S2Fx4Ej7Vx6HRnJkoC3URQQzYUcKYp0WpKHOSzDtI-LtD3SPUSJR4ncytXdcl_WM1e5F6rqzA8fjXyv3F5MvHYqklnY0mMCa6HCrQ5SKePtYL2BsOO_-LKEwyt5nBCcE80U-VkiS6gFKxbI-mXclPfvX3NCHiiGfw0eJKFfHEHnjx8EPMAn2_wlUsyTGdyfJcM5VHljyOakJlQN53ZGmJ85USFRiuslM487ySt1i3NGu84sEXk1g_XQbPPuGj07faL3mdhp9ZAmVrKaA6A2RKuKwtDOskV1aC_50RjgzktDvdcaCVrb4qCFJQpVRBQgwznx32boRwZbMR9xcrkrCCHBX6sP4yjnUKXqtPUo9W7KxBDeP8GtTUnHmT9xnICl_mcGo2yHn2EuxviXtXfc-Z_BwIa9GH-Cy8BoAgTWU8R1GAYTU2Zl5q_8lL6-jlXVODB_dkmmsbNhxYwKudfm7KTPBslXevpI9WOXwibpaiCHCVurFlWqLY1s9jTaciPxs2or63JWKNvHMdUsOzECGU3Lk-BYo_ux-wKgKTZIyf7B3Kj9mUUjix58s0btuh=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1ZnBAWjjXlKWMF0FZw/giphy.gif";
-                        description = "-Antebrazo bloqueado\n-Posición del cuerpo cómoda y natural\n-Se mueve la muñeca solo\n-Palma hacia arriba";
+                        name = "Movimientos del Carpo";
+                        photo_path = "https://lh3.googleusercontent.com/OHn2C_HZWXN0JEFohaF6S1SFXEOVBNGvYqVnZl6w6ccmQLgB5SOSlRfZ1N2xQxaZKlm6BPocdvCWiDtJsO_T6pzBRogUBShLIDeAVuOPoCj38S4zJZnt9WDNDabPOnNn-2GrUlPfTIgkiwLmdeUbm99UppBmd6uJSJ-J8DZGyI3r96Hm9UCcGNhAqmDtUy4vIHBmqBHBbpBYfboAQoAfDH_O0rppv454NFtpIdwDos6neLfpnW87gXDW27nxj5yF04X2aVWwXYIu2eiYAiYq2Khc67_qskOlI7u3xNYfkgWPMmPFs5vcQrvYpgELCwRePzOMwCPpJZJwqXKpNWPRjupn79Osbhjk3GGWgA2YQobKCXokvtM8pyXnRe-prYdVijhzsPm6eWkKDzp4xeljHKOoCL0FjqI9nNtDjbnwH-GDhRXw0BYAexNdlI1uWXAxral2zIeiVWUwQ2-4yB-3HwwOkPz17IhR6ps8RMy8Z9UBE2ZPlFC5jVSHupVhL-7XGZIZhJG-6Uon_vY0kKQJIA6s0SywLfVkR8JtW2I6kurqKJrP0wWSI1mqxmbmQ8nwvBMwDCF4fjjvvH-Ug0bxEdIIu7-QrzYHR0sFlnIf-wVHJWBqV3zZj31o6yIwg-QiL--qRA13vVF_1gr-Xwtxi7Wo=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/28hFzCXP7glsyUnXcc/giphy.gif";
+                        description = "-Son 3 ejercicios diferentes\n-Flexión de muñeca, Extensión, Rotación\n-Hacer por separado\n-Se mueve la muñeca solo, cuerpo cómodo";
                         muscle_zone = "forearm";
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
                         break;
                     case 32:
-                        name = "Extension de Muneca";
-                        photo_path = "https://lh3.googleusercontent.com/VT6FusoC0wkdzGgADsh9VMjbmpVcyT0P-RxinlNMHrQpcg1dGjiIg6aOx4qLeIB1kfXXavTCp_N2hcfhxPrIlVBSwnB3oVSpBIfCnxkbB2i1odJKzTRYwKVb5jZAirztTbMLMGHJKqS_Xf1u8UtBhaSkRMkIeXtFjWdpkSMN9daB0y9L8RuimjwesIrij5FDv5E2w-knPgN6xBhcGuyy0cF8X6STtswOyvKM2U9jUyvwgxbbw1km1SO8X445cgHP-CETcYBxPVbyvYj-vs9udGH5d3tPQtHxZg8Bx7sGakHgkGFajrolwDhM5uLZj3gOzs394a7JjjlnWuZg6i1uRpgJyYUrdte6PtY7J3Um2Z1DMJbvRDoqGRU9AlkEiqoPVcyIDHHdTqa-LMHhkAmkAdSFP4kubpZkl10U2OokXHtZpsz94fpiIpw5sRn5cqMqoCFsJe-tfQ7mCXYqJEbIHyrqGee5M4zen32bXN7KiBsxG4vGV09RJvOIfQiuxPMhMTUtsRAFbP8tGiQmmV6ZC0BD0aICGnt844Hxc_oN0WHM3aXaARaKUx40NGsnTEVSqN4m_LuCibKpzNHBrS-j2FNfeXoS8qRIc74xbFn5YvuPVU7_gheyXQ8qQ1vI87lXhVJ3scUsapRV9XjcZ2bOhyCJ275dIzFZSvzkpfTYhh3OcTxV_8anW31T=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/tJYdAoXnHjilIWNZAl/giphy.gif";
-                        description = "-Antebrazo bloqueado\n-Posición del cuerpo cómoda\n-Se mueve la muñeca solo\n-Palma hacia abajo";
-                        muscle_zone = "forearm";
-                        hip_weight = "6/8/10/12/16";
-                        res_weight ="4/6/8/10/14";
-                        vol_weight = "8/10/12/14/18";
-                        break;
-                    case 33:
-                        name = "Rotacion de Muneca";
-                        photo_path = "https://lh3.googleusercontent.com/VT6FusoC0wkdzGgADsh9VMjbmpVcyT0P-RxinlNMHrQpcg1dGjiIg6aOx4qLeIB1kfXXavTCp_N2hcfhxPrIlVBSwnB3oVSpBIfCnxkbB2i1odJKzTRYwKVb5jZAirztTbMLMGHJKqS_Xf1u8UtBhaSkRMkIeXtFjWdpkSMN9daB0y9L8RuimjwesIrij5FDv5E2w-knPgN6xBhcGuyy0cF8X6STtswOyvKM2U9jUyvwgxbbw1km1SO8X445cgHP-CETcYBxPVbyvYj-vs9udGH5d3tPQtHxZg8Bx7sGakHgkGFajrolwDhM5uLZj3gOzs394a7JjjlnWuZg6i1uRpgJyYUrdte6PtY7J3Um2Z1DMJbvRDoqGRU9AlkEiqoPVcyIDHHdTqa-LMHhkAmkAdSFP4kubpZkl10U2OokXHtZpsz94fpiIpw5sRn5cqMqoCFsJe-tfQ7mCXYqJEbIHyrqGee5M4zen32bXN7KiBsxG4vGV09RJvOIfQiuxPMhMTUtsRAFbP8tGiQmmV6ZC0BD0aICGnt844Hxc_oN0WHM3aXaARaKUx40NGsnTEVSqN4m_LuCibKpzNHBrS-j2FNfeXoS8qRIc74xbFn5YvuPVU7_gheyXQ8qQ1vI87lXhVJ3scUsapRV9XjcZ2bOhyCJ275dIzFZSvzkpfTYhh3OcTxV_8anW31T=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/7OVQTNQbAjVeCFhmd4/giphy.gif";
-                        description = "-Antebrazo bloqueado\n-Posición del cuerpo cómoda";
-                        muscle_zone = "forearm";
-                        hip_weight = "6/8/10/12/16";
-                        res_weight ="4/6/8/10/14";
-                        vol_weight = "8/10/12/14/18";
-                        break;
-                    case 34:
                         name = "Flexion y Extension de Dedos";
                         photo_path = "https://lh3.googleusercontent.com/qBM6Nsyl1hQvlP3D8ccjCrhDsc-dG5D7SptavRH0jvLwiE1pNfg1xnFD4b6I1coPs15oxLWTvYZgk2EG0qpglRdRhhVYdsVu30Bei3TYJTyUeHf2y43RRoIBMMstqZ4IqjfDka_Ea_qou4sSHXr3Z1TqJ8UxHXp8XWNODdojRWBx7WZKHhEjYJsAdgyJVKypgGX5wS5QNVOr2QWyZyiIg9K7nyJXoiKru9bioKUlLVKVxCbKcqlwPPAIurnhK_yKczp1re093HzDlCjZGsTCAHTlFpTzGpLH_6_bzYWCMKs4m-4p1scgqgINH-XZ7LclnbwQ2gUV5qhaLUVaiTs6TeTAqU9gNFLfS2T-hCBPDTD8Dei4wvSn3nw7uPy8SCxJfHlrwvpWwRZ1lPE1oSmVLL2Np9ymdRA56n0WeFnJuXxVUyrCFN89wDtPbr2pCUv0PPKJvUTFdlAdRmlZHsF9thU7TKnyHs0k4ZU3YywbvPTpBes2jdS1eAUteNj0W8UdjwNS635mLYSUg6JEVbcqx8oKhlLbuU1l-OpQBo5yH7OQxH3xnU5IjwKf4iwGaFhrp_kwsikiOYCeLVmcdWM3lPKL5MriderpwsjcxgL7wf9vwJ8b7M9NMbdG9yw-H2qSN2eEoyM3vzEkO2z26Xv3GlkYd2qzrShGSM1ojpWJYeBcwPRAuQn3lO0J=w680-h632-no";
                         video_path = "https://media.giphy.com/media/oOBv4TkeywxU3sdMRT/giphy.gif";
-                        description = "-Si falta material, cambio ejercicio\n-Apretar pelota, estirar dedos";
+                        description = "-Si falta material, cambio ejercicio\n-Apretar pelota, estirar dedos\n-Otro producto similar: powerweb";
                         muscle_zone = "forearm";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 33:
+                        name = "Press Declinado";
+                        photo_path = "https://lh3.googleusercontent.com/nTarKZ7nwyXa1kQTDmvK10Z2sK5SDUzIZdISi5gEoqfWYJfWDd_2lDcGssmbq0hPTSWH0zPT7rZNeorqRTsWzeu7NMJFJVGX8_mH9h1ufWANdmSG1weUpO68u4LV74O6M38zIdyNZTEZhPbB2-8lhzS1DI0hkuKb76ro_2HUEYwJU4WukHYXZNf7fjj6JyVxsQlqMjy8UeUKRIEFhbnNeLa5xCkL27qoyqeJ0ugL9N1AFOurI704NcFKOoHWU3PFM5C6bJj7ZLWk028Ic_2sUrzHye6bL-SmqkVwiYZNw3fDHj-3JFOyzd8tq5ag-IzSFWFXRh7_twSNnwuj6_AxfaFPAel-IZn4i6tVklmpRUBB-7HzVESpnouRi3-HplHo_C2h5JlSpu3UNu2XGHTT1bS0VDf5Zi56uqpQUmQjFEz9E8bQ8qXJnS3f6GP_GbRWxnr968EPK-fGcV5-lrsMSTUU0uvQWq_bqkw0BVQMEHGX4QuGfVYZWYAr1rfcmCQaG4VxepD8fVAEkf8DE1JGhhqNsl6DDxWzpvMGzBdCniQvX57lr50gxcpBIi-0St4jp7LoV2IxVYGxzX4FKqI0wfkJSUoBvh37QvaJGh3zHFpoRMMgpsyl-hTt-Cf43pAvLBX7ewnO4-QymKO2BodM1ddx=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/Lp4c1Ofp6QAaIk1TMF/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 34:
+                        name = "Fly en Polea Tumbado";
+                        photo_path = "https://lh3.googleusercontent.com/jh4CMol2iGtE9mf4cloL3A41l42EYqDy1oFIRSOgGwmwfwD41y89ywppmQX0mQXF6x3PN5_O-iSpryo8GJJIiBxCKz3EnWQnlsgIRw31bL9VdNc-__jKblO_hX9Su0SWAHaP_YJE3Tvzf1zbXwYoyivjHW5mY9MljHIBOdqxThNvvH5Sw1zFUi1ndqkkHGfn2fimEo5ZK9gEFiNoYopd83n9jPZtCm7iv4Ezb0Qu0jIShZxIu_pNxYpVSs1vJyBfAmezYJZWPdxfrNTeyCdPlDN3_ZxzIp8GT8ufg_K41K389HXb8xI1KhjQYN2zKGYx4I_dsSwXTtTnooEBm3HqwemfiXo9R6KCLVBsplyPpt4gSsoq1Av_T3g2EYq0y2DUhtGOh0kWOKAWQC022Zsg_K6wmvwBSc-AoZSjN0jMMpXJriFanVx1hvI6A6OVBt8G0GnhZPhwS17XCBdwjIgWBRlChfNzd77mOr16875m9dhUHnYVZqEz0xutE5gRwE1MpaP6FTIpodALxwacsAcELRtnsEyxCpbcEnzoSr2nr2K9CduLP7SQH5TsGwDFD7_FUs0n6ASpVUyNndMhNsga4WbWCoOwxlIui9WfxmUhICpNz0wCJrClnXKJjdZZuyA_C86Al6LXOgPvvDWeLioRXxgU=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/khNNuK9Xo1CtBMHopU/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -2198,6 +2669,476 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         photo_path = "https://lh3.googleusercontent.com/OUXLEojbdLdTYpozHqm9LKv6yptF1TttYX4MrQkuKRaSbUNH9B3uhSLFbTr5u8MhRMJ616GTb6ERAzFJyqUUHVVmwXuL0pygIAL4zzAZc3C4hVctX0juE7bXJQFAM6I5x4HRrirF-GcfGJrTw7rwac3WwSXSDEWBwzcGW3PTRMOgDzaINhr0iUjaKOuPlvwW9qtlWAx6p286pfvsgFfVeqvTsE5aXR5otUp8v89rfDJbn0dJSnwoAGoRj2PAduzwkBus5BVWtXsn4-Mqy5mb2GW2J3sL_7TbemyIIj3oiOWigpGiAQXj9ZZ99CvbAHIGqAD9gQ_BIsLt0xcvUMJ7KUDx3ZsAyzMfzl7BMkORFbgMJJLuZdT82moCfQ2VibgB_8jxQ1h7UJ7WvT86ODRTKwEugcywfuous52bIgKORaOi-6NyhTwBDb6TjJbzMU2XGAghBz25eoWBou6RIsuplMY4p1N0mpix2pIE7JoypaGSIIvmnhL5sgiqAAhMYOztsp674Hbmm7IIg6mreS7Ulv9YLyLRpNjH59etI559qu2gN71ypWLMIGi73m0LJgmLTbno4T4AZ3SgMnuIXkQiXZ3abuZqg8HZP9gRs1vWiTO9Qy3syOIArZ8dsPjvpv3pMlLrimJfPF32TYR_yjFDziLTMkvn5BoqnVFBWSUf95QWMqClX1U8JRLe=w713-h632-no";
                         video_path = "https://media.giphy.com/media/9A34Cep8gjmptKTkqf/giphy.gif";
                         description = "-Hombro 90º codo 90º (inicio)\n-Ir a tocar la cadera contraria\n-Progresivo, vuelta controlada\n-Tensión inicial de goma, no balanceo\n-Nivel alto: +separación y goma +dura";
+                        muscle_zone = "upper-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 104:
+                        name = "Biceps TRX";
+                        photo_path = "https://lh3.googleusercontent.com/hOoYRUW3TXgwrWKgtU0CWfcESQEkg__lowshrqX-OusGeyrDB2Wo_8RGF9nOKpiHeuE16DFoPPtApmAnx95VXhHL-dxpeVCNHrFMtP17Eq_EpYFwBN_-1u98rx4AoMDQMnko14AbdgpUG4e62yqEBn7DAKJQuxB5rKrD5k4WQYaaPqyFbtUZ-T-EWCcyDoaNO_EQS1D-EdcRO14NnWYeW7UFk1fLvnA_IfUMlIOpaTtoCMxncXEaiMxEtb5GloCSQHz5ziwtMueiIxkeeK4cX2vNb7hJ25O8892DVzMklZnzoNY8m_iVkpqm2-jVf7ObtAa_BxkCsizZNSIQ1RPh2zDrMo2eLJNIGAuhMC9fZC1XNFFNW0WYmWEhRZMcrn2nQAZtfh3ix2YRYMa57mpdVkjZAFWD8Zn_Huvul17CF4frgV1ktxLFophG86Heqrp88A95uVkvUrrsSYRazzDIQNcO8OdCXqNjSStlbOQg5lmGdFwNxYeOevsFeTvVGpXCypOFpVj61IANMPW5M4gcXAderwUW8snpcC9FGf3oVrj7uzyQRbKPbQOdiVz922zQ1pQ46NpZVJD2pDoOC7kEjaEkO5aL8FK1uZDt_eu44KiQ9K4FXpiFzjpathtZPcsR1rgqi3LGRejxE-v1EGNgZ0IR=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/mxw6MEQJ6gymq6A3gW/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "biceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 105:
+                        name = "Curl Concentrado Polea Alta";
+                        photo_path = "https://lh3.googleusercontent.com/QvgZl-B8OV0NfBOtNne-SzeAvORfE2dNROVFdfOODhWDHDRwYXAS1NVOATPAtARZJJdkJMn3vLryPvqqqZ9NhH_sP-IThcIEmB7ak8iQdy1dKxgoU4H5nM8FCy4yBSeO8OjHh3VJOqVPZhB1QjT8dR5ISk0UspLWR3ID92PGbeN_sOC0s9AWi9uZM248c_y6i673CwZ1IdRiHqxbznR9Fc63w7CQj9nZDoan4SES2M5YdsH0v_4qI2nsSohKssERwvFUWHVWUuGSq4PR_85wKSgr0CsV1x1ATjR2tz7wIi8wvhYsxXGs1_aiEo4idkZE2uKVvTsxx9fkAG-UmrClLDKojJRGug9eX_dHiDGIFFNKeuJGGa_UJPLGff39vtn8fB7k-55-xyRSU9Wg-mIIrcT4eTHJRNuPx4SYDS-1PFILxhr7vnZZOtKElEW8yPzGptTqH84K4miG_Q_a8y5CetObsD4cBdJA5d7CpaiIaiDeMI858O8uIr2b80pWDl-AYWTHWDbqPSVZZpiZ3oxRe1L8vCW0Q9wrtrtVo-bN9tt6mt0St9cv88DXza37IlKKff0hJ9IMXzVll8LTPPKyi-gw3blDMVEyrmfxhp_zhUFI59VqdX4xs5iZtW4ckx2yvCXTFdTpMC1JGjan04yAlwvd=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/8FJsTdcvExMqCaBT0E/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "biceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 106:
+                        name = "Biceps Curl Polea Barra";
+                        photo_path = "https://lh3.googleusercontent.com/JyqeadFjt7hGejFSsx1fsPAvU6tPTEEkWVnu6pzmO5kkF3HWFrS7Vga9B1_bHhVxi3r2D3Xyl4mONFRooPD74kO28FpCvlu7QAXlZJXbUmdtWNvhds7VvsP9DoVMz6lmfUPXJ74W1AsbrV0VSJj63Xry-cZlMbAS31nAH274H8gDwc3RrzKa0dtGjEFuWHNDGSKBtuq6b_SA-eLtXKYe4cO1vpmM7Qi3NFs_lIcncZMcFYb1OmJ5Htmmjbddia2QekEXkRv-9gM1e7tq_jD8S8yGsbQeldxwjXfCOhNZGXReEfubrdVciuA-tdjqdblRMcrjcrfKdoUiXTkeIh35jM1tcLOzD6DdSlr0eHcS2KvLJPZx9r66HidXvwStaoJZSXdMkAl6MHdPROy5Omlj02K09fBRajdCW38eV_aRONMz2_WvokSWdD_jX3eJqA-aoSK4hy8ZUr5fEbXrE-Di0XzdWsvOuvVTkCwi8qc3qj0nLxKXSjkhOA8bf1PKmkJeen_aeKAogpR509y2Kr4g_GfjuVZTfBdkMHB5b9wFlgI2Et6RG5Kj2Ly8TeWShInqGI0HJKZxNrsww8jsLxEKQZFXuLF3jyolMX5lKd6dDq8tHXlG5_QPF5bA-claj9s-AYgPxGQDk9X-bxlnACLTU39f=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/fWgdQFSFuU3JZm75jF/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "biceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 107:
+                        name = "Biceps Curl Inclinado";
+                        photo_path = "https://lh3.googleusercontent.com/Z9VxJmG4q4kXDRkJaiyRZEocuUYTiDQN3BZ6xxP5AgW-pmKNcHkLnN8L4a2x03spyVZ9PP0oP3h3x8h3Iw4-CLn8Kp-hRSTzem7T7MR-cB_Lnck0_EUHPkkKvk__veAfFSbkooisJgbHAs1PXyvg8SklngYF2UXnAyJJFYplHyfV48rtIKdWxFpbsKkoXpBsplauy5GRouqehpOJgRfsDafsogI9__8AwKrwcY2G9il_phjx9DEvz2-rxJs2YeTabw1id2smbw62jvEPUAE7C3heliqWYLRIVkwb6RZjdhg8ATMFzn8d6_o1xnPLVdOLuiz5JWiTilE9ichd5O_YyeQMWk5HBi_OOTMf4AHlGJNwgtUjutpvIYbDP4Pgk1pFn9Wbd7sY-izk_9v386SWVufdR0RZ6ZNc2HImhjeT8kggAA4GfoYWzBxGgqkYWaXEYVBCRFgw83TefcTDiaKv8DTEIfuJ9NIv-wksrcKPS0pFier5EwiPEWPnx_0ZyR5rKIjxUCvfS5Sq4owySjhdCbL6rYuBk9l-psv5U5Fzw5GPuQQDViQJlEnChyXzdseKOZMVndRm4HAlXDCU2advcav-QpCgFHni1_bPDe-jH4onD7J9EULvSa_DzmSVOQUdxdom5529P9A1myzCnH9esOXI=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/Zv9uPsqqBpYdzHDBWV/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "biceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 108:
+                        name = "Abs Declinado";
+                        photo_path = "https://lh3.googleusercontent.com/xIVXCHXw5jP9EVbjN6GQPZsQlowTO0ovms6ZcFVL8NsxU-vkKt3ZTHSMJbX3hEVE2UiLUPGuh2NDdN8wwr-PcwmhcJQsL7jkbelhfbWwSXGQwJs_q02jJW2ElQidvtvmhIOpBuW5_r8i2bGZibzEUxcV-2nB4vAscflOHDywiP9_hBKjAGFBro8e1td7_yT3ET--N_AgT03OREdhwTShJKrjQYJEmWcSWrRzXMYCHXGjWBGr17idk3QQYQ0c1kR0ElRAygidujbWkRl97FGp0IVojl7iohCP56AHglxMIca2SeZarl9V5lrWxR9M288zO4K5fk2CGhvITtUi5jnCP4PCxzv_wmLDNuD1lTdPmBQ3FLzQAlQYbthe_zwjDNlbdW5FnwxW0bQLMt9KM7dhrQ-9UK2L9j7_asLZcd4rvGdPnmERAU0uscxBNXqFpW1wzKXsT8kYNPgV4DwBiOT2GJm-m_FO1uba_g5QzQlN2pqMDf2PvFpnAa7NvAAILnOKL4tuEW8TimDExcxUiPZGSu7bQyHkg-pVRIlQQ-YfA00vDWqEId-sXQ_E3HqcC33wIn4896CVxJne2bcufo91fWNlrEbMIQE6Qre0ByBZo9WIKZc9Kgfe-KrVIMy_4g7zIBpRKux2BpWjOOEXPfXwnZ0o=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2A60mcadGXJKxaMGZq/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 109:
+                        name = "Abs Declinado con Giro";
+                        photo_path = "https://lh3.googleusercontent.com/yE5LmY-4GPa4HfOCThApecdt3p3gh49dQCMBoeb28ac5sANpM7vmudhVVFuP_qmZQ39SStMZ_IhK7PFFAmwFSTbR8LF7gjZw7m9-yNH1IsHZdaHjDwpkwhLFv6lQr9sMUd8p-zii2zphspNbag4QnoFkBi3TdTXnYxDzWifcuYLujChyYjALMXyfieJb4teXHTYE_BhKzus7dfLiWTQbkSrcdB74RQxsCPFWcT1hNkKQO0p27TnjyRAxwBW89chjNcYGu77-1c_vWjiAA1uY57HKd8yzeNw7DQuzxFoPy_uxnjiTxh_ICViTfYyV-yqMQYSMsbGrNFwRFVYJNX6NrHHsaGBIdD7x9H4irVQxuMpzLF7QIlp3T5PRKGbtVm0NP4OL6nQSY7IHVfuggmhR6O563V_-xtQ4fSh_U9IC47OOXEO0uu0zdgO-N56mGIgNxMh_ZwI7IZS23DtQp3m4769F9DBy_IurhbrUl3NZ_Ofez8ZqHaHMByMDMR0WMAjjOzD72Sm4ReBmy-COj-_1XdH7Q__XAmsZO3rYNAwJXWLs6LvaDYgqanivte-L60B0zlOyss85Y2R-B-CK7qYfK1WVEm6xdcbADCi6CQLAxQMgPaSDH3NhtdC3k2ez4m3kexbykFCgU7j3md0pf81y9LbA=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/9DrmXHaTo0ahiG1Mo5/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 110:
+                        name = "Abs Invertidas Banco Declinado";
+                        photo_path = "https://lh3.googleusercontent.com/hrWKlidGfvXA2nd5cDRTwIQNjfEJ18v-JJYzTqgY3jYnoFHvheZLIl0fHU144KYiBnR5Mp_rg7ldcl0Os3UZ-AUazhDP-KMeQfrJM7Cu7IiPEU6H7ShfEHdL9AbXM9mOi2N6_fUujO3VoHJOlB-lhGeN1OorPmF7Qf-wkzFZnFgtnedt2LgjH1mRMm9q9jQNqtAvA9rsIlDp8BNINxO-IlCcTYcjbH38gDGtRM4sb7YIgoPfYUXnRfikJLPLA1TzpLXkEKzRdQlhHA9ejXICGe1J0lPHeZqc9HtI2FkrZ2Jo0pwTkiTsd0K3x7BtxHLfy_jpBPfTofz8c7V2dJXyQ8JxxxO6CxoJDbPD3tepu5LsdvjOIgkPitJKgXcl7ywAYYmDImDvWG_rLyyBfD3LS7UVjHDDdXoOo8d7LvS8syaI978gLv0zPRsaEpRfcvyfJm50VqOyev3CXX49DEgQUwki5G1JOm9ljZuwTEd1ipFv1Oap4GM5QIlIDPrRquRmDJdEVJSP9HziFIxAxlmO307BoFNHwLrdUxuQTs63snBw3ge6qKKpEpR1XST8wJJIbjIPhogiAUg39O3gqmwLcj9x7WS0R_9VpS0fT_Mls2WvIdic7ftV2R4nvaq_xXnSE-RqA7Rhza_lhrHXVdwD4II3=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/PP3sY8NqawBgQuaT7l/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 111:
+                        name = "Giro Bola";
+                        photo_path = "https://lh3.googleusercontent.com/N_kAexHmDeMtuuNkVlekXlPGvPbUh-MJSXyvmmXSvheOT1jMC5QnjOhuxONo9KY2hKjT2W7QPNnLPcoMki3w-gjwZCtcUFC-7BblfOJRBhSpVvKzL_Mukbk1rkUcbAlgsJAcxqVB8p_wer_gCdsUUwSBSOntImJMywo39Gb3LEc5OAXcvGXW58_hnPxX4W1NWuVYZGncSEWYehUXQmf3EbmTPGU5ZXC8Ki_rNxQEb3sFnYI0G42MEo3m5PGGuomTzo1Lfs-Zd8a6ladjpIn3VZF1w-PlEeRwr_BhX8W73YUqZLrNy2I-ZxQXcFADnnBj0cZCJ5BvfvZHc05ndc5bPiR0cW7b3forz3gi-4m8G8ihSzAeZBBP4rnQRa_J0-Gc4G0mxbx7SmVcx_0mgaOTQw6_OojvixdQCMWn1zauCVvE9OobKrDs4U89e2tWDG7LJnN2AZpEgRVPUJVryBqgDV38FwmLtJBem-BxW7B0P5PHr7FT3mBc43ZoP4y7Ddh4uHHC3E6vyjh-Z9lhDcor4oYgpnIpvI0arxi2puKKw1wIgoZUtKsI8nyHkN6PeHcg2BvwtD-zGXZmcCOWgHRB5Lbi1cecFknO2Lk5rXJHyENK3Zv3eJPJ7CGJZxCS0Osy8UJBYWOLXxnq9AJZc3cjEkxw=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/61VQ740tYI7DcZ28F6/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 112:
+                        name = "Abs Peso Sobre Cabeza";
+                        photo_path = "https://lh3.googleusercontent.com/trbtH5qqnZ7F-VCDDXZyvds55LrHfVL94xTeff58WsNfi-bm9EsrJwouEVHtwmpQaKyYbPExU5ho2cMTx9F_EtR8bdS4dmIs9VTZfGLVXiF-elBUYBXdkTZK6Lad13Vb-ze0qDoFbQJxL55OByG3mdad5ZaAgqnzTc9a-AzKoAhNG_EOI9SZ7Hp8U6aV5jXmTHyBRdEr8gv1thVWm0ze-yRe1N6RFjqEEgbLqIyD67-u4JpFKuG8hCSgnurOr2z8q_lDFEwBhME2Wu7QQ0Oepi0adMVtCu05Ft9I1l5gKm2Ue-u0DDxVmYYacQEMxAmtiSYF0NrfAFuL0-UXzbNe1UBzMJ0bI7Qrw9T7IwpbP-IDZzBfynlTI5UHqflWb9hxX1ydC60ZlVUBe3zTYl58oJ6aahTkr4F3ja_zswyeKEO3NnZvrQ6JmkhdyJujwDZ9PNugiWS1h3FCXGT6erK751TW_CRMyc0ebfL46pH7bwwwGH0r7cXS7H54WUHS_Ulz6iw_toqLMlQTlhqFaQ15oRSmF-bCeWkEjBHTJbR6iyCnfcWCNJ27wjyBRI-2o27ePHPDnUGUXk-fzeKIF-eSpK5Et7mzPw9B7ipSMpKNKDrry-VYkypfmO-3nHx2pbjRy4I-k4Qg6gkZMmFrI1RGfcOf=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/fteghURwSXnjqj9ZoG/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "abs";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 113:
+                        name = "Cruces Polea Baja";
+                        photo_path = "https://lh3.googleusercontent.com/WdM0d0FzUuGPzpnxCu7ZiQwDqIdO4r3hBWzMyy5dwnIOaNsUq-wi2Q_wKyPEf17zXjrur69ExoQIKuTxQ0jrw9wYLtaDEZPK808RcJI_gAbu9ofo7VEuGNJ3ESuCDSawrUapaWBbawbRMQD81101APgOzqCQRu6u6yeI-yfelO0oO-s_lLHXo-SivMIJG4qb1UN5nA9bR2JNGR9K75fVcgd4SWcM4bqoXqvt_uYaU5ZYrjY4U6ZM6jxIYifoLmxOuecm3_IZmQHh4RJMAEmCBn_WO7VnIaQfwN3WbEN5c-7YgwpyfSZMsU545cgIncYEZ4r18K8jydqmKKJiOioZTxym2a1KSwQZyTYrcvwa8dG8bHq9LeZXmbuD3cYiZ5X2d58eeyezzwuGs2iE8zcU_rwP3gB4fDtwiaW54XcqGKbCNVlgSrhebz2jODTpwDwpvMPiVrur5WunhDPwhWIcfd5hSzLraNpB8d9Fj1KeEU8o7mSAKSypWo8wK4BrTFxKcgdgAKVAsaF8uX8gggvZ88f4eLV25fL0Ezb2HAAqzyFIiQsJAfyKw4fXnt3e1lQziPl-0h4L4Hct50O9FWERxBBvAPO4VaHN4cU3juQqD8dFfCPwzuvkZnT0myr9B2sUsoJE0spsb9pqg0AKaiVItUB1=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/7E2rsOxLJ3K9zo5qMV/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 114:
+                        name = "Maquina Pectoral Superior";
+                        photo_path = "https://lh3.googleusercontent.com/iEGQvYIpKb0o-TnM9NRxCk07661dqgyie_uRYhu65i1ZdXBqYcdoWS9iyh-G4MMEObjyr-scXrrcSyVV4hccQYYHpJr4UEYNBJDvgHwji8znqJFRDHTqDDAuMbKthmYiQdKSZ2Rc4X813Mw5mRCjg6misRei-Th1HAuDC020XTOBZsnHD5-Ls8dqy_kBvMNyTfX6-nm589W7ds1PIRgN7pKB-GHrLzCNEi-87pEbG4wgyz7XsEnnBPFhIUu8m7Zbz_YgULt50hJ6zRE3dPE-ZbfdcDDUq7W6QgDXpLgsZ1FWR-o99CHact6FfTPMC1BzEEs30XXkpIeAdF74rctvc_RQHSnP8bOUlWCWGwAAYqmiA7Q2UUpTf0mPF8UkNYQN3oyy_MATwExhty3fdh4kxXfWQuC9wi_5D35SUFQ7cnYFeGlM4Gf7x81Z5iovbyHbyk9VwH105YnS8SHcel3-uhKv2RZRjAJZS2PFnafVsKclXLwBADKP1LzqNnD5_R_uCg_7npvqwTTE8rKjlQoSFS4PRVJaiciDOgcrWC7GWmLV1XjVEgQgdcZQnibS1e9aVBTH0xQzOdlyEN89TQGzSZ459REB1fHgtD2-4dD0udbmxQG7O2jKulwR4ztcVhpvrY41p0ICNhQdO5blfGelXW5D=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/TgIYDZOBGtrwAzBsFx/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 115:
+                        name = "Flexiones TRX";
+                        photo_path = "https://lh3.googleusercontent.com/Vqkrw4zP3upLa7BB__vTI4s1t2H1pR5X6pyXXxb4pznEwcHRtdg4Rk86GJog8_d5hV1gWlmsbfEIkoSH2SjzAQsS-Ue50pR9knQ7q8R078LQUZUskdB3lUrMzb4t1I_hDsgzVX_xsjv6BCJiTfepeKTjI7t6IUDzCVKAicIm8zdj9OKLvt6ITbABvyIyKkKjELMzqmGpMIxl0NvX-n7ll9Ye9tTW5X2D8SjzH8E83xZZ18DEU3Fb_x_vVUIfiWhPNJP4bBRy8_8DGE6z0X9lTJTQ94zpXdvW4TbrMYhfCpdOVSifNDEkoLyJ2-T06JoyRHtTMWULgW1Z1P_T9VQ64TjJmNog7ArAM4bimowENQULj3LaL-xz3-uD5_s01DS4reOtdQzUK0kkYZtQNsJm-XjQR9ZyDKWdj3XbxrF31QGB1sdXzImfDUzdDJTMTWKFpHLsAOOVndYUV3fBszJFNPOjWD9JYSNvNL6yUTKUndY0fxqm4ruwnleiOHecrpa2yL3Pofi8-RxWAlWb4rRgkRWz_uH-srvDbR3eiSMaJznStKstoHE61SbplX41MS-WbheF5uePGqEzZ1qPvlPh0HQHz_MwBRRjG2JHWbPR_sPI4y4fq6GJ_jX69xsXUxYWl7ZbtX0xA-PQzTSRYMqUAwOv=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/oxYnbMISU4JiLFxuDq/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 116:
+                        name = "Press 45º Mancuernas";
+                        photo_path = "https://lh3.googleusercontent.com/jKub1XesxZ9SDX05yHDurq3MQSnrJk5eS2RPtr4j1zLxaqHqHYcUFUZd_SbQ2-IiTowWTACvoo1bfJvyMzyDUShheODev46HH4YeT51DGbQjIAzFHmtqm8gxZLQLUscZRoc1ADl6i5BoYgqVX1tUyryofgICBgSJgyXNYLXAPU4yiiaWHSyw_x4yNPN6GWMUJtqTFwrNd1TupV6ZEwamAtx9YLT5pkT-MPaxgbQlVuqJY_eBW1dLp0nySAI2uG2fQ31iEDpryU7v2dIrEL5u1wu2ARoEjXSAHxsSHgqRuHha8vuVgpJ8Uq3x65p8ij0dFLH-oYhiw7Qywl2yI7VVdDvJtbjyRwEq5EMAKHCAwYRypxBRjTyG_SqIMgvVgsBBr6ichq1kWDmmxhUh_AJultPTSYfp4vkjUKfAghDewFwL1X81qj_cURmOP8eT_KmjrUGM4bWPxAPNUAwqHk_1_6EtPnxhMXoB8Rxvqt-Q_FkULUI6C4YRPUTshETndQv_cCsCuXAdg1Y68zLgMsul4wSH5StwSjrHfZUPdvrlRVVHgrfwxlT8K9Jr52prIVVMDcL1BziVcyAQGb7lfUhgu1XRalb2VLdkP0wX3pd5sXSf5W682Hqt1VqmD9I92ZNzf26BbZkX1KH_O9bTrhDX59v2=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/V9QhTjEQbBySzbJQ6w/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "chest";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 117:
+                        name = "Maquina Hombros con Codos";
+                        photo_path = "https://lh3.googleusercontent.com/-_GTiHZEoQ9sYwdmeksfjBsoBivKtR1Hnc07j0OXXrGYzjhtdiR7mfiFMHPA0dgtxHHcqKTQTewvqaMylmYFE4hG_YD3A9kNL4SavaUdKEsITwuXpx4wlt366DljAra_4MNYvAapR9eq3kybtRwmtpvoZZGFK_RLFXDoimi4dalyfbHvab0n_6gbX9630uTlyTc49l8C5IULMnUjp74R6b5eeON9Wvl-hqXeOIxfOUZPK1Pk3x2PwH12tEyGebrVJ2jGeCBt5FkflBrtpiqMPxQhAggVBE67c4h5Ystfu7-SIxnYp7tadhJyM51usaF6x8ME1bu3eblaId6UEXkguQqAt6iWpRAe4F82CTaiJy0DxrwqmA1zJ6wk2WBiy00l2GrS4odJ81Bi65r3xftYqyBioZDIoydTK4VTRpSsT2Dq0ASZHhoMaeVDLUuMst3xl5VNm7-dTObfBqmGUGG91uFoi-ooDusO58h1oWlMHRtowxLBoq71edeviF-hAfYP1v7qopivKTTUo9qt0tgcpQhhA0VcwbrFBcNsiBAqKvUT3cyF7tX9JSOKTPXZXaGJ_znphfrUFcV_cJgnT4k1n5D5paKYVXbLiPPNtez8uFq-dFN7jvJSCAs_NjiUbFp5WP0x9dGBi0NG41ZJ2nyLAotY=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2bWSeoXmRSUwxjw00z/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "deltoid";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 118:
+                        name = "Fly Reverso Inclinado";
+                        photo_path = "https://lh3.googleusercontent.com/1GpPkX7HeZfdoxFrXRxPIc1ORBJsV028uEV1vBYrSU1EMAEpWVDTYbuJGrmxgGY6SYPq-tHXkrmkost51Hkgqb6Ce8HTHAeYHfETiPCDtclsAX5eGf8auLqZUl3tiJXr188-ZQDBbwsem3lXFWU50ZUJmIZYylzXyqmzcu6KGAZY0T39Ay8-el01PjEMm3SzLxE8dh2dF5oRNEhRTwznwGKuLrJjKmpCI0DkTRT--F6J1awb_NiJJR9IuxOhsbnagC2nx1_w88FWEviA5s9rBv3PVEt5Zvp1O8GpOuW7vvn-bQmjP6gDXPSUueWT6bSunZcU61b_W8vNmAHMpsDHXiOpPu3Ewx2g59Z31VyA3Yx5sPcqvIvyLE5YTXIvyYlX5JCApSok0kdZgyToj4whG3oboUlMzWgOPIEheO3q_5gJiCO_k1dVjPAXlTco5JhRiPtCkYkU4GbqpH2laItO2ntTNfSy-G9AIjyhydWFYyfPfXTbFMXYPHdEuAUf3Q28K_m92UBXgr_9Z1PKUDPMTfKcCqpwMXKIMk2P9VUrENXFyBCh2-cXjhn3SeixDOWeKv64aN7LMPTbj0W6K1-TOJ_NSQrmDmMBb_XA76_g6q59gjk6AWgKwK5LOkMk1lM3dbE3ZSjCfZW__rDX2nzUdUSm=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/5vUSFFWKQA3j5hSAF5/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "deltoid";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 119:
+                        name = "Press Militar Barra Sentado";
+                        photo_path = "https://lh3.googleusercontent.com/vJMENReIm3Ym0iOUK5HutTctyH9chKJZr-aXOD0QhEfbQCqBzZVEoV3DJYWC95yVzXD7cy8E3N6-GhARJLVvYDCusYKveqMvsfkiPpQjHXuUqWVTgVsMVyHHft_s0YqwOSJ0XyIckjDXgzMdBMZW35HLGxNZ-a92xGDEaH20CzAOpg63Eh7nGSr7nY4XdWSCeCAD_BZBGhfUTb3e7fD6fHiunG9vlz8nVeIrHKcyyHAOZUHM6ybFme1dOKP6vTSPqno6mB1i1BceXl6cNehDoGZkZ2j_ivmR8T9Ikieap6zmYuQU-6YxB9YZuynoGxRBXYJ-pAgoAbijmoxnHI5tPFTcM4NWso7rXdjGrDtc3xYxf243TdY1PjllPyJRRrf0xyWTIZtLe_Vj5-Jjz2PTzz-lVocektLYnigealcbJAFcdeFnmh8ex2y-sQ_k_pEh_9lVWZSFaItLRR4WLkljHnW2ssQPs_jwcuCE8cfNlm7LUtaZGSfT0Ll9-97lJcx40pITBRmZwtFIGZqrFmGUf12eiv2dQk-2g4r8HBJUKbTyRXeVHCAEXQd74objlGf3kG5KJTHptG5xE5v91is7FqjcSlWBJJiisLMGLXWE8hhoJpL898nfeWoBxdlTZzKgil_l9litrAX_lZ16ekWERo3l=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/xFkh0qh9GjLnaxg2Oh/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "deltoid";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 120:
+                        name = "Push Press con Mancuernas";
+                        photo_path = "https://lh3.googleusercontent.com/z16H2L-tUv8sMTRr2xikCHiUltWcdv-LpwM058v6XB5mQ_RYGrmgUj7odwBL8OE5rDF1ZvBI4G4Dk2_78Pu9mS67Eg7thpipZ0UhhbU4-cpOAe1Ty1Oulcj0pDadBLby4Yqp_Jb3S7ZC-mfFdFhiXmWHN97To0970rfpJb0uQ_u1h9Z1PLZe_k0CeCZTe0Y_F6oYDj-cXhyM8tnqGp3agDzvcy9qkb1vtylgPn3496Pt0R_C_4xn9omzSLhcMeuGBiaPW4KisY0luL-bxQEyu1610Hpi80MCWNmnjD-xQRwyniONEm_5gIDiL88ochX1BB-3bSaZHQZ4LUk14wjc-gReTc83JG-fWr98D3Stc-MNGQkazo7Pt722fnbb3ymrnTA9XLh8iT0X3lluYzczBcVqb5j4uOIo-y1NQYaVVPN5QyxKgOFRHf2U8BYjkpk1bzgp8APO_Cr3YUO1-BHtMOgl2ytNOUWqn6EJ4csSLhCzBlWJjritH2QdVrtFDdpcciiXvM0sF_2NzYOb6F1t2E85p-QWDhLzOuWHGgUsaujJEWIuym3-NKte4FcTbbWex98sJtjLOSpAhbVWf66Au4KXyLOcM31JVgpsvIg92oZBAJmTp3dL6jJO4VF512_MgBr8fu6VyLj2F9lL47mSnWu2=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/BpDPkqQDNz8xB8l3AI/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "deltoid";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 121:
+                        name = "Elevacion de punteras ";
+                        photo_path = "https://lh3.googleusercontent.com/bKR4aVEBg6-698SCpYedqqX8lW15QFyqCNg9s98i3AKjcYP4K0rnaPV2whhkcrpQAuoqreDWKEgLivibkA3bjGPlpeMB7kD1UNkHKGZmDOtxRgls0dQBRfzcJyhj7wjy2lrtyZzTjFEpkIrW30tM6pbwU7349SRdWwCjaWIzSkOp2o7CdlUaxA_7ps7J_BsrqnMQ6DjdXvQNBxJliYij0mAgBRo5Yi1g6X54NdsbBdd9pNaN3Dh_8JKGPgmuIIJbdYRl1I26kq1zbOOsS4S5iXMEhQarvx_6mSsZzzv5HyIcKzuR4S2Vura9kQABwYdefEw0dR0cfyndBjH7gSO438rpPgeCMoMr6u-BD0eRJljamt9hgn2mtjQxaCmKR0gD0SrYB8HYziFIlQgROIkg80p06RPAC04UTRfALs3nlpprWfELQaPdfelD34UUVDICXuqyIpporf_KFOlHHSMtFDS4hl8LG27sPlAleqgx7TvfBOrum4NIUpC-5OyC1sBsKgE2v5762YCgR1UKU4tB5GPnP8vZyuKSvSQyAjvNgk_oPiQtuUDKcMKDZSOspikMnzPY1kyKonfglNT61EnhHS7uEjTKpI0A-p7HsjjSgKQNFpvYE0XI28sw6tlp_pwRMpXTVeVMeRy8Vpl5rNkrsT4D=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/igGDYnbdf590kutIgk/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "calf";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 122:
+                        name = "Box Jump";
+                        photo_path = "https://lh3.googleusercontent.com/tv_cTmPlVWga08kBmdjiRrLoOe0Ktvms828GRX88BXntNbhzrEo-EC3iVil-U6Hd8MVdHaOk8Ez7fwidjMy2uuO7DHpROTzg6bQFkHhtb2Bp7vx5jfprWBGpaX8Qh6R5oZjGn5LjP7LxDTsAJVTAl7iP5rq_JLz8FJTQh9CmBCStT3_72OIhCuuncuSBGvIdurKhhg5MSw_xOJjp75t3u2gMc74C-qlzuhhnn2eziKHE44mzBEHbj1dhERNx6en5mnpqnNnolYOjBjbdTjrjX6ZTRJ3uwcM13J-CJGC89cUFjd2vMU6_7LARm4XIwngwfRB0Wzj5h6rAeYvS-wS46V2krm8Rq_N6irarjgasbL1qmjMkrfF2pTOheycWxh2CgJKlxPkEWRwD8IExeUGKNj8n2KWyIEVILxeBEq07WmAAXgYT-bgneqrI3lx-LE8HD_J12VDDw75m6b6h7CD9PxL2-iaAlWtQAKr6h7MEIJSey2JyvTbE5su-2IGjd_QX95bq5-GB3kO8FCdBPBfrS1E3ucjVbOPc2-cCZdltkbFb-g-gCPxe--rnZmoN1RJZFJ4ZSmwmWcE7jcD6Bzdq0-seDEHltOwVTGnveUjDiML3HmF5nHk5bWxhYfGEid-wekMv-j2JxGsNJA6SlhdQ1Yr6=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/3ohbdTPkVZ6rNwU3eA/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "calf";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 123:
+                        name = "Maquina Press Extension Gemelo";
+                        photo_path = "https://lh3.googleusercontent.com/tG1uBjqWcKOQOR7HSE00D-vpZeQSYMyTbyMb5ibV2fKyL7HgX7WDLRRxrRwQs_lu74yjXrnYhMb9BVRYPuBEu4hoZqn7sdKPL9qVuiMWDIH1_h5MnbrCUrnTMYPbdeqOoMsXNAcNUk8P9LHjTfrDUbFlj8xzqEygFnRs1FJ7lFekFu1IEBTaIDRb-ZXp4Ux_9RNaqu0wJfrkoq5tf7fJcl7WyKzFshA8HFlHxz2QSIbfbPVZy9N8DRl5fF6PaNqKY23TfOd2MtmzS3NEJg_EBVoudtWq52Ly-ab0zzjWvXv8ifVGKtPN0OaVGjofslFPafddFAOM8ukseM19iQUnRa9hGPaGeIw1IPFfB_0G73b604rARD_r6hlHkk5QApbNl6AL-vK2LZqIMYdmnJiRYoSMnhcUvicJJ8GOUbDdGvsp1BFf0Npyewe0O81TNC8lFv3cH0Gbrp2DOqc5c_jXzzYG6IuCbRB0wr-BKPws0ER-GLl53jcWUhEFE_cu-kZEnvu6IFoux6ObbpxELXgWThemNP4ecIYgTH_AJhb6-oky_D9HwBY3Uj0uE8atv-o9ga2X71sDlaSCgj4VJN1Irat3CWj4lETKOguzWXgw20O8HQGqhDIzUcEsg0vtjTTEgAPA3fX67KzV1YoVqHcoKXC5=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/cY4J3pKEhTnzHm6V5Q/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "calf";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 124:
+                        name = "Maquina Press Extension Soleo";
+                        photo_path = "https://lh3.googleusercontent.com/KbjLyJNvMpzqa9o_7-RbEc_CFCDLxfSyTB8bl8d12lG4Nmr0bWhiexCUfpZXv-R82HkM8e4Q-vM4S1h0HjGCk_XdFOw9BSoDSj_zdHr9LyL8d7GQB_Mz9pDlQeWNfH8AuZbH6iH1qPJzOy23SZYNRnWMnjHfMXDWxUNRuirCXTZO_GReePfEm7fDGoQv474AjiwVGa-1mbn5ZStRnlY9ziWBxq0Qdg_dsRcayS6ST6Ew4CbMY0282u7BixjLmrS3rYqa9KRB74gZ5ELKqFHdk_UF2KxgOWbQwatK3JJnz1Y_EAUp04MdHrPAKMpYv5sTocLyrxpO5z_YqpEUw4byRCme8EQNoLFmi6Zd5jpRwWCIkOfIilEKNMmydmAKuqbcjuf0EojPOK5lbvsn1VOpHq8_IBqUkBQsjqEYpI7ascgresW984PCw-MpKz3yDIH_Ha1vKStNlkSaRg3WuZpvgxWl2-sjg5Ktyr6nysJ40OBewMtUixwxJ-PyzFno-11ouUQUeTGJefKPJEzVlZV5gWnjhlB0o2RKyxmkpa-3bipvMTaARnmztQOPUB1Nni0QnOd-Idq6LpWKHd4rZ9-114HAD7Ghb9Z85JnwKvQh2Q1JpuPpOXFRSQEAK-qJyui_fSqsa22ZmiQaRqA45YXBjqpW=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/1XhrlvfIGmtM3oY4ZD/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "calf";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 125:
+                        name = "Paso con Elevacion de Pierna";
+                        photo_path = "https://lh3.googleusercontent.com/Q9Z6t_WLU7dCowJT5RpDxct0dVe675DaJvIjINQBIKMGT1N-SdWAOmwlcrbSeuNl2pZmT-UlMLWiSdRgLcc9MCubWBl0o2VSNVLgCQNtEZ9H1uLi96lie-j-6vOAYfcX7uzcXKhtCOaoIv_Wa6MlDlrhwZpqU1XnZecJIBtQpStALPtGidJlM6q1cOwcFFHHJct1Q1qDp-9ypp6-M_B0a3OS2dt5Tw3WQJ-UsjtwZN2VJvWQG5WXb2O4A-VBZuU15AOPKoTDf5iIxm33IIp_nVQlqFoMww-CbvguqxfllZblr5CZt9l9Oq21A3j4da-im3PB65gHrS3SpkZfym8Gd1SQHsafp2hFxo0eeFGL2jKDcczF8bqyC0iO4MB5-kwC3UWNWceeJm3bqQMvHHQ6QMUgYEWu2pxmsGBi-OaRe3KlsaqaDXb7NxeRtVmCw0gZuKM2kf6Iv0erEiSdpFnUmNjWVjP-Ucz3Sv0wc-MOdWaptwe9_SCImYJkLlIuwhupzkSM2gJya9WZlFV14faZoTkEwyMAtlKlW3Bu-MGnko7h3WuhW4PfuJsdEdAXyCya1Qxr181ckBfyQLmiD6D9i6LqDlawRfVi2OvFQcKrTZjr5gVlFQ5KOuTs60jli893Qo-HKYlhTeotorTeB1dC8Zl9=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/oxZBPjDe1Y8L1AIeIx/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "glute";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 126:
+                        name = "Peso Muerto Sumo";
+                        photo_path = "https://lh3.googleusercontent.com/wiotV69miQ0FvqcWJrYlhbtipsdca1z_Z5nI8EFWsYX2MW1uoPkaqsSktOFk9m38o5JiEHnDR3aRmhkeEnWgFZcp38MrWNzjaX9ok3VxxxeTKz4AEuqz8yP_cPkI4hkenUja2uB4LQhvyDyJPrhF_Onhzh0t_JGWuI8TtwigDSEmrfS741mFooHqej-Z-mGCbXzKXe3UPKCVRXTbq4jUSyeWe6svVBRo-ZJsNscC6FsHaTU1E1Vv_PIEp77CyKGIT63coYSnotvsxFHP2P8f1kY83991_SC71wL4ciSb4AGMXSbUuSQJw0Iow-avydWvF73T_HMLtO8wyIEn3vjIlA4uV2yOj1OZB3_nbNLWPS7O0n5q1kxqvOONeQqmaKPVsT5mOZ4d8zkC_HkSKwCB7zW9xDfkZnldfvRAhLL1ypSRwo5NaVjB5eesUoEO0bX0ndcoUX-7WBFf30EM-HVy51XK6n0X2RkNDvxBxoiGYYDDd1tEHNOj73za-7bX-P18TGuYAcatqfYn6tK-mjcVPAAFiT3cr7FKjqbggHc5i3m5U6Ex9Eg_q1d0qU88Zem_c-az8ewbZHn1XICMM7EAanqSXHokgMnnHTxjJdv4c7kqLeU1NQhphCGm1FQ9FogYznyT8yy67a46Pm7JCbGTvb-W=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/jVc6rROm00jQiDLNWd/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "glute";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 127:
+                        name = "Glute Bridge 1 Pierna";
+                        photo_path = "https://lh3.googleusercontent.com/zecrFhyPXaqQEv4s_7jXUpndJTQ8OjER1EEx84sf2JRtAO_pd2aneN17KwGg72DVYhPK8aPUpww7qZyZPo3CA0O3VICo41EWuImCPZUZz7TjfoJKHwZtsFOWJ9z3xd16edei-wjR_WsvZZcyweHoa5-c6bf_Q6X0_bGwqA2b2T8LIQmwTD36RhHaVL4JT4TzXVXnSURJ5Ip2uj4FMYPzb6rlJwIkEpDtS45GvZCbwy2BfT_mfH4sX3lEn9erLtfE4jTLJbPNZW_QPP_8zb7b74-xBYSKEVGrk5zAHboKnRf3Kv5QT-UGBBOZgy_arvmR-tXg-WOBucop4tkyWQP9V2OlCW9oeezmNqLFYxQwxTruuhYDQvJ9DP2g1Pz_ltUV1lu0rz9WUD6atPOlg7qKZgReaqT_-1-hs1sgbJ0-deX-mXeuMBXIjSQtq0B7EWisfgn--Cjt8nrYZzU9DqvUAtxhoHvOFTGl1DyKDbrssoN9c8e8-XJiYwUCuvzRoWE9hYy1RnKKQ06HRey8e3mTcGBrvTTUiACcGwvJXTvFihnUAqnsWOT-9NQRarStUJEjXH9TY1nb3sJM-QwQTz4kjp8HAJCunBC-m_CY5_dQ2jby5OeGN6uXi9zK-mY7T3vun408ibOBz7tXhGDW_F2TglEP=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/l76Ix9dqzxUYteNfqD/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "glute";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 128:
+                        name = "Flutter Kicks";
+                        photo_path = "https://lh3.googleusercontent.com/9HejaUy__qfCNTcUfYnhAVvVrMc8FyYPglnUCkSEVm_AlO2dfO5_9JXSyIaCNnvAaK3UUnU7D6VlDKe9o0bdE0pZeJ8u7QkxU5k4uxjO6UEEjM7xgkjzvo3GxccUK4qhOgYsc04bZkmv2NZnaaUHe7Mp5L47Fo_wAfyFEwHaB6L1rTMyGqt-7D_rJXVU3e8Me9zbOTBqWZNz-QCs_eErewf-hIWorCOXChO4xUMNVHI9blIDjcqHxaC2zY96OWJK-JNjY1wETIVPN-jfy02ozPZAxejthyUXFeDpIH84q8FWzJYkYACZTlZpzP11_LvImbRlsNgnDtFEGNwDPhqY0pl2A2I7hLmwTtIqcKIaanmANRFqP82hp4OkbkjCeeB-faJFZBl-RiY0MFORfJWp4zESovJaPpPDNnevT3nPW3QrVnncevuw9vk-HEIY8-bgZUKfQ5OFi4Q4Z_OAbv1OehM8cdKjnf10uNHycRDCCLftHZXq7v4Jwg1AxZ5PbFbu2_hCR3BvD4Ufvghiv6ocgGqVsNF6CNBFxwYUti6bKz297m8VY2bB-7OWiaT3WNIQzlCpKublezYyrXqF4gFXVusv6f7NhPaU381m0fF869GbxtnRfYN3QMeIvXEmSHw34_hBEZOB--eGC5sFa666-gpz=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/5toEg8oq3Octu5yTCX/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "glute";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 129:
+                        name = "Bajada de Cuerda en Polea";
+                        photo_path = "https://lh3.googleusercontent.com/Vu3FznNEsG0KFaoNseI_hGEJfLuvzrTntQtdP15br3NB8-_E-FIaVY11eeJw6qXzD-q528aGZOEWIUAOnwFueYnmeEEJblpX5DCq-KBPbwfIEWeEF3UPIsqOqx256wnO0WjLDgAzU7WllB1j59eVxumnYCgfs-pps4KI3TscI2ZqUDb_m3tmiq_Gmy4viwrh5oJyDeKR2hxGMFa_LDK-yp6zjqDylEhGZwxy53SfLr2TaMJ6N4N8wF4Tn0A8wmS02lG-rlztOi1t-GUN1CUTZa68O1NhZD6oI-_iMIYaV6mhgkt3neG3MIhE2iqN94Bt6o7zKz5VpkfFHxokkuddDcsHOqpgvW0j7XTh99FLFInLkvB99vsXhq1qaLK5o0JCrKs8qBJUkJ73-REOhg_N7BIj07zzbE_bsyHVetC9iM3LYN9vG9wW6CQCiYzeIpGJrA_eGaiYpcv5MQZUOv42P-iuXudu6ApyvIcUdv9dU_0qKkVIx2UShSSKwJEpXk65vtbrykc76L4y_PGzrphbNHg7mkW3apMNOarZrefz2ZarV7PwdyfDHOxuBvOA3qCd7IkXKZmYfzNfH4csPXecOTIOXZaCcdEr2kZusuiOsSG1b4Mji4JiCIMHyvGiaQSXutDiAm2g5ZiPRKC5wis2QWMr=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/1gUW7Ljv2Qi9MmmQyN/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "mid-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 130:
+                        name = "Remo T-Bar";
+                        photo_path = "https://lh3.googleusercontent.com/5MDzFRzmf0jdbHc3Ezn3rn8rKFvY3CxKrrHLub7zPxT1kchMduhgn8AduDBa2Rp_dxk37AUzblBRcQzhk_REIhRvMjmG45cWUIfFcUTiYUI2UhXvz28DA5KBm_L2HZMWKZXIvYTOEns-HyZ-mNQttj_2jhT7KjS5lYPFUv898TiHD-Hfvc9RhZpQtZeRuH2KFR00HV-8uymzQcA5CjLArdV1MZgHbeF9JZ6bDnIyZuT4HT9YTtrB9ksXOmJFAWflhGWR_NBDRhyvqgMsBmFMrVmI3hEHjxD6SkI415pK5rq7-GBLauFQKSSUXHxcYF5hB4Rd3OH9jqrDHNGCX8GiO5w84TBeQFCksQXFOGwjYMG6yCmdT_1vrYoxHJnbmkxn6gwqZvk4Lrk6iJAziNpdfj-nR6e0_Y65IvzkP9nAod6xexx1OYbVNL7IoprqsPQL6pQRal4lqP1QzgSqtVIdO5U0VKGF2yNvt946hcZ_ejKQW2j73HAw-SIiTZcrmUlnMAtxYo9zWUnaDAEjlkDyq__HsPp81Y8Sh8xsI3loF7Sl07qjTFflc-BgHK9xTxSaqV2ouYbp78JwVSfVdR7cQWOjYOT4FQ0yCXvfFFF1suzxuNqa_s7jROWMNPKKdUppxg-Eh36-t74KhY0zNhS178y_=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/1gUWdeaxbnV5eo5voP/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "mid-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 131:
+                        name = "Remo TRX Invertido";
+                        photo_path = "https://lh3.googleusercontent.com/wNIOCBudZE7mzDa07nGXE4rfY1MZ3rzCMVX-RugqEelwVFWInLnmhziLDiAqND9BKrAR3ovq4DEiBJTYjghG2nWVOgLKFuRQsnJTKMMs7yltPVoYbBUZxnntNCgCDQyLxwCTcuM5ljnephqYpcQgWT_jI8pBRAVEdCHmM5LAXCVXtj-0eqo7fZovc_pSJ0JtWxZA1VmgRG8GOeiTAi_rws_bZAsonAegPvj9Vg741jmbA_4xy3VUp2fvEUJDbvb6kIRoLGjsfJfUsF7B_rcJSJjIvpN4SvvCg_ySCd-rLPcGLZmFFo5mXDW3y7bipa3_FZOz8aamq-JMAwWMzOeL_UM4QEpJBPISzgtfyc5V22lELpsl9CBUhyc57CGN2mUpECrffC0avZso-oRVnSV0Nu7nlLNueCKjnK0SULX4-RuT3aSFk4zwi9cJbNcqfHsq9zIN_Xl94PZoAeFv6hJUlHrfPi8k1oWAZXQlqgpiDcwHaDQL6_cUNDS7JSJzB_6ct7KCHNxG_uKrmyS3LoX8uJCJjzoDeOdH-Ry4rM0eDBr9--AQ5xJujt1dENVeQnPaeRhB9eXcmLT4OCCeMoXj9pVz3fwtFnU-I2WExR_ixsm6LQNphYejOyr-wV8hmVsOLW48LY4-zH1-Y84YGgJTAyo5=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/8Zef9CMPBlRiFqySOG/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "mid-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 132:
+                        name = "Remo Mancuernas";
+                        photo_path = "https://lh3.googleusercontent.com/K6U3Z2OGZNMfr3aNt-mVpYNNo4-FH6t2LMhRD8aCKUfrt84Ni6z859yXYS15oFn4XiD5xiiHsZMF_hIjvCWCzIR8JRONFTiCWdExHrMt5fqwVSbvBAia2J0fQ_qVWleIB0PfFrWYopN-WT0IbtfCt1mbfi7jIJg7UZatWezHXzpgQ7cSfvH0o2hew-b3SfFwiFMv4yrkcp5nO3An596cT43WOZT6_vEBkXx2S2x6cyD6BQIRW-bKzoigByy35xYOwZMH9fomLcGOuySXk80Pvee7j-GXjT8inCQfZZcNQhfjiISVASd_2fUva09u5e9IYXmiPu3T0wzUAwiXyUnyQjAwjOi74lMdKTpHI0lzohXBo08c7nDXaFvzcvQGnbBLEbQEqzQFIka0x_IOB41prWbx3FVhErP1moU_l6qDf1DOJnBaoF_IRiuEJfH7MKCj9TEX8qO8lDhqYC3VdCip8BL-QYrlzp7fjwpmTghWcNrv9ZrC2CVSqmtkNR3T4mBaesjl-dSmcYJWTmqDjhco4KZCdGQveEZNqjdgwUmgUOTNXnVckO0VZ3tgziTYq17qvHs485FrJOUoLZYUJ3JErG7fxGT031aE20dfjHo823Wumtm2C2B5pJUNk88l-A-U5xDPK_8AGyD-J7g-eltvg7mZ=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2mEfe8ryXe5vv2FYd3/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "mid-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 133:
+                        name = "Maquina Lumbar Girando";
+                        photo_path = "https://lh3.googleusercontent.com/lhbTLaITXokzxm9Fy6IBe2Fmk8R8mYplbZO6TNlBv-ZHOGVHjpI6GEja6jPeOPY5ToHPngWq6tX0Lg3cLAg_Y2JqifVUng5Nip0grUqJBWNioS5G9-gMmKkxkZbKQXUbrzfZhOsMQIvIV6uzwWjn5MBXCYAQBvaYxC2EoUOYpYng6hG2JEHhr7E3Un1ljetpHd0ZjAWTLLJolP3CDLCNqQtcQkP4pe7aYyaDnw7F3w4JEe5H94k07lAbxFKeDOsEpMVJMhsz2xBs5qBZyNAUf_RlH7_wp1g27LePH-bq69IQ-bXFkZjo-CqetYcVJU__a7E_ZuVPaz-NO0fywjYs85zrL5Yd5kFDLJ0XN3VeMOHCl6N90B-Vbi0TvONKG137O_RGBj6hrb7AajzWtIS2Ax7e69tJmksZxhsjbFkt2qxiaCHpqHHP1s_wc5G_XpnxD7m8Xvw12g-odpngepjxi-Bh6vsDT0QbBrsy0mhEiN8TBnIsx1ZW0IXVqLgmfxFAAvp0mE_QPYHS__nnlWMSxCsHS1IyJVJRMErJze6wmt0Dz8bngfl1RUZBrOs9i6idNROp8s0Rze_45_RZiku119VkYvA6kshWdk_PptKUhTK2YprBVJXdgarzgCzFUardQzARpogpSkAoK6Jkw-pViiwZ=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/12PUH4DfqiyDZgb5Ip/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "lumbar";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 134:
+                        name = "Lumbar TRX Isometrico";
+                        photo_path = "https://lh3.googleusercontent.com/raGQIUCI-WeparnwM12NPHF_IxuwH9NIpLqE9Klx9wBDqAOqRjtnp1M9TFCc52RTbE5nMNyNBj-gE6YYHqq-1qClwidOoTWJt5Oz1uGCJ9V0UtHp7QRosyWc18_O9uBRF2q-ynyzP6T-nac5d7cgogRUp2XvwhjQDhRYGDL0aynV3Ftp3E9zlGA7UioaKx2FoVeF2KtCniWlZuFlX86ZppIBhMHRPelWcJ_bG-nUGeFgsC4ZUiXrtpEH5ABXfvHTWBCR7B4fylgHsg1V3i2hngyWgy5AWzUdPcoChLi4wUzs_EhZXT_G5XoMVpsL0tRtPGe0AzkJz-alh9_xF6BFHoNTJoZl_9cJ1Btt6kRRObqCYJyA1bxxaqwpPhF4cHEG0wFyHA8y-KrDPHWRzJ0nCNJ8DOIgK-WMGuB8_EdnfEE7EST8cv8qXwcsqh7XEJdRV0bmjB_y94Ye-42wssbFsfbDACZUQsyv2C-szVxUauPvOK1LhggQE9vyZf8jcZlciP57PD74fo4s-Wxf2iNCoP1VBi15FoDjZhhllrHCYbuPO0EB6qTg0jFR-AcQgh_4-DVF2mQef_Jc9SndkWw8hBBXDwCovs0Lf-2WqdIJRV-3yUhF6I2WLEZ_dcrSTW5fP-00i60Tb_N-FKiNZgyVQYnW=w713-h632-no";
+                        video_path = "https://lh3.googleusercontent.com/raGQIUCI-WeparnwM12NPHF_IxuwH9NIpLqE9Klx9wBDqAOqRjtnp1M9TFCc52RTbE5nMNyNBj-gE6YYHqq-1qClwidOoTWJt5Oz1uGCJ9V0UtHp7QRosyWc18_O9uBRF2q-ynyzP6T-nac5d7cgogRUp2XvwhjQDhRYGDL0aynV3Ftp3E9zlGA7UioaKx2FoVeF2KtCniWlZuFlX86ZppIBhMHRPelWcJ_bG-nUGeFgsC4ZUiXrtpEH5ABXfvHTWBCR7B4fylgHsg1V3i2hngyWgy5AWzUdPcoChLi4wUzs_EhZXT_G5XoMVpsL0tRtPGe0AzkJz-alh9_xF6BFHoNTJoZl_9cJ1Btt6kRRObqCYJyA1bxxaqwpPhF4cHEG0wFyHA8y-KrDPHWRzJ0nCNJ8DOIgK-WMGuB8_EdnfEE7EST8cv8qXwcsqh7XEJdRV0bmjB_y94Ye-42wssbFsfbDACZUQsyv2C-szVxUauPvOK1LhggQE9vyZf8jcZlciP57PD74fo4s-Wxf2iNCoP1VBi15FoDjZhhllrHCYbuPO0EB6qTg0jFR-AcQgh_4-DVF2mQef_Jc9SndkWw8hBBXDwCovs0Lf-2WqdIJRV-3yUhF6I2WLEZ_dcrSTW5fP-00i60Tb_N-FKiNZgyVQYnW=w713-h632-no";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "lumbar";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 135:
+                        name = "Peso Muerto con Barra";
+                        photo_path = "https://lh3.googleusercontent.com/EdXCvslIWlI7K6zckPUtmHQuW5f4Dc2Qhs6ajgyi0RAOdzn2LdiKfyiCciH_tX-zCZ5XXJrQPxxoUCzc2iz4UZ_G8J7aKUvUeTLSzuNQtpfged9pjEH9PWxWdtiZqghZD5548CBAeEHbeII9Im2dGhb94Xs6V8Cawr0LzwR19HLH1QHBacvYGcnubDxL4qDMBHRtmtUKzLvpCU7eRI3QjbUnPaQf71iURKkxX6v1XH1jcn-xZZ_lzaO4ubivoiu_ygMhX4ydTmcZYRKqclhT5RL8CJoxxofYbTQoMiAFDAEGuX0KYR-c4RFzNICzFkSdYNqFYvCTib4_SQ9iosbmUEacJGgi45FUAUqeBGVSZkTvWwXuNtqG7cF6JZTJd6s0I81EfAcSuBzCqMEU92cb6wngKLV1XTenuVb9g0R3-8l7tHIHU1PeIEL56rZ6Zk60PvyoTUYZfTSvDSTfCJfh9GstuQAnufhxNAv3nYqKwI99aIH6wmdQ3BWoPFjyWuyg_68BBx6NYGqFgHk5_GuRDjoWWEq8sdOp3THYt6KKPh28USQB1y8K8vSz-u56XHWue9QRXJ9Dulypbp4EZtOk98vXgGprqLZ1RBchAu72wqeCi-tP1mTfI7TSwG7T_oFNqe_qI8guz-dYM4ibJHU9Ofry=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/yMzm6l8tID8C74uhwn/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "lumbar";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 136:
+                        name = "Extension Lumbar en Suelo";
+                        photo_path = "https://lh3.googleusercontent.com/J6Ko7uJl08srwjSpdxV_-oYHlHf0dyojBoIFTJVsXGA5tlS4e4T98x_jHnLbzh0sm7TYlWLBzRLW08GpWNNXVx2pNraOkssMpzAyOYhJfoZ7fqp67sIRVvpMibgxRNUj6lAFrfxDf77_xLPk-spGdutH3qj5p154gruCcMzGqHGjJQtMdNS4rtoUzm6Dlj-qpR4ARygDBaTgmDVSxIGfNwMVkWHSlFIq4-VMdP6gGyXDx8o1PxfIVs8qbLsCQRy5iZ3wfaHc91z93CFyWm0FMhjY4iO_kGNqmppExb6B2Ny-tvrm8uiF1D14nRCT3zgIYYHEWtctGlPkOv8dvugawNW6TXE78ztLvjkvoEDHIMmXosSQ8EBT9BPbCEjRHwiJgUyTa4AsTzq3_pAq1LA8cBmtEYZIN3FQ2LE0DGLDel5EBBzjQPydnSRIVRVhjHJtu7IaMUeH4O0Vo-HV5Ph8k4UoXS9F1qE2KVsyQjKamP_756P8sEqmNAu37LE5Vn3wRTX6RggaRKhpaM6tEyfk32twRRFy980ccW3UFONKysDfJLcVJRvkQzKWBU6xmZVXUdg6UgnwNwD9Z0mosEr9E_h7n3CKu6BzCtAvvLlduyNttkClp5NIqTpude2h-QsJQhbrjJiFuWnXQsgakjAeYUMG=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/vRHPj45jrIIBBVHHz9/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "lumbar";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 137:
+                        name = "Aductores en Polea";
+                        photo_path = "https://lh3.googleusercontent.com/i9d-sXKz48w3muDl81fvLm5-zW4iAAfjO7dVoV3tHRHXe92MUuN_Swy4AJJCIiXMxxEywih-ey2ZAYAK58SjA8jViaVqsTPUBDwZ_se06glw1UhqbFz2t1J6ckHrXeSpDNsK1fiUAfLMLezzqdIlRc0niUX6k97LEkiY52-0A1aB5mFFIJ2J2MkYc2Da-XpUlwEatbpTGScIhOFdkfHWQHlIPZCidqLD-kyQImDoYoc4ODo3CjyLTRgkvXbK2G65ocwee8VmEsGPLDDDjxpNmbxAf2VvUsAEzwApC8aa_0y-8p6ws0MpGWUhZ1vZB3i77h6FBsZIh7wWQKwLn72CH-TMM5RGrDacUKrKgawH4RPqvuzVdedUkCLAWeVQfwe2aaUagjiNzJa_ZnKHBwC28d1uk7WcPsXocwH16STKQfuEdWoNhCXAsdGVdZFEu5JYsa_pe7RpCFKxPssGhlplJ7Rx_9bRSHs7o2McwD5sr1aoOPoq6OjaGQ4d9BQ4fPabSArbLepnV7aL0GcYtpV39jNAPZPyEW5hARZPU9gRcJWahxc5XRxFJ3bxiVX8ppqCC05P0wjkdi_tgo3ztj24l-tbb8Bni1BwbSCul1sOwxLEvBm-MNYZJWTzndluN7_l60SNd-cNQa95Bdi9kcyt3doU=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2zdVi3zVbjIiOvyY5L/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 138:
+                        name = "Abductores en Polea";
+                        photo_path = "https://lh3.googleusercontent.com/Z-A4oOO7xZwWQO1uicZBXMoPVx4J_EfmQLQxQJ9mwqhv5is6IumzPo52Dyg_gHXUUm5lLv4xnmtpoJbcI7cnOLpgUgWpymGn0FlLCVhUYfjG3bQEsfuNUThQvWLGA8c-pl1RF2EqBXNuPl0K66IfDHDu3wgWD3GSZ7WsuDklr3VGJ_8gc4E_AnqzVYqmLXE3IkGQzW6pU3-NlJfxqP71bZvOB5lYHvJSS71EWy2PYBtjg__L9uAjftCJx-7K0nSisGvaTemQYnMpPJaMWG2tv-ONZFAUFFifLmOzQniEE4nm4IU6dByh17M5EGsOKJKO1OmnNvOev02j258Hww_wGRQdY6sNUiggXCvGeSg-IgJMtPeEZdlb5J4HlupjRVCocy75lA7KnUok_ch3gEjvb6hUDJ16s1ar8HguvOXz5nJGV1YSqcXeMXyfhGRAvK5ZhzgdyueAcSPbkksQnukYMu_Ecfq37xiOCuBO3KGXU1ybU3drzb7uHsAtIaZhpZ-_FDwE7LSzbynwATIyW0l_UnuvpTU6vub-9tVUD49sKqJ9Tf5EOYYxvbVZ46zpQvk8pmYR_FL2Lk1oVBwZSYWEy2H-8l2EAZbs2oDYy8pgi78KBN7BY_x6JvxY8555fyTmLN7GsJ5a4iUUPBJ06kFraH7W=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/NPHjDsNIFje7CdO6pi/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 139:
+                        name = "Maquina de Cuadriceps";
+                        photo_path = "https://lh3.googleusercontent.com/jbgEm1o5fKY035i69XBZjlN-6sDcS6JPKbFsDlrS-pxefTLN83YdxUhfg2FbQB3V_EcKiCRqztxBV0GK08yJSQ9m5c6ymGwpFIWjc834xDtm9f3oSxsVh8bCPIhTJpm2VhS8y8v2AE-R8kG2uex9n4AFEy-VpeU6zUze36O-g2IkRVu4tzX8bhn28LnDkYNLn4PjV66rAbnOGiBlwOBKqItRmo06YVZBpoIKnQq3szLlpf75nSI9B3uaKtl897rJUsVoRKxque2eyF-_9q3y8u7n_ny6hrjiy6yVL0rFOAYUJ0el1ZcH3Wd-u4hPAx4lonsl6tyzqMP7O71EMzIshKrv5nEhl2aKzV_N0PFcoydfZyY0Fk38SoX7cAIt0VTvlU9HCVORUpzUOKrw8WuTkMx_LVfEKTtlfJ03-mgzLwrV2C71Pa7Y1RQ0A0gMWQTR1_4icIFQWAPXBbNdzrjvh2DUD6QA5tROPL7iuDMaoilm_uoe-GUTDGMjxKtVN8Vz2ohhI5f7LkERZwo4Ow7yizczL5WI6Ngx0C_pSGdooNh5s9db402BelTKKvFk1bcvhw89tMiy0CVfEgR6XgWIEaCubrKzKdNkJyfWMZyWy8PLCEHG0uZMvui12Xy4NJTAm9If72R1xf9sZ7ITxNu6wywv=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/5zw8PEt9LisjDkBsrS/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 140:
+                        name = "Squat en Fitball";
+                        photo_path = "https://lh3.googleusercontent.com/MKm9RY7zZ_4zPsdcBa848pJexKBsQMAWzhVbm2-0hL0MII4zSHaM36iVe3wJuDa5Jcxwonl45jxedYHrtHup_pbndDL-ke6suV4ciEyY9C0MrPWDLXaU-SmNjTzYJqZkqMoc83qYP4m1yecz4yvGzZcyUBJgf2jPhqQDLYQv2srA9QTBwvMs2U8AXFSpuAhorBbExWIQlNhyXR8XY-HdY1_bR0UFByw9xmMyR1hHywOZWjU4q1mf4zSXnqtIJcglykHcDy72f8uwAGh4Y32xt7Q-7ujG3PFmNrCVsoWuZ64flpD8A3qBtUAxtYJQAMwx2tZ6S85OVliQ4dwLQimjjffFiPabj_tQlrCxlyt9QgcxMMH_toUPSq8Th8xt63dsd3FgOhblOhGvuDsKChDWfSQlKVFOskZEraDKF-EFpiU-A980FpHWkGxWhG5mCbsZybozNKsMPiLfF-ik7uh1d24SFyxfNZXlN0szax2QFjKQbFpTi2B_Qyxo6m6OZSh4JoACWXDAfk2dBLnv2m58HeMdKUOKymFp6R8W_fm8RHwGd6TDPmTn30hr5IGThS4hZ8nrF0ymsiU13lu1oh89D8Zohd9AYC1jrkmeZw9m5zMHWuMRmYcquFE5OMZi7gj5H0lG3QlUj3eQzs6Dx0-0Mx9q=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/X9i2BF4fJ3kD77ImLb/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 141:
+                        name = "Fitball Squat 1 Pierna";
+                        photo_path = "https://lh3.googleusercontent.com/dk4bUOC5nub1aVra4HC6vP-cKYhpFbP2fmCKFDFF4EJdqjVu6GrUpWsnRjn-DSGVY5D0hnp-LsQ-OrsM0UpPYgkIFgjtu7yXbU7VVBRrv8CRgffW0HHI5zb3dwcTM5beyMY1uPlfzkS976bhY8R83_sHoHi-pbz9fKjI9e-l6gkSYJaxO6fjssc51c1UiSXMerpZAGMFuT2dq9bQt1dCAEtd6ziAALbTcvSeyyt3UFhYDUwmzbmKf16qbvd1QSXBqc8M2bF-XyskVnJEnSr1KmDpCNM0rlZhivt8B1VjOMKkMZZb3eM8_pPmS5AGzIav1FEG1z5INBZuxMxZQ9_n7wr9dzeP_skxJPV8lf5It3Q5llMfAmO5vMSxB46464eeXuDawxgNmCQOITXWCBcjiqsyGaqyanoXnyPT9WvBs7T5b1AZ3xtKglc8vkZM19zxkzHvgS30jTQ28kM3XmHqjFNYBNwHVnvLrcDY38DufOB8WJF15sbS9KTnzyMWelANAi7U4IIVGTkxh-uIelc6U9zUjFRE_gKee9FqkGPILSoDxXHc8eVzOmMXUs6_WY15t9twRkyA8segfbE5yPSQ6SFwsBKYsrDl1_d6y8IIF1VNTBLRiQpTpPqOnRBvwPfT46SXJ42DZaSMUcpqyydJLdZn=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/9J8XZah8QEbUOButZo/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "thigh";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 142:
+                        name = "Extension Barra EZ Declinado";
+                        photo_path = "https://lh3.googleusercontent.com/q3ZH0Wsa7-DNsoARcgNWJpes4854HIahnidXOXfJA2TAm2IueMr-q3RoAPlVon9CVuqvZuAdZuCNz69F6XcZtAmDzR3lo-MNE_C1x711zOMsTIzAn8kPUAymOe2RSVs5TKM1VG8hDqDnejDxGSg7WYzDufYAR6oQHY5aQiJy5WCp7KTQezGoVP7tTGFLTaMZc3XNkt7u3mdRx2G9Q2noHppFRHK4TalG0mLQndXB_1I9nMvs-Sl9WdyI9R0B8PIIa6JcXCysacCmCmNaBHsWYisoWFiCHZbLwXsQnEl2ZKM50wXNrAezLr289mv87y4vi7zD5gHOONqu9zLwro7k_DmiVWITbjccRNmNXbNOvZFP7fHU0N9B6QIj0zPOKmwYn9wVp6WTkdQCF1l2-c2vO9NJyV3Y5T9bWf4jdy0y-MY7yKjIAilcQ-W-UwggeMCeAl3i0ZDV3IijqkYxwWeCcBVeh-bTyIRhUPEgLdBuZZWs-ZrlcFRVI7bcaZPipJofleAbo0dsdOvA9o1txWAWMB6iA7vc_RxbQylwcx26J6C8_Ql5iuW795W4YM2qNBtKCBeQHIiQSRri3QJqvL7DrQlHU5zmmQrPX02O8O5_5dXwVl7ZDsVv5E_PsxRQQK7-t6T2mMhg-VG6XUbrLNMLou7i=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/7Tl49qaA5QoO9YCP7x/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 143:
+                        name = "Press Triceps";
+                        photo_path = "https://lh3.googleusercontent.com/XjoUIqWC0i2wyUWUJHEduqnN8CfND-C5h6Ghh136A2sLsAsld7jTh4pwxnazMVmfT6zoNzShh5HF0jgPx6sHqtEBRFxNdow5uZSLsYF47y-t_dz1_KhSgtxXVmZMusXmDWmTeVMMOG1IPtsU0Xm6ioW-NJQ6mBeUxFXIDxZOCQoimYkz_CGuJn5p4e4Q4LeXmJ5meSqpanDOAYWJpv5X8qCnLRV7vpSuPhjCKXFQYhNfW17NDstuAvqgD8ZZjJgERqQz0Nzi1Yfxi5f8mHfT7PydjtBOaYHznNU4s8Yhe5qltcB2L6NNf5n5XiEQuxjZIotcoPySeuYFs_X3Ca3eIIlQcFuQKgHAXFnTcuw0EwSwpn3k_J7Rx0PLe-LQYhbspO1xap2a84ik5IX4FqNns4ir4HJDJUp6oeTTUsju90TP329F50g2FCGROg5uIXuhwkXIuWEX1JKg5SCehGVah_3ATIXQ1mRYLS0092l7ez7tbUFHQ_Z_45XvnerK90Ect6vaKUQcOOh4Gucrb1cQSWxDxtvRz087Ejo7BbRmb1k8C9fz6ZlD2tujewOkBlKrGCmNsqqppklp67lZ975bit7Ex8wRB1Xo8MM35Q9N011iLN8D0kriKoO65QH6DysI4B09hhQ_gqVpG3TA2ZTtYkDR=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/uU8UjZMmcJDQv8gEqx/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 144:
+                        name = "Triceps Polea Barra Supino";
+                        photo_path = "https://lh3.googleusercontent.com/ov_OVt4hUp1BN0Z5JB99AwPmlkovFAbf2FSyjDGDmPtIi8wIPAa5rpQF9aU6RASn5XahUnHQgESw1o9F2mkx9vDLzTUENfN1V8mT44zjyEq1ZmMy9IXzjOAHkSU5LBBGLydgd1fDc-blvjtY8lMmv_pu2jacAJD5LLGQZRVOwFaEr-tkACpfEw6oYpJslH8a-_xUV-wDqJL2fbKWSVmYCZ4yseWm4ERB5gE5E9LV0WF485Gg62UzMgZdrMkt9Fp8lBrhFSett0HWQ9xdij-EARZ6UEWB5978sTjlD540ELAlimERQzJTuZbXB4MDw3fC1JXPDaubFQrTpusSSxjkGQAZ_QijMr6xhaNZSWqKA-DA9QP8bbM65kwb2FIiCOiPxF7ga1roCbJ7pwBCS4D-Mgtg_blcv8CzrgtC7Lhm67AMiPJukRes2SR6byvyBEQNW1_ZvNT2zhqmtSFOZwJKwh2sG74lGfTRqzf__e8bPgWvZd8jZ-7qpXx7KUF4SM_8BM7fvva3WMd87BgO7RaVeFdZD1_dEnVSExGW4ojWn9Yuce_DQimpMTFwqZRBj6e4mRDpzAiGQYX1oVmthZCp8-CWkTD1ULMyeRMEksnF4yBBlQKePHYnuQ10wdigNrmPmnzJFFrETTnQ8gk6mBn-xda9=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/8lPMWahnH18U4pLcJv/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 145:
+                        name = "Dips con Banco";
+                        photo_path = "https://lh3.googleusercontent.com/2FMIZudtWeGicUbOtFbZ66X6WBL0MFLJkN7_PqmUJMdtel0-6XXI1SOdeSEBRT9QNRZ8SnBpPwNwBlRqKmJPn0jI4pa9qJv3P2nChSFVr2KxfPCjzEdHq8CZEOhLD0CiBMiZjyIUbITIGbM2mc497zV4YtulEDRp43t6zncvjqT5jFxFN9c44DZkDK5aLzaS3e-rzAjRfHEvpx2UMGZAW_DjJ8cvxKSnB8R3FqBjJSyN7FRyK8-kjVFFfK8duvfYzd71h9qlh_vkOSrCenT-nuON4L5qnvjEMk3d32lM7QAzRkTfEHmu60e2BRj-Pfifx0g07QnpvNzn6qtTUPZb_1SqF_HMF7UQyiZpHJiNDuj4GtEva_pK1qGoVdYyE5R_Kzyiie0RCQT_69XevGrZNXML-RBPFq6eqULmrr0WvcGqe-MqQMzE7dpaZUVNjVhB4ZXs4huMXl9rg4Elco7O1eYB-F-zbxW8VyYuFmaSEQLl5PGfcT6I4Nv4wpJSCccqs5aE0ilIL0Pv9c7MRnD1dI2eVThWVdasqPBLHU0yS-MguDEkT6UV1QWxyXtvbWfulXMUSaP7kqQBdJc3D7je1PtKI7ePxR2HKZLOg5UAjiTEm3LhCParlHkOQAoOUlDOKUZRFU3kNP8XOB84v3gOWwgU=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2yxNfyGU8qeQBaTnkt/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 146:
+                        name = "Ext. Sobre Cabeza Mancuernas";
+                        photo_path = "https://lh3.googleusercontent.com/g07X-yvmKrklroLfTJ4L7xgKNVqf80W-RCQmWFiET85cnlail4CtZOw25koMT9qGwxtseMoF71M37KLOW8PxvFSYnyTJKG8SbrH7rw7pWzmqOGHrPY4ka18VGZf5sjwL2zPhKggzFQrSbnlGyrsO_Ho06B3suDoTefIc_68BWgazHpQGcw1aK1aZEp3IHEu1SD0oG5STKCf2meeROydk-G1EvaT2ENWEEynQEqsziX4VXx9wuWhE94naZTbTHc7j3yHdP_Mxcf3YV04Z3Rx-g7iMAaV7pU5DtgrnKhqzzR1rXvzafWXrai1qwrnd0ppJjqzhOFdfgtyhzBsBFYwmF11NKmSm0atsVT0wuU_9DfaJeUOT93ia43xY9wsBHpW0ZJ2SviS2JQqPj4D--c5YDsujXw7pcWLItgIbDqSK9Fma0iCjYChfd1qI2rLTYvOflxnbfUgEbD-K_OScDFeeBxsuBmrQF2YKAlumb4eV9Q1e_D539t94bRjeS8ZZG_1dw2calIC3KMTkMxSuWsgztxdVDTXlEc2cnsz58nyi1sRTw3goR0mUQ8dj5KIflJtWS-4hBMGV9WMOZq78jyJNdVjVc5zji7fIID4MjMk1qGNlkoV0CXVM0xlOyhNvK21aHhgOMr1JppMSsVlOej1ejnWP=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/2zoCeuXwuprH9zzPhP/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 147:
+                        name = "Triceps Press Agarre Supino";
+                        photo_path = "https://lh3.googleusercontent.com/7ufNJO2D1-aMH-61pZXBLNW0RMytmJta86wLBr7Ju8jwJ3CQTOzFZE3Xhn-lBwS9iAAbZu9jn5VUh76U_t9nHDmpQwatKiuV1BWPmdqVJ8adFqmm_3-HouSHufYu3EXdL_VoQUr5m-prkwhUOOUdJtgEKxaaCtQDmn0Sa5KBRyW67lYgrUjWidUn4IBMp79yofn9UTnAfd37xtuPOHqvPY9DEtSyZCrw-RhjYHWFxWaSL6Psfn3SqRZMTnnHjYJNT1Ll1v5TiI2JXwZpSWUQsALM_xecmZ7k0MGNQ6sPbxDxiJ5KlGdfdxRiqp8hM5xoCgIepgh8-_lnTmRvV2vRyno-zCQkiUaSChd1ANlK_eP2xLUsfZjU_Yd5YCWnysdjTPA2dyzxMJUU490uo7xB7D_qvd7_S4jIKTldRg6gjvMXJ0n7Tjzl5sfzt1vgCyNsZI0x6sflF_aGx7a1Mpqwd2sTg1aj81m244cDE6TEFghDIvXTGv0yFzmFoGaO6s2LcVRgP1N7b5TbbOLefiS1RvK1DyQJl7jJxuYX-C0zfCk7QEzGcvJZkaNXqJXjw1PVsAKXF1dwo0PMagq3ypPYHUdzpUPTEaT9Cj17Znkk3M5fGAVZDFnZh6UXNddZWc41tbz7WVF48Yp1vrVQv78OsRJQ=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/7FgWqCdOBfXk6tiHBv/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "triceps";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 148:
+                        name = "Rotadores Internos Polea";
+                        photo_path = "https://lh3.googleusercontent.com/2PxZaqKfqUg9mtl_oMD88mawm84FR2f-njRoneNIHwL4chyFDZB2UAqaxny5HCw6jyF4IMQDvZb9PLZdl9rvWMb0jeKrbzQlwEI_LHO-Gpu-3e_sPE1tvucYsvQq36GdVRWqwIrXSzFTN0WYoG_r831Y7Q8GZ84Yy5aR9kx6KFdgSgaa57jT0c_h-DVqhr1H-T8ZD2WTJVHO2D7TwGLTDFNnGsYF-ORRsNpVo7HEBrR6nU0NnU8V_JJYi8yk851aCYIhsGANDsgrEYWWQIGc8XMB8akjMysPbkXRx9u8mHDkF9Q93fnBvofLt2bMKVN6uI-RsjLQG_Kh3VvPo5kYoGI-bLYi-KLDVCEHv-XsrHf1UzatOyKjhZiaIIvGPaN-jremDqhnQ4mxbFEAHakHvtoPepO4rFHGYfozac6n4B7RrVLfRyDg1rGbuv7xQLJ5ujmgFJmmrHcadi8bOo5--0T1E1b3oRaF2T82PT4Bl_EyywQuWpzs6MJdinWjVYlY6YZ3NOwm4nBDWyuenYTlrp9S8v5u-XV1oXyMtbPd3lmAPzbL2x4aC62MZIjB0ywgRIezO6L__7W0dhFJo2msABma5w8xlsIq1pANwH8lLto83dHxXEhsc44IDofzGBae8xX_E8Xz7CNdkah8BOo-X30w=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/3xfoP4uynxy2uIDiej/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "upper-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 149:
+                        name = "Rotadores Externos Polea";
+                        photo_path = "https://lh3.googleusercontent.com/iFmDu70rEx7SWl_OqCXPjnWawHaDp7hGZPSEwksvO4DS4QS8t0fLDrSbeHsAeq-nlDknHRgnyhFvMHHArTHwrvbZ_jvhKq5oXIXngfsYDiNWXbaxEDAwlcyMoHO926WbBaNzenWDA59gyDb0eUakwFhfBaLubnZy-wZ4l2TWVHBFDdYceuc0nHFSxvWKuwHiYq2TGy4HLXnLEbUV3Yq7JpXU98j-M3NniZC6Yrtm4HgvlrsL5wemzf-vynFg7ToRDKNpwpK7-4A5dW7HL5yIbR5Pe3xjhSXpsyGqJFodV_VcMgxfrRxNLyMFMcmULDmcJTMRrlmqllnx8tWaOejEqy3RyYxqxOFXEWypeA9wK5yrQQtAUoHS9-xgFg7u-gL99caBUNdu6XvuyUrzVDdJUUIYbmcOKuM7yEDNIk-WsZXnkrekIGBTZ1Me9yySEiyLfMB4A-XlDL_D7GSmXVt3CbnkXtNUX5bbUIUqAKe7uaxSWX9c3z419PDfGSaqU5yYiuHld2DDfADAlvWCbdmmM8bSI6FGAB8Z8iaTuJzS5C7YgB6aM7EXNnLFFoFYH7T84vCNwxAoM6QNN2y2OT-wALeaLcP7HxEJHNCp6lo8c5Qksh-d7RzyM0wydO44oBk8aA_Ya-yGfSJ1_HaJbLDufeA8=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/j0NIgyrhWndODoblPI/giphy.gif";
+                        description = "-Descripción por escribir";
+                        muscle_zone = "upper-back";
+                        hip_weight = "0/0/0/0/0";
+                        res_weight ="0/0/0/0/0";
+                        vol_weight = "0/0/0/0/0";
+                        break;
+                    case 150:
+                        name = "Supraespinoso Polea";
+                        photo_path = "https://lh3.googleusercontent.com/SH181_V1CE9Ma2Wx6CmdBJUFvuuTdzLaJh45gUZzLnUXxznoYEqvNFWxHuhCsEkjZzPK9fsY78Ivv8Lw7sX2fU45EOWTRBjMTsoC-5Kc-knkpZuHvhXFaMOpK1fN6ovfVaYPIJDUcSCjUZxz_bQhzBCs0WQpp-WOmxmQlI-0RqCzq441As8F4w1e8eKeUy_KlGoYHF4phWIBEtmxnPMbiZaotRcxTugxXpl5fzWllaRsgdVmwZfCoL2t658BgRTCrWj_FJKUYeelXHl_koakgf5nohPBOAkaRmg04N4sKYBod43HH0Y08gOq9F0OyBqht_1Ec7Mp3cOyTogAwZ6h2IZT4e4mXrRDGmAVi3J6fqP8oHgtrr2p__ZwhsdC-gZrOHNHsMglwqHZN26cjLeUh8ke83KiVy_H4CYKVyan-_NtEDf6w4bBhH_R_Y034TGsflMRn9KVLjvz5fOTvsjJmlZOcQSdrC23Zq-tC6OdFEM3Qawt48hFNNLzjYzNgIZC9cSph5fa6E6hk0aGHxphWqtXZsJjr7wyyB0EVKubfxgJCgrWSXw6F1z8rPLaDpZX43SHiTlDra6z9Gl6_tkoNJVdpzh3Mwlt_X8uxLwX2YJFrRnewvm9KHe_KQvmk8Qb5vf1_pviNmHA3r_WwxBn4aDP=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/X8JjbYywM6iHynvnpW/giphy.gif";
+                        description = "-Descripción por escribir";
                         muscle_zone = "upper-back";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";

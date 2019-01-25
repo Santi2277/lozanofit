@@ -1,11 +1,15 @@
 package deploy.android.lozanofit.es.lozanofitroutinemixer.activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.sqlite.ExercisesDB;
@@ -19,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 26);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 28);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //if db is opened correctly
@@ -34,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void goToActivity2 (View view){
+
+
         Intent intent = new Intent (this, Activity2.class);
         int count = 0;
         intent.putExtra("exerciseCounter", count);
