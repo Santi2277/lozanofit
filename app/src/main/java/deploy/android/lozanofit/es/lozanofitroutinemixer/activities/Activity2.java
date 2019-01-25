@@ -51,7 +51,7 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 28);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //get selected level and objective
@@ -261,14 +261,61 @@ public class Activity2 extends AppCompatActivity {
         counter = getIntent().getIntExtra("exerciseCounter", 0);
 
         TextView text = findViewById(R.id.textView4);
-        TextView uppertext = findViewById(R.id.textView3);
+        TextView uppertext = findViewById(R.id.textView10);
+        TextView uppertext2 = findViewById(R.id.textView3);
         ImageView image = findViewById(R.id.imageView);
 
 
         text.setText(exercisesList.get(counter).getName());
         TextView remaining = findViewById(R.id.textView6);
         remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
-        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+
+        //translate muscle zone to show it in its textview
+        String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
+        switch(muscleZoneEnglish){
+            case "biceps":
+                muscleZoneEnglish = "BICEPS";
+                break;
+            case "abs":
+                muscleZoneEnglish = "ABS";
+                break;
+            case "forearm":
+                muscleZoneEnglish = "ANTEBR.";
+                break;
+            case "chest":
+                muscleZoneEnglish = "PECHO";
+                break;
+            case "deltoid":
+                muscleZoneEnglish = "HOMBRO";
+                break;
+            case "calf":
+                muscleZoneEnglish = "GEMELO";
+                break;
+            case "glute":
+                muscleZoneEnglish = "GLUTEO";
+                break;
+            case "mid-back":
+                muscleZoneEnglish = "ESP.MED.";
+                break;
+            case "lumbar":
+                muscleZoneEnglish = "LUMBAR";
+                break;
+            case "thigh":
+                muscleZoneEnglish = "MUSLO";
+                break;
+            case "triceps":
+                muscleZoneEnglish = "TRICEPS";
+                break;
+            case "upper-back":
+                muscleZoneEnglish = "ESP.SUP.";
+                break;
+        }
+        uppertext.setText(muscleZoneEnglish);
+
+
+
+
+        uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
         Picasso
                 .with(this)
                 .load(exercisesList.get(counter).getPhoto_path())
@@ -409,8 +456,54 @@ public class Activity2 extends AppCompatActivity {
             counter++;
 
             text.setText(exercisesList.get(counter).getName());
-            TextView uppertext = findViewById(R.id.textView3);
-            uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+            TextView uppertext = findViewById(R.id.textView10);
+            TextView uppertext2 = findViewById(R.id.textView3);
+            uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+
+            //uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+            //translate muscle zone to show it in its textview
+            String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
+            switch(muscleZoneEnglish){
+                case "biceps":
+                    muscleZoneEnglish = "BICEPS";
+                    break;
+                case "abs":
+                    muscleZoneEnglish = "ABS";
+                    break;
+                case "forearm":
+                    muscleZoneEnglish = "ANTEBR.";
+                    break;
+                case "chest":
+                    muscleZoneEnglish = "PECHO";
+                    break;
+                case "deltoid":
+                    muscleZoneEnglish = "HOMBRO";
+                    break;
+                case "calf":
+                    muscleZoneEnglish = "GEMELO";
+                    break;
+                case "glute":
+                    muscleZoneEnglish = "GLUTEO";
+                    break;
+                case "mid-back":
+                    muscleZoneEnglish = "ESP.MED.";
+                    break;
+                case "lumbar":
+                    muscleZoneEnglish = "LUMBAR";
+                    break;
+                case "thigh":
+                    muscleZoneEnglish = "MUSLO";
+                    break;
+                case "triceps":
+                    muscleZoneEnglish = "TRICEPS";
+                    break;
+                case "upper-back":
+                    muscleZoneEnglish = "ESP.SUP.";
+                    break;
+            }
+            uppertext.setText(muscleZoneEnglish);
+
+
             TextView remaining = findViewById(R.id.textView6);
             remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
             Picasso
@@ -517,8 +610,53 @@ public class Activity2 extends AppCompatActivity {
             counter--;
 
             text.setText(exercisesList.get(counter).getName());
-            TextView uppertext = findViewById(R.id.textView3);
-            uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+            TextView uppertext = findViewById(R.id.textView10);
+            TextView uppertext2 = findViewById(R.id.textView3);
+            uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+
+            //translate muscle zone to show it in its textview
+            String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
+            switch(muscleZoneEnglish){
+                case "biceps":
+                    muscleZoneEnglish = "BICEPS";
+                    break;
+                case "abs":
+                    muscleZoneEnglish = "ABS";
+                    break;
+                case "forearm":
+                    muscleZoneEnglish = "ANTEBR.";
+                    break;
+                case "chest":
+                    muscleZoneEnglish = "PECHO";
+                    break;
+                case "deltoid":
+                    muscleZoneEnglish = "HOMBRO";
+                    break;
+                case "calf":
+                    muscleZoneEnglish = "GEMELO";
+                    break;
+                case "glute":
+                    muscleZoneEnglish = "GLUTEO";
+                    break;
+                case "mid-back":
+                    muscleZoneEnglish = "ESP.MED.";
+                    break;
+                case "lumbar":
+                    muscleZoneEnglish = "LUMBAR";
+                    break;
+                case "thigh":
+                    muscleZoneEnglish = "MUSLO";
+                    break;
+                case "triceps":
+                    muscleZoneEnglish = "TRICEPS";
+                    break;
+                case "upper-back":
+                    muscleZoneEnglish = "ESP.SUP.";
+                    break;
+            }
+            uppertext.setText(muscleZoneEnglish);
+
+
             TextView remaining = findViewById(R.id.textView6);
             remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
             Picasso
@@ -626,8 +764,52 @@ public class Activity2 extends AppCompatActivity {
         counter = exercisesList.size()-1;
 
         text.setText(exercisesList.get(counter).getName());
-        TextView uppertext = findViewById(R.id.textView3);
-        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+        TextView uppertext = findViewById(R.id.textView10);
+        TextView uppertext2 = findViewById(R.id.textView3);
+        uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+
+        //translate muscle zone to show it in its textview
+        String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
+        switch(muscleZoneEnglish){
+            case "biceps":
+                muscleZoneEnglish = "BICEPS";
+                break;
+            case "abs":
+                muscleZoneEnglish = "ABS";
+                break;
+            case "forearm":
+                muscleZoneEnglish = "ANTEBR.";
+                break;
+            case "chest":
+                muscleZoneEnglish = "PECHO";
+                break;
+            case "deltoid":
+                muscleZoneEnglish = "HOMBRO";
+                break;
+            case "calf":
+                muscleZoneEnglish = "GEMELO";
+                break;
+            case "glute":
+                muscleZoneEnglish = "GLUTEO";
+                break;
+            case "mid-back":
+                muscleZoneEnglish = "ESP.MED.";
+                break;
+            case "lumbar":
+                muscleZoneEnglish = "LUMBAR";
+                break;
+            case "thigh":
+                muscleZoneEnglish = "MUSLO";
+                break;
+            case "triceps":
+                muscleZoneEnglish = "TRICEPS";
+                break;
+            case "upper-back":
+                muscleZoneEnglish = "ESP.SUP.";
+                break;
+        }
+        uppertext.setText(muscleZoneEnglish);
+
         TextView remaining = findViewById(R.id.textView6);
         remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
         Picasso
@@ -733,8 +915,53 @@ public class Activity2 extends AppCompatActivity {
         counter = 0;
 
         text.setText(exercisesList.get(counter).getName());
-        TextView uppertext = findViewById(R.id.textView3);
-        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+        TextView uppertext = findViewById(R.id.textView10);
+        TextView uppertext2 = findViewById(R.id.textView3);
+        uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+
+        //translate muscle zone to show it in its textview
+        String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
+        switch(muscleZoneEnglish){
+            case "biceps":
+                muscleZoneEnglish = "BICEPS";
+                break;
+            case "abs":
+                muscleZoneEnglish = "ABS";
+                break;
+            case "forearm":
+                muscleZoneEnglish = "ANTEBR.";
+                break;
+            case "chest":
+                muscleZoneEnglish = "PECHO";
+                break;
+            case "deltoid":
+                muscleZoneEnglish = "HOMBRO";
+                break;
+            case "calf":
+                muscleZoneEnglish = "GEMELO";
+                break;
+            case "glute":
+                muscleZoneEnglish = "GLUTEO";
+                break;
+            case "mid-back":
+                muscleZoneEnglish = "ESP.MED.";
+                break;
+            case "lumbar":
+                muscleZoneEnglish = "LUMBAR";
+                break;
+            case "thigh":
+                muscleZoneEnglish = "MUSLO";
+                break;
+            case "triceps":
+                muscleZoneEnglish = "TRICEPS";
+                break;
+            case "upper-back":
+                muscleZoneEnglish = "ESP.SUP.";
+                break;
+        }
+        uppertext.setText(muscleZoneEnglish);
+
+
         TextView remaining = findViewById(R.id.textView6);
         remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
         Picasso
@@ -842,8 +1069,53 @@ public class Activity2 extends AppCompatActivity {
 
 
         text.setText(exercisesList.get(counter).getName());
-        TextView uppertext = findViewById(R.id.textView3);
-        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+        TextView uppertext = findViewById(R.id.textView10);
+        TextView uppertext2 = findViewById(R.id.textView3);
+        uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+
+        //translate muscle zone to show it in its textview
+        String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
+        switch(muscleZoneEnglish){
+            case "biceps":
+                muscleZoneEnglish = "BICEPS";
+                break;
+            case "abs":
+                muscleZoneEnglish = "ABS";
+                break;
+            case "forearm":
+                muscleZoneEnglish = "ANTEBR.";
+                break;
+            case "chest":
+                muscleZoneEnglish = "PECHO";
+                break;
+            case "deltoid":
+                muscleZoneEnglish = "HOMBRO";
+                break;
+            case "calf":
+                muscleZoneEnglish = "GEMELO";
+                break;
+            case "glute":
+                muscleZoneEnglish = "GLUTEO";
+                break;
+            case "mid-back":
+                muscleZoneEnglish = "ESP.MED.";
+                break;
+            case "lumbar":
+                muscleZoneEnglish = "LUMBAR";
+                break;
+            case "thigh":
+                muscleZoneEnglish = "MUSLO";
+                break;
+            case "triceps":
+                muscleZoneEnglish = "TRICEPS";
+                break;
+            case "upper-back":
+                muscleZoneEnglish = "ESP.SUP.";
+                break;
+        }
+        uppertext.setText(muscleZoneEnglish);
+
+
         TextView remaining = findViewById(R.id.textView6);
         remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
         Picasso
@@ -944,7 +1216,7 @@ public class Activity2 extends AppCompatActivity {
     public void createRoutineFull (int biceps, int abs, int forearm, int chest, int deltoid, int calf, int glute, int midBack, int lumbar, int thigh, int triceps, int upperBack) {
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 28);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
 
@@ -1175,7 +1447,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 28);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Half
@@ -1206,7 +1478,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 28);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Third
@@ -1235,7 +1507,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 28);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Fourth
@@ -1265,7 +1537,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 28);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //Fifth
@@ -1296,7 +1568,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 28);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
@@ -1327,8 +1599,54 @@ public class Activity2 extends AppCompatActivity {
 
 
         text.setText(exercisesList.get(counter).getName());
-        TextView uppertext = findViewById(R.id.textView3);
-        uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
+        TextView uppertext = findViewById(R.id.textView10);
+        TextView uppertext2 = findViewById(R.id.textView3);
+        uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+
+
+        //translate muscle zone to show it in its textview
+        String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
+        switch(muscleZoneEnglish){
+            case "biceps":
+                muscleZoneEnglish = "BICEPS";
+                break;
+            case "abs":
+                muscleZoneEnglish = "ABS";
+                break;
+            case "forearm":
+                muscleZoneEnglish = "ANTEBR.";
+                break;
+            case "chest":
+                muscleZoneEnglish = "PECHO";
+                break;
+            case "deltoid":
+                muscleZoneEnglish = "HOMBRO";
+                break;
+            case "calf":
+                muscleZoneEnglish = "GEMELO";
+                break;
+            case "glute":
+                muscleZoneEnglish = "GLUTEO";
+                break;
+            case "mid-back":
+                muscleZoneEnglish = "ESP.MED.";
+                break;
+            case "lumbar":
+                muscleZoneEnglish = "LUMBAR";
+                break;
+            case "thigh":
+                muscleZoneEnglish = "MUSLO";
+                break;
+            case "triceps":
+                muscleZoneEnglish = "TRICEPS";
+                break;
+            case "upper-back":
+                muscleZoneEnglish = "ESP.SUP.";
+                break;
+        }
+        uppertext.setText(muscleZoneEnglish);
+
+
         TextView remaining = findViewById(R.id.textView6);
         remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
         Picasso

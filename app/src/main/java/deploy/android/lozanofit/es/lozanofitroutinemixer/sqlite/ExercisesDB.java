@@ -33,12 +33,12 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 String description = "";
                 String muscle_zone = "";
                 String level = "";
-                String subclasses = "";
+                String subclasses = "mid-back";
                 String hip_weight = "";
                 String res_weight = "";
                 String vol_weight = "";
                 String reps_obj = "";
-                reps_obj = "10-12 reps/16-20 reps/6-8 reps";
+                reps_obj = "10-12 rep/16-20 rep/6-8 rep";
 
 
 
@@ -52,6 +52,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/10/14/16/20";
                         res_weight ="4/8/12/14/18";
                         vol_weight = "8/12/16/18/24";
+                        subclasses = "c.larga";
                         break;
                     case 2:
                         name = "Curl Con Giro";
@@ -62,6 +63,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/10/14/16/20";
                         res_weight ="4/8/12/14/18";
                         vol_weight = "8/12/16/18/24";
+                        subclasses = "c.corta";
                         break;
                     case 3:
                         name = "Curl Concentrado";
@@ -72,6 +74,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/10/14/16/20";
                         res_weight ="4/8/12/14/18";
                         vol_weight = "8/12/16/18/24";
+                        subclasses = "c.corta";
                         break;
                     case 4:
                         name = "Curl Martillo";
@@ -82,6 +85,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/10/14/16/20";
                         res_weight ="4/8/12/14/18";
                         vol_weight = "8/12/16/18/24";
+                        subclasses = "braquial";
                         break;
                     case 5:
                         name = "Dominada Supina";
@@ -93,6 +97,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "-/-/0/2/4";
                         res_weight ="-/-/-/-/-";
                         vol_weight = "-/-/2/4/6";
+                        subclasses = "c.larga";
                         break;
                     case 6:
                         name = "Dominada Agarre Paralelo";
@@ -104,6 +109,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "-/-/0/2/4";
                         res_weight ="-/-/-/-/-";
                         vol_weight = "-/-/2/4/6";
+                        subclasses = "braquial";
                         break;
                     case 7:
                         name = "Curl Con Barra";
@@ -114,6 +120,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "2.5/5/10/15/20";
                         res_weight ="0/2.5/5/10/15";
                         vol_weight = "5/10/15/20/25";
+                        subclasses = "c.larga";
                         break;
                     case 8:
                         name = "Kettlebell al hombro";
@@ -124,6 +131,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
+                        subclasses = "c.corta";
                         break;
                     case 9:
                         name = "Curl Cuerda Polea";
@@ -134,6 +142,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/25/30/35";
                         res_weight ="12.5/17.5/22.5/27.5/32.5";
                         vol_weight = "17.5/22.5/27.5/32.5/37.5";
+                        subclasses = "braquial";
                         break;
                     case 10:
                         name = "Barra Z Banco Scott";
@@ -144,6 +153,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "5/10/15/20/25";
                         res_weight ="0/5/10/15/20";
                         vol_weight = "10/15/20/25/30";
+                        subclasses = "c.corta";
                         break;
                     case 11:
                         name = "Curl Barra Z";
@@ -154,6 +164,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "2.5/5/10/15/20";
                         res_weight ="0/2.5/5/10/15";
                         vol_weight = "5/10/15/20/25";
+                        subclasses = "c.corta";
                         break;
                     case 12:
                         name = "Escalar La Cuerda";
@@ -165,7 +176,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "-/-/0/0/4";
                         res_weight ="-/-/0/0/0";
                         vol_weight = "-/-/0/4/";
-                        reps_obj = "6 reps/8 reps/4 reps";
+                        reps_obj = "6 rep/8 rep/4 rep";
+                        subclasses = "braquial";
                         break;
                     case 13:
                         name = "Rope Training";
@@ -177,6 +189,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
                         reps_obj = "45 seg/1 min/30 seg";
+                        subclasses = "braquial";
                         break;
                     case 14:
                         name = "Superabdominales";
@@ -187,7 +200,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5+2/5+4/5+4/10+6";
                         res_weight ="0/0/2.5+2/2.5+2/5+4";
                         vol_weight = "2.5+2/5+4/8+6/8+6/12+8";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 15:
                         name = "Crunch";
@@ -198,7 +211,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 16:
                         name = "Crunch Lateral";
@@ -209,7 +222,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "oblique";
+                        subclasses = "oblicuos";
                         break;
                     case 17:
                         name = "Bodysaw";
@@ -221,7 +234,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="0/0/0/2/4";
                         vol_weight = "2/2/4/6/10";
                         reps_obj = "50 seg/1min 15s/30 seg";
-                        subclasses = "isometric";
+                        subclasses = "isom.";
                         break;
                     case 18:
                         name = "Plancha Lateral";
@@ -233,7 +246,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="0/0/0/2/4";
                         vol_weight = "2/2/4/6/10";
                         reps_obj = "45 seg/1 min/30 seg";
-                        subclasses = "isometric";
+                        subclasses = "isom.lat.";
                         break;
                     case 19:
                         name = "Crunch Brazos Estirados";
@@ -244,7 +257,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/1/2.5/5/10";
                         res_weight ="0/0/0/2.5/5";
                         vol_weight = "1/2.5/5/10/15";
-                        subclasses = "straight";
+                        subclasses = "superior";
                         break;
                     case 20:
                         name = "Pies a la Barra";
@@ -256,7 +269,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "straight";
+                        subclasses = "inferior";
                         break;
                     case 21:
                         name = "Sentado en Captain Chair";
@@ -268,7 +281,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "straight";
+                        subclasses = "inferior";
                         break;
                     case 22:
                         name = "Crunch Corto";
@@ -279,7 +292,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 23:
                         name = "Bici";
@@ -290,7 +303,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "oblique";
+                        subclasses = "oblicuos";
                         break;
                     case 24:
                         name = "Lateral Piernas Cruzadas";
@@ -301,7 +314,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "oblique";
+                        subclasses = "oblicuos";
                         break;
                     case 25:
                         name = "Plancha Frontal a Lateral";
@@ -312,7 +325,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "isometric";
+                        subclasses = "isom.lat.";
                         break;
                     case 26:
                         name = "V Fitball";
@@ -323,7 +336,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 27:
                         name = "Pase de Fitball";
@@ -334,7 +347,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 28:
                         name = "Crunch en Fitball";
@@ -345,7 +358,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 29:
                         name = "Rueda Abdominal";
@@ -356,7 +369,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "isometric";
+                        subclasses = "isom.";
                         reps_obj = "50 seg/1min 15s/30 seg";
                         break;
                     case 30:
@@ -368,7 +381,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/22.5/25/30";
                         res_weight ="12.5/17.5/20/22.5/25";
                         vol_weight = "17.5/22.5/25/27.5/35";
-                        subclasses = "oblique";
+                        subclasses = "oblicuos";
                         break;
                     case 31:
                         name = "Movimientos del Carpo";
@@ -379,6 +392,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
+                        subclasses = "carpo";
                         break;
                     case 32:
                         name = "Flexion y Extension de Dedos";
@@ -389,6 +403,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "dedos";
                         break;
                     case 33:
                         name = "Press Declinado";
@@ -399,6 +414,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 34:
                         name = "Fly en Polea Tumbado";
@@ -409,6 +425,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 35:
                         name = "Press Plano";
@@ -419,6 +436,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "10/14/16/18/22";
                         res_weight ="8/12/14/16/18";
                         vol_weight = "12/16/18/20/26";
+                        subclasses = "med.-inf.";
                         break;
                     case 36:
                         name = "Press 30º";
@@ -429,6 +447,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "10/14/16/18/22";
                         res_weight ="8/12/14/16/18";
                         vol_weight = "12/16/18/20/26";
+                        subclasses = "med.-inf.";
                         break;
                     case 37:
                         name = "Press 45º Mancuernas Juntas";
@@ -439,6 +458,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "10/14/16/18/22";
                         res_weight ="8/12/14/16/18";
                         vol_weight = "12/16/18/20/26";
+                        subclasses = "superior";
                         break;
                     case 38:
                         name = "Flexiones de Pecho";
@@ -449,6 +469,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/5/10/15";
                         res_weight ="0/0/0/5/10";
                         vol_weight = "0/5/10/15/20";
+                        subclasses = "med.-inf.";
                         break;
                     case 39:
                         name = "Press en Polea Manos Interior";
@@ -459,6 +480,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/25/30/35";
                         res_weight ="12.5/17.5/22.5/27.5/32.5";
                         vol_weight = "17.5/22.5/27.5/32.5/37.5";
+                        subclasses = "superior";
                         break;
                     case 40:
                         name = "Maquina de Pecho con Codos";
@@ -469,6 +491,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "45/55/60/65/75";
                         res_weight ="8/12/14/16/18";
                         vol_weight = "50/60/65/70/80";
+                        subclasses = "med.-inf.";
                         break;
                     case 41:
                         name = "Cruces Polea Media Altura";
@@ -479,6 +502,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12.5/15/20/22.5/27.5";
                         res_weight ="10/12.5/17.5/20/25";
                         vol_weight = "15/17.5/22.5/25/30";
+                        subclasses = "med.-inf.";
                         break;
                     case 42:
                         name = "Maquina de Pecho con Manos";
@@ -489,6 +513,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "35/45/50/55/65";
                         res_weight ="30/40/45/50/60";
                         vol_weight = "40/50/55/60/70";
+                        subclasses = "med.-inf.";
                         break;
                     case 43:
                         name = "Press Guillotina";
@@ -499,6 +524,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/25/30/40";
                         res_weight ="10/15/20/25/30";
                         vol_weight = "20/25/30/35/50";
+                        subclasses = "med.-inf.";
                         break;
                     case 44:
                         name = "Press con Goma Elastica";
@@ -509,6 +535,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 45:
                         name = "Burpee";
@@ -519,6 +546,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 46:
                         name = "Mancuerna Elevacion Frontal";
@@ -529,6 +557,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "anterior";
                         break;
                     case 47:
                         name = "Press Militar con Mancuernas";
@@ -539,6 +568,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
+                        subclasses = "medio";
                         break;
                     case 48:
                         name = "Elevacion del Lado al Frente";
@@ -549,6 +579,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/6/8/8/12";
                         res_weight ="4/4/6/6/10";
                         vol_weight = "8/8/6/6/10";
+                        subclasses = "anterior";
                         break;
                     case 49:
                         name = "Kettlebell Push Press";
@@ -559,6 +590,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "anterior";
                         break;
                     case 50:
                         name = "Remo Colgando";
@@ -570,6 +602,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/5";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/5/10";
+                        subclasses = "posterior";
                         break;
                     case 51:
                         name = "Elevacion Lateral en Polea";
@@ -580,6 +613,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "7.5/10/12.5/15/20";
                         res_weight ="5/7.5/10/12.5/17.5";
                         vol_weight = "10/12.5/15/17.5/22.5";
+                        subclasses = "medio";
                         break;
                     case 52:
                         name = "Maquina de Remo Codos Altos";
@@ -590,6 +624,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "45/55/60/65/75";
                         res_weight ="40/50/55/60/70";
                         vol_weight = "50/60/65/70/80";
+                        subclasses = "posterior";
                         break;
                     case 53:
                         name = "Maquina de hombros";
@@ -600,6 +635,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "45/55/60/65/75";
                         res_weight ="40/50/55/60/70";
                         vol_weight = "50/60/65/70/80";
+                        subclasses = "medio";
                         break;
                     case 54:
                         name = "Linear Jammer con una Mano";
@@ -610,6 +646,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "10/10/20/20/30";
                         res_weight ="5/5/15/15/25";
                         vol_weight = "15/15/25/25/35";
+                        subclasses = "anterior";
                         break;
                     case 55:
                         name = "Goma Elastica a la Cara";
@@ -620,6 +657,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "posterior";
                         break;
                     case 56:
                         name = "Remo Mancuernas Codos Altos";
@@ -630,6 +668,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "posterior";
                         break;
                     case 57:
                         name = "Maquina de Gemelos";
@@ -640,6 +679,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "25/35/40/45/55";
                         res_weight ="20/30/35/40/50";
                         vol_weight = "30/40/45/50/60";
+                        subclasses = "soleo";
                         break;
                     case 58:
                         name = "Saltar Cuerda Pies Juntos";
@@ -651,6 +691,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
                         reps_obj = "1 min/1m 30s/45 seg";
+                        subclasses = "gemelo";
                         break;
                     case 59:
                         name = "Maquina de Gluteo Sentado";
@@ -661,6 +702,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "40/50/55/60/70";
                         res_weight ="35/45/50/55/65";
                         vol_weight = "45/55/60/65/75";
+                        subclasses = "menor";
                         break;
                     case 60:
                         name = "Rotacion con Banda Elastica";
@@ -671,6 +713,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "menor";
                         break;
                     case 61:
                         name = "Sentadilla";
@@ -681,6 +724,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12/20/24/28/36";
                         res_weight ="8/16/20/24/32";
                         vol_weight = "16/24/28/32/40";
+                        subclasses = "mayor";
                         break;
                     case 62:
                         name = "Jumping Jacks";
@@ -691,6 +735,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "medio";
                         break;
                     case 63:
                         name = "Elevacion Lateral de Pierna";
@@ -701,6 +746,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "medio";
                         break;
                     case 64:
                         name = "Cable Kickback";
@@ -711,6 +757,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "17.5/22.5/25/27.5/32.5";
                         res_weight ="15/20/22.5/25/30";
                         vol_weight = "20/25/27.5/30/35";
+                        subclasses = "mayor";
                         break;
                     case 65:
                         name = "Pull Through";
@@ -721,6 +768,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "30/32.5/35/40/45";
                         res_weight ="27.5/30/32.5/35/40";
                         vol_weight = "32.5/35/40/45/50";
+                        subclasses = "mayor";
                         break;
                     case 66:
                         name = "Maquina de Gluteos de Pie";
@@ -731,6 +779,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "40/50/60/65/75";
                         res_weight ="35/45/50/55/65";
                         vol_weight = "45/55/65/70/80";
+                        subclasses = "medio";
                         break;
                     case 67:
                         name = "Glute Bridge";
@@ -741,6 +790,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "5/15/20/25/35";
                         res_weight ="0/10/15/20/30";
                         vol_weight = "10/20/25/30/40";
+                        subclasses = "mayor";
                         break;
                     case 68:
                         name = "Lunge con Pie Elevado";
@@ -751,6 +801,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12/16/20/24/32";
                         res_weight ="8/12/16/20/28";
                         vol_weight = "16/20/24/28/36";
+                        subclasses = "mayor";
                         break;
                     case 69:
                         name = "Floor Glute Bridge";
@@ -761,6 +812,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "5/15/20/25/35";
                         res_weight ="0/10/15/20/30";
                         vol_weight = "10/20/25/30/40";
+                        subclasses = "mayor";
                         break;
                     case 70:
                         name = "Lunge Lateral";
@@ -771,6 +823,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "medio";
                         break;
                     case 71:
                         name = "Lunge Diagonal";
@@ -781,6 +834,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "menor";
                         break;
                     case 72:
                         name = "Dominada";
@@ -853,6 +907,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5+1/5+2/6+3/8+4";
                         res_weight ="0/0/2.5+1/5+2/6+3";
                         vol_weight = "2.5+1/5+2/6+3/8+4/10+6";
+                        subclasses = "normal";
                         break;
                     case 79:
                         name = "Maquina Lumbar";
@@ -863,6 +918,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "5/10/15/20/25";
                         res_weight ="0/5/10/15/20";
                         vol_weight = "10/15/20/25/30";
+                        subclasses = "normal";
                         break;
                     case 80:
                         name = "Maquina Lumbar Lateral";
@@ -873,6 +929,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "2.5/5/10/15/20";
                         res_weight ="0/2.5/5/10/15";
                         vol_weight = "5/10/15/20/25";
+                        subclasses = "lateral";
                         break;
                     case 81:
                         name = "Peso Muerto";
@@ -883,6 +940,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "22/28/32.5/37.5/42.5";
                         res_weight ="18/24/28/32.5/37.5";
                         vol_weight = "24/32.5/37.5/42.5/47.5";
+                        subclasses = "normal";
                         break;
                     case 82:
                         name = "Lumbares en Fitball";
@@ -893,6 +951,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "3/5/10/15/20";
                         res_weight ="0/3/5/10/15";
                         vol_weight = "5/10/15/20/25";
+                        subclasses = "normal";
                         break;
                     case 83:
                         name = "Rotaciones Polea Rodillas";
@@ -903,6 +962,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12.5/15/17.5/20/25";
                         res_weight ="10/12.5/15/17.5/20";
                         vol_weight = "15/17.5/20/25/30";
+                        subclasses = "lateral";
                         break;
                     case 84:
                         name = "Maquina de Aductores";
@@ -913,6 +973,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "40/50/55/60/70";
                         res_weight ="35/45/50/55/65";
                         vol_weight = "45/55/60/65/75";
+                        subclasses = "local";
                         break;
                     case 85:
                         name = "Press de Piernas";
@@ -923,6 +984,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "100/140/160/180/200";
                         res_weight ="80/120/140/160/180";
                         vol_weight = "120/160/180/200/220";
+                        subclasses = "global";
                         break;
                     case 86:
                         name = "Sliding Harmstring Curl";
@@ -933,6 +995,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/2.5/5/10";
                         res_weight ="0/0/0/2.5/5";
                         vol_weight = "2.5/2.5/5/10/15";
+                        subclasses = "local";
                         break;
                     case 87:
                         name = "Lunge (Zancada)";
@@ -943,6 +1006,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12/20/24/28/36";
                         res_weight ="8/16/20/24/32";
                         vol_weight = "16/24/28/32/40";
+                        subclasses = "global";
                         break;
                     case 88:
                         name = "Maquina de Isquios";
@@ -953,6 +1017,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "25/35/40/45/55";
                         res_weight ="20/30/35/40/50";
                         vol_weight = "30/40/45/50/60";
+                        subclasses = "local";
                         break;
                     case 89:
                         name = "Maquina de Aductores de Pie";
@@ -963,6 +1028,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "40/50/60/65/75";
                         res_weight ="35/45/50/55/65";
                         vol_weight = "45/55/65/70/80";
+                        subclasses = "local";
                         break;
                     case 90:
                         name = "TRX Triceps";
@@ -973,6 +1039,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 91:
                         name = "Dips Station";
@@ -983,6 +1050,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/4/6";
                         res_weight ="0/0/0/0/4";
                         vol_weight = "0/2/4/6/8";
+                        subclasses = "c.larga";
                         break;
                     case 92:
                         name = "Flexiones Codos Cerrados";
@@ -993,6 +1061,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/5/10/15";
                         res_weight ="0/0/0/5/10";
                         vol_weight = "0/5/10/15/20";
+                        subclasses = "c.lateral";
                         break;
                     case 93:
                         name = "Flexiones Manos Juntas";
@@ -1003,6 +1072,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/5/10/15";
                         res_weight ="0/0/0/5/10";
                         vol_weight = "0/5/10/15/20";
+                        subclasses = "c.lateral";
                         break;
                     case 94:
                         name = "Extension Polea Sobre Cabeza";
@@ -1013,6 +1083,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/22.5/25/30";
                         res_weight ="12.5/17.5/20/22.5/27.5";
                         vol_weight = "17.5/22.5/25/27.5/32.5";
+                        subclasses = "c.larga";
                         break;
                     case 95:
                         name = "Ext. Polea Manos Abiertas";
@@ -1023,6 +1094,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/22.5/25/30";
                         res_weight ="12.5/17.5/20/22.5/27.5";
                         vol_weight = "17.5/22.5/25/27.5/32.5";
+                        subclasses = "c.lateral";
                         break;
                     case 96:
                         name = "Extension Polea con Cuerda";
@@ -1033,6 +1105,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "20/25/27.5/30/35";
                         res_weight ="17.5/22.5/25/27.5/30";
                         vol_weight = "22.5/27.5/30/32.5/37.5";
+                        subclasses = "c.lateral";
                         break;
                     case 97:
                         name = "Subescapular con Mancuernas";
@@ -1043,6 +1116,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
+                        subclasses = "rot.int.";
                         break;
                     case 98:
                         name = "Supraespinoso";
@@ -1053,6 +1127,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "supraesp.";
                         break;
                     case 99:
                         name = "Kettlebell High Pull";
@@ -1063,6 +1138,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "trapecio";
                         break;
                     case 100:
                         name = "Infraespinoso con Mancuerna";
@@ -1073,6 +1149,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "4/6/8/10/14";
                         res_weight ="2/4/6/8/12";
                         vol_weight = "6/8/10/12/16";
+                        subclasses = "rot.ext.";
                         break;
                     case 101:
                         name = "V con Goma Elastica";
@@ -1083,6 +1160,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.ext.";
                         break;
                     case 102:
                         name = "Infraespinoso Goma Elastica";
@@ -1093,6 +1171,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.ext.";
                         break;
                     case 103:
                         name = "Subescapular Goma Elastica";
@@ -1103,6 +1182,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.int.";
                         break;
                     case 104:
                         name = "Biceps TRX";
@@ -1113,6 +1193,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 105:
                         name = "Curl Concentrado Polea Alta";
@@ -1123,6 +1204,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.corta";
                         break;
                     case 106:
                         name = "Biceps Curl Polea Barra";
@@ -1133,6 +1215,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 107:
                         name = "Biceps Curl Inclinado";
@@ -1143,6 +1226,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 108:
                         name = "Abs Declinado";
@@ -1153,6 +1237,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 109:
                         name = "Abs Declinado con Giro";
@@ -1163,6 +1248,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "oblicuos";
                         break;
                     case 110:
                         name = "Abs Invertidas Banco Declinado";
@@ -1173,6 +1259,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "inferior";
                         break;
                     case 111:
                         name = "Giro Bola";
@@ -1183,6 +1270,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "isom.lat.";
                         break;
                     case 112:
                         name = "Abs Peso Sobre Cabeza";
@@ -1193,6 +1281,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 113:
                         name = "Cruces Polea Baja";
@@ -1203,6 +1292,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 114:
                         name = "Maquina Pectoral Superior";
@@ -1213,6 +1303,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 115:
                         name = "Flexiones TRX";
@@ -1223,6 +1314,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 116:
                         name = "Press 45º Mancuernas";
@@ -1233,6 +1325,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 117:
                         name = "Maquina Hombros con Codos";
@@ -1243,6 +1336,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "medio";
                         break;
                     case 118:
                         name = "Fly Reverso Inclinado";
@@ -1253,6 +1347,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "posterior";
                         break;
                     case 119:
                         name = "Press Militar Barra Sentado";
@@ -1263,6 +1358,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "anterior";
                         break;
                     case 120:
                         name = "Push Press con Mancuernas";
@@ -1273,6 +1369,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "anterior";
                         break;
                     case 121:
                         name = "Elevacion de punteras ";
@@ -1283,6 +1380,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "gemelo";
                         break;
                     case 122:
                         name = "Box Jump";
@@ -1293,6 +1391,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "soleo";
                         break;
                     case 123:
                         name = "Maquina Press Extension Gemelo";
@@ -1303,6 +1402,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "gemelo";
                         break;
                     case 124:
                         name = "Maquina Press Extension Soleo";
@@ -1313,6 +1413,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "soleo";
                         break;
                     case 125:
                         name = "Paso con Elevacion de Pierna";
@@ -1323,6 +1424,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "mayor";
                         break;
                     case 126:
                         name = "Peso Muerto Sumo";
@@ -1333,6 +1435,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "mayor";
                         break;
                     case 127:
                         name = "Glute Bridge 1 Pierna";
@@ -1343,6 +1446,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "mayor";
                         break;
                     case 128:
                         name = "Flutter Kicks";
@@ -1353,6 +1457,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "mayor";
                         break;
                     case 129:
                         name = "Bajada de Cuerda en Polea";
@@ -1403,6 +1508,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "lateral";
                         break;
                     case 134:
                         name = "Lumbar TRX Isometrico";
@@ -1413,6 +1519,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "normal";
                         break;
                     case 135:
                         name = "Peso Muerto con Barra";
@@ -1423,6 +1530,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "normal";
                         break;
                     case 136:
                         name = "Extension Lumbar en Suelo";
@@ -1433,6 +1541,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "normal";
                         break;
                     case 137:
                         name = "Aductores en Polea";
@@ -1443,6 +1552,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "local";
                         break;
                     case 138:
                         name = "Abductores en Polea";
@@ -1453,6 +1563,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "local";
                         break;
                     case 139:
                         name = "Maquina de Cuadriceps";
@@ -1463,6 +1574,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "local";
                         break;
                     case 140:
                         name = "Squat en Fitball";
@@ -1473,6 +1585,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "global";
                         break;
                     case 141:
                         name = "Fitball Squat 1 Pierna";
@@ -1483,6 +1596,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "global";
                         break;
                     case 142:
                         name = "Extension Barra EZ Declinado";
@@ -1493,6 +1607,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 143:
                         name = "Press Triceps";
@@ -1503,6 +1618,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.lateral";
                         break;
                     case 144:
                         name = "Triceps Polea Barra Supino";
@@ -1513,6 +1629,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.media";
                         break;
                     case 145:
                         name = "Dips con Banco";
@@ -1523,6 +1640,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 146:
                         name = "Ext. Sobre Cabeza Mancuernas";
@@ -1533,6 +1651,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 147:
                         name = "Triceps Press Agarre Supino";
@@ -1543,6 +1662,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.media";
                         break;
                     case 148:
                         name = "Rotadores Internos Polea";
@@ -1553,6 +1673,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.int.";
                         break;
                     case 149:
                         name = "Rotadores Externos Polea";
@@ -1563,6 +1684,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.ext.";
                         break;
                     case 150:
                         name = "Supraespinoso Polea";
@@ -1573,6 +1695,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "supraesp.";
                         break;
 
 
@@ -1603,12 +1726,12 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 String description = "";
                 String muscle_zone = "";
                 String level = "";
-                String subclasses = "";
+                String subclasses = "mid-back";
                 String hip_weight = "";
                 String res_weight = "";
                 String vol_weight = "";
                 String reps_obj = "";
-                reps_obj = "10-12 reps/16-20 reps/6-8 reps";
+                reps_obj = "10-12 rep/16-20 rep/6-8 rep";
 
 
 
@@ -1622,6 +1745,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/10/14/16/20";
                         res_weight ="4/8/12/14/18";
                         vol_weight = "8/12/16/18/24";
+                        subclasses = "c.larga";
                         break;
                     case 2:
                         name = "Curl Con Giro";
@@ -1632,6 +1756,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/10/14/16/20";
                         res_weight ="4/8/12/14/18";
                         vol_weight = "8/12/16/18/24";
+                        subclasses = "c.corta";
                         break;
                     case 3:
                         name = "Curl Concentrado";
@@ -1642,6 +1767,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/10/14/16/20";
                         res_weight ="4/8/12/14/18";
                         vol_weight = "8/12/16/18/24";
+                        subclasses = "c.corta";
                         break;
                     case 4:
                         name = "Curl Martillo";
@@ -1652,6 +1778,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/10/14/16/20";
                         res_weight ="4/8/12/14/18";
                         vol_weight = "8/12/16/18/24";
+                        subclasses = "braquial";
                         break;
                     case 5:
                         name = "Dominada Supina";
@@ -1663,6 +1790,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "-/-/0/2/4";
                         res_weight ="-/-/-/-/-";
                         vol_weight = "-/-/2/4/6";
+                        subclasses = "c.larga";
                         break;
                     case 6:
                         name = "Dominada Agarre Paralelo";
@@ -1674,6 +1802,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "-/-/0/2/4";
                         res_weight ="-/-/-/-/-";
                         vol_weight = "-/-/2/4/6";
+                        subclasses = "braquial";
                         break;
                     case 7:
                         name = "Curl Con Barra";
@@ -1684,6 +1813,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "2.5/5/10/15/20";
                         res_weight ="0/2.5/5/10/15";
                         vol_weight = "5/10/15/20/25";
+                        subclasses = "c.larga";
                         break;
                     case 8:
                         name = "Kettlebell al hombro";
@@ -1694,6 +1824,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
+                        subclasses = "c.corta";
                         break;
                     case 9:
                         name = "Curl Cuerda Polea";
@@ -1704,6 +1835,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/25/30/35";
                         res_weight ="12.5/17.5/22.5/27.5/32.5";
                         vol_weight = "17.5/22.5/27.5/32.5/37.5";
+                        subclasses = "braquial";
                         break;
                     case 10:
                         name = "Barra Z Banco Scott";
@@ -1714,6 +1846,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "5/10/15/20/25";
                         res_weight ="0/5/10/15/20";
                         vol_weight = "10/15/20/25/30";
+                        subclasses = "c.corta";
                         break;
                     case 11:
                         name = "Curl Barra Z";
@@ -1724,6 +1857,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "2.5/5/10/15/20";
                         res_weight ="0/2.5/5/10/15";
                         vol_weight = "5/10/15/20/25";
+                        subclasses = "c.corta";
                         break;
                     case 12:
                         name = "Escalar La Cuerda";
@@ -1735,7 +1869,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "-/-/0/0/4";
                         res_weight ="-/-/0/0/0";
                         vol_weight = "-/-/0/4/";
-                        reps_obj = "6 reps/8 reps/4 reps";
+                        reps_obj = "6 rep/8 rep/4 rep";
+                        subclasses = "braquial";
                         break;
                     case 13:
                         name = "Rope Training";
@@ -1747,6 +1882,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
                         reps_obj = "45 seg/1 min/30 seg";
+                        subclasses = "braquial";
                         break;
                     case 14:
                         name = "Superabdominales";
@@ -1757,7 +1893,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5+2/5+4/5+4/10+6";
                         res_weight ="0/0/2.5+2/2.5+2/5+4";
                         vol_weight = "2.5+2/5+4/8+6/8+6/12+8";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 15:
                         name = "Crunch";
@@ -1768,7 +1904,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 16:
                         name = "Crunch Lateral";
@@ -1779,7 +1915,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "oblique";
+                        subclasses = "oblicuos";
                         break;
                     case 17:
                         name = "Bodysaw";
@@ -1791,7 +1927,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="0/0/0/2/4";
                         vol_weight = "2/2/4/6/10";
                         reps_obj = "50 seg/1min 15s/30 seg";
-                        subclasses = "isometric";
+                        subclasses = "isom.";
                         break;
                     case 18:
                         name = "Plancha Lateral";
@@ -1803,7 +1939,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="0/0/0/2/4";
                         vol_weight = "2/2/4/6/10";
                         reps_obj = "45 seg/1 min/30 seg";
-                        subclasses = "isometric";
+                        subclasses = "isom.lat.";
                         break;
                     case 19:
                         name = "Crunch Brazos Estirados";
@@ -1814,7 +1950,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/1/2.5/5/10";
                         res_weight ="0/0/0/2.5/5";
                         vol_weight = "1/2.5/5/10/15";
-                        subclasses = "straight";
+                        subclasses = "superior";
                         break;
                     case 20:
                         name = "Pies a la Barra";
@@ -1826,7 +1962,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "straight";
+                        subclasses = "inferior";
                         break;
                     case 21:
                         name = "Sentado en Captain Chair";
@@ -1838,7 +1974,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "straight";
+                        subclasses = "inferior";
                         break;
                     case 22:
                         name = "Crunch Corto";
@@ -1849,7 +1985,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 23:
                         name = "Bici";
@@ -1860,7 +1996,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "oblique";
+                        subclasses = "oblicuos";
                         break;
                     case 24:
                         name = "Lateral Piernas Cruzadas";
@@ -1871,7 +2007,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "oblique";
+                        subclasses = "oblicuos";
                         break;
                     case 25:
                         name = "Plancha Frontal a Lateral";
@@ -1882,7 +2018,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "isometric";
+                        subclasses = "isom.lat.";
                         break;
                     case 26:
                         name = "V Fitball";
@@ -1893,7 +2029,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 27:
                         name = "Pase de Fitball";
@@ -1904,7 +2040,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 28:
                         name = "Crunch en Fitball";
@@ -1915,7 +2051,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
-                        subclasses = "straight";
+                        subclasses = "medio";
                         break;
                     case 29:
                         name = "Rueda Abdominal";
@@ -1926,7 +2062,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
-                        subclasses = "isometric";
+                        subclasses = "isom.";
                         reps_obj = "50 seg/1min 15s/30 seg";
                         break;
                     case 30:
@@ -1938,7 +2074,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/22.5/25/30";
                         res_weight ="12.5/17.5/20/22.5/25";
                         vol_weight = "17.5/22.5/25/27.5/35";
-                        subclasses = "oblique";
+                        subclasses = "oblicuos";
                         break;
                     case 31:
                         name = "Movimientos del Carpo";
@@ -1949,6 +2085,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
+                        subclasses = "carpo";
                         break;
                     case 32:
                         name = "Flexion y Extension de Dedos";
@@ -1959,6 +2096,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "dedos";
                         break;
                     case 33:
                         name = "Press Declinado";
@@ -1969,6 +2107,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 34:
                         name = "Fly en Polea Tumbado";
@@ -1979,6 +2118,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 35:
                         name = "Press Plano";
@@ -1989,6 +2129,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "10/14/16/18/22";
                         res_weight ="8/12/14/16/18";
                         vol_weight = "12/16/18/20/26";
+                        subclasses = "med.-inf.";
                         break;
                     case 36:
                         name = "Press 30º";
@@ -1999,6 +2140,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "10/14/16/18/22";
                         res_weight ="8/12/14/16/18";
                         vol_weight = "12/16/18/20/26";
+                        subclasses = "med.-inf.";
                         break;
                     case 37:
                         name = "Press 45º Mancuernas Juntas";
@@ -2009,6 +2151,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "10/14/16/18/22";
                         res_weight ="8/12/14/16/18";
                         vol_weight = "12/16/18/20/26";
+                        subclasses = "superior";
                         break;
                     case 38:
                         name = "Flexiones de Pecho";
@@ -2019,6 +2162,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/5/10/15";
                         res_weight ="0/0/0/5/10";
                         vol_weight = "0/5/10/15/20";
+                        subclasses = "med.-inf.";
                         break;
                     case 39:
                         name = "Press en Polea Manos Interior";
@@ -2029,6 +2173,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/25/30/35";
                         res_weight ="12.5/17.5/22.5/27.5/32.5";
                         vol_weight = "17.5/22.5/27.5/32.5/37.5";
+                        subclasses = "superior";
                         break;
                     case 40:
                         name = "Maquina de Pecho con Codos";
@@ -2039,6 +2184,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "45/55/60/65/75";
                         res_weight ="8/12/14/16/18";
                         vol_weight = "50/60/65/70/80";
+                        subclasses = "med.-inf.";
                         break;
                     case 41:
                         name = "Cruces Polea Media Altura";
@@ -2049,6 +2195,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12.5/15/20/22.5/27.5";
                         res_weight ="10/12.5/17.5/20/25";
                         vol_weight = "15/17.5/22.5/25/30";
+                        subclasses = "med.-inf.";
                         break;
                     case 42:
                         name = "Maquina de Pecho con Manos";
@@ -2059,6 +2206,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "35/45/50/55/65";
                         res_weight ="30/40/45/50/60";
                         vol_weight = "40/50/55/60/70";
+                        subclasses = "med.-inf.";
                         break;
                     case 43:
                         name = "Press Guillotina";
@@ -2069,6 +2217,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/25/30/40";
                         res_weight ="10/15/20/25/30";
                         vol_weight = "20/25/30/35/50";
+                        subclasses = "med.-inf.";
                         break;
                     case 44:
                         name = "Press con Goma Elastica";
@@ -2079,6 +2228,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 45:
                         name = "Burpee";
@@ -2089,6 +2239,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 46:
                         name = "Mancuerna Elevacion Frontal";
@@ -2099,6 +2250,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "anterior";
                         break;
                     case 47:
                         name = "Press Militar con Mancuernas";
@@ -2109,6 +2261,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
+                        subclasses = "medio";
                         break;
                     case 48:
                         name = "Elevacion del Lado al Frente";
@@ -2119,6 +2272,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/6/8/8/12";
                         res_weight ="4/4/6/6/10";
                         vol_weight = "8/8/6/6/10";
+                        subclasses = "anterior";
                         break;
                     case 49:
                         name = "Kettlebell Push Press";
@@ -2129,6 +2283,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "anterior";
                         break;
                     case 50:
                         name = "Remo Colgando";
@@ -2140,6 +2295,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/5";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/5/10";
+                        subclasses = "posterior";
                         break;
                     case 51:
                         name = "Elevacion Lateral en Polea";
@@ -2150,6 +2306,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "7.5/10/12.5/15/20";
                         res_weight ="5/7.5/10/12.5/17.5";
                         vol_weight = "10/12.5/15/17.5/22.5";
+                        subclasses = "medio";
                         break;
                     case 52:
                         name = "Maquina de Remo Codos Altos";
@@ -2160,6 +2317,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "45/55/60/65/75";
                         res_weight ="40/50/55/60/70";
                         vol_weight = "50/60/65/70/80";
+                        subclasses = "posterior";
                         break;
                     case 53:
                         name = "Maquina de hombros";
@@ -2170,6 +2328,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "45/55/60/65/75";
                         res_weight ="40/50/55/60/70";
                         vol_weight = "50/60/65/70/80";
+                        subclasses = "medio";
                         break;
                     case 54:
                         name = "Linear Jammer con una Mano";
@@ -2180,6 +2339,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "10/10/20/20/30";
                         res_weight ="5/5/15/15/25";
                         vol_weight = "15/15/25/25/35";
+                        subclasses = "anterior";
                         break;
                     case 55:
                         name = "Goma Elastica a la Cara";
@@ -2190,6 +2350,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "posterior";
                         break;
                     case 56:
                         name = "Remo Mancuernas Codos Altos";
@@ -2200,6 +2361,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "posterior";
                         break;
                     case 57:
                         name = "Maquina de Gemelos";
@@ -2210,6 +2372,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "25/35/40/45/55";
                         res_weight ="20/30/35/40/50";
                         vol_weight = "30/40/45/50/60";
+                        subclasses = "soleo";
                         break;
                     case 58:
                         name = "Saltar Cuerda Pies Juntos";
@@ -2221,6 +2384,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
                         reps_obj = "1 min/1m 30s/45 seg";
+                        subclasses = "gemelo";
                         break;
                     case 59:
                         name = "Maquina de Gluteo Sentado";
@@ -2231,6 +2395,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "40/50/55/60/70";
                         res_weight ="35/45/50/55/65";
                         vol_weight = "45/55/60/65/75";
+                        subclasses = "menor";
                         break;
                     case 60:
                         name = "Rotacion con Banda Elastica";
@@ -2241,6 +2406,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "menor";
                         break;
                     case 61:
                         name = "Sentadilla";
@@ -2251,6 +2417,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12/20/24/28/36";
                         res_weight ="8/16/20/24/32";
                         vol_weight = "16/24/28/32/40";
+                        subclasses = "mayor";
                         break;
                     case 62:
                         name = "Jumping Jacks";
@@ -2261,6 +2428,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "medio";
                         break;
                     case 63:
                         name = "Elevacion Lateral de Pierna";
@@ -2271,6 +2439,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "medio";
                         break;
                     case 64:
                         name = "Cable Kickback";
@@ -2281,6 +2450,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "17.5/22.5/25/27.5/32.5";
                         res_weight ="15/20/22.5/25/30";
                         vol_weight = "20/25/27.5/30/35";
+                        subclasses = "mayor";
                         break;
                     case 65:
                         name = "Pull Through";
@@ -2291,6 +2461,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "30/32.5/35/40/45";
                         res_weight ="27.5/30/32.5/35/40";
                         vol_weight = "32.5/35/40/45/50";
+                        subclasses = "mayor";
                         break;
                     case 66:
                         name = "Maquina de Gluteos de Pie";
@@ -2301,6 +2472,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "40/50/60/65/75";
                         res_weight ="35/45/50/55/65";
                         vol_weight = "45/55/65/70/80";
+                        subclasses = "medio";
                         break;
                     case 67:
                         name = "Glute Bridge";
@@ -2311,6 +2483,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "5/15/20/25/35";
                         res_weight ="0/10/15/20/30";
                         vol_weight = "10/20/25/30/40";
+                        subclasses = "mayor";
                         break;
                     case 68:
                         name = "Lunge con Pie Elevado";
@@ -2321,6 +2494,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12/16/20/24/32";
                         res_weight ="8/12/16/20/28";
                         vol_weight = "16/20/24/28/36";
+                        subclasses = "mayor";
                         break;
                     case 69:
                         name = "Floor Glute Bridge";
@@ -2331,6 +2505,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "5/15/20/25/35";
                         res_weight ="0/10/15/20/30";
                         vol_weight = "10/20/25/30/40";
+                        subclasses = "mayor";
                         break;
                     case 70:
                         name = "Lunge Lateral";
@@ -2341,6 +2516,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "medio";
                         break;
                     case 71:
                         name = "Lunge Diagonal";
@@ -2351,6 +2527,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "menor";
                         break;
                     case 72:
                         name = "Dominada";
@@ -2423,6 +2600,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5+1/5+2/6+3/8+4";
                         res_weight ="0/0/2.5+1/5+2/6+3";
                         vol_weight = "2.5+1/5+2/6+3/8+4/10+6";
+                        subclasses = "normal";
                         break;
                     case 79:
                         name = "Maquina Lumbar";
@@ -2433,6 +2611,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "5/10/15/20/25";
                         res_weight ="0/5/10/15/20";
                         vol_weight = "10/15/20/25/30";
+                        subclasses = "normal";
                         break;
                     case 80:
                         name = "Maquina Lumbar Lateral";
@@ -2443,6 +2622,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "2.5/5/10/15/20";
                         res_weight ="0/2.5/5/10/15";
                         vol_weight = "5/10/15/20/25";
+                        subclasses = "lateral";
                         break;
                     case 81:
                         name = "Peso Muerto";
@@ -2453,6 +2633,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "22/28/32.5/37.5/42.5";
                         res_weight ="18/24/28/32.5/37.5";
                         vol_weight = "24/32.5/37.5/42.5/47.5";
+                        subclasses = "normal";
                         break;
                     case 82:
                         name = "Lumbares en Fitball";
@@ -2463,6 +2644,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "3/5/10/15/20";
                         res_weight ="0/3/5/10/15";
                         vol_weight = "5/10/15/20/25";
+                        subclasses = "normal";
                         break;
                     case 83:
                         name = "Rotaciones Polea Rodillas";
@@ -2473,6 +2655,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12.5/15/17.5/20/25";
                         res_weight ="10/12.5/15/17.5/20";
                         vol_weight = "15/17.5/20/25/30";
+                        subclasses = "lateral";
                         break;
                     case 84:
                         name = "Maquina de Aductores";
@@ -2483,6 +2666,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "40/50/55/60/70";
                         res_weight ="35/45/50/55/65";
                         vol_weight = "45/55/60/65/75";
+                        subclasses = "local";
                         break;
                     case 85:
                         name = "Press de Piernas";
@@ -2493,6 +2677,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "100/140/160/180/200";
                         res_weight ="80/120/140/160/180";
                         vol_weight = "120/160/180/200/220";
+                        subclasses = "global";
                         break;
                     case 86:
                         name = "Sliding Harmstring Curl";
@@ -2503,6 +2688,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/2.5/5/10";
                         res_weight ="0/0/0/2.5/5";
                         vol_weight = "2.5/2.5/5/10/15";
+                        subclasses = "local";
                         break;
                     case 87:
                         name = "Lunge (Zancada)";
@@ -2513,6 +2699,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "12/20/24/28/36";
                         res_weight ="8/16/20/24/32";
                         vol_weight = "16/24/28/32/40";
+                        subclasses = "global";
                         break;
                     case 88:
                         name = "Maquina de Isquios";
@@ -2523,6 +2710,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "25/35/40/45/55";
                         res_weight ="20/30/35/40/50";
                         vol_weight = "30/40/45/50/60";
+                        subclasses = "local";
                         break;
                     case 89:
                         name = "Maquina de Aductores de Pie";
@@ -2533,6 +2721,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "40/50/60/65/75";
                         res_weight ="35/45/50/55/65";
                         vol_weight = "45/55/65/70/80";
+                        subclasses = "local";
                         break;
                     case 90:
                         name = "TRX Triceps";
@@ -2543,6 +2732,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 91:
                         name = "Dips Station";
@@ -2553,6 +2743,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/4/6";
                         res_weight ="0/0/0/0/4";
                         vol_weight = "0/2/4/6/8";
+                        subclasses = "c.larga";
                         break;
                     case 92:
                         name = "Flexiones Codos Cerrados";
@@ -2563,6 +2754,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/5/10/15";
                         res_weight ="0/0/0/5/10";
                         vol_weight = "0/5/10/15/20";
+                        subclasses = "c.lateral";
                         break;
                     case 93:
                         name = "Flexiones Manos Juntas";
@@ -2573,6 +2765,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/5/10/15";
                         res_weight ="0/0/0/5/10";
                         vol_weight = "0/5/10/15/20";
+                        subclasses = "c.lateral";
                         break;
                     case 94:
                         name = "Extension Polea Sobre Cabeza";
@@ -2583,6 +2776,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/22.5/25/30";
                         res_weight ="12.5/17.5/20/22.5/27.5";
                         vol_weight = "17.5/22.5/25/27.5/32.5";
+                        subclasses = "c.larga";
                         break;
                     case 95:
                         name = "Ext. Polea Manos Abiertas";
@@ -2593,6 +2787,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/22.5/25/30";
                         res_weight ="12.5/17.5/20/22.5/27.5";
                         vol_weight = "17.5/22.5/25/27.5/32.5";
+                        subclasses = "c.lateral";
                         break;
                     case 96:
                         name = "Extension Polea con Cuerda";
@@ -2603,6 +2798,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "20/25/27.5/30/35";
                         res_weight ="17.5/22.5/25/27.5/30";
                         vol_weight = "22.5/27.5/30/32.5/37.5";
+                        subclasses = "c.lateral";
                         break;
                     case 97:
                         name = "Subescapular con Mancuernas";
@@ -2613,6 +2809,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "6/8/10/12/16";
                         res_weight ="4/6/8/10/14";
                         vol_weight = "8/10/12/14/18";
+                        subclasses = "rot.int.";
                         break;
                     case 98:
                         name = "Supraespinoso";
@@ -2623,6 +2820,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "supraesp.";
                         break;
                     case 99:
                         name = "Kettlebell High Pull";
@@ -2633,6 +2831,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "8/10/12/14/18";
                         res_weight ="6/8/10/12/16";
                         vol_weight = "10/12/14/16/20";
+                        subclasses = "trapecio";
                         break;
                     case 100:
                         name = "Infraespinoso con Mancuerna";
@@ -2643,6 +2842,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "4/6/8/10/14";
                         res_weight ="2/4/6/8/12";
                         vol_weight = "6/8/10/12/16";
+                        subclasses = "rot.ext.";
                         break;
                     case 101:
                         name = "V con Goma Elastica";
@@ -2653,6 +2853,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.ext.";
                         break;
                     case 102:
                         name = "Infraespinoso Goma Elastica";
@@ -2663,6 +2864,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.ext.";
                         break;
                     case 103:
                         name = "Subescapular Goma Elastica";
@@ -2673,6 +2875,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.int.";
                         break;
                     case 104:
                         name = "Biceps TRX";
@@ -2683,6 +2886,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 105:
                         name = "Curl Concentrado Polea Alta";
@@ -2693,6 +2897,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.corta";
                         break;
                     case 106:
                         name = "Biceps Curl Polea Barra";
@@ -2703,6 +2908,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 107:
                         name = "Biceps Curl Inclinado";
@@ -2713,6 +2919,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 108:
                         name = "Abs Declinado";
@@ -2723,6 +2930,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 109:
                         name = "Abs Declinado con Giro";
@@ -2733,6 +2941,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "oblicuos";
                         break;
                     case 110:
                         name = "Abs Invertidas Banco Declinado";
@@ -2743,6 +2952,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "inferior";
                         break;
                     case 111:
                         name = "Giro Bola";
@@ -2753,6 +2963,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "isom.lat.";
                         break;
                     case 112:
                         name = "Abs Peso Sobre Cabeza";
@@ -2763,6 +2974,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 113:
                         name = "Cruces Polea Baja";
@@ -2773,6 +2985,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 114:
                         name = "Maquina Pectoral Superior";
@@ -2783,6 +2996,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 115:
                         name = "Flexiones TRX";
@@ -2793,6 +3007,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "med.-inf.";
                         break;
                     case 116:
                         name = "Press 45º Mancuernas";
@@ -2803,6 +3018,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "superior";
                         break;
                     case 117:
                         name = "Maquina Hombros con Codos";
@@ -2813,6 +3029,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "medio";
                         break;
                     case 118:
                         name = "Fly Reverso Inclinado";
@@ -2823,6 +3040,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "posterior";
                         break;
                     case 119:
                         name = "Press Militar Barra Sentado";
@@ -2833,6 +3051,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "anterior";
                         break;
                     case 120:
                         name = "Push Press con Mancuernas";
@@ -2843,6 +3062,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "anterior";
                         break;
                     case 121:
                         name = "Elevacion de punteras ";
@@ -2853,6 +3073,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "gemelo";
                         break;
                     case 122:
                         name = "Box Jump";
@@ -2863,6 +3084,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "soleo";
                         break;
                     case 123:
                         name = "Maquina Press Extension Gemelo";
@@ -2873,6 +3095,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "gemelo";
                         break;
                     case 124:
                         name = "Maquina Press Extension Soleo";
@@ -2883,6 +3106,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "soleo";
                         break;
                     case 125:
                         name = "Paso con Elevacion de Pierna";
@@ -2893,6 +3117,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "mayor";
                         break;
                     case 126:
                         name = "Peso Muerto Sumo";
@@ -2903,6 +3128,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "mayor";
                         break;
                     case 127:
                         name = "Glute Bridge 1 Pierna";
@@ -2913,6 +3139,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "mayor";
                         break;
                     case 128:
                         name = "Flutter Kicks";
@@ -2923,6 +3150,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "mayor";
                         break;
                     case 129:
                         name = "Bajada de Cuerda en Polea";
@@ -2973,6 +3201,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "lateral";
                         break;
                     case 134:
                         name = "Lumbar TRX Isometrico";
@@ -2983,6 +3212,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "normal";
                         break;
                     case 135:
                         name = "Peso Muerto con Barra";
@@ -2993,6 +3223,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "normal";
                         break;
                     case 136:
                         name = "Extension Lumbar en Suelo";
@@ -3003,6 +3234,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "normal";
                         break;
                     case 137:
                         name = "Aductores en Polea";
@@ -3013,6 +3245,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "local";
                         break;
                     case 138:
                         name = "Abductores en Polea";
@@ -3023,6 +3256,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "local";
                         break;
                     case 139:
                         name = "Maquina de Cuadriceps";
@@ -3033,6 +3267,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "local";
                         break;
                     case 140:
                         name = "Squat en Fitball";
@@ -3043,6 +3278,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "global";
                         break;
                     case 141:
                         name = "Fitball Squat 1 Pierna";
@@ -3053,6 +3289,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "global";
                         break;
                     case 142:
                         name = "Extension Barra EZ Declinado";
@@ -3063,6 +3300,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 143:
                         name = "Press Triceps";
@@ -3073,6 +3311,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.lateral";
                         break;
                     case 144:
                         name = "Triceps Polea Barra Supino";
@@ -3083,6 +3322,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.media";
                         break;
                     case 145:
                         name = "Dips con Banco";
@@ -3093,6 +3333,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 146:
                         name = "Ext. Sobre Cabeza Mancuernas";
@@ -3103,6 +3344,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.larga";
                         break;
                     case 147:
                         name = "Triceps Press Agarre Supino";
@@ -3113,6 +3355,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "c.media";
                         break;
                     case 148:
                         name = "Rotadores Internos Polea";
@@ -3123,6 +3366,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.int.";
                         break;
                     case 149:
                         name = "Rotadores Externos Polea";
@@ -3133,6 +3377,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "rot.ext.";
                         break;
                     case 150:
                         name = "Supraespinoso Polea";
@@ -3143,6 +3388,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        subclasses = "supraesp.";
                         break;
 
                 }
