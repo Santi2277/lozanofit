@@ -18,6 +18,7 @@
         <item>Todo</item>
         <item>Superior</item>
         <item>Inferior</item>
+        <item>Músculo</item>
     </string-array>
     <string-array name="routineobjectivelist">
         <item>Salud</item>
