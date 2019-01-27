@@ -41,6 +41,7 @@ public class Activity2 extends AppCompatActivity {
     public String objectivestring = "";
     public boolean listcreated = false;
     public ArrayList<Exercise> exercisesList = new ArrayList<Exercise>();
+    public ArrayList<String> musclesSelected = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,9 @@ public class Activity2 extends AppCompatActivity {
 
         //get boolean listcreated
         listcreated = getIntent().getBooleanExtra("listCreated", false);
+
+        //get musclesSelected list
+        //musclesSelected = getIntent().getStringArrayListExtra("selectedMuscles");
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
         ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
