@@ -52,7 +52,7 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //get musclesSelected list
-        //musclesSelected = getIntent().getStringArrayListExtra("selectedMuscles");
+        musclesSelected = getIntent().getStringArrayListExtra("selectedMuscles");
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
         ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
@@ -111,116 +111,42 @@ public class Activity2 extends AppCompatActivity {
             }.start();
 
 
-            switch (bodystring){
-                case "Todo":
-                    // CHOOSE routine exercises number of each category (it doesnt repeat, it will be 4 if you say 5 exercises of biceps and db has only 4)
-                    switch(timestring) {
-                        case "15 min":
-                            createRoutineFull(0,1,0,0,0,0,0,0,0,1,0,0);
-                            createRoutineHalf("biceps","chest");
-                            createRoutineHalf("mid-back","upper-back");
-                            createRoutineHalf("deltoid","triceps");
-                            createRoutineHalf("forearm","calf");
-                            createRoutineHalf("glute","thigh");
-                            createRoutineHalf("abs","lumbar");
-                            createRoutineFifth("biceps", "chest", "upper-back", "mid-back", "deltoid");
-                            Collections.sort(exercisesList);
-                            break;
-                        case "30 min":
-                            createRoutineFull(1,1,1,1,1,0,1,1,1,1,1,1);
-                            createRoutineHalf("biceps","chest");
-                            createRoutineHalf("upper-back","mid-back");
-                            createRoutineHalf("deltoid","forearm");
-                            createRoutineThird("triceps","calf", "lumbar");
-                            createRoutineHalf("thigh","glute");
-                            Collections.sort(exercisesList);
-                            break;
-                        case "45 min":
-                            createRoutineFull(2,4,2,2,2,0,2,2,2,2,2,2);
-                            createRoutineHalf("thigh","calf");
-                            Collections.sort(exercisesList);
-                            superserie(exercisesList);
-                            break;
-                        case "1 h":
-                            createRoutineFull(3,4,3,3,3,0,3,3,2,3,2,3);
-                            createRoutineThird("triceps","calf", "lumbar");
-                            createRoutineThird("triceps","calf", "lumbar");
-                            Collections.sort(exercisesList);
-                            superserie(exercisesList);
-                            break;
-                        case "1 h 30 min":
-                            createRoutineFull(5,8,5,5,5,1,3,5,4,3,4,5);
-                            Collections.sort(exercisesList);
-                            superserie(exercisesList);
-                            break;
-                    }
+            //CREATE LIST
+            int musclesNumb = musclesSelected.size();
+            int exercNumb = 0;
+            switch(timestring) {
+                case "15 min":
+                    exercNumb = 7;
                     break;
-                case "Superior":
-                    // CHOOSE routine exercises number of each category (it doesnt repeat, it will be 4 if you say 5 exercises of biceps and db has only 4)
-                    switch(timestring) {
-                        case "15 min":
-                            createRoutineFull(1,0,1,1,1,0,0,1,0,0,1,1);
-                            createRoutineThird("biceps","chest", "mid-back");
-                            Collections.sort(exercisesList);
-                            break;
-                        case "30 min":
-                            createRoutineFull(2,0,2,2,2,0,0,2,0,0,2,2);
-                            createRoutineHalf("triceps","upper-back");
-                            createRoutineThird("biceps","chest", "mid-back");
-                            createRoutineThird("biceps","chest", "mid-back");
-                            Collections.sort(exercisesList);
-                            superserie(exercisesList);
-                            break;
-                        case "45 min":
-                            createRoutineFull(4,0,3,4,3,0,0,4,0,0,3,3);
-                            createRoutineHalf("triceps","upper-back");
-                            Collections.sort(exercisesList);
-                            superserie(exercisesList);
-                            break;
-                        case "1 h":
-                            createRoutineFull(5,0,4,5,5,0,0,5,0,0,5,5);
-                            Collections.sort(exercisesList);
-                            superserie(exercisesList);
-                            break;
-                        case "1 h 30 min":
-                            createRoutineFull(7,0,6,7,7,0,0,7,0,0,7,7);
-                            createRoutineThird("biceps","chest", "mid-back");
-                            createRoutineFifth("triceps","upper-back", "biceps","chest", "mid-back");
-                            Collections.sort(exercisesList);
-                            superserie(exercisesList);
-                            break;
-                    }
+                case "30 min":
+                    exercNumb = 15;
                     break;
-                case "Inferior":
-                    // CHOOSE routine exercises number of each category (it doesnt repeat, it will be 4 if you say 5 exercises of biceps and db has only 4)
-                    switch(timestring) {
-                        case "15 min":
-                            createRoutineFull(0,2,0,0,0,1,2,0,1,2,0,0);
-                            Collections.sort(exercisesList);
-                            break;
-                        case "30 min":
-                            createRoutineFull(0,4,0,0,0,2,4,0,3,4,0,0);
-                            Collections.sort(exercisesList);
-                            break;
-                        case "45 min":
-                            createRoutineFull(0,6,0,0,0,3,6,0,4,6,0,0);
-                            Collections.sort(exercisesList);
-                            break;
-                        case "1 h":
-                            createRoutineFull(0,8,0,0,0,4,8,0,6,8,0,0);
-                            Collections.sort(exercisesList);
-                            break;
-                        case "1 h 30 min":
-                            createRoutineFull(0,12,0,0,0,6,12,0,9,12,0,0);
-                            Collections.sort(exercisesList);
-                            break;
-                    }
+                case "45 min":
+                    exercNumb = 22;
+                    break;
+                case "1 h":
+                    exercNumb = 30;
+                    break;
+                case "1 h 30 min":
+                    exercNumb = 45;
                     break;
             }
+            int exercEach = exercNumb / musclesNumb;
+            int exercRemaining = exercNumb % musclesNumb;
 
+            int idx0 = 0;
+            while((idx0<musclesNumb)&&(musclesNumb!=0)){
+                obtainExercices(musclesSelected.get(idx0), exercEach);
+                idx0++;
+            }
+            //musclesselected take into account and dont repeat in exerciseslist
+            obtainExercRemaining(exercRemaining);
 
+            //
+            Collections.sort(exercisesList);
 
-
+            //
+            superserie(exercisesList);
 
 
 
@@ -1217,310 +1143,21 @@ public class Activity2 extends AppCompatActivity {
     }
 
 
-    public void createRoutineFull (int biceps, int abs, int forearm, int chest, int deltoid, int calf, int glute, int midBack, int lumbar, int thigh, int triceps, int upperBack) {
-
-        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
-        SQLiteDatabase db = exdb.getWritableDatabase();
-
-
-        String muscle1 = "biceps";
-        String muscle1count = Integer.toString(biceps);
-        String muscle2 = "abs";
-        String muscle2count = Integer.toString(abs);
-        String muscle3 = "forearm";
-        String muscle3count = Integer.toString(forearm);
-        String muscle4 = "chest";
-        String muscle4count = Integer.toString(chest);
-        String muscle5 = "deltoid";
-        String muscle5count = Integer.toString(deltoid);
-        String muscle6 = "calf";
-        String muscle6count = Integer.toString(calf);
-        String muscle7 = "glute";
-        String muscle7count = Integer.toString(glute);
-        String muscle8 = "mid-back";
-        String muscle8count = Integer.toString(midBack);
-        String muscle9 = "lumbar";
-        String muscle9count = Integer.toString(lumbar);
-        String muscle10 = "thigh";
-        String muscle10count = Integer.toString(thigh);
-        String muscle11 = "triceps";
-        String muscle11count = Integer.toString(triceps);
-        String muscle12 = "upper-back";
-        String muscle12count = Integer.toString(upperBack);
-
-        String query="";
-        //BICEPS
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle1count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' ORDER BY RANDOM() LIMIT "+muscle1count;
-        }
-
-        Cursor c = db.rawQuery(query, null);
-        //add exercises to array list
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-
-            } while(c.moveToNext());
-        }
-
-        //ABS
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle2+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle2count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT "+muscle2count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //FOREARM
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle3+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle3count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT "+muscle3count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //CHEST
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle4+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle4count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT "+muscle4count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //DELTOID
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle5+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle5count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT "+muscle5count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //CALF
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle6+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle6count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle6+"' ORDER BY RANDOM() LIMIT "+muscle6count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //GLUTE
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle7+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle7count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle7+"' ORDER BY RANDOM() LIMIT "+muscle7count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //MID-BACK
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle8+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle8count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle8+"' ORDER BY RANDOM() LIMIT "+muscle8count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //LUMBAR
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle9+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle9count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle9+"' ORDER BY RANDOM() LIMIT "+muscle9count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //THIGH
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle10+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle10count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle10+"' ORDER BY RANDOM() LIMIT "+muscle10count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //TRICEPS
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle11+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle11count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle11+"' ORDER BY RANDOM() LIMIT "+muscle11count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-        //UPPER-BACK
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle12+"'AND level LIKE '' ORDER BY RANDOM() LIMIT "+muscle12count;
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle12+"' ORDER BY RANDOM() LIMIT "+muscle12count;
-        }
-        c = db.rawQuery(query, null);
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-            } while(c.moveToNext());
-        }
-
-    }
-
-    public void createRoutineHalf (String muscle1, String muscle2){
+    public void obtainExercices (String muscle1, int exNumb){
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
         ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
-        //Half
         String query="";
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
+        String numb = Integer.toString(exNumb);
 
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"') AND level LIKE '' ORDER BY RANDOM() LIMIT 1";
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' ORDER BY RANDOM() LIMIT 1";
-        }
-
-
-        Cursor c = db.rawQuery(query, null);
-        //add exercises to array list
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-
-            } while(c.moveToNext());
-        }
-
-    }
-
-    public void createRoutineThird (String muscle1, String muscle2, String muscle3){
-
-
-        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
-        SQLiteDatabase db = exdb.getWritableDatabase();
-
-        //Third
-        String query="";
         //if objective=resistencia or level=1/2 don't get "hard" exercises
         if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"') AND level LIKE '' ORDER BY RANDOM() LIMIT 1";
+            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '"+muscle1+"') AND level LIKE '' ORDER BY RANDOM() LIMIT "+numb;
         }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' ORDER BY RANDOM() LIMIT 1";
-        }
-
-        Cursor c = db.rawQuery(query, null);
-        //add exercises to array list
-        if (c.moveToFirst()) {
-            //go over cursor until the end
-            do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
-                exercisesList.add(currentExercise);
-
-            } while(c.moveToNext());
-        }
-
-    }
-
-    public void createRoutineFourth (String muscle1, String muscle2, String muscle3, String muscle4){
-
-
-        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
-        SQLiteDatabase db = exdb.getWritableDatabase();
-
-        //Fourth
-        String query="";
-        //if objective=resistencia or level=1/2 don't get "hard" exercises
-        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"') AND level LIKE '' ORDER BY RANDOM() LIMIT 1";
-        }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' ORDER BY RANDOM() LIMIT 1";
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' ORDER BY RANDOM() LIMIT "+numb;
         }
 
         Cursor c = db.rawQuery(query, null);
@@ -1537,20 +1174,42 @@ public class Activity2 extends AppCompatActivity {
     }
 
 
-    public void createRoutineFifth (String muscle1, String muscle2, String muscle3, String muscle4, String muscle5){
 
+    public void obtainExercRemaining(int exNumb){
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
         ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
-        //Fifth
         String query="";
+        String numb = Integer.toString(exNumb);
+
+        int idxAux = 0;
+
         //if objective=resistencia or level=1/2 don't get "hard" exercises
         if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' OR muscle_zone LIKE '"+muscle5+"') AND level LIKE '' ORDER BY RANDOM() LIMIT 1";
+            //get only from selected muscles
+            query = "SELECT * FROM Exercises WHERE (muscle_zone LIKE '";
+            while(idxAux < musclesSelected.size()){
+                //last one, add )
+                if(idxAux == musclesSelected.size()-1){
+                    query += musclesSelected.get(idxAux)+"') AND level LIKE '' ORDER BY RANDOM() LIMIT "+numb;
+                }else{
+                    query += musclesSelected.get(idxAux)+"' OR muscle_zone LIKE '";
+                }
+                idxAux++;
+            }
         }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle1+"' OR muscle_zone LIKE '"+muscle2+"' OR muscle_zone LIKE '"+muscle3+"' OR muscle_zone LIKE '"+muscle4+"' OR muscle_zone LIKE '"+muscle5+"' ORDER BY RANDOM() LIMIT 1";
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '";
+            while(idxAux < musclesSelected.size()){
+                //last one, add )
+                if(idxAux == musclesSelected.size()-1){
+                    query += musclesSelected.get(idxAux)+"' ORDER BY RANDOM() LIMIT "+numb;
+                }else{
+                    query += musclesSelected.get(idxAux)+"' OR muscle_zone LIKE '";
+                }
+                idxAux++;
+            }
         }
 
         Cursor c = db.rawQuery(query, null);
@@ -1564,7 +1223,38 @@ public class Activity2 extends AppCompatActivity {
             } while(c.moveToNext());
         }
 
+
     }
+
+
+
+    public void addMuscle(String muscle){
+        //get the list of that muscle we got in exerciseslist
+
+
+        //
+        //switch(muscle){
+            //BICEPS MAXIMUM
+            //case "biceps":
+
+        //}
+
+
+    }
+
+    public void addSubMuscle(String subMuscle){
+
+
+    }
+
+
+
+
+
+
+
+
+
 
 
     public void changeExercise (View view){
