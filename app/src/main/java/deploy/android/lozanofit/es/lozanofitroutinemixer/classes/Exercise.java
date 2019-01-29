@@ -16,6 +16,7 @@ public class Exercise implements Parcelable, Comparable {
     private String muscle_zone;
 
     private String level;
+    private String series;
     private String subclasses;
     private String hip_weight;
     private String res_weight;
@@ -27,7 +28,7 @@ public class Exercise implements Parcelable, Comparable {
 
 
 
-    public Exercise(int id2, String name2, String photo_path2, String video_path2, String description2, String muscle_zone2, String level2, String subclasses2, String hip_weight2, String res_weight2, String vol_weight2, String reps_obj2) {
+    public Exercise(int id2, String name2, String photo_path2, String video_path2, String description2, String muscle_zone2, String level2, String subclasses2, String hip_weight2, String res_weight2, String vol_weight2, String reps_obj2, String series2) {
         id = id2;
         name = name2;
         photo_path = photo_path2;
@@ -40,6 +41,7 @@ public class Exercise implements Parcelable, Comparable {
         res_weight = res_weight2;
         vol_weight = vol_weight2;
         reps_obj = reps_obj2;
+        series = series2;
         done = 0;
     }
 
@@ -56,6 +58,7 @@ public class Exercise implements Parcelable, Comparable {
         res_weight = source.readString();
         vol_weight = source.readString();
         reps_obj = source.readString();
+        series = source.readString();
         done = source.readInt();
     }
 
@@ -114,6 +117,14 @@ public class Exercise implements Parcelable, Comparable {
 
     public void setLevel(String level) {
         this.level = level;
+    }
+
+    public String getSeries() {
+        return series;
+    }
+
+    public void setSeries(String series) {
+        this.series = series;
     }
 
     public String getSubclasses() {
@@ -180,6 +191,7 @@ public class Exercise implements Parcelable, Comparable {
         dest.writeString(res_weight);
         dest.writeString(vol_weight);
         dest.writeString(reps_obj);
+        dest.writeString(series);
         dest.writeInt(done);
     }
 

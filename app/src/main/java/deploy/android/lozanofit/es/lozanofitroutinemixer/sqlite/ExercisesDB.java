@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 public class ExercisesDB extends SQLiteOpenHelper {
 
     //create database SQL sentence
-    String sqlCreate = "CREATE TABLE Exercises (id INTEGER, name TEXT, photo_path TEXT, video_path TEXT, description TEXT, muscle_zone TEXT, level TEXT, subclasses TEXT, hip_weight TEXT, res_weight TEXT, vol_weight TEXT, reps_obj TEXT)";
+    String sqlCreate = "CREATE TABLE Exercises (id INTEGER, name TEXT, photo_path TEXT, video_path TEXT, description TEXT, muscle_zone TEXT, level TEXT, subclasses TEXT, hip_weight TEXT, res_weight TEXT, vol_weight TEXT, reps_obj TEXT, series TEXT)";
 
 
     public ExercisesDB(Context context, String name, CursorFactory factory, int version) {
@@ -33,13 +33,13 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 String description = "";
                 String muscle_zone = "";
                 String level = "";
-                String subclasses = "mid-back";
+                String subclasses = "esp.med.";
                 String hip_weight = "";
                 String res_weight = "";
                 String vol_weight = "";
                 String reps_obj = "";
                 reps_obj = "10-12 rep/16-20 rep/6-8 rep";
-
+                String series = "1";
 
 
                 switch (i) {
@@ -277,7 +277,6 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/9r8HDw7mVePKVERYe1/giphy.gif";
                         description = "-Descripción por escribir";
                         muscle_zone = "abs";
-                        level = "hard";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -398,7 +397,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         name = "Flexion y Extension de Dedos";
                         photo_path = "https://lh3.googleusercontent.com/qBM6Nsyl1hQvlP3D8ccjCrhDsc-dG5D7SptavRH0jvLwiE1pNfg1xnFD4b6I1coPs15oxLWTvYZgk2EG0qpglRdRhhVYdsVu30Bei3TYJTyUeHf2y43RRoIBMMstqZ4IqjfDka_Ea_qou4sSHXr3Z1TqJ8UxHXp8XWNODdojRWBx7WZKHhEjYJsAdgyJVKypgGX5wS5QNVOr2QWyZyiIg9K7nyJXoiKru9bioKUlLVKVxCbKcqlwPPAIurnhK_yKczp1re093HzDlCjZGsTCAHTlFpTzGpLH_6_bzYWCMKs4m-4p1scgqgINH-XZ7LclnbwQ2gUV5qhaLUVaiTs6TeTAqU9gNFLfS2T-hCBPDTD8Dei4wvSn3nw7uPy8SCxJfHlrwvpWwRZ1lPE1oSmVLL2Np9ymdRA56n0WeFnJuXxVUyrCFN89wDtPbr2pCUv0PPKJvUTFdlAdRmlZHsF9thU7TKnyHs0k4ZU3YywbvPTpBes2jdS1eAUteNj0W8UdjwNS635mLYSUg6JEVbcqx8oKhlLbuU1l-OpQBo5yH7OQxH3xnU5IjwKf4iwGaFhrp_kwsikiOYCeLVmcdWM3lPKL5MriderpwsjcxgL7wf9vwJ8b7M9NMbdG9yw-H2qSN2eEoyM3vzEkO2z26Xv3GlkYd2qzrShGSM1ojpWJYeBcwPRAuQn3lO0J=w680-h632-no";
                         video_path = "https://media.giphy.com/media/oOBv4TkeywxU3sdMRT/giphy.gif";
-                        description = "-Si falta material, cambio ejercicio\n-Apretar pelota, estirar dedos\n-Otro producto similar: powerweb";
+                        description = "-Si falta material, cambio ejercicio\n-Apretar pelota, estirar dedos\n-Producto: handmaster, powerweb";
                         muscle_zone = "forearm";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
@@ -1311,6 +1310,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/oxYnbMISU4JiLFxuDq/giphy.gif";
                         description = "-Descripción por escribir";
                         muscle_zone = "chest";
+                        level = "hard";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -1485,6 +1485,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/8Zef9CMPBlRiFqySOG/giphy.gif";
                         description = "-Descripción por escribir";
                         muscle_zone = "mid-back";
+                        level = "hard";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -1505,6 +1506,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/12PUH4DfqiyDZgb5Ip/giphy.gif";
                         description = "-Descripción por escribir";
                         muscle_zone = "lumbar";
+                        level = "hard";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -1702,8 +1704,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 }
 
                 //insert in Exercises table
-                db.execSQL("INSERT INTO Exercises (id, name, photo_path, video_path, description, muscle_zone, level, subclasses, hip_weight, res_weight, vol_weight, reps_obj) " +
-                        "VALUES (" + id + ", '" + name + "', '" + photo_path + "', '" + video_path + "', '" + description + "', '" + muscle_zone + "', '" + level + "', '" + subclasses + "', '" + hip_weight + "', '" + res_weight + "', '" + vol_weight + "', '" + reps_obj + "')");
+                db.execSQL("INSERT INTO Exercises (id, name, photo_path, video_path, description, muscle_zone, level, subclasses, hip_weight, res_weight, vol_weight, reps_obj, series) " +
+                        "VALUES (" + id + ", '" + name + "', '" + photo_path + "', '" + video_path + "', '" + description + "', '" + muscle_zone + "', '" + level + "', '" + subclasses + "', '" + hip_weight + "', '" + res_weight + "', '" + vol_weight + "', '" + reps_obj + "', '"+series+"')");
             }
         }
     }
@@ -1726,13 +1728,13 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 String description = "";
                 String muscle_zone = "";
                 String level = "";
-                String subclasses = "mid-back";
+                String subclasses = "esp.med.";
                 String hip_weight = "";
                 String res_weight = "";
                 String vol_weight = "";
                 String reps_obj = "";
                 reps_obj = "10-12 rep/16-20 rep/6-8 rep";
-
+                String series = "1";
 
 
                 switch (i) {
@@ -1970,7 +1972,6 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/9r8HDw7mVePKVERYe1/giphy.gif";
                         description = "-Descripción por escribir";
                         muscle_zone = "abs";
-                        level = "hard";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -2091,7 +2092,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         name = "Flexion y Extension de Dedos";
                         photo_path = "https://lh3.googleusercontent.com/qBM6Nsyl1hQvlP3D8ccjCrhDsc-dG5D7SptavRH0jvLwiE1pNfg1xnFD4b6I1coPs15oxLWTvYZgk2EG0qpglRdRhhVYdsVu30Bei3TYJTyUeHf2y43RRoIBMMstqZ4IqjfDka_Ea_qou4sSHXr3Z1TqJ8UxHXp8XWNODdojRWBx7WZKHhEjYJsAdgyJVKypgGX5wS5QNVOr2QWyZyiIg9K7nyJXoiKru9bioKUlLVKVxCbKcqlwPPAIurnhK_yKczp1re093HzDlCjZGsTCAHTlFpTzGpLH_6_bzYWCMKs4m-4p1scgqgINH-XZ7LclnbwQ2gUV5qhaLUVaiTs6TeTAqU9gNFLfS2T-hCBPDTD8Dei4wvSn3nw7uPy8SCxJfHlrwvpWwRZ1lPE1oSmVLL2Np9ymdRA56n0WeFnJuXxVUyrCFN89wDtPbr2pCUv0PPKJvUTFdlAdRmlZHsF9thU7TKnyHs0k4ZU3YywbvPTpBes2jdS1eAUteNj0W8UdjwNS635mLYSUg6JEVbcqx8oKhlLbuU1l-OpQBo5yH7OQxH3xnU5IjwKf4iwGaFhrp_kwsikiOYCeLVmcdWM3lPKL5MriderpwsjcxgL7wf9vwJ8b7M9NMbdG9yw-H2qSN2eEoyM3vzEkO2z26Xv3GlkYd2qzrShGSM1ojpWJYeBcwPRAuQn3lO0J=w680-h632-no";
                         video_path = "https://media.giphy.com/media/oOBv4TkeywxU3sdMRT/giphy.gif";
-                        description = "-Si falta material, cambio ejercicio\n-Apretar pelota, estirar dedos\n-Otro producto similar: powerweb";
+                        description = "-Si falta material, cambio ejercicio\n-Apretar pelota, estirar dedos\n-Producto: handmaster, powerweb";
                         muscle_zone = "forearm";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
@@ -3004,6 +3005,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/oxYnbMISU4JiLFxuDq/giphy.gif";
                         description = "-Descripción por escribir";
                         muscle_zone = "chest";
+                        level = "hard";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -3178,6 +3180,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/8Zef9CMPBlRiFqySOG/giphy.gif";
                         description = "-Descripción por escribir";
                         muscle_zone = "mid-back";
+                        level = "hard";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -3198,6 +3201,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/12PUH4DfqiyDZgb5Ip/giphy.gif";
                         description = "-Descripción por escribir";
                         muscle_zone = "lumbar";
+                        level = "hard";
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
@@ -3394,8 +3398,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 }
 
                 //insert in Exercises table
-                db.execSQL("INSERT INTO Exercises (id, name, photo_path, video_path, description, muscle_zone, level, subclasses, hip_weight, res_weight, vol_weight, reps_obj) " +
-                        "VALUES (" + id + ", '" + name + "', '" + photo_path + "', '" + video_path + "', '" + description + "', '" + muscle_zone + "', '" + level + "', '" + subclasses + "', '" + hip_weight + "', '" + res_weight + "', '" + vol_weight + "', '" + reps_obj + "')");
+                db.execSQL("INSERT INTO Exercises (id, name, photo_path, video_path, description, muscle_zone, level, subclasses, hip_weight, res_weight, vol_weight, reps_obj, series) " +
+                        "VALUES (" + id + ", '" + name + "', '" + photo_path + "', '" + video_path + "', '" + description + "', '" + muscle_zone + "', '" + level + "', '" + subclasses + "', '" + hip_weight + "', '" + res_weight + "', '" + vol_weight + "', '" + reps_obj + "','"+series+"')");
             }
         }
 

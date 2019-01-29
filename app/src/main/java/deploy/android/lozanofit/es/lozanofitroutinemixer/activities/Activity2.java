@@ -55,7 +55,7 @@ public class Activity2 extends AppCompatActivity {
         musclesSelected = getIntent().getStringArrayListExtra("selectedMuscles");
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //get selected level and objective
@@ -136,11 +136,15 @@ public class Activity2 extends AppCompatActivity {
 
             int idx0 = 0;
             while((idx0<musclesNumb)&&(musclesNumb!=0)){
-                obtainExercices(musclesSelected.get(idx0), exercEach);
+                //obtainExercices(musclesSelected.get(idx0), exercEach);
+                for(int i=1; i<exercEach+1; i++){
+                    addMuscle(musclesSelected.get(idx0));
+                }
                 idx0++;
             }
             //musclesselected take into account and dont repeat in exerciseslist
-            obtainExercRemaining(exercRemaining);
+            //obtainExercRemaining(exercRemaining);
+            //REMAINING!!!!!
 
             //
             Collections.sort(exercisesList);
@@ -195,6 +199,8 @@ public class Activity2 extends AppCompatActivity {
         TextView uppertext2 = findViewById(R.id.textView3);
         ImageView image = findViewById(R.id.imageView);
 
+        TextView uppertext3 = findViewById(R.id.textView13);
+        uppertext3.setText(exercisesList.get(counter).getSeries()+" SERIE");
 
         text.setText(exercisesList.get(counter).getName());
         TextView remaining = findViewById(R.id.textView6);
@@ -389,6 +395,8 @@ public class Activity2 extends AppCompatActivity {
             TextView uppertext = findViewById(R.id.textView10);
             TextView uppertext2 = findViewById(R.id.textView3);
             uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+            TextView uppertext3 = findViewById(R.id.textView13);
+            uppertext3.setText(exercisesList.get(counter).getSeries()+" SERIE");
 
             //uppertext.setText(exercisesList.get(counter).getMuscle_zone().toUpperCase());
             //translate muscle zone to show it in its textview
@@ -543,6 +551,8 @@ public class Activity2 extends AppCompatActivity {
             TextView uppertext = findViewById(R.id.textView10);
             TextView uppertext2 = findViewById(R.id.textView3);
             uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+            TextView uppertext3 = findViewById(R.id.textView13);
+            uppertext3.setText(exercisesList.get(counter).getSeries()+" SERIE");
 
             //translate muscle zone to show it in its textview
             String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
@@ -697,6 +707,8 @@ public class Activity2 extends AppCompatActivity {
         TextView uppertext = findViewById(R.id.textView10);
         TextView uppertext2 = findViewById(R.id.textView3);
         uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+        TextView uppertext3 = findViewById(R.id.textView13);
+        uppertext3.setText(exercisesList.get(counter).getSeries()+" SERIE");
 
         //translate muscle zone to show it in its textview
         String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
@@ -848,6 +860,8 @@ public class Activity2 extends AppCompatActivity {
         TextView uppertext = findViewById(R.id.textView10);
         TextView uppertext2 = findViewById(R.id.textView3);
         uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+        TextView uppertext3 = findViewById(R.id.textView13);
+        uppertext3.setText(exercisesList.get(counter).getSeries()+" SERIE");
 
         //translate muscle zone to show it in its textview
         String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
@@ -1002,6 +1016,8 @@ public class Activity2 extends AppCompatActivity {
         TextView uppertext = findViewById(R.id.textView10);
         TextView uppertext2 = findViewById(R.id.textView3);
         uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+        TextView uppertext3 = findViewById(R.id.textView13);
+        uppertext3.setText(exercisesList.get(counter).getSeries()+" SERIE");
 
         //translate muscle zone to show it in its textview
         String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
@@ -1147,7 +1163,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1165,7 +1181,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12));
                 exercisesList.add(currentExercise);
 
             } while(c.moveToNext());
@@ -1178,7 +1194,7 @@ public class Activity2 extends AppCompatActivity {
     public void obtainExercRemaining(int exNumb){
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1217,7 +1233,7 @@ public class Activity2 extends AppCompatActivity {
         if (c.moveToFirst()) {
             //go over cursor until the end
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12));
                 exercisesList.add(currentExercise);
 
             } while(c.moveToNext());
@@ -1229,25 +1245,798 @@ public class Activity2 extends AppCompatActivity {
 
 
     public void addMuscle(String muscle){
+        //find subclasses that could be
+        //count subclasses you have, then obtain possible ones next
+        int idx0;
+        int minRep;
+        ArrayList<String> subclPass = new ArrayList<>();
+        switch(muscle){
+            case "biceps":
+                int braCount = 0;
+                int corCount = 0;
+                int larCount = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "braquial":
+                                braCount++;
+                                break;
+                            case "c.corta":
+                                corCount++;
+                                break;
+                            case "c.larga":
+                                larCount++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(braCount, Math.min(corCount, larCount));
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==braCount){
+                    subclPass.add("braquial");
+                }
+                if(minRep==corCount){
+                    subclPass.add("c.corta");
+                }
+                if(minRep==larCount){
+                    subclPass.add("c.larga");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "abs":
+                int infCount = 0;
+                int isoCount = 0;
+                int isoLatCount = 0;
+                int medCount = 0;
+                int oblCount = 0;
+                int supCount = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "inferior":
+                                infCount++;
+                                break;
+                            case "isom.":
+                                isoCount++;
+                                break;
+                            case "isom.lat.":
+                                isoLatCount++;
+                                break;
+                            case "medio":
+                                medCount++;
+                                break;
+                            case "oblicuos":
+                                oblCount++;
+                                break;
+                            case "superior":
+                                supCount++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(supCount, Math.min(oblCount, Math.min(medCount, Math.min(infCount, Math.min(isoCount, isoLatCount)))));
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==infCount){
+                    subclPass.add("inferior");
+                }
+                if(minRep==isoCount){
+                    subclPass.add("isom.");
+                }
+                if(minRep==isoLatCount){
+                    subclPass.add("isom.lat.");
+                }
+                if(minRep==medCount){
+                    subclPass.add("medio");
+                }
+                if(minRep==oblCount){
+                    subclPass.add("oblicuos");
+                }
+                if(minRep==supCount){
+                    subclPass.add("superior");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "forearm":
+                int carCount = 0;
+                int dedCount = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "carpo":
+                                carCount++;
+                                break;
+                            case "dedos":
+                                dedCount++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(carCount, dedCount);
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==carCount){
+                    subclPass.add("carpo");
+                }
+                if(minRep==dedCount){
+                    subclPass.add("dedos");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "chest":
+                int medInfCount = 0;
+                int sup7Count = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "med.-inf.":
+                                medInfCount++;
+                                break;
+                            case "superior":
+                                sup7Count++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(medInfCount, sup7Count);
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==medInfCount){
+                    subclPass.add("med.-inf.");
+                }
+                if(minRep==sup7Count){
+                    subclPass.add("superior");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "deltoid":
+                int antCount = 0;
+                int med2Count = 0;
+                int posCount = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "anterior":
+                                antCount++;
+                                break;
+                            case "medio":
+                                med2Count++;
+                                break;
+                            case "posterior":
+                                posCount++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(antCount, Math.min(med2Count, posCount));
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==antCount){
+                    subclPass.add("anterior");
+                }
+                if(minRep==med2Count){
+                    subclPass.add("medio");
+                }
+                if(minRep==posCount){
+                    subclPass.add("posterior");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "calf":
+                int gemCount = 0;
+                int solCount = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "gemelo":
+                                gemCount++;
+                                break;
+                            case "soleo":
+                                solCount++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(gemCount, solCount);
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==gemCount){
+                    subclPass.add("gemelo");
+                }
+                if(minRep==solCount){
+                    subclPass.add("soleo");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "glute":
+                int mayCount = 0;
+                int med3Count = 0;
+                int menCount = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "mayor":
+                                mayCount++;
+                                break;
+                            case "medio":
+                                med3Count++;
+                                break;
+                            case "menor":
+                                menCount++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(mayCount, Math.min(med3Count, menCount));
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==mayCount){
+                    subclPass.add("mayor");
+                }
+                if(minRep==med3Count){
+                    subclPass.add("medio");
+                }
+                if(minRep==menCount){
+                    subclPass.add("menor");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "mid-back":
+                subclPass.clear();
+                subclPass.add("esp.med.");
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "lumbar":
+                int latCount = 0;
+                int norCount = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "lateral":
+                                latCount++;
+                                break;
+                            case "normal":
+                                norCount++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(latCount, norCount);
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==latCount){
+                    subclPass.add("lateral");
+                }
+                if(minRep==norCount){
+                    subclPass.add("normal");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "thigh":
+                int gloCount = 0;
+                int locCount = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "global":
+                                gloCount++;
+                                break;
+                            case "local":
+                                locCount++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(gloCount, locCount);
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==gloCount){
+                    subclPass.add("global");
+                }
+                if(minRep==locCount){
+                    subclPass.add("local");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "triceps":
+                int lar2Count = 0;
+                int lat2Count = 0;
+                int med4Count = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "c.larga":
+                                lar2Count++;
+                                break;
+                            case "c.lateral":
+                                lat2Count++;
+                                break;
+                            case "c.media":
+                                med4Count++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(lar2Count, Math.min(lat2Count, med4Count));
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==lar2Count){
+                    subclPass.add("c.larga");
+                }
+                if(minRep==lat2Count){
+                    subclPass.add("c.lateral");
+                }
+                if(minRep==med4Count){
+                    subclPass.add("c.media");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+            case "upper-back":
+                //TRAPECIO not included
+                int extCount = 0;
+                int intCount = 0;
+                int supraCount = 0;
+                //which subclasses turn will be next
+                idx0 = 0;
+                //go over exercisesList
+                while ((idx0 < exercisesList.size())&&(exercisesList.size()!=0)){
+                    //count subclasses you have
+                    if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
+                        switch (exercisesList.get(idx0).getSubclasses()){
+                            case "rot.ext.":
+                                extCount++;
+                                break;
+                            case "rot.int.":
+                                intCount++;
+                                break;
+                            case "supraesp.":
+                                supraCount++;
+                                break;
+                        }
+                    }
+                    idx0++;
+                }
+                //get minimum repetion number
+                minRep = Math.min(extCount, Math.min(intCount, supraCount));
+                subclPass.clear();
+                //get subclasses with minimum reps (the ones which turn could be next)
+                if(minRep==extCount){
+                    subclPass.add("rot.ext.");
+                }
+                if(minRep==intCount){
+                    subclPass.add("rot.int.");
+                }
+                if(minRep==supraCount){
+                    subclPass.add("supraesp.");
+                }
+                //add submuscle then
+                addSubMuscle(muscle, subclPass);
+                break;
+        }
+
+
+
+
+
+    }
+
+    public void addSubMuscle(String muscle, ArrayList<String> submuscles){
+        //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
+        SQLiteDatabase db = exdb.getWritableDatabase();
+        String query="";
+
+        //001 GET 1 EXERCISE (of one of that submuscles)
+        //--if objective=resistencia or level=1/2 don't get "hard" exercises
+        int idxAux = 0;
+        if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+            query = "SELECT * FROM Exercises WHERE (subclasses LIKE '";
+            //add all the submuscles candidates to the query
+            while(idxAux < submuscles.size()){
+                if(idxAux == submuscles.size()-1){
+                    query += submuscles.get(idxAux)+"') AND level LIKE '' AND muscle_zone LIKE '"+muscle+"' ORDER BY RANDOM() LIMIT 1";
+                }else{
+                    query += submuscles.get(idxAux)+"' OR subclasses LIKE '";
+                }
+                idxAux++;
+            }
+        }else{
+            query = "SELECT * FROM Exercises WHERE (subclasses LIKE '";
+            while(idxAux < submuscles.size()){
+                if(idxAux == submuscles.size()-1){
+                    query += submuscles.get(idxAux)+"') AND muscle_zone LIKE '"+muscle+"' ORDER BY RANDOM() LIMIT 1";
+                }else{
+                    query += submuscles.get(idxAux)+"' OR subclasses LIKE '";
+                }
+                idxAux++;
+            }
+        }
+        //002 CHECK REPEATED (on the exercisesList made)
+        Cursor c = db.rawQuery(query, null);
+        int idx2 = 0;
+        boolean found = false;
+        int foundPosition = 0;
+        if (c.moveToFirst()) {
+            do {
+                //go over exercisesList to check if it exists on it
+                while((idx2<exercisesList.size())&&(exercisesList.size()!=0)){
+                    if(c.getString(1).equals(exercisesList.get(idx2).getName())){
+                        found = true;
+                        foundPosition = idx2;
+                        break;
+                    }
+                    idx2++;
+                }
+                //003 IF NOT REPEATED, ADD EXERCISE (doesn't exist on exercisesList)
+                if(!found){
+                    Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12));
+                    exercisesList.add(currentExercise);
+                }
+            } while(c.moveToNext());
+        }
+        //004 IF REPEATED
+        if(found){
+            String subcl = exercisesList.get(foundPosition).getSubclasses();
+            int idx3 = 0;
+            int countEx = 0;
+            ArrayList<String> exercNames = new ArrayList<>();
+            int submuscleMax = 100;
+
+            //005 CHECK SUBCLASS MAXIMUM (full or not)
+            switch(muscle){
+                case "biceps":
+                    switch (subcl){
+                        case "braquial":
+                            //MAX 5 (and 3)
+                            if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+                                submuscleMax = 3;
+                            }else{
+                                submuscleMax = 5;
+                            }
+                            break;
+                        case "c.corta":
+                            //MAX 6 (and 6)
+                            submuscleMax = 6;
+                            break;
+                        case "c.larga":
+                            //MAX 6 (and 5)
+                            if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+                                submuscleMax = 5;
+                            }else{
+                                submuscleMax = 6;
+                            }
+                            break;
+                    }
+                    break;
+                case "abs":
+                    switch (subcl){
+                        case "inferior":
+                            //MAX
+                            if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+                                submuscleMax = 2;
+                            }else{
+                                submuscleMax = 3;
+                            }
+                            break;
+                        case "isom.":
+                            //MAX
+                            submuscleMax = 2;
+                            break;
+                        case "isom.lat.":
+                            //MAX
+                            submuscleMax = 3;
+                            break;
+                        case "medio":
+                            //MAX
+                            submuscleMax = 6;
+                            break;
+                        case "oblicuos":
+                            //MAX
+                            submuscleMax = 5;
+                            break;
+                        case "superior":
+                            //MAX
+                            submuscleMax = 3;
+                            break;
+                    }
+                    break;
+                case "forearm":
+                    switch (subcl){
+                        case "carpo":
+                            //MAX
+                            submuscleMax = 1;
+                            break;
+                        case "dedos":
+                            //MAX
+                            submuscleMax = 1;
+                            break;
+                    }
+                    break;
+                case "chest":
+                    switch (subcl){
+                        case "med.-inf.":
+                            //MAX
+                            if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+                                submuscleMax = 10;
+                            }else{
+                                submuscleMax = 11;
+                            }
+                            break;
+                        case "superior":
+                            //MAX
+                            submuscleMax = 6;
+                            break;
+                    }
+                    break;
+                case "deltoid":
+                    switch (subcl){
+                        case "anterior":
+                            //MAX
+                            submuscleMax = 6;
+                            break;
+                        case "medio":
+                            //MAX
+                            submuscleMax = 4;
+                            break;
+                        case "posterior":
+                            //MAX
+                            if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+                                submuscleMax = 4;
+                            }else{
+                                submuscleMax = 5;
+                            }
+                            break;
+                    }
+                    break;
+                case "calf":
+                    switch (subcl){
+                        case "gemelo":
+                            //MAX
+                            submuscleMax = 3;
+                            break;
+                        case "soleo":
+                            //MAX
+                            submuscleMax = 3;
+                            break;
+                    }
+                    break;
+                case "glute":
+                    switch (subcl){
+                        case "mayor":
+                            //MAX
+                            submuscleMax = 10;
+                            break;
+                        case "medio":
+                            //MAX
+                            submuscleMax = 4;
+                            break;
+                        case "menor":
+                            //MAX
+                            submuscleMax = 3;
+                            break;
+                    }
+                    break;
+                case "mid-back":
+                    switch (subcl){
+                        case "esp.med.":
+                            //MAX
+                            if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+                                submuscleMax = 7;
+                            }else{
+                                submuscleMax = 10;
+                            }
+                            break;
+                    }
+                    break;
+                case "lumbar":
+                    switch (subcl){
+                        case "lateral":
+                            //MAX
+                            if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+                                submuscleMax = 2;
+                            }else{
+                                submuscleMax = 3;
+                            }
+                            break;
+                        case "normal":
+                            //MAX
+                            submuscleMax = 7;
+                            break;
+                    }
+                    break;
+                case "thigh":
+                    switch (subcl){
+                        case "global":
+                            //MAX
+                            submuscleMax = 4;
+                            break;
+                        case "local":
+                            //MAX
+                            submuscleMax = 7;
+                            break;
+                    }
+                    break;
+                case "triceps":
+                    switch (subcl){
+                        case "c.larga":
+                            //MAX
+                            submuscleMax = 6;
+                            break;
+                        case "c.lateral":
+                            //MAX
+                            submuscleMax = 5;
+                            break;
+                        case "c.media":
+                            //MAX
+                            submuscleMax = 2;
+                            break;
+                    }
+                    break;
+                case "upper-back":
+                    switch (subcl){
+                        case "rot.ext.":
+                            //MAX
+                            submuscleMax = 4;
+                            break;
+                        case "rot.int.":
+                            //MAX
+                            submuscleMax = 3;
+                            break;
+                        case "supraesp.":
+                            //MAX
+                            submuscleMax = 2;
+                            break;
+                    }
+                    break;
+            }
+            //count exercises of that subclass to compare with maximum
+            while(idx3<exercisesList.size()){
+                if(exercisesList.get(idx3).getSubclasses().equals(subcl)){
+                    //add in a list(x) exercises name of that submuscle we have in exercisesList
+                    exercNames.add(exercisesList.get(idx3).getName());
+                    countEx++;
+                }
+                idx3++;
+            }
+            //006 IF FULL, ADD SERIE
+            if(!(countEx<submuscleMax)){
+                String serieStr = exercisesList.get(foundPosition).getSeries();
+                int serieInt = Integer.parseInt(serieStr);
+                serieInt++;
+                exercisesList.get(foundPosition).setSeries(Integer.toString(serieInt));
+
+            //007 ELSE, ADD EXERCISE "NEW" FROM THAT SUBCLASS (else)
+                //"NEW" exercise of that subclass without muscle name in that list(x)
+            }else{
+                String query2 = "";
+                //if objective=resistencia or level=1/2 don't get "hard" exercises
+                int idxAux2 = 0;
+                if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
+                    //get only from selected submuscle and muscle and exercises names list
+                    query2 = "SELECT * FROM Exercises WHERE level LIKE '' AND muscle_zone LIKE '"+muscle+"' AND subclasses LIKE '"+subcl+"' AND ";
+                    query2 += "name NOT IN ('";
+                    while(idxAux2 < exercNames.size()){
+                        //last one, add )
+                        if(idxAux2 == exercNames.size()-1){
+                            query2 += exercNames.get(idxAux2)+"') ORDER BY RANDOM() LIMIT 1";
+                        }else{
+                            query2 += exercNames.get(idxAux2)+"', '";
+                        }
+                        idxAux2++;
+                    }
+                }else{
+                    query2 = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+muscle+"' AND subclasses LIKE '"+subcl+"' AND ";
+                    query2 += "name NOT IN ('";
+                    while(idxAux2 < exercNames.size()){
+                        //last one, add )
+                        if(idxAux2 == exercNames.size()-1){
+                            query2 += exercNames.get(idxAux2)+"') ORDER BY RANDOM() LIMIT 1";
+                        }else{
+                            query2 += exercNames.get(idxAux2)+"', '";
+                        }
+                        idxAux2++;
+                    }
+                }
+
+                Cursor c2 = db.rawQuery(query, null);
+                //add exercises to array list
+                if (c2.moveToFirst()) {
+                    //go over cursor until the end
+                    do {
+                        Exercise currentExercise = new Exercise(c2.getInt(0), c2.getString(1), c2.getString(2), c2.getString(3), c2.getString(4), c2.getString(5), c2.getString(6), c2.getString(7), c2.getString(8), c2.getString(9), c2.getString(10), c2.getString(11), c2.getString(12));
+                        exercisesList.add(currentExercise);
+
+                    } while(c2.moveToNext());
+                }
+            }
+
+
+        }
+
+
+    }
+
+
+
+
+
+    public void addMuscleRemaining(){
         //get the list of that muscle we got in exerciseslist
 
 
-        //
-        //switch(muscle){
-            //BICEPS MAXIMUM
-            //case "biceps":
-
-        //}
-
 
     }
-
-    public void addSubMuscle(String subMuscle){
-
-
-    }
-
-
 
 
 
@@ -1262,7 +2051,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 32);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
@@ -1281,7 +2070,7 @@ public class Activity2 extends AppCompatActivity {
         //change exercise
         if (c.moveToFirst()) {
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12));
                 exercisesList.set(index, currentExercise);
 
             } while(c.moveToNext());
@@ -1296,6 +2085,8 @@ public class Activity2 extends AppCompatActivity {
         TextView uppertext = findViewById(R.id.textView10);
         TextView uppertext2 = findViewById(R.id.textView3);
         uppertext2.setText(exercisesList.get(counter).getSubclasses().toUpperCase());
+        TextView uppertext3 = findViewById(R.id.textView13);
+        uppertext3.setText(exercisesList.get(counter).getSeries()+" SERIE");
 
 
         //translate muscle zone to show it in its textview
