@@ -200,6 +200,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5+2/5+4/5+4/10+6";
                         res_weight ="0/0/2.5+2/2.5+2/5+4";
                         vol_weight = "2.5+2/5+4/8+6/8+6/12+8";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 15:
@@ -211,6 +212,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 16:
@@ -222,6 +224,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 17:
@@ -257,6 +260,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/1/2.5/5/10";
                         res_weight ="0/0/0/2.5/5";
                         vol_weight = "1/2.5/5/10/15";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "superior";
                         break;
                     case 20:
@@ -280,6 +284,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "inferior";
                         break;
                     case 22:
@@ -291,6 +296,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 23:
@@ -302,6 +308,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 24:
@@ -313,6 +320,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 25:
@@ -324,6 +332,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "50 seg/1min 15s/30 seg";
                         subclasses = "isom.lat.";
                         break;
                     case 26:
@@ -335,6 +344,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 27:
@@ -346,6 +356,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 28:
@@ -357,6 +368,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 29:
@@ -380,6 +392,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/22.5/25/30";
                         res_weight ="12.5/17.5/20/22.5/25";
                         vol_weight = "17.5/22.5/25/27.5/35";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 31:
@@ -452,7 +465,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         name = "Press 45º Mancuernas Juntas";
                         photo_path = "https://lh3.googleusercontent.com/TbaQW-bK4QhLx_7mAY7HtuprsjOcn2zPvoD-UHF0eVpprfYKZm3nsabVu65T6NtvQkxuSIbpUIEngx32HB_zRpfxpayBpb8LUYsWX_-u7BJFvkHhcU9CLehxU5PuFP0MMIhdqCvfC46nA0g_XlqjrrbJZWSB0Un-IR3_nmPplQWvEZDp_b4L6_VXagZn2MMjwwEKThRbZQn5a2nLIUebWFuVeK33fE8Ri9K-E5DcpvLlfUkXoroV4LN-xbqcc-D8XPzjokL25nFYyHS8Xb3MNkVr-oTq4m3KtE_xvp3uV7TEhuvIUlCOxSslBbcRDGziwqJpYDvgeCRUTINPAuEqNjScsPQ5xod9ybpUR3EGwtY2I6dUHW6ZLSFDtSXkpHO6Yc3-R2JX3SusRyJ0rWZl6VEslKSlhvBTBFtoGKGSo7J-sAWjEDCXavx6_v1iG22CNIxefQ0VQho4eNwWM34E900s1d2IshMVuyfB6LudMKFIvwfPkK7PrKPzuVuKlP0sdDgeOVV93GbBO0bu3vxKA3ASFjksCtE_Otke3O3Z-U_H3vTYjESkSG1iANIBpSk-HKLQDtwK9VbfcxuNsBwbb_kyWAUlpgIQUI1zQtAe6y2C1kOsMdJCKR-tirf17as-oEzpNBrGE8krghsP5eLNAiiXNWe_Lg24GahmVPzPF2Ha1DoORYF9SOA3=w713-h632-no";
                         video_path = "https://media.giphy.com/media/1zR9sWUTovqqrV2lGx/giphy.gif";
-                        description = "Banco 45º inclinado\n-Mancuernas se tocan por los lados\n-Bajar hasta casi tocar el pecho\n-Codos cómodos al lado";
+                        description = "-Banco 45º inclinado\n-Mancuernas se tocan por los lados\n-Bajar hasta casi tocar el pecho\n-Codos cómodos al lado";
                         muscle_zone = "chest";
                         hip_weight = "10/14/16/18/22";
                         res_weight ="8/12/14/16/18";
@@ -1042,7 +1055,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 91:
                         name = "Dips Station";
-                        photo_path = "https://lh3.googleusercontent.com/tU-Ir3GttLI-iqyBgNsyVQlhAgbs4rqS9w6SkdGhhwQhzJjfDnj6v_xYqsS2mcTorscjqtTYZOoXsrIOm4DF-MooMXWfMrOVbA8BQ0CRbDWreNJUAM8RJjcjX9tvffPOQOeGHYfj4b7Wvz0XKkreD-6vDsXCuvoMESzug-lZ7KbPibb5DDb-zZ18_skD3bSfzhgnlBCfGBMzBc6eA2hZ6ccWOefrWoIMaPRbcxHhIsdGl2WT_xzKrm857U71Pg10E78AmgkCuPJXd_Wkebvvcs-Kl-p7OxQwXqNI6Fz3sbhogNNMjf0P35mNxMkgrwU9yD3UZWWnbqKqtgBTgulgauGydY3zfzSiETLF9oxtWvV1ndb_HuGS_foRF0R_qesJWfs0KcR4AcDbvs123HoYqT8N5PK3TCGcVPrU4DyNmJdnOV06eVKM6FPlwfF4FNq8EdtqVG3VcDkiXfP4lkrcFzqZeElrRBgP4HpDdxxW2OoQfq2xcpa-5BVW8J6VORVXuBhfeVyDmHXhSp0lzw0-dR2ZJQQ7HqFht-yTFPlIj48nzQjU5Gt6UFGvPxXlmieztjYyQreMehm4Io8-hP4l3isasb7vZQn8teNJtKGbRAPeeakboZMjFAmNqsb53MFDMkeifxTxLkZF5vC5oMdChwba=w713-h632-no";
+                        photo_path = "https://lh3.googleusercontent.com/MwBvh5BnEbDUI3KSiYTtce_q3IJi9Sr0xS5k1Y2vryYa73lWZCUY7r9W5l-s09s6DSJ4ksDr4Hf3k_XfT_qyiKN6t0W5St84xYWNwYVE0iBAONdcFNMid09o1jLeHE0dQQif6-limChKRPkzPe_7lIZZav3tRCc8aJQ9pV5MMVGlBY3sZVT0X8azIeuem7jogzIGKawYmAJSbQ6GLkRG4rA6i6czCGzQmb61CNzamiyoOxEYgLwR7J-DYI7aTgK0swAaGBmZohpMFGh4vDFkDK0jMAZmzswu8aLbpyPQRkr0VyjzF4TALxL2FG_ots0aajXBuucPvkL9Ez8SZHfTNyrZhLUcmgvsnSziW4gY3_ictFzC2SXhrmEj0qr04PuVRhi8zywufD-TqckwfvFrBk9dEigF9MJLNGEQceAYAh200dcte3tJ9lJanuL1vVX9gXZuOmf9Bo3JbsDM4nSvZyCOJ8O4RGl1N1knv5HiFX1l9qo4s_E5lKm1OhqyzT10krg2SyDtfv-DwHCACVHmU9xWwHg9Ur0u_LG8b256Vpy8lVRXS_-ieiKWCQB582U-JmGKIjXPWoOc4kULgssGAfHIitmiCUMS1m46auLj97q5MKXG0dnDwimf4ki3tvLwa5HEQDPBt64vfeSWRSaiEHwPARbzLXM=w712-h632-no";
                         video_path = "https://media.giphy.com/media/1vZeeiFVQqa5Gc2KDp/giphy.gif";
                         description = "-Movimiento vertical\n-Sin balanceos adelante-atrás\n-Espalda recta, tronco baja con brazos\n-Movimiento controlado\n-Si no puedo: ayuda gomas, o máquina";
                         muscle_zone = "triceps";
@@ -1236,6 +1249,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "superior";
                         break;
                     case 109:
@@ -1247,6 +1261,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 110:
@@ -1258,6 +1273,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "inferior";
                         break;
                     case 111:
@@ -1269,6 +1285,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "50 seg/1min 15s/30 seg";
                         subclasses = "isom.lat.";
                         break;
                     case 112:
@@ -1280,6 +1297,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "superior";
                         break;
                     case 113:
@@ -1394,7 +1412,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "soleo";
                         break;
                     case 123:
-                        name = "Maquina Press Extension Gemelo";
+                        name = "Maq. Press Ext. Gemelo";
                         photo_path = "https://lh3.googleusercontent.com/tG1uBjqWcKOQOR7HSE00D-vpZeQSYMyTbyMb5ibV2fKyL7HgX7WDLRRxrRwQs_lu74yjXrnYhMb9BVRYPuBEu4hoZqn7sdKPL9qVuiMWDIH1_h5MnbrCUrnTMYPbdeqOoMsXNAcNUk8P9LHjTfrDUbFlj8xzqEygFnRs1FJ7lFekFu1IEBTaIDRb-ZXp4Ux_9RNaqu0wJfrkoq5tf7fJcl7WyKzFshA8HFlHxz2QSIbfbPVZy9N8DRl5fF6PaNqKY23TfOd2MtmzS3NEJg_EBVoudtWq52Ly-ab0zzjWvXv8ifVGKtPN0OaVGjofslFPafddFAOM8ukseM19iQUnRa9hGPaGeIw1IPFfB_0G73b604rARD_r6hlHkk5QApbNl6AL-vK2LZqIMYdmnJiRYoSMnhcUvicJJ8GOUbDdGvsp1BFf0Npyewe0O81TNC8lFv3cH0Gbrp2DOqc5c_jXzzYG6IuCbRB0wr-BKPws0ER-GLl53jcWUhEFE_cu-kZEnvu6IFoux6ObbpxELXgWThemNP4ecIYgTH_AJhb6-oky_D9HwBY3Uj0uE8atv-o9ga2X71sDlaSCgj4VJN1Irat3CWj4lETKOguzWXgw20O8HQGqhDIzUcEsg0vtjTTEgAPA3fX67KzV1YoVqHcoKXC5=w713-h632-no";
                         video_path = "https://media.giphy.com/media/cY4J3pKEhTnzHm6V5Q/giphy.gif";
                         description = "-Descripción por escribir";
@@ -1405,7 +1423,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "gemelo";
                         break;
                     case 124:
-                        name = "Maquina Press Extension Soleo";
+                        name = "Maq. Press Ext. Soleo";
                         photo_path = "https://lh3.googleusercontent.com/KbjLyJNvMpzqa9o_7-RbEc_CFCDLxfSyTB8bl8d12lG4Nmr0bWhiexCUfpZXv-R82HkM8e4Q-vM4S1h0HjGCk_XdFOw9BSoDSj_zdHr9LyL8d7GQB_Mz9pDlQeWNfH8AuZbH6iH1qPJzOy23SZYNRnWMnjHfMXDWxUNRuirCXTZO_GReePfEm7fDGoQv474AjiwVGa-1mbn5ZStRnlY9ziWBxq0Qdg_dsRcayS6ST6Ew4CbMY0282u7BixjLmrS3rYqa9KRB74gZ5ELKqFHdk_UF2KxgOWbQwatK3JJnz1Y_EAUp04MdHrPAKMpYv5sTocLyrxpO5z_YqpEUw4byRCme8EQNoLFmi6Zd5jpRwWCIkOfIilEKNMmydmAKuqbcjuf0EojPOK5lbvsn1VOpHq8_IBqUkBQsjqEYpI7ascgresW984PCw-MpKz3yDIH_Ha1vKStNlkSaRg3WuZpvgxWl2-sjg5Ktyr6nysJ40OBewMtUixwxJ-PyzFno-11ouUQUeTGJefKPJEzVlZV5gWnjhlB0o2RKyxmkpa-3bipvMTaARnmztQOPUB1Nni0QnOd-Idq6LpWKHd4rZ9-114HAD7Ghb9Z85JnwKvQh2Q1JpuPpOXFRSQEAK-qJyui_fSqsa22ZmiQaRqA45YXBjqpW=w713-h632-no";
                         video_path = "https://media.giphy.com/media/1XhrlvfIGmtM3oY4ZD/giphy.gif";
                         description = "-Descripción por escribir";
@@ -1895,6 +1913,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5+2/5+4/5+4/10+6";
                         res_weight ="0/0/2.5+2/2.5+2/5+4";
                         vol_weight = "2.5+2/5+4/8+6/8+6/12+8";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 15:
@@ -1906,6 +1925,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 16:
@@ -1917,6 +1937,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 17:
@@ -1952,6 +1973,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/1/2.5/5/10";
                         res_weight ="0/0/0/2.5/5";
                         vol_weight = "1/2.5/5/10/15";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "superior";
                         break;
                     case 20:
@@ -1975,6 +1997,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "inferior";
                         break;
                     case 22:
@@ -1986,6 +2009,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 23:
@@ -1997,6 +2021,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 24:
@@ -2008,6 +2033,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 25:
@@ -2019,6 +2045,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "50 seg/1min 15s/30 seg";
                         subclasses = "isom.lat.";
                         break;
                     case 26:
@@ -2030,6 +2057,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 27:
@@ -2041,6 +2069,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 28:
@@ -2052,6 +2081,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/2.5/5/10/15";
                         res_weight ="0/0/2.5/5/10";
                         vol_weight = "2.5/5/10/15/20";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "medio";
                         break;
                     case 29:
@@ -2075,6 +2105,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "15/20/22.5/25/30";
                         res_weight ="12.5/17.5/20/22.5/25";
                         vol_weight = "17.5/22.5/25/27.5/35";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 31:
@@ -2147,7 +2178,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         name = "Press 45º Mancuernas Juntas";
                         photo_path = "https://lh3.googleusercontent.com/TbaQW-bK4QhLx_7mAY7HtuprsjOcn2zPvoD-UHF0eVpprfYKZm3nsabVu65T6NtvQkxuSIbpUIEngx32HB_zRpfxpayBpb8LUYsWX_-u7BJFvkHhcU9CLehxU5PuFP0MMIhdqCvfC46nA0g_XlqjrrbJZWSB0Un-IR3_nmPplQWvEZDp_b4L6_VXagZn2MMjwwEKThRbZQn5a2nLIUebWFuVeK33fE8Ri9K-E5DcpvLlfUkXoroV4LN-xbqcc-D8XPzjokL25nFYyHS8Xb3MNkVr-oTq4m3KtE_xvp3uV7TEhuvIUlCOxSslBbcRDGziwqJpYDvgeCRUTINPAuEqNjScsPQ5xod9ybpUR3EGwtY2I6dUHW6ZLSFDtSXkpHO6Yc3-R2JX3SusRyJ0rWZl6VEslKSlhvBTBFtoGKGSo7J-sAWjEDCXavx6_v1iG22CNIxefQ0VQho4eNwWM34E900s1d2IshMVuyfB6LudMKFIvwfPkK7PrKPzuVuKlP0sdDgeOVV93GbBO0bu3vxKA3ASFjksCtE_Otke3O3Z-U_H3vTYjESkSG1iANIBpSk-HKLQDtwK9VbfcxuNsBwbb_kyWAUlpgIQUI1zQtAe6y2C1kOsMdJCKR-tirf17as-oEzpNBrGE8krghsP5eLNAiiXNWe_Lg24GahmVPzPF2Ha1DoORYF9SOA3=w713-h632-no";
                         video_path = "https://media.giphy.com/media/1zR9sWUTovqqrV2lGx/giphy.gif";
-                        description = "Banco 45º inclinado\n-Mancuernas se tocan por los lados\n-Bajar hasta casi tocar el pecho\n-Codos cómodos al lado";
+                        description = "-Banco 45º inclinado\n-Mancuernas se tocan por los lados\n-Bajar hasta casi tocar el pecho\n-Codos cómodos al lado";
                         muscle_zone = "chest";
                         hip_weight = "10/14/16/18/22";
                         res_weight ="8/12/14/16/18";
@@ -2737,7 +2768,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 91:
                         name = "Dips Station";
-                        photo_path = "https://lh3.googleusercontent.com/tU-Ir3GttLI-iqyBgNsyVQlhAgbs4rqS9w6SkdGhhwQhzJjfDnj6v_xYqsS2mcTorscjqtTYZOoXsrIOm4DF-MooMXWfMrOVbA8BQ0CRbDWreNJUAM8RJjcjX9tvffPOQOeGHYfj4b7Wvz0XKkreD-6vDsXCuvoMESzug-lZ7KbPibb5DDb-zZ18_skD3bSfzhgnlBCfGBMzBc6eA2hZ6ccWOefrWoIMaPRbcxHhIsdGl2WT_xzKrm857U71Pg10E78AmgkCuPJXd_Wkebvvcs-Kl-p7OxQwXqNI6Fz3sbhogNNMjf0P35mNxMkgrwU9yD3UZWWnbqKqtgBTgulgauGydY3zfzSiETLF9oxtWvV1ndb_HuGS_foRF0R_qesJWfs0KcR4AcDbvs123HoYqT8N5PK3TCGcVPrU4DyNmJdnOV06eVKM6FPlwfF4FNq8EdtqVG3VcDkiXfP4lkrcFzqZeElrRBgP4HpDdxxW2OoQfq2xcpa-5BVW8J6VORVXuBhfeVyDmHXhSp0lzw0-dR2ZJQQ7HqFht-yTFPlIj48nzQjU5Gt6UFGvPxXlmieztjYyQreMehm4Io8-hP4l3isasb7vZQn8teNJtKGbRAPeeakboZMjFAmNqsb53MFDMkeifxTxLkZF5vC5oMdChwba=w713-h632-no";
+                        photo_path = "https://lh3.googleusercontent.com/MwBvh5BnEbDUI3KSiYTtce_q3IJi9Sr0xS5k1Y2vryYa73lWZCUY7r9W5l-s09s6DSJ4ksDr4Hf3k_XfT_qyiKN6t0W5St84xYWNwYVE0iBAONdcFNMid09o1jLeHE0dQQif6-limChKRPkzPe_7lIZZav3tRCc8aJQ9pV5MMVGlBY3sZVT0X8azIeuem7jogzIGKawYmAJSbQ6GLkRG4rA6i6czCGzQmb61CNzamiyoOxEYgLwR7J-DYI7aTgK0swAaGBmZohpMFGh4vDFkDK0jMAZmzswu8aLbpyPQRkr0VyjzF4TALxL2FG_ots0aajXBuucPvkL9Ez8SZHfTNyrZhLUcmgvsnSziW4gY3_ictFzC2SXhrmEj0qr04PuVRhi8zywufD-TqckwfvFrBk9dEigF9MJLNGEQceAYAh200dcte3tJ9lJanuL1vVX9gXZuOmf9Bo3JbsDM4nSvZyCOJ8O4RGl1N1knv5HiFX1l9qo4s_E5lKm1OhqyzT10krg2SyDtfv-DwHCACVHmU9xWwHg9Ur0u_LG8b256Vpy8lVRXS_-ieiKWCQB582U-JmGKIjXPWoOc4kULgssGAfHIitmiCUMS1m46auLj97q5MKXG0dnDwimf4ki3tvLwa5HEQDPBt64vfeSWRSaiEHwPARbzLXM=w712-h632-no";
                         video_path = "https://media.giphy.com/media/1vZeeiFVQqa5Gc2KDp/giphy.gif";
                         description = "-Movimiento vertical\n-Sin balanceos adelante-atrás\n-Espalda recta, tronco baja con brazos\n-Movimiento controlado\n-Si no puedo: ayuda gomas, o máquina";
                         muscle_zone = "triceps";
@@ -2931,6 +2962,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "superior";
                         break;
                     case 109:
@@ -2942,6 +2974,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "oblicuos";
                         break;
                     case 110:
@@ -2953,6 +2986,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "inferior";
                         break;
                     case 111:
@@ -2964,6 +2998,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "50 seg/1min 15s/30 seg";
                         subclasses = "isom.lat.";
                         break;
                     case 112:
@@ -2975,6 +3010,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "0/0/0/0/0";
                         res_weight ="0/0/0/0/0";
                         vol_weight = "0/0/0/0/0";
+                        reps_obj = "18 rep/24 rep/12 rep";
                         subclasses = "superior";
                         break;
                     case 113:
@@ -3089,7 +3125,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "soleo";
                         break;
                     case 123:
-                        name = "Maquina Press Extension Gemelo";
+                        name = "Maq. Press Ext. Gemelo";
                         photo_path = "https://lh3.googleusercontent.com/tG1uBjqWcKOQOR7HSE00D-vpZeQSYMyTbyMb5ibV2fKyL7HgX7WDLRRxrRwQs_lu74yjXrnYhMb9BVRYPuBEu4hoZqn7sdKPL9qVuiMWDIH1_h5MnbrCUrnTMYPbdeqOoMsXNAcNUk8P9LHjTfrDUbFlj8xzqEygFnRs1FJ7lFekFu1IEBTaIDRb-ZXp4Ux_9RNaqu0wJfrkoq5tf7fJcl7WyKzFshA8HFlHxz2QSIbfbPVZy9N8DRl5fF6PaNqKY23TfOd2MtmzS3NEJg_EBVoudtWq52Ly-ab0zzjWvXv8ifVGKtPN0OaVGjofslFPafddFAOM8ukseM19iQUnRa9hGPaGeIw1IPFfB_0G73b604rARD_r6hlHkk5QApbNl6AL-vK2LZqIMYdmnJiRYoSMnhcUvicJJ8GOUbDdGvsp1BFf0Npyewe0O81TNC8lFv3cH0Gbrp2DOqc5c_jXzzYG6IuCbRB0wr-BKPws0ER-GLl53jcWUhEFE_cu-kZEnvu6IFoux6ObbpxELXgWThemNP4ecIYgTH_AJhb6-oky_D9HwBY3Uj0uE8atv-o9ga2X71sDlaSCgj4VJN1Irat3CWj4lETKOguzWXgw20O8HQGqhDIzUcEsg0vtjTTEgAPA3fX67KzV1YoVqHcoKXC5=w713-h632-no";
                         video_path = "https://media.giphy.com/media/cY4J3pKEhTnzHm6V5Q/giphy.gif";
                         description = "-Descripción por escribir";
@@ -3100,7 +3136,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "gemelo";
                         break;
                     case 124:
-                        name = "Maquina Press Extension Soleo";
+                        name = "Maq. Press Ext. Soleo";
                         photo_path = "https://lh3.googleusercontent.com/KbjLyJNvMpzqa9o_7-RbEc_CFCDLxfSyTB8bl8d12lG4Nmr0bWhiexCUfpZXv-R82HkM8e4Q-vM4S1h0HjGCk_XdFOw9BSoDSj_zdHr9LyL8d7GQB_Mz9pDlQeWNfH8AuZbH6iH1qPJzOy23SZYNRnWMnjHfMXDWxUNRuirCXTZO_GReePfEm7fDGoQv474AjiwVGa-1mbn5ZStRnlY9ziWBxq0Qdg_dsRcayS6ST6Ew4CbMY0282u7BixjLmrS3rYqa9KRB74gZ5ELKqFHdk_UF2KxgOWbQwatK3JJnz1Y_EAUp04MdHrPAKMpYv5sTocLyrxpO5z_YqpEUw4byRCme8EQNoLFmi6Zd5jpRwWCIkOfIilEKNMmydmAKuqbcjuf0EojPOK5lbvsn1VOpHq8_IBqUkBQsjqEYpI7ascgresW984PCw-MpKz3yDIH_Ha1vKStNlkSaRg3WuZpvgxWl2-sjg5Ktyr6nysJ40OBewMtUixwxJ-PyzFno-11ouUQUeTGJefKPJEzVlZV5gWnjhlB0o2RKyxmkpa-3bipvMTaARnmztQOPUB1Nni0QnOd-Idq6LpWKHd4rZ9-114HAD7Ghb9Z85JnwKvQh2Q1JpuPpOXFRSQEAK-qJyui_fSqsa22ZmiQaRqA45YXBjqpW=w713-h632-no";
                         video_path = "https://media.giphy.com/media/1XhrlvfIGmtM3oY4ZD/giphy.gif";
                         description = "-Descripción por escribir";

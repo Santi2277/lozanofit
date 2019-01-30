@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
         SQLiteDatabase db = exdb.getWritableDatabase();
         //if db is opened correctly
         if(db != null)
@@ -195,8 +195,62 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToAct4 (View view){
+
+        int count = 0;
+        final Spinner timespinner = (Spinner) findViewById(R.id.spinner);
+        String selectedtimestring = timespinner.getSelectedItem().toString();
+        final Spinner levelspinner = (Spinner) findViewById(R.id.spinner2);
+        String selectedlevelstring = levelspinner.getSelectedItem().toString();
+        final Spinner bodyspinner = (Spinner) findViewById(R.id.spinner3);
+        String selectedbodypartstring = bodyspinner.getSelectedItem().toString();
+        final Spinner objectivespinner = (Spinner) findViewById(R.id.spinner5);
+        String selectedobjectivestring = objectivespinner.getSelectedItem().toString();
+
+        switch(selectedbodypartstring){
+            case "Todo":
+                musclesSelected.add("biceps");
+                musclesSelected.add("abs");
+                musclesSelected.add("forearm");
+                musclesSelected.add("chest");
+                musclesSelected.add("deltoid");
+                musclesSelected.add("calf");
+                musclesSelected.add("glute");
+                musclesSelected.add("mid-back");
+                musclesSelected.add("lumbar");
+                musclesSelected.add("thigh");
+                musclesSelected.add("triceps");
+                musclesSelected.add("upper-back");
+                break;
+            case "Superior":
+                musclesSelected.add("biceps");
+                musclesSelected.add("forearm");
+                musclesSelected.add("chest");
+                musclesSelected.add("deltoid");
+                musclesSelected.add("mid-back");
+                musclesSelected.add("triceps");
+                musclesSelected.add("upper-back");
+                break;
+            case "Inferior":
+                musclesSelected.add("abs");
+                musclesSelected.add("calf");
+                musclesSelected.add("glute");
+                musclesSelected.add("lumbar");
+                musclesSelected.add("thigh");
+                break;
+        }
+
+        //go to activity 5 if musculo is selected
+
         Intent intent = new Intent (this, Activity4.class);
+        intent.putExtra("exerciseCounter", count);
+        intent.putExtra("selectedTime", selectedtimestring);
+        intent.putExtra("selectedLevel", selectedlevelstring);
+        intent.putExtra("selectedBodyPart", selectedbodypartstring);
+        intent.putExtra("selectedObjective", selectedobjectivestring);
+        intent.putExtra("listCreated", false);
+        intent.putExtra("selectedMuscles", musclesSelected);
         startActivity(intent);
+
 
     }
 

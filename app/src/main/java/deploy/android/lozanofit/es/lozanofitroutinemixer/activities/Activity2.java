@@ -57,7 +57,7 @@ public class Activity2 extends AppCompatActivity {
         musclesSelected = getIntent().getStringArrayListExtra("selectedMuscles");
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //get selected level and objective
@@ -169,12 +169,20 @@ public class Activity2 extends AppCompatActivity {
                 musclesArray.remove(randomIndex);
                 idxA++;
             }
+            if(bodystring.equals("Todo")||(bodystring.equals("Inferior"))){
+                if((timestring.equals("1 h"))||(timestring.equals("1 h 30 min"))){
+                    addMuscle("abs");
+                }
+            }
 
 
             Collections.sort(exercisesList);
             //
-            superserie(exercisesList);
-
+            if(musclesSelected.size()==2){
+                superserie2(musclesSelected.get(0), musclesSelected.get(1));
+            }else{
+                superserie(exercisesList);
+            }
 
 
         } else {
@@ -1186,7 +1194,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1217,7 +1225,7 @@ public class Activity2 extends AppCompatActivity {
     public void obtainExercRemaining(int exNumb){
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1354,23 +1362,26 @@ public class Activity2 extends AppCompatActivity {
                 minRep = Math.min(supCount, Math.min(oblCount, Math.min(medCount, Math.min(infCount, Math.min(isoCount, isoLatCount)))));
                 subclPass.clear();
                 //get subclasses with minimum reps (the ones which turn could be next)
-                if(minRep==infCount){
-                    subclPass.add("inferior");
-                }
-                if(minRep==isoCount){
-                    subclPass.add("isom.");
-                }
-                if(minRep==isoLatCount){
-                    subclPass.add("isom.lat.");
-                }
                 if(minRep==medCount){
                     subclPass.add("medio");
-                }
-                if(minRep==oblCount){
-                    subclPass.add("oblicuos");
-                }
-                if(minRep==supCount){
-                    subclPass.add("superior");
+                }else{
+                    if((minRep==infCount)||(minRep==oblCount)||(minRep==supCount)){
+                        if(minRep==infCount){
+                            subclPass.add("inferior");
+                        }
+                        if(minRep==oblCount){
+                            subclPass.add("oblicuos");
+                        }
+                        if(minRep==supCount){
+                            subclPass.add("superior");
+                        }
+                    }else{
+                        if(minRep==isoCount){
+                            subclPass.add("isom.");
+                        }else{
+                            subclPass.add("isom.lat.");
+                        }
+                    }
                 }
                 //add submuscle then
                 addSubMuscle(muscle, subclPass);
@@ -1539,18 +1550,19 @@ public class Activity2 extends AppCompatActivity {
                     idx0++;
                 }
                 //get minimum repetion number
-                minRep = Math.min(mayCount, Math.min(med3Count, menCount));
+                //minRep = Math.min(mayCount, Math.min(med3Count, menCount));
                 subclPass.clear();
                 //get subclasses with minimum reps (the ones which turn could be next)
-                if(minRep==mayCount){
+                if(mayCount==med3Count+menCount){
                     subclPass.add("mayor");
+                }else{
+                    if(Math.min(med3Count, menCount)==med3Count){
+                        subclPass.add("medio");
+                    }else{
+                        subclPass.add("menor");
+                    }
                 }
-                if(minRep==med3Count){
-                    subclPass.add("medio");
-                }
-                if(minRep==menCount){
-                    subclPass.add("menor");
-                }
+
                 //add submuscle then
                 addSubMuscle(muscle, subclPass);
                 break;
@@ -1727,7 +1739,7 @@ public class Activity2 extends AppCompatActivity {
 
     public void addSubMuscle(String muscle, ArrayList<String> submuscles){
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
         SQLiteDatabase db = exdb.getWritableDatabase();
         String query="";
 
@@ -2113,7 +2125,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 34);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
@@ -2545,6 +2557,88 @@ public class Activity2 extends AppCompatActivity {
             idx_chest = 0;
         }
 
+    }
+
+    //public void superserie(ArrayList<Exercise> exercisesList2) {
+    public void superserie2(String muscle1, String muscle2) {
+        //muscle1-muscle2 "superserie" (reused biceps and chest notation)
+        int idx_biceps = 0;
+        int idx_last_biceps = -1;
+        boolean firstbiceps = false;
+        int idx_chest = 0;
+        int idx_last_chest = -1;
+        boolean nextbiceps = true;
+        boolean nextchest = true;
+        boolean changed = false;
+        boolean firstchange = false;
+        int idx_limit = 100000;
+        int swaps_counter = 0;
+        //while there's more exercises continue swapping
+        while (nextbiceps && nextchest) {
+            //find next biceps
+            //go over all the list, get nextbiceps idx
+            for (Exercise tempexercise : exercisesList) {
+                if (tempexercise.getMuscle_zone().equals(muscle1) && idx_biceps > idx_last_biceps) {
+                    if (idx_limit == idx_biceps) {
+                        if (exercisesList.get(idx_limit - 1).getMuscle_zone().equals(muscle1)) {
+                            int position1 = idx_limit;
+                            int position2 = idx_limit + 1;
+                            while (swaps_counter != 0) {
+                                Collections.swap(exercisesList, position1, position2);
+                                position1 = position1 + 2;
+                                position2 = position2 + 2;
+                                swaps_counter--;
+                            }
+                        } else {
+                            break;
+                        }
+                    }
+                    if (!firstbiceps) {
+                        firstbiceps = true;
+                        idx_biceps++;
+                    } else {
+                        changed = true;
+                        idx_last_biceps = idx_biceps;
+                        firstbiceps = false;
+                        break;
+                    }
+                } else {
+                    idx_biceps++;
+                }
+            }
+            if (!changed) {
+                nextbiceps = false;
+            } else {
+                changed = false;
+            }
+            //find next chest
+            //go over all the list, get nextbiceps idx
+            for (Exercise tempexercise : exercisesList) {
+                if (tempexercise.getMuscle_zone().equals(muscle2) && idx_chest > idx_last_chest) {
+                    changed = true;
+                    idx_last_chest = idx_chest;
+                    break;
+                } else {
+                    idx_chest++;
+                }
+            }
+            if (!changed) {
+                nextchest = false;
+            } else {
+                changed = false;
+            }
+            if (nextbiceps && nextchest) {
+                Collections.swap(exercisesList, idx_biceps, idx_chest);
+                swaps_counter++;
+                idx_last_chest = idx_biceps;
+            }
+            if (!firstchange) {
+                idx_limit = idx_chest;
+                firstchange = true;
+            }
+            idx_biceps = 0;
+            idx_chest = 0;
+        }
     }
 
 }
