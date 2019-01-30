@@ -219,78 +219,292 @@ public class Exercise implements Parcelable, Comparable {
         int compareorder = 0;
         switch (this.getMuscle_zone()) {
             case "biceps":
-                thisorder = 1;
+                switch (this.getSubclasses()){
+                    case "c.larga":
+                        thisorder = 1;
+                        break;
+                    case "c.corta":
+                        thisorder = 2;
+                        break;
+                    case "braquial":
+                        thisorder = 3;
+                        break;
+                }
                 break;
             case "chest":
-                thisorder = 2;
+                switch (this.getSubclasses()){
+                    case "med.-inf.":
+                        thisorder = 4;
+                        break;
+                    case "superior":
+                        thisorder = 5;
+                        break;
+                }
                 break;
             case "mid-back":
-                thisorder = 3;
-                break;
-            case "deltoid":
-                thisorder = 4;
-                break;
-            case "upper-back":
-                thisorder = 5;
-                break;
-            case "triceps":
                 thisorder = 6;
                 break;
+            case "deltoid":
+                switch (this.getSubclasses()){
+                    case "anterior":
+                        thisorder = 7;
+                        break;
+                    case "medio":
+                        thisorder = 8;
+                        break;
+                    case "posterior":
+                        thisorder = 9;
+                        break;
+                }
+                break;
+            case "upper-back":
+                switch (this.getSubclasses()){
+                    case "rot.ext.":
+                        thisorder = 10;
+                        break;
+                    case "rot.int.":
+                        thisorder = 11;
+                        break;
+                    case "supraesp.":
+                        thisorder = 12;
+                        break;
+                    case "trapecio":
+                        thisorder = 13;
+                        break;
+                }
+                break;
+            case "triceps":
+                switch (this.getSubclasses()){
+                    case "c.larga":
+                        thisorder = 14;
+                        break;
+                    case "c.lateral":
+                        thisorder = 15;
+                        break;
+                    case "c.media":
+                        thisorder = 16;
+                        break;
+                }
+                break;
             case "forearm":
-                thisorder = 7;
+                switch (this.getSubclasses()){
+                    case "carpo":
+                        thisorder = 17;
+                        break;
+                    case "dedos":
+                        thisorder = 18;
+                        break;
+                }
                 break;
             case "lumbar":
-                thisorder = 8;
+                switch (this.getSubclasses()){
+                    case "normal":
+                        thisorder = 19;
+                        break;
+                    case "lateral":
+                        thisorder = 20;
+                        break;
+                }
                 break;
             case "abs":
-                thisorder = 9;
+                switch (this.getSubclasses()){
+                    case "medio":
+                        thisorder = 21;
+                        break;
+                    case "inferior":
+                        thisorder = 22;
+                        break;
+                    case "superior":
+                        thisorder = 23;
+                        break;
+                    case "oblicuos":
+                        thisorder = 24;
+                        break;
+                    case "isom.":
+                        thisorder = 25;
+                        break;
+                    case "isom.lat.":
+                        thisorder = 26;
+                        break;
+                }
                 break;
             case "glute":
-                thisorder = 10;
+                switch (this.getSubclasses()){
+                    case "mayor":
+                        thisorder = 27;
+                        break;
+                    case "medio":
+                        thisorder = 28;
+                        break;
+                    case "menor":
+                        thisorder = 29;
+                        break;
+                }
                 break;
             case "thigh":
-                thisorder = 11;
+                switch (this.getSubclasses()){
+                    case "global":
+                        thisorder = 30;
+                        break;
+                    case "local":
+                        thisorder = 31;
+                        break;
+                }
                 break;
             case "calf":
-                thisorder = 12;
+                switch (this.getSubclasses()){
+                    case "gemelo":
+                        thisorder = 32;
+                        break;
+                    case "soleo":
+                        thisorder = 33;
+                        break;
+                }
                 break;
         }
         switch (((Exercise)o).getMuscle_zone()) {
             case "biceps":
-                compareorder = 1;
+                switch (((Exercise)o).getSubclasses()){
+                    case "c.larga":
+                        compareorder = 1;
+                        break;
+                    case "c.corta":
+                        compareorder = 2;
+                        break;
+                    case "braquial":
+                        compareorder = 3;
+                        break;
+                }
                 break;
             case "chest":
-                compareorder = 2;
+                switch (((Exercise)o).getSubclasses()){
+                    case "med.-inf.":
+                        compareorder = 4;
+                        break;
+                    case "superior":
+                        compareorder = 5;
+                        break;
+                }
                 break;
             case "mid-back":
-                compareorder = 3;
-                break;
-            case "deltoid":
-                compareorder = 4;
-                break;
-            case "upper-back":
-                compareorder = 5;
-                break;
-            case "triceps":
                 compareorder = 6;
                 break;
+            case "deltoid":
+                switch (((Exercise)o).getSubclasses()){
+                    case "anterior":
+                        compareorder = 7;
+                        break;
+                    case "medio":
+                        compareorder = 8;
+                        break;
+                    case "posterior":
+                        compareorder = 9;
+                        break;
+                }
+                break;
+            case "upper-back":
+                switch (((Exercise)o).getSubclasses()){
+                    case "rot.ext.":
+                        compareorder = 10;
+                        break;
+                    case "rot.int.":
+                        compareorder = 11;
+                        break;
+                    case "supraesp.":
+                        compareorder = 12;
+                        break;
+                    case "trapecio":
+                        compareorder = 13;
+                        break;
+                }
+                break;
+            case "triceps":
+                switch (((Exercise)o).getSubclasses()){
+                    case "c.larga":
+                        compareorder = 14;
+                        break;
+                    case "c.lateral":
+                        compareorder = 15;
+                        break;
+                    case "c.media":
+                        compareorder = 16;
+                        break;
+                }
+                break;
             case "forearm":
-                compareorder = 7;
+                switch (((Exercise)o).getSubclasses()){
+                    case "carpo":
+                        compareorder = 17;
+                        break;
+                    case "dedos":
+                        compareorder = 18;
+                        break;
+                }
                 break;
             case "lumbar":
-                compareorder = 8;
+                switch (((Exercise)o).getSubclasses()){
+                    case "normal":
+                        compareorder = 19;
+                        break;
+                    case "lateral":
+                        compareorder = 20;
+                        break;
+                }
                 break;
             case "abs":
-                compareorder = 9;
+                switch (((Exercise)o).getSubclasses()){
+                    case "medio":
+                        compareorder = 21;
+                        break;
+                    case "inferior":
+                        compareorder = 22;
+                        break;
+                    case "superior":
+                        compareorder = 23;
+                        break;
+                    case "oblicuos":
+                        compareorder = 24;
+                        break;
+                    case "isom.":
+                        compareorder = 25;
+                        break;
+                    case "isom.lat.":
+                        compareorder = 26;
+                        break;
+                }
                 break;
             case "glute":
-                compareorder = 10;
+                switch (((Exercise)o).getSubclasses()){
+                    case "mayor":
+                        compareorder = 27;
+                        break;
+                    case "medio":
+                        compareorder = 28;
+                        break;
+                    case "menor":
+                        compareorder = 29;
+                        break;
+                }
                 break;
             case "thigh":
-                compareorder = 11;
+                switch (((Exercise)o).getSubclasses()){
+                    case "global":
+                        compareorder = 30;
+                        break;
+                    case "local":
+                        compareorder = 31;
+                        break;
+                }
                 break;
             case "calf":
-                compareorder = 12;
+                switch (((Exercise)o).getSubclasses()){
+                    case "gemelo":
+                        compareorder = 32;
+                        break;
+                    case "soleo":
+                        compareorder = 33;
+                        break;
+                }
                 break;
         }
         return thisorder-compareorder;

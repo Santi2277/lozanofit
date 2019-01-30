@@ -24,6 +24,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
@@ -42,6 +43,7 @@ public class Activity2 extends AppCompatActivity {
     public boolean listcreated = false;
     public ArrayList<Exercise> exercisesList = new ArrayList<Exercise>();
     public ArrayList<String> musclesSelected = new ArrayList<String>();
+    public Random randomGenerator = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,7 +135,7 @@ public class Activity2 extends AppCompatActivity {
             }
             int exercEach = exercNumb / musclesNumb;
             int exercRemaining = exercNumb % musclesNumb;
-
+            //ADD, number of exercises per each muscle
             int idx0 = 0;
             while((idx0<musclesNumb)&&(musclesNumb!=0)){
                 //obtainExercices(musclesSelected.get(idx0), exercEach);
@@ -144,11 +146,32 @@ public class Activity2 extends AppCompatActivity {
             }
             //musclesselected take into account and dont repeat in exerciseslist
             //obtainExercRemaining(exercRemaining);
-            //REMAINING!!!!!
+            //Add, exercises of muscles remaining
+            ArrayList<String> musclesArray = new ArrayList<>();
+            musclesArray.add("biceps");
+            musclesArray.add("abs");
+            musclesArray.add("forearm");
+            musclesArray.add("chest");
+            musclesArray.add("deltoid");
+            musclesArray.add("calf");
+            musclesArray.add("glute");
+            musclesArray.add("mid-back");
+            musclesArray.add("lumbar");
+            musclesArray.add("thigh");
+            musclesArray.add("triceps");
+            musclesArray.add("upper-back");
+            int randomIndex;
+            //while remaining (WHILE put)
+            int idxA = 0;
+            while(idxA<exercRemaining){
+                randomIndex = randomGenerator.nextInt(musclesArray.size());
+                addMuscle(musclesArray.get(randomIndex));
+                musclesArray.remove(randomIndex);
+                idxA++;
+            }
 
-            //
+
             Collections.sort(exercisesList);
-
             //
             superserie(exercisesList);
 
@@ -1263,13 +1286,13 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "braquial":
-                                braCount++;
+                                braCount = braCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "c.corta":
-                                corCount++;
+                                corCount = corCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "c.larga":
-                                larCount++;
+                                larCount = larCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1306,22 +1329,22 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "inferior":
-                                infCount++;
+                                infCount = infCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "isom.":
-                                isoCount++;
+                                isoCount = isoCount +Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "isom.lat.":
-                                isoLatCount++;
+                                isoLatCount = isoLatCount +Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "medio":
-                                medCount++;
+                                medCount = medCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "oblicuos":
-                                oblCount++;
+                                oblCount = oblCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "superior":
-                                supCount++;
+                                supCount=supCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1363,10 +1386,10 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "carpo":
-                                carCount++;
+                                carCount = carCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "dedos":
-                                dedCount++;
+                                dedCount=dedCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1396,10 +1419,10 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "med.-inf.":
-                                medInfCount++;
+                                medInfCount=medInfCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "superior":
-                                sup7Count++;
+                                sup7Count=sup7Count+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1430,13 +1453,13 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "anterior":
-                                antCount++;
+                                antCount=antCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "medio":
-                                med2Count++;
+                                med2Count=med2Count+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "posterior":
-                                posCount++;
+                                posCount=posCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1469,10 +1492,10 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "gemelo":
-                                gemCount++;
+                                gemCount=gemCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "soleo":
-                                solCount++;
+                                solCount=solCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1503,13 +1526,13 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "mayor":
-                                mayCount++;
+                                mayCount=mayCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "medio":
-                                med3Count++;
+                                med3Count=med3Count+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "menor":
-                                menCount++;
+                                menCount=menCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1547,10 +1570,10 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "lateral":
-                                latCount++;
+                                latCount=latCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "normal":
-                                norCount++;
+                                norCount=norCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1580,10 +1603,10 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "global":
-                                gloCount++;
+                                gloCount=gloCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "local":
-                                locCount++;
+                                locCount=locCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1614,13 +1637,13 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "c.larga":
-                                lar2Count++;
+                                lar2Count=lar2Count+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "c.lateral":
-                                lat2Count++;
+                                lat2Count=lat2Count+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "c.media":
-                                med4Count++;
+                                med4Count=med4Count+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1655,13 +1678,13 @@ public class Activity2 extends AppCompatActivity {
                     if(exercisesList.get(idx0).getMuscle_zone().equals(muscle)){
                         switch (exercisesList.get(idx0).getSubclasses()){
                             case "rot.ext.":
-                                extCount++;
+                                extCount=extCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "rot.int.":
-                                intCount++;
+                                intCount=intCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                             case "supraesp.":
-                                supraCount++;
+                                supraCount=supraCount+Integer.parseInt(exercisesList.get(idx0).getSeries());
                                 break;
                         }
                     }
@@ -1970,7 +1993,23 @@ public class Activity2 extends AppCompatActivity {
                 idx3++;
             }
             //006 IF FULL, ADD SERIE
+            int idx4 = 0;
+
+
+
+
             if(!(countEx<submuscleMax)){
+                //check minimum series (to add to first minimum) subcl
+                while(idx4<exercisesList.size()){
+                    if(muscle.equals(exercisesList.get(idx4).getMuscle_zone())){
+                        if(subcl.equals(exercisesList.get(idx4).getSubclasses())){
+
+
+
+
+                        }
+                    }
+                }
                 String serieStr = exercisesList.get(foundPosition).getSeries();
                 int serieInt = Integer.parseInt(serieStr);
                 serieInt++;
@@ -2009,7 +2048,7 @@ public class Activity2 extends AppCompatActivity {
                     }
                 }
 
-                Cursor c2 = db.rawQuery(query, null);
+                Cursor c2 = db.rawQuery(query2, null);
                 //add exercises to array list
                 if (c2.moveToFirst()) {
                     //go over cursor until the end
