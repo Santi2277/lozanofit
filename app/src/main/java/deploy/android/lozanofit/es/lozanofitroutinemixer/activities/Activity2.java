@@ -1583,11 +1583,22 @@ public class Activity2 extends AppCompatActivity {
                 minRep = Math.min(latCount, norCount);
                 subclPass.clear();
                 //get subclasses with minimum reps (the ones which turn could be next)
-                if(minRep==latCount){
-                    subclPass.add("lateral");
-                }
-                if(minRep==norCount){
-                    subclPass.add("normal");
+                int division = 0;
+                int module = 0;
+                if(latCount==0){
+                    if(norCount>2){
+                        subclPass.add("lateral");
+                    }else{
+                        subclPass.add("normal");
+                    }
+                }else{
+                    division =norCount/latCount;
+                    module =norCount%latCount;
+                    if((division>2)||(division==2 && module>0)){
+                        subclPass.add("lateral");
+                    }else{
+                        subclPass.add("normal");
+                    }
                 }
                 //add submuscle then
                 addSubMuscle(muscle, subclPass);
