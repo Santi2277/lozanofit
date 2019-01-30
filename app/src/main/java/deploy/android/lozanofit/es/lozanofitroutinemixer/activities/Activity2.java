@@ -1994,26 +1994,38 @@ public class Activity2 extends AppCompatActivity {
             }
             //006 IF FULL, ADD SERIE
             int idx4 = 0;
-
-
-
-
+            int minimum=1;
+            boolean first = true;
             if(!(countEx<submuscleMax)){
-                //check minimum series (to add to first minimum) subcl
+                //check MINIMUM SERIES (to add to first minimum) subcl
+                //get minimum
                 while(idx4<exercisesList.size()){
                     if(muscle.equals(exercisesList.get(idx4).getMuscle_zone())){
                         if(subcl.equals(exercisesList.get(idx4).getSubclasses())){
-
-
-
-
+                            if(first){
+                                minimum = Integer.parseInt(exercisesList.get(idx4).getSeries());
+                                first = false;
+                            }else{
+                                minimum = Math.min(minimum, Integer.parseInt(exercisesList.get(idx4).getSeries()));
+                            }
                         }
                     }
+                    idx4++;
                 }
-                String serieStr = exercisesList.get(foundPosition).getSeries();
-                int serieInt = Integer.parseInt(serieStr);
-                serieInt++;
-                exercisesList.get(foundPosition).setSeries(Integer.toString(serieInt));
+                //get first with minimum, add a serie
+                idx4 = 0;
+                while(idx4<exercisesList.size()){
+                    if(muscle.equals(exercisesList.get(idx4).getMuscle_zone())){
+                        if(subcl.equals(exercisesList.get(idx4).getSubclasses())){
+                            if(Integer.parseInt(exercisesList.get(idx4).getSeries())==minimum){
+                                minimum++;
+                                exercisesList.get(idx4).setSeries(Integer.toString(minimum));
+                                break;
+                            }
+                        }
+                    }
+                    idx4++;
+                }
 
             //007 ELSE, ADD EXERCISE "NEW" FROM THAT SUBCLASS (else)
                 //"NEW" exercise of that subclass without muscle name in that list(x)
