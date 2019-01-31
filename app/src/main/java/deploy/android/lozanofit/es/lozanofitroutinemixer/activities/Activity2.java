@@ -57,7 +57,7 @@ public class Activity2 extends AppCompatActivity {
         musclesSelected = getIntent().getStringArrayListExtra("selectedMuscles");
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //get selected level and objective
@@ -148,18 +148,12 @@ public class Activity2 extends AppCompatActivity {
             //obtainExercRemaining(exercRemaining);
             //Add, exercises of muscles remaining
             ArrayList<String> musclesArray = new ArrayList<>();
-            musclesArray.add("biceps");
-            musclesArray.add("abs");
-            musclesArray.add("forearm");
-            musclesArray.add("chest");
-            musclesArray.add("deltoid");
-            musclesArray.add("calf");
-            musclesArray.add("glute");
-            musclesArray.add("mid-back");
-            musclesArray.add("lumbar");
-            musclesArray.add("thigh");
-            musclesArray.add("triceps");
-            musclesArray.add("upper-back");
+            int indexAux = 0;
+            while(indexAux<musclesSelected.size()){
+                musclesArray.add(musclesSelected.get(indexAux));
+                indexAux++;
+            }
+
             int randomIndex;
             //while remaining (WHILE put)
             int idxA = 0;
@@ -1194,7 +1188,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1225,7 +1219,7 @@ public class Activity2 extends AppCompatActivity {
     public void obtainExercRemaining(int exNumb){
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1739,7 +1733,7 @@ public class Activity2 extends AppCompatActivity {
 
     public void addSubMuscle(String muscle, ArrayList<String> submuscles){
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
         SQLiteDatabase db = exdb.getWritableDatabase();
         String query="";
 
@@ -2125,26 +2119,28 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 35);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
         String exerciseName = exercisesList.get(index).getName();
         String exerciseCategory = exercisesList.get(index).getMuscle_zone();
+        String exercSubmuscle = exercisesList.get(index).getSubclasses();
+        int series = Integer.parseInt(exercisesList.get(index).getSeries());
 
         String query="";
-        //find a new exercise (different from that and not existing in the list)
+        //find a new exercise (different from that) (and not existing in the list)
         if(objectivestring.equals("Definición")|| levelstring.equals("1.- Básico")||levelstring.equals("2.- En forma")){
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+exerciseCategory+"'AND level LIKE '' AND name NOT IN ('"+exerciseName+"') ORDER BY RANDOM() LIMIT 1";
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+exerciseCategory+"'AND subclasses LIKE '"+exercSubmuscle+"' AND level LIKE '' AND name NOT IN ('"+exerciseName+"') ORDER BY RANDOM() LIMIT 1";
         }else{
-            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+exerciseCategory+"' AND name NOT IN ('"+exerciseName+"') ORDER BY RANDOM() LIMIT 1";
+            query = "SELECT * FROM Exercises WHERE muscle_zone LIKE '"+exerciseCategory+"' AND subclasses LIKE '"+exercSubmuscle+"' AND name NOT IN ('"+exerciseName+"') ORDER BY RANDOM() LIMIT 1";
         }
 
         Cursor c = db.rawQuery(query, null);
         //change exercise
         if (c.moveToFirst()) {
             do {
-                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12));
+                Exercise currentExercise = new Exercise(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), Integer.toString(series));
                 exercisesList.set(index, currentExercise);
 
             } while(c.moveToNext());
@@ -2559,86 +2555,52 @@ public class Activity2 extends AppCompatActivity {
 
     }
 
-    //public void superserie(ArrayList<Exercise> exercisesList2) {
+    //initial condition: only 2 muscles in exercisesList
     public void superserie2(String muscle1, String muscle2) {
-        //muscle1-muscle2 "superserie" (reused biceps and chest notation)
-        int idx_biceps = 0;
-        int idx_last_biceps = -1;
-        boolean firstbiceps = false;
-        int idx_chest = 0;
-        int idx_last_chest = -1;
-        boolean nextbiceps = true;
-        boolean nextchest = true;
-        boolean changed = false;
-        boolean firstchange = false;
-        int idx_limit = 100000;
-        int swaps_counter = 0;
-        //while there's more exercises continue swapping
-        while (nextbiceps && nextchest) {
-            //find next biceps
-            //go over all the list, get nextbiceps idx
-            for (Exercise tempexercise : exercisesList) {
-                if (tempexercise.getMuscle_zone().equals(muscle1) && idx_biceps > idx_last_biceps) {
-                    if (idx_limit == idx_biceps) {
-                        if (exercisesList.get(idx_limit - 1).getMuscle_zone().equals(muscle1)) {
-                            int position1 = idx_limit;
-                            int position2 = idx_limit + 1;
-                            while (swaps_counter != 0) {
-                                Collections.swap(exercisesList, position1, position2);
-                                position1 = position1 + 2;
-                                position2 = position2 + 2;
-                                swaps_counter--;
-                            }
-                        } else {
-                            break;
-                        }
-                    }
-                    if (!firstbiceps) {
-                        firstbiceps = true;
-                        idx_biceps++;
-                    } else {
-                        changed = true;
-                        idx_last_biceps = idx_biceps;
-                        firstbiceps = false;
-                        break;
-                    }
-                } else {
-                    idx_biceps++;
-                }
+
+        //001 split in two arraylists, one of each muscle
+        ArrayList<Exercise> muscle1List = new ArrayList<>();
+        ArrayList<Exercise> muscle2List = new ArrayList<>();
+
+        int idx8 = 0;
+        while(idx8<exercisesList.size()){
+            if(exercisesList.get(idx8).getMuscle_zone().equals(muscle1)){
+                muscle1List.add(exercisesList.get(idx8));
+            }else{
+                muscle2List.add(exercisesList.get(idx8));
             }
-            if (!changed) {
-                nextbiceps = false;
-            } else {
-                changed = false;
-            }
-            //find next chest
-            //go over all the list, get nextbiceps idx
-            for (Exercise tempexercise : exercisesList) {
-                if (tempexercise.getMuscle_zone().equals(muscle2) && idx_chest > idx_last_chest) {
-                    changed = true;
-                    idx_last_chest = idx_chest;
-                    break;
-                } else {
-                    idx_chest++;
-                }
-            }
-            if (!changed) {
-                nextchest = false;
-            } else {
-                changed = false;
-            }
-            if (nextbiceps && nextchest) {
-                Collections.swap(exercisesList, idx_biceps, idx_chest);
-                swaps_counter++;
-                idx_last_chest = idx_biceps;
-            }
-            if (!firstchange) {
-                idx_limit = idx_chest;
-                firstchange = true;
-            }
-            idx_biceps = 0;
-            idx_chest = 0;
+            idx8++;
         }
+
+        //002 combine 2 lists alterned
+        exercisesList.clear();
+        int idxMusc1 = 0;
+        int idxMusc2= 0;
+        int idxAlternate = 1;
+        while ((idxMusc1<muscle1List.size())&&(idxMusc2<muscle2List.size())){
+            if(idxAlternate==1){
+                exercisesList.add(muscle1List.get(idxMusc1));
+                idxMusc1++;
+                idxAlternate = 2;
+            }else{
+                exercisesList.add(muscle2List.get(idxMusc2));
+                idxMusc2++;
+                idxAlternate=1;
+            }
+        }
+        //remaining, not alternating, just last ones
+        if(idxMusc1<muscle1List.size()){
+            while(idxMusc1<muscle1List.size()){
+                exercisesList.add(muscle1List.get(idxMusc1));
+                idxMusc1++;
+            }
+        }else{
+            while(idxMusc2<muscle2List.size()){
+                exercisesList.add(muscle2List.get(idxMusc2));
+                idxMusc2++;
+            }
+        }
+
     }
 
 }

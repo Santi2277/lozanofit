@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -23,13 +24,13 @@ public class Activity5 extends AppCompatActivity {
     public String objectivestring = "";
     public boolean listcreated = false;
     public ArrayList<String> musclesSelected = new ArrayList<String>();
+    public String muscle = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_5);
 
-        listcreated = getIntent().getBooleanExtra("listCreated", false);
         objectivestring = getIntent().getStringExtra("selectedObjective");
         levelstring = getIntent().getStringExtra("selectedLevel");
         timestring = getIntent().getStringExtra("selectedTime");
@@ -117,7 +118,7 @@ public class Activity5 extends AppCompatActivity {
 
     public void goToMain(View view) {
 
-        //NOT WORKING go to activity 2 directly, then go to activity1 first
+
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("exerciseCounter", counter);
         intent.putExtra("selectedTime", timestring);
@@ -128,6 +129,24 @@ public class Activity5 extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
+    public void goToActivity6(View view){
+
+        //on click checkbox problems, get view clicked here problems
+        //final TextView simpleChrono = findViewById(R.id.);
+
+        Intent intent = new Intent(this, Activity6.class);
+        intent.putExtra("selectedTime", timestring);
+        intent.putExtra("selectedLevel", levelstring);
+        intent.putExtra("selectedBodyPart", bodystring);
+        intent.putExtra("selectedObjective", objectivestring);
+        intent.putExtra("listCreated", false);
+        //intent.putExtra("muscle", );
+        startActivity(intent);
+
+    }
+
 
 }
 

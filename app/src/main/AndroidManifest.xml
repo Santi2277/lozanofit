@@ -29,7 +29,8 @@
         <activity
             android:name=".activities.Activity4"
             android:label="@string/title_activity_4" />
-        <activity android:name=".activities.Activity5"></activity>
+        <activity android:name=".activities.Activity5" />
+        <activity android:name=".activities.Activity6"></activity>
     </application>
 
 </manifest>

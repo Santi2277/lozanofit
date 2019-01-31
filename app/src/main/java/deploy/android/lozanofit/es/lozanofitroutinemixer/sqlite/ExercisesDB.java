@@ -176,7 +176,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "-/-/0/0/4";
                         res_weight ="-/-/0/0/0";
                         vol_weight = "-/-/0/4/";
-                        reps_obj = "6 rep/8 rep/4 rep";
+                        reps_obj = "30 seg/45 seg/20 seg";
                         subclasses = "braquial";
                         break;
                     case 13:
@@ -1889,7 +1889,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         hip_weight = "-/-/0/0/4";
                         res_weight ="-/-/0/0/0";
                         vol_weight = "-/-/0/4/";
-                        reps_obj = "6 rep/8 rep/4 rep";
+                        reps_obj = "30 seg/45 seg/20 seg";
                         subclasses = "braquial";
                         break;
                     case 13:
