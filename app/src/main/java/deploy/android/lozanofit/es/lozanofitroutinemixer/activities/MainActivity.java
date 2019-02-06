@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("selectedBodyPart", selectedbodypartstring);
             intent.putExtra("selectedObjective", selectedobjectivestring);
             intent.putExtra("listCreated", false);
-            intent.putExtra("selectedMuscles", musclesSelected);
+            intent.putExtra("musclesSelected", musclesSelected);
             startActivity(intent);
         }else{
             //else, go to activity 2
@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("selectedBodyPart", selectedbodypartstring);
             intent.putExtra("selectedObjective", selectedobjectivestring);
             intent.putExtra("listCreated", false);
-            intent.putExtra("selectedMuscles", musclesSelected);
+            intent.putExtra("musclesSelected", musclesSelected);
             startActivity(intent);
         }
 
@@ -239,7 +239,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        //go to activity 5 if musculo is selected
 
         Intent intent = new Intent (this, Activity4.class);
         intent.putExtra("exerciseCounter", count);
@@ -247,8 +246,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("selectedLevel", selectedlevelstring);
         intent.putExtra("selectedBodyPart", selectedbodypartstring);
         intent.putExtra("selectedObjective", selectedobjectivestring);
-        intent.putExtra("listCreated", false);
-        intent.putExtra("selectedMuscles", musclesSelected);
+        intent.putExtra("musclesSelected", musclesSelected);
         startActivity(intent);
 
 

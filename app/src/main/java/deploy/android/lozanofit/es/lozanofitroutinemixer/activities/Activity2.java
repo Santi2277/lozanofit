@@ -44,6 +44,8 @@ public class Activity2 extends AppCompatActivity {
     public ArrayList<Exercise> exercisesList = new ArrayList<Exercise>();
     public ArrayList<String> musclesSelected = new ArrayList<String>();
     public Random randomGenerator = new Random();
+    public String muscleNow = "";
+    public boolean fromAct2 = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,7 @@ public class Activity2 extends AppCompatActivity {
         listcreated = getIntent().getBooleanExtra("listCreated", false);
 
         //get musclesSelected list
-        musclesSelected = getIntent().getStringArrayListExtra("selectedMuscles");
+        musclesSelected = getIntent().getStringArrayListExtra("musclesSelected");
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
         ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
@@ -220,7 +222,7 @@ public class Activity2 extends AppCompatActivity {
         counter = getIntent().getIntExtra("exerciseCounter", 0);
 
         TextView text = findViewById(R.id.textView4);
-        TextView uppertext = findViewById(R.id.textView10);
+        final TextView uppertext = findViewById(R.id.textView10);
         TextView uppertext2 = findViewById(R.id.textView3);
         ImageView image = findViewById(R.id.imageView);
 
@@ -230,6 +232,53 @@ public class Activity2 extends AppCompatActivity {
         text.setText(exercisesList.get(counter).getName());
         TextView remaining = findViewById(R.id.textView6);
         remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
+
+        //link to activity6
+        uppertext.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(v.getContext(), Activity6.class);
+                intent.putExtra("exerciseCounter", counter);
+                //parcelable
+                intent.putParcelableArrayListExtra("key", exercisesList);
+
+                TextView simpleChrono = findViewById(R.id.simpleChronometer);
+                String chronotext = (String) simpleChrono.getText();
+                intent.putExtra("chronoText", chronotext);
+
+                intent.putExtra("selectedLevel", levelstring);
+                intent.putExtra("selectedObjective", objectivestring);
+
+                muscleNow = uppertext.getText().toString();
+                intent.putExtra("muscleNow", muscleNow);
+
+                intent.putExtra("fromAct2", fromAct2);
+
+                startActivity(intent);
+            }
+        });
+
+        //link to activity6
+        uppertext2.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(v.getContext(), Activity6.class);
+                intent.putExtra("exerciseCounter", counter);
+                //parcelable
+                intent.putParcelableArrayListExtra("key", exercisesList);
+
+                TextView simpleChrono = findViewById(R.id.simpleChronometer);
+                String chronotext = (String) simpleChrono.getText();
+                intent.putExtra("chronoText", chronotext);
+
+                intent.putExtra("selectedLevel", levelstring);
+                intent.putExtra("selectedObjective", objectivestring);
+
+                muscleNow = uppertext.getText().toString();
+                intent.putExtra("muscleNow", muscleNow);
+                intent.putExtra("fromAct2", fromAct2);
+                startActivity(intent);
+            }
+        });
+
 
         //translate muscle zone to show it in its textview
         String muscleZoneEnglish = exercisesList.get(counter).getMuscle_zone();
