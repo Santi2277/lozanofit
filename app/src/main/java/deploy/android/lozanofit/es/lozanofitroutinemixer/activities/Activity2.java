@@ -59,7 +59,7 @@ public class Activity2 extends AppCompatActivity {
         musclesSelected = getIntent().getStringArrayListExtra("musclesSelected");
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 37);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //get selected level and objective
@@ -1237,7 +1237,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 37);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1268,7 +1268,7 @@ public class Activity2 extends AppCompatActivity {
     public void obtainExercRemaining(int exNumb){
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 37);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1782,7 +1782,7 @@ public class Activity2 extends AppCompatActivity {
 
     public void addSubMuscle(String muscle, ArrayList<String> submuscles){
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 37);
         SQLiteDatabase db = exdb.getWritableDatabase();
         String query="";
 
@@ -2168,7 +2168,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 36);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 37);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
