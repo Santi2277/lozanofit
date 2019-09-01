@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
             timestring = getIntent().getStringExtra("selectedTime");
             bodystring = getIntent().getStringExtra("selectedBodyPart");
 
+            //check if null values (if so put blank string)
+            if(timestring == null){timestring = "";}
+            if(objectivestring == null){objectivestring = "";}
+            if(levelstring == null){levelstring = "";}
+            if(bodystring == null){bodystring = "";}
 
             final Spinner timespinner = (Spinner) findViewById(R.id.spinner);
             switch (timestring){
@@ -66,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case "1h 30 min":
                     timespinner.setSelection(4);
+                    break;
+                default:
+                    timespinner.setSelection(0);
                     break;
             }
 
@@ -86,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
                 case "5.- Muy fuerte":
                     levelspinner.setSelection(4);
                     break;
+                default:
+                    levelspinner.setSelection(0);
+                    break;
             }
 
             final Spinner bodyspinner = (Spinner) findViewById(R.id.spinner3);
@@ -102,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
                 case "Músculo":
                     bodyspinner.setSelection(3);
                     break;
+                default:
+                    bodyspinner.setSelection(0);
+                    break;
             }
 
             final Spinner objectivespinner = (Spinner) findViewById(R.id.spinner5);
@@ -114,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case "Definición":
                     objectivespinner.setSelection(2);
+                    break;
+                default:
+                    objectivespinner.setSelection(0);
                     break;
             }
 

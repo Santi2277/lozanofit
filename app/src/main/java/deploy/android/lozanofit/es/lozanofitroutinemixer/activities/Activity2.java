@@ -101,7 +101,8 @@ public class Activity2 extends AppCompatActivity {
             new CountDownTimer(milis, 1000) {
 
                 public void onTick(long millisUntilFinished) {
-                    int numb = toIntExact(millisUntilFinished / 1000);
+                    long longnumb = millisUntilFinished / 1000;
+                    int numb = (int)longnumb;
                     //Integer.toString(numb)
                     int minutes = numb / 60;
                     int seconds = numb % 60;
@@ -197,7 +198,8 @@ public class Activity2 extends AppCompatActivity {
             new CountDownTimer(milis, 1000) {
 
                 public void onTick(long millisUntilFinished) {
-                    int numb = toIntExact(millisUntilFinished / 1000);
+                    long longnumb = millisUntilFinished / 1000;
+                    int numb = (int)longnumb;
                     //Integer.toString(numb)
                     int minutes = numb / 60;
                     int seconds = numb % 60;
