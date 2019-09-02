@@ -1103,7 +1103,7 @@ public class Activity5 extends AppCompatActivity {
     public void goToMain(View view) {
 
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Main2Activity.class);
         intent.putExtra("exerciseCounter", counter);
         intent.putExtra("selectedTime", timestring);
         intent.putExtra("selectedLevel", levelstring);
