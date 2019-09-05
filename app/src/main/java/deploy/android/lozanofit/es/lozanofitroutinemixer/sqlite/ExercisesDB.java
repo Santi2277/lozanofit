@@ -9,7 +9,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
 
     //create database SQL sentence
     String sqlCreate = "CREATE TABLE Exercises (id INTEGER, name TEXT, photo_path TEXT, video_path TEXT, description TEXT, muscle_zone TEXT, level TEXT, subclasses TEXT, hip_weight TEXT, res_weight TEXT, vol_weight TEXT, reps_obj TEXT, series TEXT)";
-
+    String sqlCreate2 = "CREATE TABLE Profile (id INTEGER, name TEXT, weekdays INTEGER, currentday INTEGER, dayminutes TEXT, strengthlevel TEXT, objective TEXT, method TEXT, def INTEGER, more TEXT)";
+    String sqlCreate3 = "CREATE TABLE Calendar (id INTEGER, profile_id INTEGER, profile_name TEXT, calendardate TEXT, profile_weekdays INTEGER, profile_currentday INTEGER, profile_dayminutes TEXT, profile_strengthlevel TEXT, profile_objective TEXT, profile_method TEXT, profile_more TEXT, more TEXT)";
 
     public ExercisesDB(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -19,7 +20,17 @@ public class ExercisesDB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("DROP TABLE IF EXISTS Exercises");
+        db.execSQL("DROP TABLE IF EXISTS Profile");
+        db.execSQL("DROP TABLE IF EXISTS Calendar");
         db.execSQL(sqlCreate);
+        db.execSQL(sqlCreate2);
+        db.execSQL(sqlCreate3);
+
+        //default values for profile table
+        db.execSQL("INSERT INTO Profile (id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more) VALUES (1, 'perfil 1', null, null, null, null, null, null, 1, null)");
+        db.execSQL("INSERT INTO Profile (id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more) VALUES (2, 'perfil 2', null, null, null, null, null, null, 1, null)");
+        db.execSQL("INSERT INTO Profile (id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more) VALUES (3, 'perfil 3', null, null, null, null, null, null, 1, null)");
+        db.execSQL("INSERT INTO Profile (id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more) VALUES (4, 'perfil 4', null, null, null, null, null, null, 1, null)");
 
         //if db is opened correctly (COPIED FROM ONCREATE METHOD ABOVE MUST BE THE SAME!!!)
         if (db != null) {
@@ -1725,6 +1736,11 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 //insert in Exercises table
                 db.execSQL("INSERT INTO Exercises (id, name, photo_path, video_path, description, muscle_zone, level, subclasses, hip_weight, res_weight, vol_weight, reps_obj, series) " +
                         "VALUES (" + id + ", '" + name + "', '" + photo_path + "', '" + video_path + "', '" + description + "', '" + muscle_zone + "', '" + level + "', '" + subclasses + "', '" + hip_weight + "', '" + res_weight + "', '" + vol_weight + "', '" + reps_obj + "', '"+series+"')");
+
+
+
+
+
             }
         }
     }
@@ -1733,7 +1749,17 @@ public class ExercisesDB extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int idx, int i1) {
 
         db.execSQL("DROP TABLE IF EXISTS Exercises");
+        db.execSQL("DROP TABLE IF EXISTS Profile");
+        db.execSQL("DROP TABLE IF EXISTS Calendar");
         db.execSQL(sqlCreate);
+        db.execSQL(sqlCreate2);
+        db.execSQL(sqlCreate3);
+
+        //default values for profile table
+        db.execSQL("INSERT INTO Profile (id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more) VALUES (1, 'perfil 1', null, null, null, null, null, null, 1, null)");
+        db.execSQL("INSERT INTO Profile (id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more) VALUES (2, 'perfil 2', null, null, null, null, null, null, 1, null)");
+        db.execSQL("INSERT INTO Profile (id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more) VALUES (3, 'perfil 3', null, null, null, null, null, null, 1, null)");
+        db.execSQL("INSERT INTO Profile (id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more) VALUES (4, 'perfil 4', null, null, null, null, null, null, 1, null)");
 
         //if db is opened correctly
         if (db != null) {
@@ -3438,6 +3464,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 //insert in Exercises table
                 db.execSQL("INSERT INTO Exercises (id, name, photo_path, video_path, description, muscle_zone, level, subclasses, hip_weight, res_weight, vol_weight, reps_obj, series) " +
                         "VALUES (" + id + ", '" + name + "', '" + photo_path + "', '" + video_path + "', '" + description + "', '" + muscle_zone + "', '" + level + "', '" + subclasses + "', '" + hip_weight + "', '" + res_weight + "', '" + vol_weight + "', '" + reps_obj + "','"+series+"')");
+
+
+
             }
         }
 

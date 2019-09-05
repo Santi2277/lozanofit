@@ -1,43 +1,47 @@
 package deploy.android.lozanofit.es.lozanofitroutinemixer.activities;
 
 import android.content.Intent;
-import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Spinner;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 
-public class Activity9 extends AppCompatActivity {
+public class Activity10 extends AppCompatActivity {
 
     String name = "";
+    String weekdays = "";
     int profileid = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_9);
+        setContentView(R.layout.activity_10);
 
+        name = getIntent().getStringExtra("name");
         profileid = getIntent().getIntExtra("profileid", 0);
 
     }
 
-    public void goToAct8 (View view){
-        Intent intent = new Intent (this, Activity8.class);
+    public void goToAct9 (View view){
+        Intent intent = new Intent (this, Activity9.class);
         startActivity(intent);
 
     }
 
-    public void goToAct10 (View view){
-        Intent intent = new Intent (this, Activity10.class);
+    public void goToAct11 (View view){
+        Intent intent = new Intent (this, Activity11.class);
 
+        final Spinner weekdaysspinner = (Spinner) findViewById(R.id.spinner107);
+        weekdays = weekdaysspinner.getSelectedItem().toString();
+        intent.putExtra("weekdays", weekdays);
 
-        TextInputEditText nameInput = findViewById(R.id.textInput001);
-        name = nameInput.getText().toString();
         intent.putExtra("name", name);
         intent.putExtra("profileid", profileid);
         startActivity(intent);
 
     }
+
 
 }

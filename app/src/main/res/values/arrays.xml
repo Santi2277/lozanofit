@@ -25,4 +25,17 @@
         <item>Volumen</item>
         <item>Definición</item>
     </string-array>
+    <string-array name="daysperweek">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="trainingmethod">
+        <item>Todos los músculos cada día</item>
+        <item>Por separado</item>
+    </string-array>
 </resources>

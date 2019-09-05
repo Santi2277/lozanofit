@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 37);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 40);
         SQLiteDatabase db = exdb.getWritableDatabase();
         //if db is opened correctly
         if(db != null)
