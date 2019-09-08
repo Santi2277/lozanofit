@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
 
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 
 public class Activity16 extends AppCompatActivity {
@@ -20,8 +23,15 @@ public class Activity16 extends AppCompatActivity {
         profileid = getIntent().getIntExtra("profileid", 0);
 
         // get the reference of CalendarView and set Monday as the first day of the week
-        CalendarView simpleCalendarView = (CalendarView) findViewById(R.id.calendarView01);
-        simpleCalendarView.setFirstDayOfWeek(2);
+        //CalendarView simpleCalendarView = (CalendarView) findViewById(R.id.calendarView01);
+        //simpleCalendarView.setFirstDayOfWeek(2);
+        MaterialCalendarView materialcalendar = (MaterialCalendarView) findViewById(R.id.calendarView);
+
+        materialcalendar.setDateSelected(CalendarDay.from(2019, 9, 3), true);
+
+        materialcalendar.setDateSelected(CalendarDay.from(2019, 9, 5), true);
+
+        materialcalendar.setDateSelected(CalendarDay.from(2019, 9, 6), true);
 
 
     }
