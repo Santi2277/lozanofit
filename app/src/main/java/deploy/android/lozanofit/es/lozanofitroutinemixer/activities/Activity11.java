@@ -14,6 +14,7 @@ public class Activity11 extends AppCompatActivity {
     String weekdays = "";
     String dayminutes = "";
     int profileid = 0;
+    int comingfromprofile = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +24,14 @@ public class Activity11 extends AppCompatActivity {
         weekdays = getIntent().getStringExtra("weekdays");
         name = getIntent().getStringExtra("name");
         profileid = getIntent().getIntExtra("profileid", 0);
+        comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
 
     }
 
     public void goToAct10 (View view){
         Intent intent = new Intent (this, Activity10.class);
+        intent.putExtra("comingfromprofile", comingfromprofile);
+        intent.putExtra("profileid", profileid);
         startActivity(intent);
 
     }
@@ -42,6 +46,7 @@ public class Activity11 extends AppCompatActivity {
         intent.putExtra("weekdays", weekdays);
         intent.putExtra("name", name);
         intent.putExtra("profileid", profileid);
+        intent.putExtra("comingfromprofile", comingfromprofile);
         startActivity(intent);
 
     }

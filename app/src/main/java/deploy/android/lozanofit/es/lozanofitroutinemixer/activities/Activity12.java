@@ -15,6 +15,7 @@ public class Activity12 extends AppCompatActivity {
     String dayminutes = "";
     String strengthlevel = "";
     int profileid = 0;
+    int comingfromprofile = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,14 @@ public class Activity12 extends AppCompatActivity {
         weekdays = getIntent().getStringExtra("weekdays");
         name = getIntent().getStringExtra("name");
         profileid = getIntent().getIntExtra("profileid", 0);
+        comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
 
     }
 
     public void goToAct11 (View view){
         Intent intent = new Intent (this, Activity11.class);
+        intent.putExtra("comingfromprofile", comingfromprofile);
+        intent.putExtra("profileid", profileid);
         startActivity(intent);
 
     }
@@ -46,6 +50,7 @@ public class Activity12 extends AppCompatActivity {
         intent.putExtra("weekdays", weekdays);
         intent.putExtra("name", name);
         intent.putExtra("profileid", profileid);
+        intent.putExtra("comingfromprofile", comingfromprofile);
         startActivity(intent);
 
     }

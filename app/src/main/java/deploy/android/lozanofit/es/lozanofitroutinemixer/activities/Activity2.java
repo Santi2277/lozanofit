@@ -20,14 +20,19 @@ import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 
 import java.io.Serializable;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
+import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Act2EndingAlertDialog;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Activity2AlertDialog;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Exercise;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.sqlite.ExercisesDB;
@@ -46,6 +51,17 @@ public class Activity2 extends AppCompatActivity {
     public Random randomGenerator = new Random();
     public String muscleNow = "";
     public boolean fromAct2 = true;
+    int profileid = 0;
+
+    String name = "";
+    int weekdays;
+    int currentday;
+    String dayminutes = "";
+    String strengthlevel = "";
+    String objective = "";
+    String method = "";
+    String more = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +74,10 @@ public class Activity2 extends AppCompatActivity {
         //get musclesSelected list
         musclesSelected = getIntent().getStringArrayListExtra("musclesSelected");
 
+        profileid = getIntent().getIntExtra("profileid", 0);
+
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 40);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 41);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //get selected level and objective
@@ -70,10 +88,10 @@ public class Activity2 extends AppCompatActivity {
         if(!listcreated) {
             //get selected time and show it (toast)
             timestring = getIntent().getStringExtra("selectedTime");
+
             Toast toast1 = Toast.makeText(getApplicationContext(),
                     timestring, Toast.LENGTH_LONG);
             toast1.show();
-
             //get selected body part
             bodystring = getIntent().getStringExtra("selectedBodyPart");
 
@@ -235,7 +253,7 @@ public class Activity2 extends AppCompatActivity {
         TextView remaining = findViewById(R.id.textView6);
         remaining.setText(Integer.toString(counter+1)+" / "+exercisesList.size());
 
-        //link to activity6
+        //link to activity6 gotoact6
         uppertext.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(v.getContext(), Activity6.class);
@@ -254,12 +272,13 @@ public class Activity2 extends AppCompatActivity {
                 intent.putExtra("muscleNow", muscleNow);
 
                 intent.putExtra("fromAct2", fromAct2);
+                intent.putExtra("profileid", profileid);
 
                 startActivity(intent);
             }
         });
 
-        //link to activity6
+        //link to activity6 gotoact6
         uppertext2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(v.getContext(), Activity6.class);
@@ -277,6 +296,7 @@ public class Activity2 extends AppCompatActivity {
                 muscleNow = uppertext.getText().toString();
                 intent.putExtra("muscleNow", muscleNow);
                 intent.putExtra("fromAct2", fromAct2);
+                intent.putExtra("profileid", profileid);
                 startActivity(intent);
             }
         });
@@ -450,6 +470,7 @@ public class Activity2 extends AppCompatActivity {
 
         intent.putExtra("selectedLevel", levelstring);
         intent.putExtra("selectedObjective", objectivestring);
+        intent.putExtra("profileid", profileid);
 
         startActivity(intent);
     }
@@ -1239,7 +1260,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 40);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 41);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1270,7 +1291,7 @@ public class Activity2 extends AppCompatActivity {
     public void obtainExercRemaining(int exNumb){
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 40);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 41);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query="";
@@ -1784,7 +1805,7 @@ public class Activity2 extends AppCompatActivity {
 
     public void addSubMuscle(String muscle, ArrayList<String> submuscles){
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 40);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 41);
         SQLiteDatabase db = exdb.getWritableDatabase();
         String query="";
 
@@ -2170,7 +2191,7 @@ public class Activity2 extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 40);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 41);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int index = counter;
@@ -2346,6 +2367,33 @@ public class Activity2 extends AppCompatActivity {
         if (checkb.isChecked()){
             //puede ser que sea al reves
             exercisesList.get(counter).setDone(1);
+
+            int idx = 0;
+            int limit = exercisesList.size();
+            int numb = 0;
+            while(idx != limit){
+                if(exercisesList.get(idx).getDone()==1){
+                    numb++;
+                }
+                idx++;
+            }
+
+            if((limit == numb) && (profileid !=0)){
+
+
+                    //go to act15
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                Act2EndingAlertDialog dialogo = new Act2EndingAlertDialog();
+                dialogo.show(fragmentManager, "tagAlerta");
+
+
+
+
+
+
+
+
+            }
         }else{
             exercisesList.get(counter).setDone(0);
         }
@@ -2354,7 +2402,7 @@ public class Activity2 extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //go to main Activity
+        //go to main Activity or Act15 (prof act)
         FragmentManager fragmentManager = getSupportFragmentManager();
         Activity2AlertDialog dialogo = new Activity2AlertDialog();
         dialogo.show(fragmentManager, "tagAlerta");

@@ -19,6 +19,7 @@ public class Main2Activity extends AppCompatActivity {
     public String bodystring = "";
     public String objectivestring = "";
     public String defaultValue = "";
+    //list created is sended with false value
     public ArrayList<String> musclesSelected = new ArrayList<String>();
 
     @Override
@@ -28,7 +29,7 @@ public class Main2Activity extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 40);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 41);
         SQLiteDatabase db = exdb.getWritableDatabase();
         //if db is opened correctly
         if(db != null)

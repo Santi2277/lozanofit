@@ -19,6 +19,7 @@ public class Activity14 extends AppCompatActivity {
     String objective = "";
     String method = "";
     int profileid = 0;
+    int comingfromprofile = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +32,14 @@ public class Activity14 extends AppCompatActivity {
         weekdays = getIntent().getStringExtra("weekdays");
         name = getIntent().getStringExtra("name");
         profileid = getIntent().getIntExtra("profileid", 0);
+        comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
 
     }
 
     public void goToAct13 (View view){
         Intent intent = new Intent (this, Activity13.class);
+        intent.putExtra("comingfromprofile", comingfromprofile);
+        intent.putExtra("profileid", profileid);
         startActivity(intent);
 
     }
@@ -45,19 +49,13 @@ public class Activity14 extends AppCompatActivity {
         final Spinner methodspinner = (Spinner) findViewById(R.id.spinner70);
         method = methodspinner.getSelectedItem().toString();
 
-
         //refresh database with new profile data
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 40);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 41);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
-        //exa
-        //insert in Exercises table
-        //db.execSQL("INSERT INTO Exercises (id, name, photo_path, video_path, description, muscle_zone, level, subclasses, hip_weight, res_weight, vol_weight, reps_obj, series) " +
-          //      "VALUES (" + id + ", '" + name + "', '" + photo_path + "', '" + video_path + "', '" + description + "', '" + muscle_zone + "', '" + level + "', '" + subclasses + "', '" + hip_weight + "', '" + res_weight + "', '" + vol_weight + "', '" + reps_obj + "', '"+series+"')");
-
-
-        db.execSQL("UPDATE Profile SET name ='"+name+"', weekdays = "+weekdays+", currentday = 1, dayminutes = '"+dayminutes+"', strengthlevel ='"+strengthlevel+"', objective = '"+objective+"', method = '"+method+"', def = 0 WHERE id ="+profileid);
+        int weekdaysint =Integer.parseInt(weekdays);
+        db.execSQL("UPDATE Profile SET name ='"+name+"', weekdays = "+weekdaysint+", currentday = 1, dayminutes = '"+dayminutes+"', strengthlevel ='"+strengthlevel+"', objective = '"+objective+"', method = '"+method+"', def = 0 WHERE id ="+profileid);
 
 
         intent.putExtra("profileid", profileid);

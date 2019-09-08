@@ -8,6 +8,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 
+import deploy.android.lozanofit.es.lozanofitroutinemixer.activities.Activity15;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.activities.Activity2;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.activities.Main2Activity;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.activities.MainActivity;
@@ -23,8 +24,17 @@ public class Activity2AlertDialog extends DialogFragment{
                 .setTitle("Volver al inicio. ¿Seguro?")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Intent intent = new Intent (getActivity(), Main2Activity.class);
-                        startActivity(intent);
+
+                        int profileid = getActivity().getIntent().getIntExtra("profileid", 0);
+                        if(profileid != 0){
+                            Intent intent = new Intent (getActivity(), Activity15.class);
+                            intent.putExtra("profileid", profileid);
+                            startActivity(intent);
+                        }else{
+                            Intent intent = new Intent (getActivity(), Main2Activity.class);
+                            startActivity(intent);
+                        }
+
 
 
                     }

@@ -10,7 +10,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
     //create database SQL sentence
     String sqlCreate = "CREATE TABLE Exercises (id INTEGER, name TEXT, photo_path TEXT, video_path TEXT, description TEXT, muscle_zone TEXT, level TEXT, subclasses TEXT, hip_weight TEXT, res_weight TEXT, vol_weight TEXT, reps_obj TEXT, series TEXT)";
     String sqlCreate2 = "CREATE TABLE Profile (id INTEGER, name TEXT, weekdays INTEGER, currentday INTEGER, dayminutes TEXT, strengthlevel TEXT, objective TEXT, method TEXT, def INTEGER, more TEXT)";
-    String sqlCreate3 = "CREATE TABLE Calendar (id INTEGER, profile_id INTEGER, profile_name TEXT, calendardate TEXT, profile_weekdays INTEGER, profile_currentday INTEGER, profile_dayminutes TEXT, profile_strengthlevel TEXT, profile_objective TEXT, profile_method TEXT, profile_more TEXT, more TEXT)";
+    String sqlCreate3 = "CREATE TABLE Calendar (id TEXT, profile_id INTEGER, profile_name TEXT, calendardate TEXT, profile_weekdays INTEGER, profile_currentday INTEGER, profile_dayminutes TEXT, profile_strengthlevel TEXT, profile_objective TEXT, profile_method TEXT, profile_more TEXT, more TEXT)";
 
     public ExercisesDB(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);

@@ -29,6 +29,7 @@ public class Activity3 extends AppCompatActivity {
     public int counter = 0;
     public String levelstring = "";
     public String objectivestring = "";
+    int profileid = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,8 @@ public class Activity3 extends AppCompatActivity {
 
         // parcelable
         exercisesList = getIntent().getParcelableArrayListExtra("key");
+
+        profileid = getIntent().getIntExtra("profileid", 0);
 
         final ImageView gifview;
         gifview = (ImageView)findViewById(R.id.gifview);
@@ -107,6 +110,7 @@ public class Activity3 extends AppCompatActivity {
         intent.putExtra("chronoText", chronotext);
         intent.putExtra("selectedLevel", levelstring);
         intent.putExtra("selectedObjective", objectivestring);
+        intent.putExtra("profileid", profileid);
         startActivity(intent);
 
     }

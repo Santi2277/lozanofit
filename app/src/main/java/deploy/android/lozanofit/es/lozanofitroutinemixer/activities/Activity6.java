@@ -26,6 +26,7 @@ public class Activity6 extends AppCompatActivity {
     public String chronoCont = "";
     public String muscleNow = "";
     public boolean fromAct2 = false;
+    int profileid = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class Activity6 extends AppCompatActivity {
 
 
         fromAct2 = getIntent().getBooleanExtra("fromAct2", false);
+        profileid = getIntent().getIntExtra("profileid", 0);
 
         if(fromAct2){
             //from activity2
@@ -221,6 +223,7 @@ public class Activity6 extends AppCompatActivity {
             intent.putExtra("chronoText", chronoCont);
             intent.putExtra("selectedLevel", levelstring);
             intent.putExtra("selectedObjective", objectivestring);
+            intent.putExtra("profileid", profileid);
             startActivity(intent);
         //go to activity5
         }else{
