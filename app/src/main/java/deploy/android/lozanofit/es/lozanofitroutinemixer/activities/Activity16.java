@@ -3,6 +3,7 @@ package deploy.android.lozanofit.es.lozanofitroutinemixer.activities;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.CalendarView;
 
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -21,7 +23,7 @@ import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.MyDayDecorator;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.sqlite.ExercisesDB;
 
-public class Activity16 extends AppCompatActivity {
+public class Activity16 extends AppCompatActivity implements OnDateSelectedListener {
 
     int profileid = 0;
     ArrayList<CalendarDay> caldays = new ArrayList<CalendarDay>();
@@ -34,6 +36,7 @@ public class Activity16 extends AppCompatActivity {
         profileid = getIntent().getIntExtra("profileid", 0);
 
         MaterialCalendarView materialcalendar = (MaterialCalendarView) findViewById(R.id.calendarView);
+        materialcalendar.setOnDateChangedListener(this);
 
         //today
         Date currentTime = Calendar.getInstance().getTime();
@@ -44,8 +47,8 @@ public class Activity16 extends AppCompatActivity {
         int month = Integer.parseInt(parts[1]);
         int day = Integer.parseInt(parts[2]);
 
-
-        materialcalendar.setDateSelected(CalendarDay.from(year, month, day), true);
+        //to select today's date, do not select because when selecting there will be an ondateselectedlistener to go to act 17
+        //materialcalendar.setDateSelected(CalendarDay.from(year, month, day), true);
 
 
         //get days to be selected
@@ -64,6 +67,7 @@ public class Activity16 extends AppCompatActivity {
                 int day2 = Integer.parseInt(parts2[2]);
 
                 caldays.add(CalendarDay.from(year2, month2, day2));
+
 
             } while(c3.moveToNext());
         }
@@ -90,5 +94,18 @@ public class Activity16 extends AppCompatActivity {
 
     }
 
+    public void goToAct17 (){
+        Intent intent = new Intent (this, Activity17.class);
+        intent.putExtra("profileid", profileid);
+        startActivity(intent);
 
+    }
+
+
+    @Override
+    public void onDateSelected(@NonNull MaterialCalendarView materialCalendarView, @NonNull CalendarDay calendarDay, boolean b) {
+        if(caldays.contains(calendarDay)){
+            goToAct17();
+        }
+    }
 }

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/icon_santi_ball_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Activity16"></activity>
+        <activity android:name=".activities.Activity17"></activity>
+        <activity android:name=".activities.Activity16" />
         <activity android:name=".activities.Activity15" />
         <activity android:name=".activities.Activity14" />
         <activity android:name=".activities.Activity13" />
