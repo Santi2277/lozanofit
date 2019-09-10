@@ -15,6 +15,7 @@ public class Activity13 extends AppCompatActivity {
     String dayminutes = "";
     String strengthlevel = "";
     String objective = "";
+
     int profileid = 0;
     int comingfromprofile = 0;
 
@@ -23,10 +24,11 @@ public class Activity13 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_13);
 
-        strengthlevel = getIntent().getStringExtra("strengthlevel");
-        dayminutes = getIntent().getStringExtra("dayminutes");
-        weekdays = getIntent().getStringExtra("weekdays");
         name = getIntent().getStringExtra("name");
+        weekdays = getIntent().getStringExtra("weekdays");
+        dayminutes = getIntent().getStringExtra("dayminutes");
+        strengthlevel = getIntent().getStringExtra("strengthlevel");
+
         profileid = getIntent().getIntExtra("profileid", 0);
         comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
 
@@ -34,6 +36,12 @@ public class Activity13 extends AppCompatActivity {
 
     public void goToAct12 (View view){
         Intent intent = new Intent (this, Activity12.class);
+        intent.putExtra("name", name);
+        intent.putExtra("weekdays", weekdays);
+        intent.putExtra("dayminutes", dayminutes);
+        intent.putExtra("strengthlevel", strengthlevel);
+        intent.putExtra("objective", objective);
+
         intent.putExtra("comingfromprofile", comingfromprofile);
         intent.putExtra("profileid", profileid);
         startActivity(intent);
@@ -47,10 +55,11 @@ public class Activity13 extends AppCompatActivity {
         objective = objectivespinner.getSelectedItem().toString();
         intent.putExtra("objective", objective);
 
-        intent.putExtra("strengthlevel", strengthlevel);
-        intent.putExtra("dayminutes", dayminutes);
-        intent.putExtra("weekdays", weekdays);
         intent.putExtra("name", name);
+        intent.putExtra("weekdays", weekdays);
+        intent.putExtra("dayminutes", dayminutes);
+        intent.putExtra("strengthlevel", strengthlevel);
+
         intent.putExtra("profileid", profileid);
         intent.putExtra("comingfromprofile", comingfromprofile);
         startActivity(intent);

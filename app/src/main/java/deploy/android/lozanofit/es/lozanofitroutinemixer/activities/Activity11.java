@@ -13,6 +13,9 @@ public class Activity11 extends AppCompatActivity {
     String name = "";
     String weekdays = "";
     String dayminutes = "";
+    String strengthlevel = "";
+    String objective = "";
+
     int profileid = 0;
     int comingfromprofile = 0;
 
@@ -21,8 +24,14 @@ public class Activity11 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_11);
 
-        weekdays = getIntent().getStringExtra("weekdays");
+
         name = getIntent().getStringExtra("name");
+        weekdays = getIntent().getStringExtra("weekdays");
+
+        strengthlevel = getIntent().getStringExtra("strengthlevel");
+        objective = getIntent().getStringExtra("objective");
+
+
         profileid = getIntent().getIntExtra("profileid", 0);
         comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
 
@@ -32,6 +41,13 @@ public class Activity11 extends AppCompatActivity {
         Intent intent = new Intent (this, Activity10.class);
         intent.putExtra("comingfromprofile", comingfromprofile);
         intent.putExtra("profileid", profileid);
+
+        intent.putExtra("name", name);
+        intent.putExtra("weekdays", weekdays);
+        intent.putExtra("dayminutes", dayminutes);
+        intent.putExtra("strengthlevel", strengthlevel);
+        intent.putExtra("objective", objective);
+
         startActivity(intent);
 
     }
@@ -43,8 +59,12 @@ public class Activity11 extends AppCompatActivity {
         dayminutes = dayminutesspinner.getSelectedItem().toString();
         intent.putExtra("dayminutes", dayminutes);
 
-        intent.putExtra("weekdays", weekdays);
         intent.putExtra("name", name);
+        intent.putExtra("weekdays", weekdays);
+
+        intent.putExtra("strengthlevel", strengthlevel);
+        intent.putExtra("objective", objective);
+
         intent.putExtra("profileid", profileid);
         intent.putExtra("comingfromprofile", comingfromprofile);
         startActivity(intent);

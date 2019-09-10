@@ -89,7 +89,7 @@ public class Activity15 extends AppCompatActivity {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String today = dateFormat.format(currentTime);
 
-        String query2 = "SELECT * FROM Calendar WHERE calendardate = '"+today+"';";
+        String query2 = "SELECT * FROM Calendar WHERE calendardate = '"+today+"' AND profile_id = "+profileid+";";
         Cursor c2 = db.rawQuery(query2, null);
         //note: maybe always move to first even without entries?¿ (to test)
         if (c2.moveToFirst()) {
