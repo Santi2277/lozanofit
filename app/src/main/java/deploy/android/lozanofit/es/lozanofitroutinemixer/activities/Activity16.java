@@ -13,7 +13,11 @@ import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.format.DateTimeFormatter;
+
 import java.text.SimpleDateFormat;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -105,7 +109,14 @@ public class Activity16 extends AppCompatActivity implements OnDateSelectedListe
     @Override
     public void onDateSelected(@NonNull MaterialCalendarView materialCalendarView, @NonNull CalendarDay calendarDay, boolean b) {
         if(caldays.contains(calendarDay)){
-            goToAct17();
+            Intent intent = new Intent (this, Activity17.class);
+            intent.putExtra("profileid", profileid);
+            //get calendar day string
+            LocalDate calendardate = calendarDay.getDate();
+            String calendarday = calendardate.format(DateTimeFormatter.ISO_LOCAL_DATE);
+
+            intent.putExtra("calendarDay", calendarday);
+            startActivity(intent);
         }
     }
 }
