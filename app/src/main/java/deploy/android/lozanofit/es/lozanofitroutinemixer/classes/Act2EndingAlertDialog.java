@@ -51,7 +51,7 @@ public class Act2EndingAlertDialog extends DialogFragment{
                         //add 1 to profile currentday, add routine to calendar table, go to act15 (from that profile)
                         //refresh database with new profile data
                         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-                        ExercisesDB exdb = new ExercisesDB(getContext(), "DBExercises", null, 41);
+                        ExercisesDB exdb = new ExercisesDB(getContext(), "DBExercises", null, 43);
                         SQLiteDatabase db = exdb.getWritableDatabase();
 
                         //get data from that profile

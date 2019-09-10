@@ -49,7 +49,7 @@ public class Activity15 extends AppCompatActivity {
         profileid = getIntent().getIntExtra("profileid", 0);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 41);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 43);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query = "SELECT id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more FROM profile ORDER BY id";
