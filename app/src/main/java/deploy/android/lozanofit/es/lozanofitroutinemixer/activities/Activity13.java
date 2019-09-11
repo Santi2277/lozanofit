@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 
@@ -31,6 +33,48 @@ public class Activity13 extends AppCompatActivity {
 
         profileid = getIntent().getIntExtra("profileid", 0);
         comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
+
+
+        //change text when spinner changes
+
+        final Spinner strengthlevelspinner = (Spinner) findViewById(R.id.spinner101);
+        //strengthlevel = strengthlevelspinner.getSelectedItem().toString();
+
+        strengthlevelspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                // your code here
+                TextView text = findViewById(R.id.textView1313);
+
+                switch (position){
+                    case 0:
+                        text.setText("Número intermedio de repeticiones y peso, mantenimiento.");
+                        break;
+                    case 1:
+                        text.setText("Pocas repeticiones y mucho peso, gran ganacia de volumen.");
+                        break;
+                    case 2:
+                        text.setText("Muchas repeticiones y menos peso, fuerza resitencia.");
+                        break;
+                }
+
+
+
+
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+
+            }
+
+
+        });
+
+
+
+
 
     }
 

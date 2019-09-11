@@ -36,8 +36,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="318dp"
-        android:layout_height="154dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -46,8 +46,8 @@
         android:layout_marginRight="8dp"
         android:text="-Barra paralela al suelo siempre\n-No balancearse\n-Piernas ligera flexión\n-Codos estáticos junto al cuerpo\n-Hombros estáticos\n-Agarre por el medio de la barra Z, palmas hacia arriba"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="20.5dp"
         android:textColor="@color/colorBlack"
+        android:textSize="20.5dp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

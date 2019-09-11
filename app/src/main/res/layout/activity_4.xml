@@ -33,7 +33,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:text="¡No esperes más y crea tu rutina para hoy!\nEntrenamiento concebido para su correcto uso en gimnasios, complementado con cardio y estiramientos/mobilidad.\nCuerpo en adaptación constante por la variedad de ejercicios.\nEjercicios selectos con graduación de pesos y niveles (orientativo).\nBotón de cambio de ejercicio, pantalla de información detallada.\n¡Úsalo como base o complemento a tu entrenamiento!"
+        android:text="Crea tu rutina de gimnasio de forma libre o guiada guardando tus datos en un perfil.\nPodrás cambiar el ejercicio con el botón de refresh, marcarlo como hecho (con todos marcados se registrará en el calendario), ver vídeos e indicaciones de los ejercicios, entre otros.\nUn complemento genial de vida sana (junto con una buena alimentación, cardio, estiramientos y otras rutinas).\n¡Ejercicios que cambian cada día para unos mejores resultados!"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="20.5dp"
         android:textColor="@color/colorBlack"
