@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -105,6 +106,9 @@ public class Act2EndingAlertDialog extends DialogFragment{
 
                         db.execSQL("INSERT INTO Calendar (id, profile_id, profile_name, calendardate, profile_weekdays, profile_currentday, profile_dayminutes, profile_strengthlevel, profile_objective, profile_method, profile_more, more) VALUES ('"+calendarid+"', "+profileid+", '"+name+"', '"+strDate+"', "+weekdays+", "+calendarcurrentday+", '"+dayminutes+"', '"+strengthlevel+"', '"+objective+"', '"+method+"', '"+more+"', null)");
 
+                        Toast toast1 = Toast.makeText(getContext(),
+                                "Rutina guardada.", Toast.LENGTH_LONG);
+                        toast1.show();
 
 
 

@@ -396,7 +396,12 @@ public class Activity15 extends AppCompatActivity {
     }
 
 
+    public void goToAct18 (View view){
+        Intent intent = new Intent (this, Activity18.class);
+        intent.putExtra("profileid", profileid);
+        startActivity(intent);
 
+    }
 
 
     public void goToAct16 (View view){

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.sqlite.ExercisesDB;
@@ -66,7 +67,9 @@ public class Activity14 extends AppCompatActivity {
 
         int weekdaysint =Integer.parseInt(weekdays);
         db.execSQL("UPDATE Profile SET name ='"+name+"', weekdays = "+weekdaysint+", currentday = 1, dayminutes = '"+dayminutes+"', strengthlevel ='"+strengthlevel+"', objective = '"+objective+"', method = '"+method+"', def = 0 WHERE id ="+profileid);
-
+        Toast toast1 = Toast.makeText(this,
+                "Perfil creado.", Toast.LENGTH_LONG);
+        toast1.show();
 
         intent.putExtra("profileid", profileid);
         startActivity(intent);
