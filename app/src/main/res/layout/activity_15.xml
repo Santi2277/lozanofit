@@ -79,14 +79,13 @@
         app:layout_constraintTop_toBottomOf="@+id/button1501" />
 
 
-
     <ImageButton
         android:id="@+id/imageButton614"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="16dp"
         android:onClick="goToAct8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

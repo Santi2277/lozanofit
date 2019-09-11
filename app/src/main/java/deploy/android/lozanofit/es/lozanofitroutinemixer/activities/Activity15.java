@@ -118,6 +118,13 @@ public class Activity15 extends AppCompatActivity {
 
     }
 
+    public void goToMain (View view){
+
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+
+    }
+
     @Override
     public void onBackPressed() {
         //go to profile selector activity

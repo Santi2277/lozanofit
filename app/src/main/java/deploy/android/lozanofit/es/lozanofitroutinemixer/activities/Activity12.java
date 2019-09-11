@@ -86,4 +86,19 @@ public class Activity12 extends AppCompatActivity {
 
     }
 
+
+    public void goToAct815 (View view){
+        //go to profile selector or one concrete profile screen
+        if(comingfromprofile == 0){
+            Intent intent = new Intent (this, Activity8.class);
+            startActivity(intent);
+        }else{
+            Intent intent = new Intent (this, Activity15.class);
+            intent.putExtra("profileid", profileid);
+            startActivity(intent);
+        }
+
+    }
+
+
 }

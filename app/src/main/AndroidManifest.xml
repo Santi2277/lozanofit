@@ -11,18 +11,18 @@
         android:roundIcon="@mipmap/icon_santi_ball_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Activity17"></activity>
-        <activity android:name=".activities.Activity16" />
-        <activity android:name=".activities.Activity15" />
-        <activity android:name=".activities.Activity14" />
-        <activity android:name=".activities.Activity13" />
-        <activity android:name=".activities.Activity12" />
-        <activity android:name=".activities.Activity11" />
-        <activity android:name=".activities.Activity10" />
-        <activity android:name=".activities.Activity9" />
-        <activity android:name=".activities.Main2Activity" />
-        <activity android:name=".activities.Activity8" />
-        <activity android:name=".activities.Activity7" />
+        <activity android:name=".activities.Activity17" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.Activity16" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity15" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity14" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity13" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity12" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity11" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity10" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity9" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Main2Activity" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity8" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity7" android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait">
@@ -40,9 +40,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Activity4"
-            android:label="@string/title_activity_4" />
-        <activity android:name=".activities.Activity5" />
-        <activity android:name=".activities.Activity6" />
+            android:label="@string/title_activity_4" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity5" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Activity6" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
