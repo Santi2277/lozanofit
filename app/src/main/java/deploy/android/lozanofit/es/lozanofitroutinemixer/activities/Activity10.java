@@ -71,4 +71,22 @@ public class Activity10 extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+        //go to act 9
+        Intent intent = new Intent (this, Activity9.class);
+        intent.putExtra("comingfromprofile", comingfromprofile);
+        intent.putExtra("profileid", profileid);
+
+        intent.putExtra("name", name);
+        intent.putExtra("weekdays", weekdays);
+        intent.putExtra("dayminutes", dayminutes);
+        intent.putExtra("strengthlevel", strengthlevel);
+        intent.putExtra("objective", objective);
+
+        startActivity(intent);
+
+    }
+
+
 }

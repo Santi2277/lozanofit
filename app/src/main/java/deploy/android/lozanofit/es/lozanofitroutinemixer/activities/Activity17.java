@@ -68,7 +68,7 @@ public class Activity17 extends AppCompatActivity {
         calendarmore = musclesSelected.toString();
 
         TextView text = findViewById(R.id.textView175);
-        text.setText("Fecha: "+calendardate+". Días a la semana: "+profileweekdays+". Día actual nº: "+profilecurrentday+". Minutos: "+profiledayminutes+". Nivel de fuerza: "+profilestrengthlevel+". Objetivo: "+profileobjective+". Método: "+profilemethod+". Músculos trabajados: "+calendarmore+".");
+        text.setText("Fecha: "+calendardate+".\nDías a la semana: "+profileweekdays+".\nDía actual nº: "+profilecurrentday+".\nMinutos: "+profiledayminutes+".\nNivel de fuerza: "+profilestrengthlevel+".\nObjetivo: "+profileobjective+".\nMétodo: "+profilemethod+".\nMúsculos trabajados: "+calendarmore+".");
 
 
     }
@@ -82,7 +82,14 @@ public class Activity17 extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+        //go to act16
+        Intent intent = new Intent (this, Activity16.class);
+        intent.putExtra("profileid", profileid);
+        startActivity(intent);
 
+    }
 
 
     public void whichMuscles (int weekdays, int currentday, String method) {

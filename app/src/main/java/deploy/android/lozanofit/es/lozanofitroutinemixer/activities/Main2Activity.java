@@ -219,7 +219,9 @@ public class Main2Activity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //does nothing in this activity
+        //go to main
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
     }
 
 }

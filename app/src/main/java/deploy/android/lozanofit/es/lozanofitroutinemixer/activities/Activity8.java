@@ -137,4 +137,16 @@ public class Activity8 extends AppCompatActivity {
 
     }
 
+
+
+    @Override
+    public void onBackPressed() {
+        //go to main
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+
+    }
+
+
+
 }
