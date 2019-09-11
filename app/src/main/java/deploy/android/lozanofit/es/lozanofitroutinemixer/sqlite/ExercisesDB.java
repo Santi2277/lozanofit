@@ -56,8 +56,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 switch (i) {
                     case 1:
                         name = "Curl Banco Scott";
-                        photo_path = "https://lh3.googleusercontent.com/qXOn76A0V3vvjW_BNApwrN6UQ7wWtFhxTA_NAzC0b8EhA1QQBUMhlfwewS1jSm_u6MwmqRL72NgMcHmBSCgz36DndbTyjCuBHTLhxn_qT06yISnO0EKGxSukGNhcKiUkRJZokLuPIWDaeLuG-XiyWwXLabYxGrPMRs3EtzhNJc-vSiTwa9eWIDV0T7ocCcE91iHejJvspuqBCNMvBxPlEvu5HimGf8tW7I03KrhKOmVKU9P0xUl58TpMfUKfbXwtF1iHJ-Q5iuzbe-opm1fLJozz_zsfV5aOxJA70jNsL_N8CAO_2ldea_YUBoxsmAtjmjCe9mLEql4K8gN18GXkXoYf8NTKOl5EUmzodZPOFepDIg9yj2--Au1O5ouUZevHOFmp-uid-EuLQzHF4jZh8tOVF00WC2iFNN9OSDaZ_aYTUyp1ojaBYnRUdBHquY8ZzaxOoqXnWVq3l59hU6WHfA4S7T3XAiHNtiHYYIU3XiLwBVIbyRKPILjTxbiSuYBD6ias_Z3HzwiZZybOjOvo8pBKr4yVvWEeUci5UfFMheQ087CRUbWRCXWITf1vJKEzvp3VW3hNHnycXwb8tvYiQeNMRWddViZkhsv-zuZJ045ZL76mmP2JXYpIwa6oycwdvBqMaUAfq4mdl8ba6PVEh21MVGPEOhDUIRHVxSB_q4LzSjdHQIzbDvXa=w712-h632-no";
-                        video_path = "https://media.giphy.com/media/4NvfWAwJOKO31HviTb/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/pRIE4QlR3Jqst687rvI1omr7prWibo4_yUh_w4z9LR3G9snwzr8NCXahxQbEN-uwToWv6n1FYVURja4JWpxHn2OjwyxybC1ty8n1hkMjByKTgL3-7Oenz9bFCl19PRSp5u6p-BKHAJHNflrqwb265vqDi4BD8oBWc5YYpw-yvLfnBVTm4A2592jJCAc54HMpwfmZq2MbS1VuOeM5-XD71EiplnhidfV5lmoMBQMLqzoq0pEoRVvYzEAq2IivbdLkLlZvXDuSAsqyrgfDjo2WCRMNrtiajG0mX4JuGYyI50tJgn-UBBx2r9MNkFWMmnkjgDgegY-7WSbPYlZ7W2kX8_oxWKTWDphwyx2Sn9evhclZpFgqMnlWd9A_3ZxR2mm-vzVhpMpClgh_aLYqhU3uo-A88Z7apu57Z002FPw84UWIoTeX9vSkpw0o4b7d_vYGogPU5KT7qpveQ_gYGcJDNf6LJcjYL26rtLEaxkTT4xtZdhodJu5h4K6Pa72JXpQrX7RMMN1W9E1T6XEc8WZD7nMvpBZEAXXq1CMNdnrDqq0VSYxSM9YB4QQdVQG67SZCbVIwouS-ocYxQq54VgWI5aqB3YX_UdZKEMwpHaTn4LgGGbvLpoVZ9_ygqS_O9DaToedTSEM6IRNaseGxz-EM0mEOLouTO3M3aHpkb3liwolhmKQ7OlRlD2E=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/VhWJOdfeiwO523mqlg/giphy.gif";
                         description = "-Banco de 45º\n-Extensión parcial del brazo (bajada)\n-Codo y hombro estático\n-No balanceo\n-Espalda recta, piernas semiflex.";
                         muscle_zone = "biceps";
                         hip_weight = "6/10/14/16/20";
@@ -67,8 +67,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 2:
                         name = "Curl Con Giro";
-                        photo_path = "https://lh3.googleusercontent.com/9dX8q0rdbHl06S0zybhrOHjLBKqcQUSX9WhsulQwYXj67ZBi4Y28XEaP3UWvBjXt8fJu61ghRRYwO0i71bvzbNvc8j8RJ4B8dK2iXnddoyXOg0-hrG86i-TPSzbDS1TIwKyV4nMcMg9uDADyRYA5eRoko3ZyxZP2zB7rGJrxlKw-dVgevkmNSU23l_nGYXgIbOlwVh9qif-Fbugslj6Ueezq4FnpPTBwN12e8nFLjjlnvz0km681FY8iRRZ8tq41buxY5HWirmkaq6iA5nkiuCzAWcYb-9hywHRJpbgzdpzSoajYMQ9JQHSdFl35v-Z7a7rGbD5uiT11XFVWTqr0IxLET3zyI7v9bEp5CdGuS3QePSNn4cnmykqnNyPPPP_YYtCXX06i5qhkN6yqA-Eb6ItMGQetWIVxtfxBnGiKkdKC4i4mxKg-MMzbpT67RFlNtx6CJssLx9AktH8y1OWpsJWizX_8hAhCa79ym9zbWe7frrZptGBnPMg9ZMFZSGMWUl1E4fJ_yg4I8zypV6AifPdVl1haNPDEPuZNL5Dg4cEhPY2WiA6yPMg_vGHVzAPb6SgcvzLbTElY5x5QEv-9p6DVv8fF2jCQXpKnVk3pPcbGxWBW8syFeWmx1ctjTVfc9qfHWgcSmUnGaFJxGE_OFCRLaFOpOLW-JY8Gmacp-Vy0ML_MAURzuLAR=w711-h632-no";
-                        video_path = "https://media.giphy.com/media/SKOXeutd8KJNiXTyEd/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/ZO9glHJtn3KaTR9YtI-oaTQv3mrNt4LHnCEgP8HCI6hCFOcqzhSjNmnn3fmsz7j_3cjfHmfWv05vCsxZHVi7H7RL8QMzEEt4-AstdFQJ_gYLMGmRw0Ey-d4lX2MRVTWKzrfglvkVF9sZQJJ4HAZJxxHtUxic8pwN6albBsb0wGLRU1jVKzvm-2OXbo6ordPPdqPlor2VKUfGsbBlKNSAIQPFr5qfTztKcZX0-X7ZbIVdmagsywEAIG9AlVpDuEnhHO2Ue3UkvmRv93ZetNwMEJlGaO3y8t6kVwD_moW0U4yDJ8R9Lpfp1b5Qtk2wk46PYKziGU2nMT9dF-m9YZzN1RJ-Kq2Bt26SRKue8cqCTj40xt1KgAt0MRMZtx2MQY_jF0vO11ht4ZSrh9jh0Za012l47EoFAw1xycTWkLyqGGq_k8RIrgjAvs5Ok-c1R8V-kMy4oFXf1gUXYuq_Dn0mRmEywjyEvejwvPmnJq7JWRFdCSkZPYojFxtm2xUXOdv2SbWTQjgZLOViTr-oizmpROFfiUw16k1faEhlhZJZg5OR6EgH74zdLFOzLEG_DV4Bic82SZWnS_e9R-D7kQ2tx08W-5rSg7vaD81jfWRh5MAysZ0tq99G7CGWjbbP94YHTgQ216-xlABxpF3m6I73ZHIRPjiF6b3AgQ4eGMfc1dwRrhhV0oGZhBU=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/fVsIvHObGjxNJiBXLA/giphy.gif";
                         description = "-Palma mira cadera luego atrás\n-Alternar der-izq\n-Codo y hombro estático\n-No balanceo\n-Espalda recta, piernas semiflex.";
                         muscle_zone = "biceps";
                         hip_weight = "6/10/14/16/20";
@@ -89,8 +89,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 4:
                         name = "Curl Martillo";
-                        photo_path = "https://lh3.googleusercontent.com/-GhEB-qYcj_5hNPnDJDE2yd5gssUYbj8PzRp6IvkYEesl65qepfNTQnXTDwH_wJpXzCbis-1IIfSw_Sd3OvTkaVMYLtSpm0s7p_JTbLu1f2RmKv_myRPTI3qHlVfr6TAv5hCJxDTPBbzB3fDUKSyySTcAn_9ceyLMk1MWRY9hzhWbsfNipsQYI4CnPgOvuXUqnxWwR3vr6UjtWHrgYnc_DeJoM1uvyaEPqxa4G7PJbH3ih8GfW3RrO1Mw6PDlzP_Scinm0pZXnVBAXrvEaI6D0T3h5jg7VKvD-tUIhtQW4K-UYh70uYEmt0Q-DWxsnTQUUtq3d1y2NtpY8FDDNmrp1xm1FCYciqfdeBqdPuBYZRNfrX_NNX_D6R2HmTV-cDn5CmcLlcJbxJAdFKKLn2rZWC5TpcjDp6sZebgDvgg96rrjXXnEqazMK21FuhjGMYTLiH3kaSXF77csKpyh0_1YvcKzjwEtkageXrqtiz9xzVzIWdIeEZb0VxIOcXtVtbixOzDUu3sIJ_bGPwXYVtRlaHSHXtqWBoO3RjSAJF8_qBK5AMyl1DiaCAgpUKeHuKhwh67sCtcdN0DbrsQk0R5pc_FPSNTdhqtaQtTQbbD321jnjSnaL2_KXf2WBkLE53w04-LAXUhOvm9VVlOoZs4__eDcStt1ekbpCnYVquRRI9T0pu8keQcfC91=w711-h632-no";
-                        video_path = "https://media.giphy.com/media/4PUq7Z1xwozF0FuLb1/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/oB-fC5yU5eLKXTypVoDnEh0Umhr4feC19A54N6PsVb4zyMl--yrGaiEDPC_0SAsDt0BAuXiQ6HkRlJWM-lLATiSXn2nvij9bPKzwHdnsj0fb-A4jb4nk5-dOgmp9rrxmyWJIDYhgu8XcsWa88tBrqyFGEEbFFSyqXyzROSjnWAL-REtuKv4nB99GFREfJRWsj4OgBMTOvA4c9paur5iShJf1PsHkZMrK_lCIBQT1CgGZl6lGoal0PbPgCftpwTKlpPW1MqMpzOKN5kUAaXfTBsByrTaVCxnEaMgw_9o9XZK4RIgKeW09hfHeflUs5qz5A6y4j3mKNyKAObJsahXvCuzpPOZMeAkcPFNPKJfmh4Xw7iSm07_9ORi1pBO4OaL_M0aVXb57BQmErkWfBdvNfkgP_kvvvILK1gMZ3y1Ey-sZuAoy4Dul0BX7EVCyte91p-hLxOEsf-unPyXxoKpDs7j2aZTpQXD5VzymcDY33adjBT6BI6ZQ6-9BMXdmGQDPt4zTg56AiQf_L5sPMzWlw_FfOChXDVHLmKYfu4vok17WVwKybxIQSB7HWniinL9mRgqzhqbozGaQkYPSSpi6WVvF_-0PvvduczfHLNiHrMTpZ3O2xx-oi5jyapDgtFTDaxEzKN1KNC07XWhbse4WQFHfWoplyBuZlmYjdP9OTMMUFJefJFSBxlE=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/RkPvuo5P4IquqssAUP/giphy.gif";
                         description = "-La palma mira al interior\n-Espalda recta, piernas semiflex.\n-Hombro y codo estáticos\n-No balanceo";
                         muscle_zone = "biceps";
                         hip_weight = "6/10/14/16/20";
@@ -100,8 +100,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 5:
                         name = "Dominada Supina";
-                        photo_path = "https://lh3.googleusercontent.com/VBU6-xhVL5LwQTp7U8Iaj6ompCpwtub35k_NEoirLFny7JxAD1y3wYcXREE_Dh0EGtGIPE6VFoXZe_r4e--0XM57AgxgC1Lv6L-C-NPoMhMc6W4Aln5ozgI_VvGcjXVrwACQRLyEA-_FNjHvW1CxKrwYGCVmEcfZFXN_xPMIJU1DekGUELWNu7KUa3Py17CZ_yaO-1nI5gWUY1F5Am0Kb57FxR5gxVPZxp_RBGLVKS4HKQIPySZC17B0X5xmJPUagdoovZbZySpf9fjXtVMzU1rTP9DMJLJXResKJ_n_2fdYU_M6MReRmkG9Yfd-7Q0_5tnnwnqJavhQGcRXm26N5NuZGUc8KaW8-ymVGBvmHBLybmuI0-nBRRhp9nCV-cHw8KaDeInVyC00M8t3UjpIfYB2i9kVaqQJocUmXB72s__m0SndwYW21DBzX-bAjBcuf34yB58omUmEjG_Uc62Q2VIi-cXBdWaOGzNgtP4lFQij3uZfBWpaOM93P2vA2cZ_vsUtWqIbxVmk8Hn9v_ipORkSfB69enGhquArBtfFr3COw1doJsgWXkoHI2UDuqL_78If5P0zudI6gJWbn8DLM5_8xMB1X5ZH3QsY47Xl7AcsSppUiCxdS3s2FaXKtd0IVqp2ZKKTRntjWX1CXMpUqV5-Yt0K1rFUCs6ayPDY9DXXEumfLoqzU6By=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/jxa5Kc03BqSQZwy3cD/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/WtLoEjfHN_gAwBwJq7oEZqtiKDtSxQ3maYEKHKqzDz4QNQMvfcgeQhiFhgSw1gQIRn2qv6Ci4ufFOgtfydXKSYJiaXdWA2bzYjAhMrcZ13BJtta63KdvclqgSuuM_dMbFbOYgEvmRSymQSj_iZdApTt2JaRYuiyh9OpGAuxY5msraLDRLUZXlGSJl_zrIEUGiN_MV8HRnH_3GX3tShFL-yCLSNzgmSCdWVBg8M8sMg8fhycH_hFhjhUUsLhmZpONSXMj1NMya1x3RsMX1kKBKahKsw0skwTPL4rVrPGSo3sLudSLLIzEFF8Yhsb4pqxbBpq6y8owBrzYabaviqogPfcvbAicr6E1SRECG8bUxWkC3dYblU6EoRCMrwWE4lftRyLbjaPSYkz4MnQErjug9-jEQ6v2IOkOv1PKCK3tIzy5kf8hkCRlKXzNFG97oTx1PZZmZebICyduFCEEuHsa9-gErxAkiNqjM7l4Kui7VgmzqFDGV4dlUgaREProz3-iB3WCEWkiYLhIxPc3K88MSmU4I0HFWIHTi9LAG15jG-PjM3GpcN2RXsB_JllRxNTraEPn3BeKY9ibZO6xUZkCrYQLKHSDS7QlT_PWI4rvuRyh6e2ELvndwbmvnyKCJyNy3F30HWeytsth1Q6nGkjloaMweb1PohsrjftGT9MAQ5V0-0A12COs3Zc=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/d8JqSoAihwzAZAnnFC/giphy.gif";
                         description = "-Agarre palma mira hacia atrás\n-Subida con flexión de brazos\n-No balanceo\n-Peso con lastre";
                         muscle_zone = "biceps";
                         level = "hard";
@@ -112,8 +112,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 6:
                         name = "Dominada Agarre Paralelo";
-                        photo_path = "https://lh3.googleusercontent.com/-qwHc8VuzGsK9YYRg3FZvspbA3YaWg6oLF2x7VRu3L0nSQJ6w7WQZmXHx6nnnbfmm9TkB0G6wGMeSL_C1X_9jX-n8rNO9bGQIONsz2RJErp23Sr7AVLKcK5LLcQ70mng7IAJ_wVydDqOvkl3zuZ2pvIwPBFkLBAIoOQMxsLmHD5aGOn5WcGRrpbFoFUc7TPjjN-mqbg95NkI8-s9WsiTo5oeoqyFjCt6j0DXhMN5f4R_F_AnlQ8YcT7cGj9dEcs1VZwkNNWGScxykqHEazxlx8aHbPaxWwQ7jhgQ0HuIXZ8itIEHW8RPkoKO5VaMR6m1d6r9GHFNeonKTaPCIJuxmSuZQzjiD4MK5CJpeE-5ao3E78Bc1qHCr1XJSKeCe_bM6DxBo--AxaudK9Le-s6niqS152ELc8GIoqd7xNF7tZHbrVgRPPau1IYyXCuantoed--llzUau2uwgglv6mRNbwtvoWjaQJ_iqekr849PCYBUIzoh9QYI1ReYQGDrMsS2eui0pqd-n9CE_W30e1urgEMdlL00_MhEG6YoR_X3RHRcW3qUZ12pVSQLZL68f9mQiI-0esKrcL-WEDpRd5HjkCOgWRk2gAT2ERqK_Cm5RRxPgi5ibAMQf7oIydW2s2Cu2ISpOGjvVCzeTmLlqqmwBBRdPg1B2OJoCv1dg8r47eZvka_YZRtbmCgy=w711-h632-no";
-                        video_path = "https://media.giphy.com/media/9DjRZ2TELxSmpeytEu/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/J0Pqg-Q8nwTDsH9F8G_hOgbJDwwyTATEL5eJjaCq-CZ61vSoUTkayXnYmYgrswq01fycKpHlae_WKckKMtv2R0DBSn8AU-tr89FE33hPjVI0avfk2ZvNUsClYlzEvque2i6VB1ZL4mhe1PkEKUAV_fwHoVslXWQ0FN5z0dSgnJX5S5BboEfp-0yfwK_gufVGZX0rrAaaVTAYBKDLdCl4RANVEMTANYUS2Qu-4BgUR2GBm7yBKpMB17vQgOfeWNDF4rMyC0uKLBinP2IbmWobqj8ttpPSM0-SPLcxcJ3bEBUT9ado4AZKf_O1W_uW2J0m2vGjkdfT-pD_QIsq8EQEjaLH_XfvFCiH5mVKZIS5aM9ipaV9p5t_dXjELnIAFk7MGVjbrac5lVDMZwkNfPjrW1H_x2JllhR_9FbF5CiRfX9-Q02E9qOAQ5__ik_aBrbrk53VmekDtpt6Ro0toJA5214WsU7JfKuCs_r_LHnzNo7mdTH4-Gr3tmyXYQWi-F-fwPY4xXorGRajVYZbrXMi7AWNM7U2eAl9cqWWX7f6CvDviIbpjZkFODyKM_Jiymk0UIYHCv4ssnT0Qo7HK6VjyZTBKEaOE6DOk2HJgKeN5Hs36hYn1mxx5NlYllc0nwx764fizhcxnIbBrrpvO914F2JdJalRsqxvg05bChfkTaEjMX2EcPsvPC0=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/Yochk6afxtXIRqeJzg/giphy.gif";
                         description = "-Agarre palma mira hacia adentro\n-Subir con flexión de brazos\n-No balanceo\n-Peso con lastre";
                         muscle_zone = "biceps";
                         level = "hard";
@@ -124,8 +124,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 7:
                         name = "Curl Con Barra";
-                        photo_path = "https://lh3.googleusercontent.com/41LuhekQGImC8YVf8WC8s4Agh_PQcTX7o8t_sLcqEfCdi9ntADTl3zpgHX61D0WKfzjz9mHXkieCqU5fn7LIxd1Dt-k6rS_d_s2yTGo0YACD774ixYjHH02pR7T2iHQZkJpUX2OyDi6dbalpQVR6ojukcv9IvMj9CHBLFvYodax2EIhrd-0W-BeWnf3oDo-qHACa8MAqNDLD38fBT94YA0PtqwOsh38dAC9d_on7YbQTjXqgE-bbYVT8xLOx__ua82NCQg_x3Wls8dz9x3zk1SHsB3QZJfXaUfsn40RQMVAbQn4l2oDKfcHBMRlZ621DFvg53dgASK6m8XB7N4UU2CnnD7TmgOnwzAWgw1tFkRSHeUVKhP79o93mW7lUYyWuEH9SIJj7sZQBk1aSwNjafhlo_IZelwGWA4jZ_z9EZgC6TZSMkSZEykZhIXPrtN69-gRVcwFkbsI0XG_ohEzmGYJm45_hDioiSDUPdBhz1EanZ31dQfLARav9JhqV_tXzAp9j-ur2KbsndtywSbR4bdkcJ1H3vnlhD9O9znO7n2kGUSDCV1U75Y93g9J697K7JZMtB8Qo72iYVJX0gpAEtGqIuCG-VYF6VDyo8JbT96Thrp0svF9YdNtFbc6fpUXagLJB6061RVQGCQV_GCdMoAPfl3tlhac7rc3FOfUuLm6Ec_f66dpPn3SS=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1pJ7pWHYBQM55tBume/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/HRUGK5w2wdCgvxhR8RGxZ7M6kaW8o5NSKfm5kP8bRsz2Qp4vT6MemYwdXQh4IYFuI6emJ_9PFxNejzTMejqC4c0yYlnHDcYS4qovulhHmBDF9_nclaF7rNOW0YcUDirmFC4ZOqVqyyiHRmO4NT3DSvDikWUyxHKfCcHTgiPePpBM-wQEp8akDEVHcsraGtlMncD04NwnRB2FogKtA2yybecmAE16WY7ksL1HKr99TFxnvZzSzmOTx9GlgJCXKgV45mSk3RdRfShA7VihvVY51xgbC2WEFY9ej1_9TV30NUeSvqiid_jt4XMDppzaVArSIp74MoZxnBf5AIbMD6Z_H5py5ke-Ikw1uEsf8ftJhJZ2sgrs1cjeM1qDZoAM9-nW3RWr7CgOCVJNYnCTbsyj6sTsUwZHgJRwWTHGZw6003DK2kmDc8NEe0aVLH-sVhtNnlXueNedC21fl0tFXrvyz_0RYbjPYcP9OQmuh2MWZxcfvU2TrIJ6bEPgfuTh6OW9er3DwvDjSLi5emcuF0cHBw8vysN9AwHS6dQxXFbOvQkWGD_qpkroTlsgRiaz53f3BVIGYQ560Lo7sDlU-n_XKvm2XJTbP0TbUoO6NjWPorzOm_mUG4aUyRvFyyT8Xm7g_O9K5cAxesfIwjWMPUwfvfST4OVhCNXX57SM_4aRQ6C4pP4-BuLxCfQ=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/JQAOx9yGh7c7Au38qv/giphy.gif";
                         description = "-Barra paralela al suelo\n-No balanceo, piernas semiflex.\n-Codos junto al cuerpo\n-Palma arriba, separación como codos\n-Peso no cuenta barra";
                         muscle_zone = "biceps";
                         hip_weight = "2.5/5/10/15/20";
@@ -134,9 +134,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "c.larga";
                         break;
                     case 8:
-                        name = "Kettlebell al hombro";
-                        photo_path = "https://lh3.googleusercontent.com/gLHzktKF3T_FBBAC4iaelB6m9gQuC1Bjat6WRHXo1tbCgBTwwuuHpglud8PmVlGNMkmIHWj7Bqu1dgI3Q3dWeWJfOhNFDP9l4mG-hiUpqBcJNuJ3gy1ZYoF0Is1AHi1ku0XaNTw95_9M5zN3SsaiaiJDTyty4D9VqBUjL1I1CR7bzZ43qYQX4_yPWxpo-r5ovgN1tpgRhJnRBcatKSGxebXNZ7QK0cgv-B1HVQGwHIGWP6zKKgRlT_BY5XsKGPtrwSK69dc0HWJvM7nqVe_qVz_4XBpMwZNhwKR09D79pElkO9AiKQch4zDLoMd7KmtX0_I4OO8S6p47tdu3LY3zCgkXA77M8_9MkEprQROc3M3eBE2QU6HDnWixdMTDNptREbD4WFpUnFPk5tltXdgBp6tM10I1Yy67LBYhHJiY2sbeECOZYcF-OlaiWhvUwNBq0AvclLZmAb2HXkmGDL_iwK4msUXJGmvhJaujTBc5qdcAkzHdbOK6mpWAlHboqwJUBY-jwqXz1bFkqyKnjFzCso15QNOHe9suO0nhGOQM5pmCpu7I_G4b7Umb8H83SJ8IEpCr4FuYjX8kzV795XbBt7xutGyTzqROjoJy43q0I-CbCNsGgQKN9Wec9XhkHgDaDggPcQez-Riksz2qTm_AJAO19Ilcuf6H1_ZdchwHa-T9HUT1vd3_GdPG=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1dIXM606KyXUJSvQLl/giphy.gif";
+                        name = "Mancuerna al hombro";
+                        photo_path = "https://lh3.googleusercontent.com/S2T7SvqirrAl9QudxD7VcB1FLB_Jj2fFWhqi_A5L8bBcni5x3A3KDwgh69IcJ84pOM9oYxhmQuECjLdkui80mtBK2rOGmIM5ZBTib-eSUsTO3ctSQnRbs1y-kds4IvCoaF0gMD-AaIXUPNFSmUNf4UAuly5NTczv7lURVcCPdUUdkPGmXMAxGT-KD9YNHTBAp5_qyJlxufElUtHF6YDiEzyiodYakWtplE1p1l8NSdrWsRcaUpqXdK4FPcn0LBidyQBgTrVSVDNKGV_W78dx5YE40daXrQCW4bkOJSnyB7wM0tamtOj6TdXKIg3GtJj8g6FvWdpp2bTC3YJZAPxSorRFnROW0AV_cSciXsHck2K3qBBuL0jCDQgmiG-tPzpbTXNirCNR8PpP1L8iF8OvSiE0aabeEMhqsCAmrpoJwYaBSmt7dMycByuDFxNWgVVxhSC59H-S66_jSn-ua84ay5pRcqCVpZ-es0mIlsN_TrChKmwt_xkV41P4JDfMaBsuIBuTEDPqn6uy70rECPFYFQ1A8HCoEkX3JCbXfRlzcvdKmJI2htY6XMQJi48tUcfPdLeEpkxhEFA55zrvRk76D714ljtEw1sseMShx5qm6Ggx6LLBS-hC5ELatPDTa2Rn2nyY9bCrK47DAj13EmByAu8ydijZ8Pcb3Uao4dx7lkBQs8InmS_WbJs=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/RIq3EgNsfwcZxBFY3B/giphy.gif";
                         description = "-Codo estático junto al cuerpo\n-Llevar peso al hombro contrario\n-Espalda recta, piernas semiflex.\n-No balanceo";
                         muscle_zone = "biceps";
                         hip_weight = "6/8/10/12/16";
@@ -1785,8 +1785,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                 switch (i) {
                     case 1:
                         name = "Curl Banco Scott";
-                        photo_path = "https://lh3.googleusercontent.com/qXOn76A0V3vvjW_BNApwrN6UQ7wWtFhxTA_NAzC0b8EhA1QQBUMhlfwewS1jSm_u6MwmqRL72NgMcHmBSCgz36DndbTyjCuBHTLhxn_qT06yISnO0EKGxSukGNhcKiUkRJZokLuPIWDaeLuG-XiyWwXLabYxGrPMRs3EtzhNJc-vSiTwa9eWIDV0T7ocCcE91iHejJvspuqBCNMvBxPlEvu5HimGf8tW7I03KrhKOmVKU9P0xUl58TpMfUKfbXwtF1iHJ-Q5iuzbe-opm1fLJozz_zsfV5aOxJA70jNsL_N8CAO_2ldea_YUBoxsmAtjmjCe9mLEql4K8gN18GXkXoYf8NTKOl5EUmzodZPOFepDIg9yj2--Au1O5ouUZevHOFmp-uid-EuLQzHF4jZh8tOVF00WC2iFNN9OSDaZ_aYTUyp1ojaBYnRUdBHquY8ZzaxOoqXnWVq3l59hU6WHfA4S7T3XAiHNtiHYYIU3XiLwBVIbyRKPILjTxbiSuYBD6ias_Z3HzwiZZybOjOvo8pBKr4yVvWEeUci5UfFMheQ087CRUbWRCXWITf1vJKEzvp3VW3hNHnycXwb8tvYiQeNMRWddViZkhsv-zuZJ045ZL76mmP2JXYpIwa6oycwdvBqMaUAfq4mdl8ba6PVEh21MVGPEOhDUIRHVxSB_q4LzSjdHQIzbDvXa=w712-h632-no";
-                        video_path = "https://media.giphy.com/media/4NvfWAwJOKO31HviTb/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/pRIE4QlR3Jqst687rvI1omr7prWibo4_yUh_w4z9LR3G9snwzr8NCXahxQbEN-uwToWv6n1FYVURja4JWpxHn2OjwyxybC1ty8n1hkMjByKTgL3-7Oenz9bFCl19PRSp5u6p-BKHAJHNflrqwb265vqDi4BD8oBWc5YYpw-yvLfnBVTm4A2592jJCAc54HMpwfmZq2MbS1VuOeM5-XD71EiplnhidfV5lmoMBQMLqzoq0pEoRVvYzEAq2IivbdLkLlZvXDuSAsqyrgfDjo2WCRMNrtiajG0mX4JuGYyI50tJgn-UBBx2r9MNkFWMmnkjgDgegY-7WSbPYlZ7W2kX8_oxWKTWDphwyx2Sn9evhclZpFgqMnlWd9A_3ZxR2mm-vzVhpMpClgh_aLYqhU3uo-A88Z7apu57Z002FPw84UWIoTeX9vSkpw0o4b7d_vYGogPU5KT7qpveQ_gYGcJDNf6LJcjYL26rtLEaxkTT4xtZdhodJu5h4K6Pa72JXpQrX7RMMN1W9E1T6XEc8WZD7nMvpBZEAXXq1CMNdnrDqq0VSYxSM9YB4QQdVQG67SZCbVIwouS-ocYxQq54VgWI5aqB3YX_UdZKEMwpHaTn4LgGGbvLpoVZ9_ygqS_O9DaToedTSEM6IRNaseGxz-EM0mEOLouTO3M3aHpkb3liwolhmKQ7OlRlD2E=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/VhWJOdfeiwO523mqlg/giphy.gif";
                         description = "-Banco de 45º\n-Extensión parcial del brazo (bajada)\n-Codo y hombro estático\n-No balanceo\n-Espalda recta, piernas semiflex.";
                         muscle_zone = "biceps";
                         hip_weight = "6/10/14/16/20";
@@ -1796,8 +1796,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 2:
                         name = "Curl Con Giro";
-                        photo_path = "https://lh3.googleusercontent.com/9dX8q0rdbHl06S0zybhrOHjLBKqcQUSX9WhsulQwYXj67ZBi4Y28XEaP3UWvBjXt8fJu61ghRRYwO0i71bvzbNvc8j8RJ4B8dK2iXnddoyXOg0-hrG86i-TPSzbDS1TIwKyV4nMcMg9uDADyRYA5eRoko3ZyxZP2zB7rGJrxlKw-dVgevkmNSU23l_nGYXgIbOlwVh9qif-Fbugslj6Ueezq4FnpPTBwN12e8nFLjjlnvz0km681FY8iRRZ8tq41buxY5HWirmkaq6iA5nkiuCzAWcYb-9hywHRJpbgzdpzSoajYMQ9JQHSdFl35v-Z7a7rGbD5uiT11XFVWTqr0IxLET3zyI7v9bEp5CdGuS3QePSNn4cnmykqnNyPPPP_YYtCXX06i5qhkN6yqA-Eb6ItMGQetWIVxtfxBnGiKkdKC4i4mxKg-MMzbpT67RFlNtx6CJssLx9AktH8y1OWpsJWizX_8hAhCa79ym9zbWe7frrZptGBnPMg9ZMFZSGMWUl1E4fJ_yg4I8zypV6AifPdVl1haNPDEPuZNL5Dg4cEhPY2WiA6yPMg_vGHVzAPb6SgcvzLbTElY5x5QEv-9p6DVv8fF2jCQXpKnVk3pPcbGxWBW8syFeWmx1ctjTVfc9qfHWgcSmUnGaFJxGE_OFCRLaFOpOLW-JY8Gmacp-Vy0ML_MAURzuLAR=w711-h632-no";
-                        video_path = "https://media.giphy.com/media/SKOXeutd8KJNiXTyEd/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/ZO9glHJtn3KaTR9YtI-oaTQv3mrNt4LHnCEgP8HCI6hCFOcqzhSjNmnn3fmsz7j_3cjfHmfWv05vCsxZHVi7H7RL8QMzEEt4-AstdFQJ_gYLMGmRw0Ey-d4lX2MRVTWKzrfglvkVF9sZQJJ4HAZJxxHtUxic8pwN6albBsb0wGLRU1jVKzvm-2OXbo6ordPPdqPlor2VKUfGsbBlKNSAIQPFr5qfTztKcZX0-X7ZbIVdmagsywEAIG9AlVpDuEnhHO2Ue3UkvmRv93ZetNwMEJlGaO3y8t6kVwD_moW0U4yDJ8R9Lpfp1b5Qtk2wk46PYKziGU2nMT9dF-m9YZzN1RJ-Kq2Bt26SRKue8cqCTj40xt1KgAt0MRMZtx2MQY_jF0vO11ht4ZSrh9jh0Za012l47EoFAw1xycTWkLyqGGq_k8RIrgjAvs5Ok-c1R8V-kMy4oFXf1gUXYuq_Dn0mRmEywjyEvejwvPmnJq7JWRFdCSkZPYojFxtm2xUXOdv2SbWTQjgZLOViTr-oizmpROFfiUw16k1faEhlhZJZg5OR6EgH74zdLFOzLEG_DV4Bic82SZWnS_e9R-D7kQ2tx08W-5rSg7vaD81jfWRh5MAysZ0tq99G7CGWjbbP94YHTgQ216-xlABxpF3m6I73ZHIRPjiF6b3AgQ4eGMfc1dwRrhhV0oGZhBU=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/fVsIvHObGjxNJiBXLA/giphy.gif";
                         description = "-Palma mira cadera luego atrás\n-Alternar der-izq\n-Codo y hombro estático\n-No balanceo\n-Espalda recta, piernas semiflex.";
                         muscle_zone = "biceps";
                         hip_weight = "6/10/14/16/20";
@@ -1818,8 +1818,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 4:
                         name = "Curl Martillo";
-                        photo_path = "https://lh3.googleusercontent.com/-GhEB-qYcj_5hNPnDJDE2yd5gssUYbj8PzRp6IvkYEesl65qepfNTQnXTDwH_wJpXzCbis-1IIfSw_Sd3OvTkaVMYLtSpm0s7p_JTbLu1f2RmKv_myRPTI3qHlVfr6TAv5hCJxDTPBbzB3fDUKSyySTcAn_9ceyLMk1MWRY9hzhWbsfNipsQYI4CnPgOvuXUqnxWwR3vr6UjtWHrgYnc_DeJoM1uvyaEPqxa4G7PJbH3ih8GfW3RrO1Mw6PDlzP_Scinm0pZXnVBAXrvEaI6D0T3h5jg7VKvD-tUIhtQW4K-UYh70uYEmt0Q-DWxsnTQUUtq3d1y2NtpY8FDDNmrp1xm1FCYciqfdeBqdPuBYZRNfrX_NNX_D6R2HmTV-cDn5CmcLlcJbxJAdFKKLn2rZWC5TpcjDp6sZebgDvgg96rrjXXnEqazMK21FuhjGMYTLiH3kaSXF77csKpyh0_1YvcKzjwEtkageXrqtiz9xzVzIWdIeEZb0VxIOcXtVtbixOzDUu3sIJ_bGPwXYVtRlaHSHXtqWBoO3RjSAJF8_qBK5AMyl1DiaCAgpUKeHuKhwh67sCtcdN0DbrsQk0R5pc_FPSNTdhqtaQtTQbbD321jnjSnaL2_KXf2WBkLE53w04-LAXUhOvm9VVlOoZs4__eDcStt1ekbpCnYVquRRI9T0pu8keQcfC91=w711-h632-no";
-                        video_path = "https://media.giphy.com/media/4PUq7Z1xwozF0FuLb1/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/oB-fC5yU5eLKXTypVoDnEh0Umhr4feC19A54N6PsVb4zyMl--yrGaiEDPC_0SAsDt0BAuXiQ6HkRlJWM-lLATiSXn2nvij9bPKzwHdnsj0fb-A4jb4nk5-dOgmp9rrxmyWJIDYhgu8XcsWa88tBrqyFGEEbFFSyqXyzROSjnWAL-REtuKv4nB99GFREfJRWsj4OgBMTOvA4c9paur5iShJf1PsHkZMrK_lCIBQT1CgGZl6lGoal0PbPgCftpwTKlpPW1MqMpzOKN5kUAaXfTBsByrTaVCxnEaMgw_9o9XZK4RIgKeW09hfHeflUs5qz5A6y4j3mKNyKAObJsahXvCuzpPOZMeAkcPFNPKJfmh4Xw7iSm07_9ORi1pBO4OaL_M0aVXb57BQmErkWfBdvNfkgP_kvvvILK1gMZ3y1Ey-sZuAoy4Dul0BX7EVCyte91p-hLxOEsf-unPyXxoKpDs7j2aZTpQXD5VzymcDY33adjBT6BI6ZQ6-9BMXdmGQDPt4zTg56AiQf_L5sPMzWlw_FfOChXDVHLmKYfu4vok17WVwKybxIQSB7HWniinL9mRgqzhqbozGaQkYPSSpi6WVvF_-0PvvduczfHLNiHrMTpZ3O2xx-oi5jyapDgtFTDaxEzKN1KNC07XWhbse4WQFHfWoplyBuZlmYjdP9OTMMUFJefJFSBxlE=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/RkPvuo5P4IquqssAUP/giphy.gif";
                         description = "-La palma mira al interior\n-Espalda recta, piernas semiflex.\n-Hombro y codo estáticos\n-No balanceo";
                         muscle_zone = "biceps";
                         hip_weight = "6/10/14/16/20";
@@ -1829,8 +1829,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 5:
                         name = "Dominada Supina";
-                        photo_path = "https://lh3.googleusercontent.com/VBU6-xhVL5LwQTp7U8Iaj6ompCpwtub35k_NEoirLFny7JxAD1y3wYcXREE_Dh0EGtGIPE6VFoXZe_r4e--0XM57AgxgC1Lv6L-C-NPoMhMc6W4Aln5ozgI_VvGcjXVrwACQRLyEA-_FNjHvW1CxKrwYGCVmEcfZFXN_xPMIJU1DekGUELWNu7KUa3Py17CZ_yaO-1nI5gWUY1F5Am0Kb57FxR5gxVPZxp_RBGLVKS4HKQIPySZC17B0X5xmJPUagdoovZbZySpf9fjXtVMzU1rTP9DMJLJXResKJ_n_2fdYU_M6MReRmkG9Yfd-7Q0_5tnnwnqJavhQGcRXm26N5NuZGUc8KaW8-ymVGBvmHBLybmuI0-nBRRhp9nCV-cHw8KaDeInVyC00M8t3UjpIfYB2i9kVaqQJocUmXB72s__m0SndwYW21DBzX-bAjBcuf34yB58omUmEjG_Uc62Q2VIi-cXBdWaOGzNgtP4lFQij3uZfBWpaOM93P2vA2cZ_vsUtWqIbxVmk8Hn9v_ipORkSfB69enGhquArBtfFr3COw1doJsgWXkoHI2UDuqL_78If5P0zudI6gJWbn8DLM5_8xMB1X5ZH3QsY47Xl7AcsSppUiCxdS3s2FaXKtd0IVqp2ZKKTRntjWX1CXMpUqV5-Yt0K1rFUCs6ayPDY9DXXEumfLoqzU6By=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/jxa5Kc03BqSQZwy3cD/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/WtLoEjfHN_gAwBwJq7oEZqtiKDtSxQ3maYEKHKqzDz4QNQMvfcgeQhiFhgSw1gQIRn2qv6Ci4ufFOgtfydXKSYJiaXdWA2bzYjAhMrcZ13BJtta63KdvclqgSuuM_dMbFbOYgEvmRSymQSj_iZdApTt2JaRYuiyh9OpGAuxY5msraLDRLUZXlGSJl_zrIEUGiN_MV8HRnH_3GX3tShFL-yCLSNzgmSCdWVBg8M8sMg8fhycH_hFhjhUUsLhmZpONSXMj1NMya1x3RsMX1kKBKahKsw0skwTPL4rVrPGSo3sLudSLLIzEFF8Yhsb4pqxbBpq6y8owBrzYabaviqogPfcvbAicr6E1SRECG8bUxWkC3dYblU6EoRCMrwWE4lftRyLbjaPSYkz4MnQErjug9-jEQ6v2IOkOv1PKCK3tIzy5kf8hkCRlKXzNFG97oTx1PZZmZebICyduFCEEuHsa9-gErxAkiNqjM7l4Kui7VgmzqFDGV4dlUgaREProz3-iB3WCEWkiYLhIxPc3K88MSmU4I0HFWIHTi9LAG15jG-PjM3GpcN2RXsB_JllRxNTraEPn3BeKY9ibZO6xUZkCrYQLKHSDS7QlT_PWI4rvuRyh6e2ELvndwbmvnyKCJyNy3F30HWeytsth1Q6nGkjloaMweb1PohsrjftGT9MAQ5V0-0A12COs3Zc=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/d8JqSoAihwzAZAnnFC/giphy.gif";
                         description = "-Agarre palma mira hacia atrás\n-Subida con flexión de brazos\n-No balanceo\n-Peso con lastre";
                         muscle_zone = "biceps";
                         level = "hard";
@@ -1841,8 +1841,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 6:
                         name = "Dominada Agarre Paralelo";
-                        photo_path = "https://lh3.googleusercontent.com/-qwHc8VuzGsK9YYRg3FZvspbA3YaWg6oLF2x7VRu3L0nSQJ6w7WQZmXHx6nnnbfmm9TkB0G6wGMeSL_C1X_9jX-n8rNO9bGQIONsz2RJErp23Sr7AVLKcK5LLcQ70mng7IAJ_wVydDqOvkl3zuZ2pvIwPBFkLBAIoOQMxsLmHD5aGOn5WcGRrpbFoFUc7TPjjN-mqbg95NkI8-s9WsiTo5oeoqyFjCt6j0DXhMN5f4R_F_AnlQ8YcT7cGj9dEcs1VZwkNNWGScxykqHEazxlx8aHbPaxWwQ7jhgQ0HuIXZ8itIEHW8RPkoKO5VaMR6m1d6r9GHFNeonKTaPCIJuxmSuZQzjiD4MK5CJpeE-5ao3E78Bc1qHCr1XJSKeCe_bM6DxBo--AxaudK9Le-s6niqS152ELc8GIoqd7xNF7tZHbrVgRPPau1IYyXCuantoed--llzUau2uwgglv6mRNbwtvoWjaQJ_iqekr849PCYBUIzoh9QYI1ReYQGDrMsS2eui0pqd-n9CE_W30e1urgEMdlL00_MhEG6YoR_X3RHRcW3qUZ12pVSQLZL68f9mQiI-0esKrcL-WEDpRd5HjkCOgWRk2gAT2ERqK_Cm5RRxPgi5ibAMQf7oIydW2s2Cu2ISpOGjvVCzeTmLlqqmwBBRdPg1B2OJoCv1dg8r47eZvka_YZRtbmCgy=w711-h632-no";
-                        video_path = "https://media.giphy.com/media/9DjRZ2TELxSmpeytEu/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/J0Pqg-Q8nwTDsH9F8G_hOgbJDwwyTATEL5eJjaCq-CZ61vSoUTkayXnYmYgrswq01fycKpHlae_WKckKMtv2R0DBSn8AU-tr89FE33hPjVI0avfk2ZvNUsClYlzEvque2i6VB1ZL4mhe1PkEKUAV_fwHoVslXWQ0FN5z0dSgnJX5S5BboEfp-0yfwK_gufVGZX0rrAaaVTAYBKDLdCl4RANVEMTANYUS2Qu-4BgUR2GBm7yBKpMB17vQgOfeWNDF4rMyC0uKLBinP2IbmWobqj8ttpPSM0-SPLcxcJ3bEBUT9ado4AZKf_O1W_uW2J0m2vGjkdfT-pD_QIsq8EQEjaLH_XfvFCiH5mVKZIS5aM9ipaV9p5t_dXjELnIAFk7MGVjbrac5lVDMZwkNfPjrW1H_x2JllhR_9FbF5CiRfX9-Q02E9qOAQ5__ik_aBrbrk53VmekDtpt6Ro0toJA5214WsU7JfKuCs_r_LHnzNo7mdTH4-Gr3tmyXYQWi-F-fwPY4xXorGRajVYZbrXMi7AWNM7U2eAl9cqWWX7f6CvDviIbpjZkFODyKM_Jiymk0UIYHCv4ssnT0Qo7HK6VjyZTBKEaOE6DOk2HJgKeN5Hs36hYn1mxx5NlYllc0nwx764fizhcxnIbBrrpvO914F2JdJalRsqxvg05bChfkTaEjMX2EcPsvPC0=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/Yochk6afxtXIRqeJzg/giphy.gif";
                         description = "-Agarre palma mira hacia adentro\n-Subir con flexión de brazos\n-No balanceo\n-Peso con lastre";
                         muscle_zone = "biceps";
                         level = "hard";
@@ -1853,8 +1853,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 7:
                         name = "Curl Con Barra";
-                        photo_path = "https://lh3.googleusercontent.com/41LuhekQGImC8YVf8WC8s4Agh_PQcTX7o8t_sLcqEfCdi9ntADTl3zpgHX61D0WKfzjz9mHXkieCqU5fn7LIxd1Dt-k6rS_d_s2yTGo0YACD774ixYjHH02pR7T2iHQZkJpUX2OyDi6dbalpQVR6ojukcv9IvMj9CHBLFvYodax2EIhrd-0W-BeWnf3oDo-qHACa8MAqNDLD38fBT94YA0PtqwOsh38dAC9d_on7YbQTjXqgE-bbYVT8xLOx__ua82NCQg_x3Wls8dz9x3zk1SHsB3QZJfXaUfsn40RQMVAbQn4l2oDKfcHBMRlZ621DFvg53dgASK6m8XB7N4UU2CnnD7TmgOnwzAWgw1tFkRSHeUVKhP79o93mW7lUYyWuEH9SIJj7sZQBk1aSwNjafhlo_IZelwGWA4jZ_z9EZgC6TZSMkSZEykZhIXPrtN69-gRVcwFkbsI0XG_ohEzmGYJm45_hDioiSDUPdBhz1EanZ31dQfLARav9JhqV_tXzAp9j-ur2KbsndtywSbR4bdkcJ1H3vnlhD9O9znO7n2kGUSDCV1U75Y93g9J697K7JZMtB8Qo72iYVJX0gpAEtGqIuCG-VYF6VDyo8JbT96Thrp0svF9YdNtFbc6fpUXagLJB6061RVQGCQV_GCdMoAPfl3tlhac7rc3FOfUuLm6Ec_f66dpPn3SS=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1pJ7pWHYBQM55tBume/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/HRUGK5w2wdCgvxhR8RGxZ7M6kaW8o5NSKfm5kP8bRsz2Qp4vT6MemYwdXQh4IYFuI6emJ_9PFxNejzTMejqC4c0yYlnHDcYS4qovulhHmBDF9_nclaF7rNOW0YcUDirmFC4ZOqVqyyiHRmO4NT3DSvDikWUyxHKfCcHTgiPePpBM-wQEp8akDEVHcsraGtlMncD04NwnRB2FogKtA2yybecmAE16WY7ksL1HKr99TFxnvZzSzmOTx9GlgJCXKgV45mSk3RdRfShA7VihvVY51xgbC2WEFY9ej1_9TV30NUeSvqiid_jt4XMDppzaVArSIp74MoZxnBf5AIbMD6Z_H5py5ke-Ikw1uEsf8ftJhJZ2sgrs1cjeM1qDZoAM9-nW3RWr7CgOCVJNYnCTbsyj6sTsUwZHgJRwWTHGZw6003DK2kmDc8NEe0aVLH-sVhtNnlXueNedC21fl0tFXrvyz_0RYbjPYcP9OQmuh2MWZxcfvU2TrIJ6bEPgfuTh6OW9er3DwvDjSLi5emcuF0cHBw8vysN9AwHS6dQxXFbOvQkWGD_qpkroTlsgRiaz53f3BVIGYQ560Lo7sDlU-n_XKvm2XJTbP0TbUoO6NjWPorzOm_mUG4aUyRvFyyT8Xm7g_O9K5cAxesfIwjWMPUwfvfST4OVhCNXX57SM_4aRQ6C4pP4-BuLxCfQ=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/JQAOx9yGh7c7Au38qv/giphy.gif";
                         description = "-Barra paralela al suelo\n-No balanceo, piernas semiflex.\n-Codos junto al cuerpo\n-Palma arriba, separación como codos\n-Peso no cuenta barra";
                         muscle_zone = "biceps";
                         hip_weight = "2.5/5/10/15/20";
@@ -1863,9 +1863,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "c.larga";
                         break;
                     case 8:
-                        name = "Kettlebell al hombro";
-                        photo_path = "https://lh3.googleusercontent.com/gLHzktKF3T_FBBAC4iaelB6m9gQuC1Bjat6WRHXo1tbCgBTwwuuHpglud8PmVlGNMkmIHWj7Bqu1dgI3Q3dWeWJfOhNFDP9l4mG-hiUpqBcJNuJ3gy1ZYoF0Is1AHi1ku0XaNTw95_9M5zN3SsaiaiJDTyty4D9VqBUjL1I1CR7bzZ43qYQX4_yPWxpo-r5ovgN1tpgRhJnRBcatKSGxebXNZ7QK0cgv-B1HVQGwHIGWP6zKKgRlT_BY5XsKGPtrwSK69dc0HWJvM7nqVe_qVz_4XBpMwZNhwKR09D79pElkO9AiKQch4zDLoMd7KmtX0_I4OO8S6p47tdu3LY3zCgkXA77M8_9MkEprQROc3M3eBE2QU6HDnWixdMTDNptREbD4WFpUnFPk5tltXdgBp6tM10I1Yy67LBYhHJiY2sbeECOZYcF-OlaiWhvUwNBq0AvclLZmAb2HXkmGDL_iwK4msUXJGmvhJaujTBc5qdcAkzHdbOK6mpWAlHboqwJUBY-jwqXz1bFkqyKnjFzCso15QNOHe9suO0nhGOQM5pmCpu7I_G4b7Umb8H83SJ8IEpCr4FuYjX8kzV795XbBt7xutGyTzqROjoJy43q0I-CbCNsGgQKN9Wec9XhkHgDaDggPcQez-Riksz2qTm_AJAO19Ilcuf6H1_ZdchwHa-T9HUT1vd3_GdPG=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1dIXM606KyXUJSvQLl/giphy.gif";
+                        name = "Mancuerna al hombro";
+                        photo_path = "https://lh3.googleusercontent.com/S2T7SvqirrAl9QudxD7VcB1FLB_Jj2fFWhqi_A5L8bBcni5x3A3KDwgh69IcJ84pOM9oYxhmQuECjLdkui80mtBK2rOGmIM5ZBTib-eSUsTO3ctSQnRbs1y-kds4IvCoaF0gMD-AaIXUPNFSmUNf4UAuly5NTczv7lURVcCPdUUdkPGmXMAxGT-KD9YNHTBAp5_qyJlxufElUtHF6YDiEzyiodYakWtplE1p1l8NSdrWsRcaUpqXdK4FPcn0LBidyQBgTrVSVDNKGV_W78dx5YE40daXrQCW4bkOJSnyB7wM0tamtOj6TdXKIg3GtJj8g6FvWdpp2bTC3YJZAPxSorRFnROW0AV_cSciXsHck2K3qBBuL0jCDQgmiG-tPzpbTXNirCNR8PpP1L8iF8OvSiE0aabeEMhqsCAmrpoJwYaBSmt7dMycByuDFxNWgVVxhSC59H-S66_jSn-ua84ay5pRcqCVpZ-es0mIlsN_TrChKmwt_xkV41P4JDfMaBsuIBuTEDPqn6uy70rECPFYFQ1A8HCoEkX3JCbXfRlzcvdKmJI2htY6XMQJi48tUcfPdLeEpkxhEFA55zrvRk76D714ljtEw1sseMShx5qm6Ggx6LLBS-hC5ELatPDTa2Rn2nyY9bCrK47DAj13EmByAu8ydijZ8Pcb3Uao4dx7lkBQs8InmS_WbJs=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/RIq3EgNsfwcZxBFY3B/giphy.gif";
                         description = "-Codo estático junto al cuerpo\n-Llevar peso al hombro contrario\n-Espalda recta, piernas semiflex.\n-No balanceo";
                         muscle_zone = "biceps";
                         hip_weight = "6/8/10/12/16";

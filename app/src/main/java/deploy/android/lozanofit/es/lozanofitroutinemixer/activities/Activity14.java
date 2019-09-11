@@ -62,7 +62,7 @@ public class Activity14 extends AppCompatActivity {
 
         //refresh database with new profile data
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 43);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 44);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         int weekdaysint =Integer.parseInt(weekdays);

@@ -56,7 +56,7 @@ public class Activity16 extends AppCompatActivity implements OnDateSelectedListe
 
 
         //get days to be selected
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 43);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 44);
         SQLiteDatabase db = exdb.getWritableDatabase();
         String query3 = "SELECT * FROM Calendar WHERE profile_id = "+profileid+";";
         Cursor c3 = db.rawQuery(query3, null);

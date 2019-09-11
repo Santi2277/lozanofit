@@ -40,7 +40,7 @@ public class DeleteProfileDataAlertDialog extends DialogFragment {
 
                         int profileid = getActivity().getIntent().getIntExtra("profileid", 0);
 
-                        ExercisesDB exdb = new ExercisesDB(getContext(), "DBExercises", null, 43);
+                        ExercisesDB exdb = new ExercisesDB(getContext(), "DBExercises", null, 44);
                         SQLiteDatabase db = exdb.getWritableDatabase();
 
                         Date currentTime = Calendar.getInstance().getTime();
