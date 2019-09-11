@@ -110,6 +110,13 @@ public class Activity15 extends AppCompatActivity {
 
     }
 
+    public void goToAct19 (View view){
+
+        Intent intent = new Intent (this, Activity19.class);
+        intent.putExtra("profileid", profileid);
+        startActivity(intent);
+    }
+
 
     public void goToMain2 (View view){
 

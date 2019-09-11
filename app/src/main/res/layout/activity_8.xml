@@ -18,7 +18,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="@font/freshman"
-        android:text="PERFIL:"
+        android:text="PERFILES:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="16pt"
         app:layout_constraintEnd_toEndOf="parent"

@@ -84,7 +84,7 @@
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
-        android:onClick="goToAct15"
+        android:onClick="goToAct19"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_keyboard_return_black_24dp" />

@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Activity15"
+    tools:context=".activities.Activity19"
     android:background="@drawable/gym2">
 
 
     <TextView
-        android:id="@+id/textView133"
+        android:id="@+id/textView1901"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -19,7 +19,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="@font/freshman"
-        android:text="Usuario 1:"
+        android:text="Perfil"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="16pt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,70 +27,68 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
+
+    <TextView
+        android:id="@+id/textView1995"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Dia, dias a la semana, dia actual, minutos, nivel de fuerza, objetivo y metodo."
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20.5dp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1901" />
+
+
     <Button
-        android:id="@+id/button07"
-        android:layout_width="163dp"
-        android:layout_height="149dp"
+        android:id="@+id/buttonData"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/btn_border"
-        android:fontFamily="@font/freshman"
-        android:onClick="goToAct2"
-        android:text="Entrena!"
-        android:textSize="11pt"
+        android:onClick="goToAct9"
+        android:text="Modificar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView133" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1995" />
 
-    <Button
-        android:id="@+id/button1501"
-        android:layout_width="0dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+    <ImageButton
+        android:id="@+id/imageButtonDelete"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:onClick="goToAct16"
-        android:text="Calendario"
-        android:background="@drawable/btn_border"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button07" />
-
-    <Button
-        android:id="@+id/button1502"
-        android:layout_width="0dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:onClick="goToAct19"
-        android:text="Editar"
-        android:background="@drawable/btn_border"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1501" />
-
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@android:color/transparent"
+        android:onClick="goToAct18"
+        app:layout_constraintEnd_toEndOf="@+id/textView1995"
+        app:layout_constraintTop_toBottomOf="@+id/textView1995"
+        app:srcCompat="@drawable/ic_delete_black_24dp" />
 
 
     <ImageButton
-        android:id="@+id/imageButton614"
+        android:id="@+id/imageButton19back"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginBottom="16dp"
-        android:onClick="goToAct8"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:onClick="goToAct15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_keyboard_return_black_24dp" />
+
 
 
 

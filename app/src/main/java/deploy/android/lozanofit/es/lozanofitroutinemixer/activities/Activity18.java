@@ -29,9 +29,9 @@ public class Activity18 extends AppCompatActivity {
 
 
 
-    public void goToAct15 (View view){
+    public void goToAct19 (View view){
 
-        Intent intent = new Intent (this, Activity15.class);
+        Intent intent = new Intent (this, Activity19.class);
         intent.putExtra("profileid", profileid);
         startActivity(intent);
     }
@@ -40,7 +40,7 @@ public class Activity18 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        Intent intent = new Intent (this, Activity15.class);
+        Intent intent = new Intent (this, Activity19.class);
         intent.putExtra("profileid", profileid);
         startActivity(intent);
 

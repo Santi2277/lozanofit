@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/icon_santi_ball_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Activity18" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.Activity19"></activity>
+        <activity
+            android:name=".activities.Activity18"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Activity17"
             android:screenOrientation="portrait" />
