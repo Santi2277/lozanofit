@@ -43,7 +43,7 @@ public class Activity17 extends AppCompatActivity {
 
 
         //get database data for that calendar day entry
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 44);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 45);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         routineday = getIntent().getStringExtra("calendarDay");
