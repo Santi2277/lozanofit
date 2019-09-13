@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Act2EndingAlertDialog;
@@ -73,7 +74,15 @@ public class Activity9 extends AppCompatActivity {
 
         intent.putExtra("profileid", profileid);
         intent.putExtra("comingfromprofile", comingfromprofile);
-        startActivity(intent);
+
+        if(name.equals("")){
+            Toast toast1 = Toast.makeText(getApplicationContext(),
+                    "Introduce un nombre", Toast.LENGTH_LONG);
+            toast1.show();
+        }else{
+            startActivity(intent);
+        }
+
 
     }
 

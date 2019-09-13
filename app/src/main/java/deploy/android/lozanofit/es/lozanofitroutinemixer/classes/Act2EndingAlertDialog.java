@@ -83,7 +83,7 @@ public class Act2EndingAlertDialog extends DialogFragment{
                         int calendarcurrentday = currentday;
                         //update currentday
                         if(currentday == weekdays){
-                            currentday=0;
+                            currentday=1;
                         }else{
                             currentday++;
                         }
