@@ -36,7 +36,7 @@ public class DeleteProfileDataAlertDialog2 extends DialogFragment {
 
                         int profileid = getActivity().getIntent().getIntExtra("profileid", 0);
 
-                        ExercisesDB exdb = new ExercisesDB(getContext(), "DBExercises", null, 45);
+                        ExercisesDB exdb = new ExercisesDB(getContext(), "DBExercises", null, 47);
                         SQLiteDatabase db = exdb.getWritableDatabase();
 
                         String query2 = "SELECT * FROM Calendar WHERE profile_id = "+profileid+";";

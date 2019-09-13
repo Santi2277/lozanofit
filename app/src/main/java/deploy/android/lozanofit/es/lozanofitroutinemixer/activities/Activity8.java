@@ -25,7 +25,7 @@ public class Activity8 extends AppCompatActivity {
         setContentView(R.layout.activity_8);
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 45);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 47);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         String query = "SELECT id, name, weekdays, currentday, dayminutes, strengthlevel, objective, method, def, more FROM profile ORDER BY id";

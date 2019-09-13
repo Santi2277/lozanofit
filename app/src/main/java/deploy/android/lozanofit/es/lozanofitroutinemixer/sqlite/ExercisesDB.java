@@ -35,7 +35,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
         //if db is opened correctly (COPIED FROM ONCREATE METHOD ABOVE MUST BE THE SAME!!!)
         if (db != null) {
             //Insert 103 exercises
-            for (int i = 1; i <= 151; i++) {
+            for (int i = 1; i <= 150; i++) {
                 //Create data
                 int id = i;
                 String name = "";
@@ -79,7 +79,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 3:
                         name = "Curl Concentrado";
                         photo_path = "https://lh3.googleusercontent.com/lzAS7j1jzb76P1iit8soZ3jkC8aM3CBlfspwBmRKLTXyfDM4iAUB0Ex3He67u99cPKhc-zx04xbdahxGcoWQOXTckfVBoKYCrvXGj_6y8SykG4mnnIn76qqlZTh5Dpo_cGG5aKWKtxkiIMEy7fyfUnJs8yAXi9Dpgh7ILLRqzGFSFUq_UKsPECmvxTsGqBgsEFzXE99J5lEJEd0Wf8E9yo8GteNSS4A0CC7ihh-cfNhKswTLlFilxyNkdIxdUFLeGt9wKY5LgYGf4WNoFjNuFklJirSTNynjFwGcxVOrAH1sf2rYg7Pcye3plGKAixTC8bM6zv2wnWRVkD2xzNnFy4Y2dMmvJiWfSPVgU2L010KOH4ij6lUsVzIuuPrkC4agB43Kq9c4CtYVLZdYHzZDKl1PCkgSoxuVsitaWpul47gy736LNqVWtshk6Dvy6LeP7MyHJzUAJeenDuk_J3nVdte3Igf0TRh8C91egYhsgB0kFViSgg5CYvLX4TSenV_vtm140wjrcqHFYwumOLmccnf1Cp-QEYJrf3_txpGk5o9Mxo0ggEoCByMMukqE43_RmWl73fgF0MRTKPeRWNnCExlRzOMNchof70Wod-_fjTG6XWrx21_tXXV85u6D3q6WnEWlLCutYb3-m5FCP5Wum-usW6R2hszQ5y5VtMpSRBBxLUrzGDp9Gzz5=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/piPn7NTBIV1QEmmnbW/giphy.gif";
+                        video_path = "https://media.giphy.com/media/TF0SpPp6PfLtd4SqpR/giphy.gif";
                         description = "-Espalda inclinada pero recta\n-Codo estático en rodilla\n-Extensión parcial del brazo (bajada)\n-Mano sube apuntando la otra rodilla";
                         muscle_zone = "biceps";
                         hip_weight = "6/10/14/16/20";
@@ -217,7 +217,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 15:
                         name = "Crunch";
                         photo_path = "https://lh3.googleusercontent.com/5cG7Lb3XI_wR6HGdvjBeGlYosgqLmmxwO6exv-SNm8uCsYenQVeZJDhv_8cBfd5sstWsvL5GhCXPSIihQUkVNVDyDZv3nEhb1Zkb4ciafJIvApdyFu9ZOooal7Q1k-IFe8_MD-o1jSLpdhYEyUp4vEG3FSPnuRvj78JTrx_SJvDBx9TRmgTdA_VvJh46uJ9IoLbGXZCbcjDNu-_3LN5KhSrj8DnqB6cD3nlKzWLw8WjL6mtggXu4fnFGiI8ANNJxZkst6BVBGx-B0ZzHTrT-F6bICqgSz68eIty1S2SB_HNnuZFFZVLyuzKI8krP-7e5EoXt2E2f9-ocwwU4VHD7gvssU3s08IBANd13QAPdzppX87NYtZzZH7ozlM3sCdoSI35hFaSg_2W2glq1oqOC2rQJpT-PGa2lc8iDJLwN2MUIzAnQu4FmqAh5GRbG0M8-2WiL9I7nrhk167LHHnpCOe5Af7MMn2avS9KQXOms0gAy86A6fbn_wzfoJ6kA6vPQ1zobcz3DEbidEj7j5gJ8xggDI5eFf9fZaDiaaxFPTM-QwEgJCMNzz1Y3hb96xAL6kDiJqKVnt_dJZBCN9BWgFBPNxfDQKQ79vB-2YsODSs4XgIZvVIXQeGjERLbSk5MksK18tTRJxMlhT6wIuTGRBSWeKLPVq5lC1DdPqbxv_V73JnQKTSbYJimw=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/BM0iusUpGKKFZeVann/giphy.gif";
+                        video_path = "https://media.giphy.com/media/dyocoboX3Ed5PyoE87/giphy.gif";
                         description = "-Piernas en V tocando el suelo\n-barbilla cerca del pecho\n-Peso en el pecho\n-Subida hasta los 45º\n-No doblar lumbar";
                         muscle_zone = "abs";
                         hip_weight = "0/2.5/5/10/15";
@@ -229,7 +229,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 16:
                         name = "Crunch Lateral";
                         photo_path = "https://lh3.googleusercontent.com/BLhQ6d-NXC0uR0_aB7vJPFZ04iDBFlL91rP9ujFpTGXbkDUU3FxukLtaJoYsU69zxZPXAtf6Jq8MCciJ6CQh4Gt0PVJ9NVa3dDu-vmemQbFFO0ow65u6kFrBNLmYdkmS6KZCoXO2O8j9klmsIDLapnIAi_NBXL_ftgDal0ZU_Kqae_BPCqwznUtDvhEWKrHOnWxEk9lqAxEcAVS0PT2bP1wuDBQ6w-rLQC6CzW0dxxTZme4jqsU6xxMZqaI0wCb82rvzz9IWaC8LrOw4i1lR0NHwGl9XJBjKGnNKRZIPiZQp_SY7Ii-OWxhtG4tqNgO3F4Mnqqzu2098kSfsGceD9KKjhQ5wlxLAAonStQVdqNM9R5s46YvQKj8Wxqi7qlFxtCFn4UFazT1phXyakW_51DBRNSLtcgmQqg4v57VypJ9Ir7XcFRbxVi_g3mCpd3N2__s3tBC3m9w9UfppwSRpghH5mxXqWxWlio6EjFiepgqU-eDp8ID8Uw8Ah3iZzMPcMo8sWLKFd0RUDDWiVQmq0LUEKnAw1YGAGn8Ne1e0_lZCE4G97Y2foPSTRXQwPUHboKDACEV-ztyd3iaq1YHIw8dst4Z5Eo8dcPGrDAQBKIeDEIfv4kABI4tl8WwpaulAeG5FmXHezctps0g85F4U7GZ57lVPkSvHY3lQ0kUAnqz5HbZEu5hfWxZl=w711-h632-no";
-                        video_path = "https://media.giphy.com/media/xV8qT1Fvmv9mP8fCwL/giphy.gif";
+                        video_path = "https://media.giphy.com/media/ihwMY0HajbiJ4Kduj8/giphy.gif";
                         description = "-Tumbado boca arriba\n-Piernas al lado en V\n-Subida hombro diagonal \n-Peso en el pecho (lado exterior)";
                         muscle_zone = "abs";
                         hip_weight = "0/2.5/5/10/15";
@@ -265,7 +265,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 19:
                         name = "Crunch Brazos Estirados";
                         photo_path = "https://lh3.googleusercontent.com/dtRpwCvFwnphzwOwBBwPR6LOIQQeE56cdGv_DN0KQ-LRZumnGcN0g43UU5fj9sWOyWh00nZfNIO4C5pKnamNur7Ui9zxQYRiMSBpQTgRibJYMWGvXtvnsRkZLuYmAy5N3JuLlB4GyXX63DVpt4sOVEPU_E_-ayz2L2oURmriC1Ms-GFs-09SLnrMjLHx8LvwVvKppCf66u7Pr8QKpzl3t-grDsNV6omatEXmvCp3a2a91M_PlldT9Fdv01VUj4B7cPVMEsFrpmuJJD4N0mLoCOEH56_-4CxQFWGD6rB-CXQdiqe0QnoAKCtMDnnb7r-kb4qMdyPEC9iIwwUYEy7q-OSe-algH3LCq-z7WNguC1v0Au0FB8ghA4JNx9fEL6BzkMa107qP9BkSbsQRL013ELAbk-dxUSruE2lek21Xm_71cpPgVRkFI0WkG9A_hVnt5-CoGGuc2t6mC8rsYNpPwvTCiZ6wnQ_8joV2By-Co7HqekdjcsdbpIiQ4FMve2j4aVogZpg2LUwPE7m2VRdAHiijvxvSrpYpmF54G9BE6zAIxhyh53UXAPt0kxnjrUu8DB569yDBUmlSMdc4sv69xyDgWoDlnFmVzAgQYtlC-prA2r5YOJ294_auE6urcRv87Yo20ZAmCpPlJeXSVaKmOvb0x6nR28F4TnqjfgSq0AKQfX8ZnNmghNR8=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/5R1ErA7RqF7HUMTIov/giphy.gif";
+                        video_path = "https://media.giphy.com/media/fq6pPYN8Dp74RynU1Z/giphy.gif";
                         description = "-Piernas fijas dobladas sobre cuerpo\n-Brazos estirados con peso\n-Brazos alineados con tronco\n-Brazos no adelantan tronco (subida)\n-Crunch corto con tronco";
                         muscle_zone = "abs";
                         hip_weight = "0/1/2.5/5/10";
@@ -301,7 +301,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 22:
                         name = "Crunch Corto";
                         photo_path = "https://lh3.googleusercontent.com/2LxKol4oLiM84S0jXQ-9SuqIwkWdi97QW7rLL0IAl3aKJpHkEOrcIllq6LDa2xJJpG3NWiScsHwCU6Fm8RKqZ6EOsqj1qtCoQS1qefoAu0vDlPnuWjdaHG3pCpEDaUrtIGDZtERRpeyFjfoo0ZJ_rOD4jYabvoykCXhRuuYgf7hT_S817z6Vpu-ZfNVjcLl53zydGQJS7AAK_Yi9U0A63wHC26X1bcgVKI6rB9jGL9btsTMu5uH0TAWWSOk1vdfejDOmERqRolurVBioYt3OAmvWD5PAPMs9wTYn8_QSnQAco8ayUZ_2qkXN7kg476xn2AV578A-psvalweeHv2zy9YTOdLkp2MVfbSbTKT7a7BUBQw1mQaqaBxPLTifqIG_rzVke_VcOO1IbZlG0npgHVWxJC66uC90WAieVQqYMKnmfHhi_Ywg462IsHq9CuvRMBsbdTYqKvNShBSEJVI7dI8Qv6td1IKKY9BidAVXH7etfsbDa4sQJ9YO0NqWh0beWZSgSJ6ZlVWENRrzusdSOHyOy4f7Eg-Sg7e6iknUmtvIytaybttBRf9I6RAn-z83Y2RRkPuVK2_KCd5-aR9mbuL9g2uDZ_bc-KhoIrCx71YieDjgCq_fMdPI-avWnSufIsMiEsmtPaJ-i06rlJKDRJPm5JjB6Cpx8dbn2Uh5Xb5ffm84tEGxS6Qn=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1rOXZsMytyUeRi3DhR/giphy.gif";
+                        video_path = "https://media.giphy.com/media/gLKiKUHjU1ynAno8cr/giphy.gif";
                         description = "-Piernas fijas dobladas sobre cuerpo\n-Crunch corto con tronco\n-Barbilla en el pecho (subida)";
                         muscle_zone = "abs";
                         hip_weight = "0/2.5/5/10/15";
@@ -313,7 +313,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 23:
                         name = "Bici";
                         photo_path = "https://lh3.googleusercontent.com/Ug04Mj3zxMe5hmY8QGyhsACJaTB-zbY4jUGiKSjcqj5_QL0bex1tjpbeQv_jOVzxWv93Ipnbix_0eztAfrTP-lhCfYALG3euMPLrQTUNvSCn_3xBPzua5nqQR1bCEy28rZVilBegbZGzS7un9lgnyY8b83xvynEkYQjqPu0AEYXrXasn9iXR4ord6RzaQi1bSd1-psVTFOzh2zsyGmyJLhHbZ2iMUk3n9cCI3L8Ujobdx7C9gNF-HvnDAmYVAgvP0htsjRez_pI3ZCFlDFuHilHQ17tt6mZzp_qViUo01FbCK92wVX9cJ_6JgQZE7r211UOwzQkEbB9MHBlrwV2zSSqDyg2SNsPVIqwO2lp3p0YDLT91QxqbVzHKX_CuNT2qWj8Cz-qMLQMZBzmbkt6pcAZGAbGwkv8y74ZwCgGBoD81Qm1UxhiJwzYjiGS2ns5ydqM8ZX9gSd7xBbOEW6s8JwQms6MbQuN3oUH22CD22YYHAVaIJl_ZBWpleYtTSQ_Tj4BZd3V1mlySQ5eahlywd8wN_Haql9tR4WC8WM3hvx13SYMNpHbhJcb93b4eV0T0MpEpOzAHiwvKCjgkyiQGH62W_12GIox2rRIicpCYY_ZrgPkPB262wa2yiEHsf9r6wobomrdCbi8yIiHGK9JrQWlf1vhoe7cneLBwOmecnHT3ophj2E2VHUSm=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/3kxqtvnl6ZtYGlZ507/giphy.gif";
+                        video_path = "https://media.giphy.com/media/kcNCK0k5RMcZrN8aKJ/giphy.gif";
                         description = "-Piernas dobladas sobre cuerpo\n-Una flexiona otra extiende\n-Codo a tocar rodilla contraria\n-Alternando lados\n-Levanto tronco luego giro";
                         muscle_zone = "abs";
                         hip_weight = "0/0/0/0/0";
@@ -325,7 +325,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 24:
                         name = "Lateral Piernas Cruzadas";
                         photo_path = "https://lh3.googleusercontent.com/Dj5lrC7mXI3FKEelMvZ_U8yb01FXAXtIPZd_YgFugPgmQHlzpz20PpDZuN5ypZjzrtD_4icIA8aKWOSiGTyEwOOKBZc1WWo1Szc-KTpvr6-DpCUKTWfzaEz6KaZLuBQiNapvwif-G1YZYeOlOIekySo5YOhwHXyEn-3kfWwjH-cEh6Z7cKpYWrtQZKN7WjIByob916jfuG1CvGBNV7FGtgiKauGewaSsyhdMcUY04pgIhYtfG6QP-HMEyDzc64yPYlEvMRo8s2OBqwXgM6dCzhT2DIxR1-eOtoHE7c4rj8lnT31PsgfN30R7JJ003cSxiwghfPS2PnbC4nBdMc-WzSgHO185lWtj6fY6OO_mcfzyEXBN3GEoBoVS9UPF4Hj5n2Sv4NPjFgTX8NpVRP4PQRhPRVYhr8lr8w-phL8w8CodG9YQDjPzPOkfQLa4zAh_dz0RZCIf-pQmFSIcKJgS75wQAqwqSlMbBEeouhh8XBJ6xkdP-yWZ_p63RRz4WwrEIvfUoTnDilQ2UnSnTc-rlwOtEq6phFZ91elKZmrJSXWqzOs_kTl4TOx35Po9QjLtdLa5nOTA3VFgP7nMZGsXM-uG3OVLdyBNlrGDbrsxBabwGueRyOJmnyFXY_H26DoE0LZp2DfUMH40ELlR9tMvgdG1Rvss3zW5MnHPrz2hl8uolSBSagyIHXe5=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/w7vu3QLKvuS49d8nvF/giphy.gif";
+                        video_path = "https://media.giphy.com/media/gEXp2cCPS7FBrSibCf/giphy.gif";
                         description = "-Un pie encima de la otra rodilla\n-Hombro dirección rodilla opuesta\n-Levanto tronco luego giro\n-No alterno lados\n-Puedo apoyar brazo en suelo";
                         muscle_zone = "abs";
                         hip_weight = "0/2.5/5/10/15";
@@ -337,7 +337,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 25:
                         name = "Plancha Frontal a Lateral";
                         photo_path = "https://lh3.googleusercontent.com/-PM1IBlAyGpVJrx0YChTLdJ-zzdKEWwT9DqrmW9suf6KJr0M-D1ZhdnQv81O9f8YdU2c9EhcBVvOUm9UePTdHDO74fdiHq5zAKcqv6yOcfzmcxvpai2W7_XW9vy-i6830phazM8R36PDYEJzhY4RvBpv5ZsSa_aFrEA9BaypXq3ylr-eUd2cztUW7qUmvILHrTEFoQjUOpxEW9osasXtazENhVQCjiAybu21cE80uLKtytStfIQHm-U9hhCCt-VSzQ-1JhYwLmBscZ7uLmBzxw8THWquxmmfIY3Zqy9fAoTlx8-wWS8-iWfqjYodo39fhub6H1gkkT_j1KeDoLd1KkUrVYomfZr11ZpHCt2PHLk9fYT6jR_3zyF2mHABUWDcEYtXeaSm88Z_w7XgvaloYXYan6z92vD2qpRMlqMXP03HeQzeEcVzW3YTfzmY4_6C4Cq3d6d5KDOkysubNhGXnalOWSLZtgiHO5_2KbWASfoLFo2Rd1uyQAWhku8k9rCig72HLaaZoHH3X0IyHzNFtNUphP8hMdXhdu5LAURlWW8Uf4OLUa72JPruktJEf2WhvwVqEbdPHoeQP1K4m9gvge4R5X9Lr8gTcbDYY9G-bemoSERqWxQDaW8R29j5kPoPfND6ZVRA2cxx6catwn4otyEUPxg_zIzbAcGhZLnVW78iTm5iPZk14HgO=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/t6J5AiLkWqOCiJEc2j/giphy.gif";
+                        video_path = "https://media.giphy.com/media/Q7LEuj87PmzoDJpXCs/giphy.gif";
                         description = "-Pasar de plancha frontal a lateral\n-Marcar cada plancha\n-Subir y bajar brazo (lateral)\n-Abdominal bloqueado cadera no baja";
                         muscle_zone = "abs";
                         hip_weight = "0/0/0/0/0";
@@ -434,9 +434,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/Lp4c1Ofp6QAaIk1TMF/giphy.gif";
                         description = "-En banco declinado\n-Bajada casi a tocar el pecho\n-Movimiento completo\n-Peso sin contar barra\n-Subida rápida, bajada más lenta";
                         muscle_zone = "chest";
-                        hip_weight = "20/25/35/40/50";
-                        res_weight ="15/20/30/40/45";
-                        vol_weight = "25/30/40/45/55";
+                        hip_weight = "15/30/40/50/60";
+                        res_weight ="10/20/30/40/50";
+                        vol_weight = "20/40/50/60/70";
                         subclasses = "med.-inf.";
                         break;
                     case 34:
@@ -456,9 +456,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/YrNy2LmzNOGsWBXCUG/giphy.gif";
                         description = "-Tumbado\n-Ángulo codo con tronco 90º\n-Codo baja un poco mas que el pecho\n-Subida hacia arriba, no diagonal";
                         muscle_zone = "chest";
-                        hip_weight = "10/14/16/18/22";
-                        res_weight ="8/12/14/16/18";
-                        vol_weight = "12/16/18/20/26";
+                        hip_weight = "10/14/18/22/26";
+                        res_weight ="6/10/14/18/22";
+                        vol_weight = "12/16/20/24/28";
                         subclasses = "med.-inf.";
                         break;
                     case 36:
@@ -467,9 +467,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/KDPE8fHLRTAgY0aiBg/giphy.gif";
                         description = "-Banco 30º inclinado\n-Ángulo codo con tronco 90º\n-Codos bajan mas abajo que pecho\n-Mancuernas suben rectas, no diagonal";
                         muscle_zone = "chest";
-                        hip_weight = "10/14/16/18/22";
-                        res_weight ="8/12/14/16/18";
-                        vol_weight = "12/16/18/20/26";
+                        hip_weight = "10/14/18/22/26";
+                        res_weight ="6/10/14/18/22";
+                        vol_weight = "12/16/20/24/28";
                         subclasses = "med.-inf.";
                         break;
                     case 37:
@@ -478,9 +478,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/RkEA44dsJXzVpd2LJo/giphy.gif";
                         description = "-Banco 45º inclinado\n-Mancuernas se tocan por los lados\n-Bajar hasta casi tocar el pecho\n-Codos cómodos al lado";
                         muscle_zone = "chest";
-                        hip_weight = "10/14/16/18/22";
-                        res_weight ="8/12/14/16/18";
-                        vol_weight = "12/16/18/20/26";
+                        hip_weight = "10/14/18/22/26";
+                        res_weight ="6/10/14/18/22";
+                        vol_weight = "12/16/20/24/28";
                         subclasses = "superior";
                         break;
                     case 38:
@@ -511,9 +511,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/lckzTgWUmCygx5AiDH/giphy.gif";
                         description = "-Con un brazo solo (luego cambio)\n-Rango de movimiento completo\n-Espalda recta pies fijos\n-Controlar el movimiento";
                         muscle_zone = "chest";
-                        hip_weight = "45/55/60/65/75";
-                        res_weight ="40/50/55/60/70";
-                        vol_weight = "50/60/65/70/80";
+                        hip_weight = "45/55/65/70/80";
+                        res_weight ="40/50/60/65/75";
+                        vol_weight = "50/60/70/75/85";
                         subclasses = "med.-inf.";
                         break;
                     case 41:
@@ -533,9 +533,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/QOcdHH38L6p4XFeqCG/giphy.gif";
                         description = "-Ambos brazos a la vez\n-Rango de movimiento completo\n-Espalda recta pies fijos\n-Controlar el movimiento";
                         muscle_zone = "chest";
-                        hip_weight = "35/45/50/55/65";
-                        res_weight ="30/40/45/50/60";
-                        vol_weight = "40/50/55/60/70";
+                        hip_weight = "35/45/55/60/70";
+                        res_weight ="30/40/50/55/65";
+                        vol_weight = "40/50/60/65/75";
                         subclasses = "med.-inf.";
                         break;
                     case 43:
@@ -544,9 +544,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/1yn2K3ajrcTo14Rr10/giphy.gif";
                         description = "-Barra casi en el cuello\n-Tumbado posición cómoda\n-Comprobar posición antes sin peso\n-Rango de movimiento completo\n-Peso no cuenta barra";
                         muscle_zone = "chest";
-                        hip_weight = "15/20/25/30/40";
-                        res_weight ="10/15/20/25/30";
-                        vol_weight = "20/25/30/35/50";
+                        hip_weight = "15/20/30/40/50";
+                        res_weight ="10/15/20/30/40";
+                        vol_weight = "20/25/40/50/60";
                         subclasses = "med.-inf.";
                         break;
                     case 44:
@@ -605,15 +605,15 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "anterior";
                         break;
                     case 49:
-                        name = "Kettlebell Push Press";
-                        photo_path = "https://lh3.googleusercontent.com/GuLrkB8YXC1MEY7xWDEymgx7OuU2iBfNYbThHTLbjjK6yjqzP2bUuQghtNAFDjXpIhvPteXcwvJnvjMoBUix9rY4HMGndy29SoyOAsfj8Fa-FWUEzr12HFm0Z6_UhKlzLSSSG6ydTVCS3fU4adTpQruv17DCC0fnIojRKCZfcqeiH1G1XFnQ82X3y74sGh3MlHUTtnijwXKOrI83IhsgssWyVK3mHnJnHXliCxoeOXwM66fvyJWnrHkFzImjn9pEJpS_wosf3m-WNBMR3Vm233uUL1WnLKGuHJSRfL_EI8Qvo1J8hdE5Jf_WbIRKgp24VAVDSB4GPInc-DFw17xJ2jfDC2kYIv6RPwwzlgySqZv_kSSecDGzU56kNNbE9q9xKZTQ2PHAzzZZbQI6K8mjDkKgEjFL9HPmm_E0WpElp304IvUhgkyqmRDg6UZlC8RWMjEpS1rjDqN_39q8WHBtd1wYraSYtH2mCFbqKDMRW0sDAnctbQEyQG52hVmIazpq7b5uzDvxG4_zHnI3RNiR9IWs9ytqv11cxRXAQVLgVkil61FlgoFL-ST3huD4tHKdeLEZLY7nV11K14EjElbpn7NdmAVIGboeBweGWu4GyWn9BHiO2L7AAK9CmQ_6EuvWGPVQflpAJlFEQQ2s_6Yj5mu--swHVU9KV6pWsJMeSsB3AeqILIvkCcG1=w698-h632-no";
-                        video_path = "https://media.giphy.com/media/1AIfHfxKGqCNWBPJnM/giphy.gif";
-                        description = "-Espalda recta, piernas semiflex.\n-No balanceo\n-Kettlebell apoyado en hombro\n-Subida en vertical";
+                        name = "Polea a la cara";
+                        photo_path = "https://lh3.googleusercontent.com/5mevVmwn8Vo77PFyjCF042lx55TkL8dx2dCukINLsl5ho1KSmgYB_wWR1ilpCaIodSS1eEWR_mtWDuM9E-GH2CxCaxzggzmwSEGRHUW8y4TWm8bcoyEvT-1PCHSuEg4AX4W5-yPsqFJs6oNZbVnurIEJq7AvulJztGiPsY1b1yZBToVvPGjiTwrVl3GFztqEXZ8R9Lnf-vaubmnJcwELG0Ov0oVc5uleLZGT_1wAebrAy4obnOZEyYkeaM1bxEtqtlpZK2LL_wbavjpz1UmAPYO5CsDLyODvXXt1BcZ4A960LbBNPbkPv9wF4GuX2lLa1FDpOWVMD-a7rOBjN4rTDRJxoXWwOxORYwDsQ39QEy0qNN06h8AGFx1W7CuCcVzVZQUU5GfSIgWJfTUqqYvlzvgyBzNijL9-pLMqb0cNoBUETEdTDENS2GYJpraHR-b9WSJWPIBKowUyeRm6W4xYhoarQnrpqLpUdPtmRQQOgW1po3QjjoYl5uXWk2hRA2Cq6SGNiSEsYdNGmy8kLbOzStWaNLbi8_cJ3jrAHtP9188Do3Of6P5YeXBaZoFKnJVkQGHCcYmLPu_0VT_HO_jS_kdtq25lCBT6t35T2xiI7LwPWcn2iIUCRl8052qB3S9o92NqdjLWgeAG5AQ4D1gHAlViXxb04AMipF91N8NV82cgBknPtuG3V_o=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/MaxxmOKT5h1aiLZVRG/giphy.gif";
+                        description = "-Espalda recta\n-Controlo la vuelta\n-Sin balanceos\n-Movimiento natural\n-No bajo codos";
                         muscle_zone = "deltoid";
-                        hip_weight = "8/10/12/14/18";
-                        res_weight ="6/8/10/12/16";
-                        vol_weight = "10/12/14/16/20";
-                        subclasses = "anterior";
+                        hip_weight = "5/10/15/20/30";
+                        res_weight ="2.5/5/10/15/25";
+                        vol_weight = "7.5/12.5/20/25/35";
+                        subclasses = "posterior";
                         break;
                     case 50:
                         name = "Remo Colgando";
@@ -640,8 +640,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 52:
                         name = "Maquina de Remo Codos Altos";
-                        photo_path = "https://lh3.googleusercontent.com/Lz8EF9TMHtpX0JjN8qxVUClUeT54WkE-a_RQz9AkwbM5lvXIEUx-i0iFa6FvTn9vXeLp6e4HCYxqkGGTvBVzRTZ9LqxLy8yhleuW7IkZBvybkwZxdFrf3vnVYihnoqfQD1FqyViJT2bf6z0TMjWcShYJEkmJwI_YOz6FEML5h_l8hd3-qzr9y0ISvsJ7lz-YnQPJuZGO3PYgdEAxWmvGSA393KQkr334WEZReG1N2Im2JGJa70Rj94aItzt9mEgU59O5Fr3tJUU53yE03KxJeq5cRlnQnqtxzFuntdtTbzc1xCJgP82WQjY6H75Xja3QrQTOdrO-aqlD6im_sBQrKLJQcbLG-NrQcbZUkuwKIx_R37hpymZ8jdjwZ1jwwgbp2l7T314NvzpGwXHMrSDsEfGcIwvj4ry-CUPfpkeQXyKezmnMpYQjYI4JbCR11EFR1cGpbD8FfwA7IUIjDcNhzI_DsAcLuDoKp_g5t3IPbPaxjT_QaT3ua5YmehDKe8tD039ir9zu15bvRY7U21OwSO_tH_WrQtF0mGI_r7iHRuO42LHj3PL-JPo2cmrL0-2dexkQWuav0Dqp8NLiLTbFgSUt-8F4ASi3OgJX8MIDQ0gbanVbHerDF52OZEwQDojp9Mx1RMoak85q31Tl_6iSrqB9Crc9zFmXpK-4uh5sfZ0DWG_Ke69tLR0=w1062-h944-no";
-                        video_path = "https://media.giphy.com/media/fr4HoxDhvjaif4oRKg/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/RY4SwIbHZJgrOY6rQlRDJP4Yix7J9KAfumLegLbh3tq9LGKqkJthpaMx7Ek8QF8DOiqiX8o43jUUFklO1RFn3hOfDFvNhIXIJmMI0RTGneo4kSNpcdT22LQ_cRwRA2KHV1OFaT6l7Fy-FTwMdV9ItNREExUq2X56su7_ZD4zZjrHGOmPsRVC2pVy46-T6ByyfPWmWZr6Zklhhj8ApJn0E2ToGCMjQW8xKiArbtWMPcELUC2lW_mQWY7iyIUj7T6HsqJpnaYUg-fm7mcUR7onZkYi_NqdbBFXdEy586iOJSr3PEzK-WLqTee1EzxHYKTCbH3rJkOVyD0OocLt5c6wd_lrhMMZH9J1B44DLcTtXjt_eXO3BdF5iZOiIASaq0M0dnO6e2GWVC13Ia5EODdQtDjaB9eTzRXSLGuqvsBtW8-BDfvUHyfIOuAFLGfNFbCnXheNvuyPeVPwZUBETng98UeA2nXjUHzEH3qulK5oGPEUcyX8Ke10J5NcaP5NM7xVwVF2WSsdtTTFiyOSS06DIXobuee83Lc2DGgqCOzq5mocY_v_K8dDYA36ut-0pYlFJObF9_7POnfCsKzBAyCkpkObk6YLOEKsz2L_-jV-zcbtIkNCdf7RMniS-K86pca3e48ZCb3AmGYl76D1DuO1__ogSVHhpx1uMDz9Q0MRJXqz_BHt3KqxSlW6=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/dtdDalKlMY01KECU8Z/giphy.gif";
                         description = "-Sentado pies fijos, espalda recta\n-Silla lo más baja posible\n-Tronco rígido, se mueven brazos\n-Mantener codos altos (sin forzar)";
                         muscle_zone = "deltoid";
                         hip_weight = "45/55/60/65/75";
@@ -722,15 +722,15 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/jRfbFtoWENAz6q5Pb7/giphy.gif";
                         description = "-Sentado cómodo\n-Amplitud de movimiento";
                         muscle_zone = "glute";
-                        hip_weight = "40/50/55/60/70";
-                        res_weight ="35/45/50/55/65";
-                        vol_weight = "45/55/60/65/75";
+                        hip_weight = "40/50/60/80/90";
+                        res_weight ="35/45/50/70/80";
+                        vol_weight = "50/60/70/90/100";
                         subclasses = "menor";
                         break;
                     case 60:
                         name = "Rotacion con Banda Elastica";
                         photo_path = "https://lh3.googleusercontent.com/aym_LIz0ITRwJkqHYklsmTIwRp6Pi_ALjQnmY9P8oG4nr4lYZP0NVBOt9UwoQ1y26bu0u6sSl3YhZyOcMc0JFN9eE_2DeRA1o96rheM9aOhohO1AutHBwnLu6HYkkQyJl92vi9_TyaXLDe5xzVicy_Qmgaggw2FVyXpHFy8SQqu8eFS_t3RYCddTjf1sdUnT4r0mABWd_hRm67mNPjIxG858baR80LnUKQdVNrYfXJgppseLvh5VVC6uO_YvDjGyg8WIFSUlZ4BgRCWugGpsO2rgz-z2t8uFMoWXJdG7DUz1PJW4QFua-C7FUro50jx9GYiiqPR7CtGHfCbYlIlQ8quLeZzdW7DypTNP3iNblLKIZuFYJUCB7ob7h8E9OkwitAG29I-fx_jLTELiSzQzWhUH0TtMvm1cFwfjNvmxUFdBV0sBTvvDjzhROa-60HOHOjQcIqH0aAVWUKY0A7u8YeSsxuaX9Bc08mm-odeJ0jH7k1Ktg8WkjxPcNItvBUCRVhtwUkQjpp_DS9boj6Q4eJMCTtBvWEmZnX5sm1llKbFWg26b9pmr_MzSP23S5Lp5jPkiANfG2CPYDzsWg0HQu-Nq4zBFrVd1kDyMTW-ZrNCs05O_1dRm1KQbv3doqPHvSjix7kZx2BfLEx49mpbZD6NkSdfWa3-hNl6EqzJ-i1d_bpSC3pXHc4Ag=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1lCGZxbOoKwOOZDCkj/giphy.gif";
+                        video_path = "https://media.giphy.com/media/huVbtq44V78loMJ6Am/giphy.gif";
                         description = "-Banda elástica en rodillas\n-Piernas en V\n-Movimiento de la pierna externa solo\n-Rotación, amplitud de movimiento\n-Peso/Nivel: color de banda (elegir)";
                         muscle_zone = "glute";
                         hip_weight = "0/0/0/0/0";
@@ -799,9 +799,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/5vYnunLwmnPJAMFGwD/giphy.gif";
                         description = "-Amplitud de movimiento\n-Pierna estirada firme\n-La vuelta controlada\n-Sin balancearse\n-Se mueve la pierna solo";
                         muscle_zone = "glute";
-                        hip_weight = "40/50/60/65/75";
-                        res_weight ="35/45/50/55/65";
-                        vol_weight = "45/55/65/70/80";
+                        hip_weight = "40/60/80/90/100";
+                        res_weight ="30/40/60/80/90";
+                        vol_weight = "50/70/90/100/120";
                         subclasses = "medio";
                         break;
                     case 67:
@@ -810,9 +810,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/7STqShwodzd1jGJD2w/giphy.gif";
                         description = "-Sentado suelo, espalda banco (coloco posición inicial)\n-Relajo en la bajada musculatura\n-Tenso musculatura en la subida\n-Marco las posiciones";
                         muscle_zone = "glute";
-                        hip_weight = "5/15/20/25/35";
-                        res_weight ="0/10/15/20/30";
-                        vol_weight = "10/20/25/30/40";
+                        hip_weight = "10/20/30/40/50";
+                        res_weight ="0/10/20/30/40";
+                        vol_weight = "20/30/40/50/60";
                         subclasses = "mayor";
                         break;
                     case 68:
@@ -832,14 +832,14 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/5ndmzORKczTEPqlJ2V/giphy.gif";
                         description = "-Tenso músculos en la subida\n-Relajo músculos en la bajada\n-Marco las posiciones\n-Movimientos controlados";
                         muscle_zone = "glute";
-                        hip_weight = "5/15/20/25/35";
-                        res_weight ="0/10/15/20/30";
-                        vol_weight = "10/20/25/30/40";
+                        hip_weight = "5/10/20/30/40";
+                        res_weight ="0/5/10/20/30";
+                        vol_weight = "10/20/30/40/50";
                         subclasses = "mayor";
                         break;
                     case 70:
                         name = "Lunge Lateral";
-                        photo_path = "https://lh3.googleusercontent.com/GOAAzT3KLEM7aH7Qikp2WQi3bAknF8oTDtSQOW_4vuNWx92M53V0ipViBz6UugZx4QbxKSQd3Zgvl28vAxYGo25Ukci5DVziIIGuh8Oc_LKZHaYkkozPjOppA1znsac9gHdbTxWffo2HCPO22OXMyHG_0lkcv5sYq-sG-2mNNb1Y-QuZ07DCzgC9nsh1HOQbrh5JVAfe2ENQ416o3GpObv_JlwbMIoTXnlbqvV8Oqy98a3sAAxjzUMTBU8KgiqtSqPlbk2ALWRsZxxxZIcDTgR1G2AHHl82zekmwftiZgguJfN57nIgjNP-oT2TOJwgDTOs-5g6Iz0ojOtalv2bPjEGg1VU3xys00PJI78fz6eMogggH56fshxDQhjCTMfMzy0Yjh5TPzxAVGppwVprojZ6bCUWHtNbd2zeTL-ddKfKTF5OO7aetP_riUoLueNw15Bk2AQq0pUsGr8tjjq3N5dGtVpX3EPlN3GBeMiAS50DgGTVWQSeDbqh-82Nj1Gghf8ht6vtyYE15h726M0Ee2UzI_Bl6iEGta6v1eb2m2T5aFL2TXHIextxPICeaWZq2JtnJsM2aB5-BH9j-ndQ-d2-MxFb_LKm3Iu6K893pb2hMWXwydXBCVU76WJ6uOAmpdZaIBDibWs7heDyfez5Ikbvf3VLl_e4FvPX2xIHgyG0uv7YNJhTAL50=w708-h944-no";
+                        photo_path = "https://lh3.googleusercontent.com/dG0Jn_viCiEpk3Z0G3BdxbIYBPmDhof12Q2Va_lPW4JF45y9FwN_JrDzxph7SXmnl82_qflILb5VeogMdUw2BETC2Nm4ObJSxjthj37gLy3QRCjBJ_LpeZrxVM7stgjHC5wLO5X0fvaOVqKJT6eFA3XSnkHFopsqcVNlS_r1OseNDGev_McWLa0HpWrWyCAGIXEMUwMcr2d7gDrBjyUUiL9--te1tCdxeg5Yyf5vRi51rIwzyb2LWHiS6HdIj5AA5i7pXsvr6hqejhdGPVQgaPPiEYfAUANcP3f0R3__MLhZg2ADX7gxWTSB2bwnv5rsRIiEC_fZFHTluFppUSP67lgBCaA0d2sv0i6y3EOJESQhWzmSvFac7GpB8QUg66Nlq4fwhQbGrjE3esU3elEWWOC0Deaf76_XUY3yLuxaAsr2KVsrf8xjNyGK0Tjf4Iw7haccTAyQ-a5TwPJoI_KRPCbicQ0E_m0DUeWQuy6yqTk6zm-0ubFhyw05N6zI_datvR6mcsbgtoEXqthRjJht7JU8s3GRaRJmKY2ZbTTVpDJ2u9QTBHxsKOHqmeLUWa4R_v08n4Pc08UKIq31M3SP-uJ3EwqOwT6sGY5Hb534KF_ldCdNqkfAuBOwlaIYJm--qKj4nazU9X0U5YofwF9Vr5L03GLRTOUtrZORQMs2CybzyVoPboKd890=w1062-h944-no";
                         video_path = "https://media.giphy.com/media/RN31a6hZh0WD5GpQzf/giphy.gif";
                         description = "-Rodilla altura del pie (no sobrepasa)\n-Bajo cadera\n-Espalda recta, saco culo\n-Movimiento controlado, equilibrio\n-Pierna interior estirada";
                         muscle_zone = "glute";
@@ -912,9 +912,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         vol_weight = "0/0/0/5/10";
                         break;
                     case 77:
-                        name = "Row Machine";
-                        photo_path = "https://lh3.googleusercontent.com/axK6489X0fY5I_gZY6kEon7lxXQrnvxP3qYFqCzeftgldesJljtJw6PcibZCWMfQyWTf-vJYidYOmedsfzA6nqGqCVdTs2bBfG-Jd9QosUZCV5sEYEDBeRiLP138V3QeoSry8wtL4VXUcuyGb1VJqpN1SPc2Tiflm-Ss7ynpYa03wn7WjQIw8zgujJBvwWO5P9vd_B_xw2sKSe20ytyH0JCfa2xBCewl0TUefPdd0QpVsD-dicoVrQT38hLKRUCSsqU5cmzQK8L7Q7rTh7GhQBL5S3ULpBotTCdSBWYFcdhRKi0zKXn3Q0md_8FAaei0Z5jp4BFAAxZ_aQqx7UxqrVzAHqTt7nk2Xbk5j7SlT1IybuUYL01UC0okYyhdRjiCNyUkuITl4L7obuReK4pngy2iYPvXvJI7BU1QIvYVRC8E1WfJBFOPg-HORnJ5CyG_0wwdqiXt6fcwEXMJpdSN_wqI2ttV51s-sWhXEAozxjeVXPG5OdxeHqG8NLjr9GYXsKI6G9WDHdAUwx-t5JAg3FXfydfHEysfxanxcBfNB_oUdht1d5RBkenZgJiB5xYN0uR6VURzmDgKpLoDyXHRptl1gThikK_v8DOn3LjNpfMOPM4gTK8g7jcvyRo2HtCGARk7HxfP_FpCVR4UBzFpQSe2XmxXYCAFpDXg_VAcB80rNtw79iDQjRk1=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/3b6qrDLve0XifFgU5H/giphy.gif";
+                        name = "Maquina de remo";
+                        photo_path = "https://lh3.googleusercontent.com/Lz8EF9TMHtpX0JjN8qxVUClUeT54WkE-a_RQz9AkwbM5lvXIEUx-i0iFa6FvTn9vXeLp6e4HCYxqkGGTvBVzRTZ9LqxLy8yhleuW7IkZBvybkwZxdFrf3vnVYihnoqfQD1FqyViJT2bf6z0TMjWcShYJEkmJwI_YOz6FEML5h_l8hd3-qzr9y0ISvsJ7lz-YnQPJuZGO3PYgdEAxWmvGSA393KQkr334WEZReG1N2Im2JGJa70Rj94aItzt9mEgU59O5Fr3tJUU53yE03KxJeq5cRlnQnqtxzFuntdtTbzc1xCJgP82WQjY6H75Xja3QrQTOdrO-aqlD6im_sBQrKLJQcbLG-NrQcbZUkuwKIx_R37hpymZ8jdjwZ1jwwgbp2l7T314NvzpGwXHMrSDsEfGcIwvj4ry-CUPfpkeQXyKezmnMpYQjYI4JbCR11EFR1cGpbD8FfwA7IUIjDcNhzI_DsAcLuDoKp_g5t3IPbPaxjT_QaT3ua5YmehDKe8tD039ir9zu15bvRY7U21OwSO_tH_WrQtF0mGI_r7iHRuO42LHj3PL-JPo2cmrL0-2dexkQWuav0Dqp8NLiLTbFgSUt-8F4ASi3OgJX8MIDQ0gbanVbHerDF52OZEwQDojp9Mx1RMoak85q31Tl_6iSrqB9Crc9zFmXpK-4uh5sfZ0DWG_Ke69tLR0=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/fr4HoxDhvjaif4oRKg/giphy.gif";
                         description = "-Espalda recta, pies fijos\n-Sillín posición cómoda\n-Codos posición natural\n-Cuerpo rígido, se mueven brazos\n-Hacer el movimiento completo";
                         muscle_zone = "mid-back";
                         hip_weight = "45/55/60/65/75";
@@ -1242,7 +1242,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 107:
                         name = "Biceps Curl Inclinado";
-                        photo_path = "https://lh3.googleusercontent.com/Z9VxJmG4q4kXDRkJaiyRZEocuUYTiDQN3BZ6xxP5AgW-pmKNcHkLnN8L4a2x03spyVZ9PP0oP3h3x8h3Iw4-CLn8Kp-hRSTzem7T7MR-cB_Lnck0_EUHPkkKvk__veAfFSbkooisJgbHAs1PXyvg8SklngYF2UXnAyJJFYplHyfV48rtIKdWxFpbsKkoXpBsplauy5GRouqehpOJgRfsDafsogI9__8AwKrwcY2G9il_phjx9DEvz2-rxJs2YeTabw1id2smbw62jvEPUAE7C3heliqWYLRIVkwb6RZjdhg8ATMFzn8d6_o1xnPLVdOLuiz5JWiTilE9ichd5O_YyeQMWk5HBi_OOTMf4AHlGJNwgtUjutpvIYbDP4Pgk1pFn9Wbd7sY-izk_9v386SWVufdR0RZ6ZNc2HImhjeT8kggAA4GfoYWzBxGgqkYWaXEYVBCRFgw83TefcTDiaKv8DTEIfuJ9NIv-wksrcKPS0pFier5EwiPEWPnx_0ZyR5rKIjxUCvfS5Sq4owySjhdCbL6rYuBk9l-psv5U5Fzw5GPuQQDViQJlEnChyXzdseKOZMVndRm4HAlXDCU2advcav-QpCgFHni1_bPDe-jH4onD7J9EULvSa_DzmSVOQUdxdom5529P9A1myzCnH9esOXI=w713-h632-no";
+                        photo_path = "https://lh3.googleusercontent.com/sVgVoAAVBorz5w0koJCIwaHtVsZRbx6uhm2hDz7WXKg23GKiO21eKn11OFmd2fmOJ0S3aT-8VB3f0GKM25D5t2QY3CC8AuKFkpqNNwhmgncbgJ84QohNRdO3FATQEYAIJy4s4G0ovB7xdcClIg7_Fm-hTNi3-3qmDcSRQQRMrkYu4MIj_ESsA_XmA9b8qbC4wHU5VAyRT1kIPZpR7ChTGrpNMk_UyaUw2acmk0id1hUG7OWS7JD-_4ZjTNWJmu_7r0HDr5CwWP9xkiP01kxwcG7ERWszhfiek8hDjGJXdBoAtuChSC30lIHp8GlVbPKuYPJac_G0jc4D6LZ_nP15SQHn-yRwcccyLn4Cmk7y1jZbnG2GxMX2RkPF6d3LQnn6UKkA8VPQ5YoqZeBK8Y8HvAKiOlAKy5WR77-gjaBxFbPQvLkIzH-jv1pdwaf90DTh9Z5z3WAZTOv-Xzt121Mpqyjxx6v_pIvRp3uTYnEraxqu-StbZUkpXFHGw_8sq280PFy4MEMnnZoKgOGAzGtcR9jPIssbSbEmooe9Pq4Khh3HpA9nzDVE1VErTkWBdlR8ZjwXkk1TGg8Xehsig9sQ7yQTFiiR-wdNZQXLI1hKvsZZAmXW05DkXKw9jOX37sj-PdfTPb9T4fHA6I2W0qpgW-L7ncnADH20X5t8GxXPafg4V7jlxXieYhA=w713-h632-no";
                         video_path = "https://media.giphy.com/media/Zv9uPsqqBpYdzHDBWV/giphy.gif";
                         description = "-Banco inclinado 45º\n-Agarre supino\n-Cuerpo posición cómoda\n-Codo fijo\n-Bajada controlada";
                         muscle_zone = "biceps";
@@ -1728,17 +1728,6 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="2.5/5/10/12.5/17.5";
                         vol_weight = "7.5/10/15/17.5/22.5";
                         subclasses = "supraesp.";
-                        break;
-                    case 151:
-                        name = "Polea a la cara";
-                        photo_path = "https://lh3.googleusercontent.com/5mevVmwn8Vo77PFyjCF042lx55TkL8dx2dCukINLsl5ho1KSmgYB_wWR1ilpCaIodSS1eEWR_mtWDuM9E-GH2CxCaxzggzmwSEGRHUW8y4TWm8bcoyEvT-1PCHSuEg4AX4W5-yPsqFJs6oNZbVnurIEJq7AvulJztGiPsY1b1yZBToVvPGjiTwrVl3GFztqEXZ8R9Lnf-vaubmnJcwELG0Ov0oVc5uleLZGT_1wAebrAy4obnOZEyYkeaM1bxEtqtlpZK2LL_wbavjpz1UmAPYO5CsDLyODvXXt1BcZ4A960LbBNPbkPv9wF4GuX2lLa1FDpOWVMD-a7rOBjN4rTDRJxoXWwOxORYwDsQ39QEy0qNN06h8AGFx1W7CuCcVzVZQUU5GfSIgWJfTUqqYvlzvgyBzNijL9-pLMqb0cNoBUETEdTDENS2GYJpraHR-b9WSJWPIBKowUyeRm6W4xYhoarQnrpqLpUdPtmRQQOgW1po3QjjoYl5uXWk2hRA2Cq6SGNiSEsYdNGmy8kLbOzStWaNLbi8_cJ3jrAHtP9188Do3Of6P5YeXBaZoFKnJVkQGHCcYmLPu_0VT_HO_jS_kdtq25lCBT6t35T2xiI7LwPWcn2iIUCRl8052qB3S9o92NqdjLWgeAG5AQ4D1gHAlViXxb04AMipF91N8NV82cgBknPtuG3V_o=w1062-h944-no";
-                        video_path = "https://media.giphy.com/media/MaxxmOKT5h1aiLZVRG/giphy.gif";
-                        description = "-Espalda rectaº\n-Controlo la vuelta\n-Sin balanceos\n-Movimiento natural\n-No bajo codos";
-                        muscle_zone = "deltoid";
-                        hip_weight = "5/10/15/20/30";
-                        res_weight ="2.5/5/10/15/25";
-                        vol_weight = "7.5/12.5/20/25/35";
-                        subclasses = "posterior";
                         break;
 
 
@@ -1775,7 +1764,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
         //if db is opened correctly
         if (db != null) {
             //Insert 103 exercises
-            for (int i = 1; i <= 151; i++) {
+            for (int i = 1; i <= 150; i++) {
                 //Create data
                 int id = i;
                 String name = "";
@@ -1819,7 +1808,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 3:
                         name = "Curl Concentrado";
                         photo_path = "https://lh3.googleusercontent.com/lzAS7j1jzb76P1iit8soZ3jkC8aM3CBlfspwBmRKLTXyfDM4iAUB0Ex3He67u99cPKhc-zx04xbdahxGcoWQOXTckfVBoKYCrvXGj_6y8SykG4mnnIn76qqlZTh5Dpo_cGG5aKWKtxkiIMEy7fyfUnJs8yAXi9Dpgh7ILLRqzGFSFUq_UKsPECmvxTsGqBgsEFzXE99J5lEJEd0Wf8E9yo8GteNSS4A0CC7ihh-cfNhKswTLlFilxyNkdIxdUFLeGt9wKY5LgYGf4WNoFjNuFklJirSTNynjFwGcxVOrAH1sf2rYg7Pcye3plGKAixTC8bM6zv2wnWRVkD2xzNnFy4Y2dMmvJiWfSPVgU2L010KOH4ij6lUsVzIuuPrkC4agB43Kq9c4CtYVLZdYHzZDKl1PCkgSoxuVsitaWpul47gy736LNqVWtshk6Dvy6LeP7MyHJzUAJeenDuk_J3nVdte3Igf0TRh8C91egYhsgB0kFViSgg5CYvLX4TSenV_vtm140wjrcqHFYwumOLmccnf1Cp-QEYJrf3_txpGk5o9Mxo0ggEoCByMMukqE43_RmWl73fgF0MRTKPeRWNnCExlRzOMNchof70Wod-_fjTG6XWrx21_tXXV85u6D3q6WnEWlLCutYb3-m5FCP5Wum-usW6R2hszQ5y5VtMpSRBBxLUrzGDp9Gzz5=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/piPn7NTBIV1QEmmnbW/giphy.gif";
+                        video_path = "https://media.giphy.com/media/TF0SpPp6PfLtd4SqpR/giphy.gif";
                         description = "-Espalda inclinada pero recta\n-Codo estático en rodilla\n-Extensión parcial del brazo (bajada)\n-Mano sube apuntando la otra rodilla";
                         muscle_zone = "biceps";
                         hip_weight = "6/10/14/16/20";
@@ -1957,7 +1946,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 15:
                         name = "Crunch";
                         photo_path = "https://lh3.googleusercontent.com/5cG7Lb3XI_wR6HGdvjBeGlYosgqLmmxwO6exv-SNm8uCsYenQVeZJDhv_8cBfd5sstWsvL5GhCXPSIihQUkVNVDyDZv3nEhb1Zkb4ciafJIvApdyFu9ZOooal7Q1k-IFe8_MD-o1jSLpdhYEyUp4vEG3FSPnuRvj78JTrx_SJvDBx9TRmgTdA_VvJh46uJ9IoLbGXZCbcjDNu-_3LN5KhSrj8DnqB6cD3nlKzWLw8WjL6mtggXu4fnFGiI8ANNJxZkst6BVBGx-B0ZzHTrT-F6bICqgSz68eIty1S2SB_HNnuZFFZVLyuzKI8krP-7e5EoXt2E2f9-ocwwU4VHD7gvssU3s08IBANd13QAPdzppX87NYtZzZH7ozlM3sCdoSI35hFaSg_2W2glq1oqOC2rQJpT-PGa2lc8iDJLwN2MUIzAnQu4FmqAh5GRbG0M8-2WiL9I7nrhk167LHHnpCOe5Af7MMn2avS9KQXOms0gAy86A6fbn_wzfoJ6kA6vPQ1zobcz3DEbidEj7j5gJ8xggDI5eFf9fZaDiaaxFPTM-QwEgJCMNzz1Y3hb96xAL6kDiJqKVnt_dJZBCN9BWgFBPNxfDQKQ79vB-2YsODSs4XgIZvVIXQeGjERLbSk5MksK18tTRJxMlhT6wIuTGRBSWeKLPVq5lC1DdPqbxv_V73JnQKTSbYJimw=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/BM0iusUpGKKFZeVann/giphy.gif";
+                        video_path = "https://media.giphy.com/media/dyocoboX3Ed5PyoE87/giphy.gif";
                         description = "-Piernas en V tocando el suelo\n-barbilla cerca del pecho\n-Peso en el pecho\n-Subida hasta los 45º\n-No doblar lumbar";
                         muscle_zone = "abs";
                         hip_weight = "0/2.5/5/10/15";
@@ -1969,7 +1958,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 16:
                         name = "Crunch Lateral";
                         photo_path = "https://lh3.googleusercontent.com/BLhQ6d-NXC0uR0_aB7vJPFZ04iDBFlL91rP9ujFpTGXbkDUU3FxukLtaJoYsU69zxZPXAtf6Jq8MCciJ6CQh4Gt0PVJ9NVa3dDu-vmemQbFFO0ow65u6kFrBNLmYdkmS6KZCoXO2O8j9klmsIDLapnIAi_NBXL_ftgDal0ZU_Kqae_BPCqwznUtDvhEWKrHOnWxEk9lqAxEcAVS0PT2bP1wuDBQ6w-rLQC6CzW0dxxTZme4jqsU6xxMZqaI0wCb82rvzz9IWaC8LrOw4i1lR0NHwGl9XJBjKGnNKRZIPiZQp_SY7Ii-OWxhtG4tqNgO3F4Mnqqzu2098kSfsGceD9KKjhQ5wlxLAAonStQVdqNM9R5s46YvQKj8Wxqi7qlFxtCFn4UFazT1phXyakW_51DBRNSLtcgmQqg4v57VypJ9Ir7XcFRbxVi_g3mCpd3N2__s3tBC3m9w9UfppwSRpghH5mxXqWxWlio6EjFiepgqU-eDp8ID8Uw8Ah3iZzMPcMo8sWLKFd0RUDDWiVQmq0LUEKnAw1YGAGn8Ne1e0_lZCE4G97Y2foPSTRXQwPUHboKDACEV-ztyd3iaq1YHIw8dst4Z5Eo8dcPGrDAQBKIeDEIfv4kABI4tl8WwpaulAeG5FmXHezctps0g85F4U7GZ57lVPkSvHY3lQ0kUAnqz5HbZEu5hfWxZl=w711-h632-no";
-                        video_path = "https://media.giphy.com/media/xV8qT1Fvmv9mP8fCwL/giphy.gif";
+                        video_path = "https://media.giphy.com/media/ihwMY0HajbiJ4Kduj8/giphy.gif";
                         description = "-Tumbado boca arriba\n-Piernas al lado en V\n-Subida hombro diagonal \n-Peso en el pecho (lado exterior)";
                         muscle_zone = "abs";
                         hip_weight = "0/2.5/5/10/15";
@@ -2005,7 +1994,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 19:
                         name = "Crunch Brazos Estirados";
                         photo_path = "https://lh3.googleusercontent.com/dtRpwCvFwnphzwOwBBwPR6LOIQQeE56cdGv_DN0KQ-LRZumnGcN0g43UU5fj9sWOyWh00nZfNIO4C5pKnamNur7Ui9zxQYRiMSBpQTgRibJYMWGvXtvnsRkZLuYmAy5N3JuLlB4GyXX63DVpt4sOVEPU_E_-ayz2L2oURmriC1Ms-GFs-09SLnrMjLHx8LvwVvKppCf66u7Pr8QKpzl3t-grDsNV6omatEXmvCp3a2a91M_PlldT9Fdv01VUj4B7cPVMEsFrpmuJJD4N0mLoCOEH56_-4CxQFWGD6rB-CXQdiqe0QnoAKCtMDnnb7r-kb4qMdyPEC9iIwwUYEy7q-OSe-algH3LCq-z7WNguC1v0Au0FB8ghA4JNx9fEL6BzkMa107qP9BkSbsQRL013ELAbk-dxUSruE2lek21Xm_71cpPgVRkFI0WkG9A_hVnt5-CoGGuc2t6mC8rsYNpPwvTCiZ6wnQ_8joV2By-Co7HqekdjcsdbpIiQ4FMve2j4aVogZpg2LUwPE7m2VRdAHiijvxvSrpYpmF54G9BE6zAIxhyh53UXAPt0kxnjrUu8DB569yDBUmlSMdc4sv69xyDgWoDlnFmVzAgQYtlC-prA2r5YOJ294_auE6urcRv87Yo20ZAmCpPlJeXSVaKmOvb0x6nR28F4TnqjfgSq0AKQfX8ZnNmghNR8=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/5R1ErA7RqF7HUMTIov/giphy.gif";
+                        video_path = "https://media.giphy.com/media/fq6pPYN8Dp74RynU1Z/giphy.gif";
                         description = "-Piernas fijas dobladas sobre cuerpo\n-Brazos estirados con peso\n-Brazos alineados con tronco\n-Brazos no adelantan tronco (subida)\n-Crunch corto con tronco";
                         muscle_zone = "abs";
                         hip_weight = "0/1/2.5/5/10";
@@ -2041,7 +2030,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 22:
                         name = "Crunch Corto";
                         photo_path = "https://lh3.googleusercontent.com/2LxKol4oLiM84S0jXQ-9SuqIwkWdi97QW7rLL0IAl3aKJpHkEOrcIllq6LDa2xJJpG3NWiScsHwCU6Fm8RKqZ6EOsqj1qtCoQS1qefoAu0vDlPnuWjdaHG3pCpEDaUrtIGDZtERRpeyFjfoo0ZJ_rOD4jYabvoykCXhRuuYgf7hT_S817z6Vpu-ZfNVjcLl53zydGQJS7AAK_Yi9U0A63wHC26X1bcgVKI6rB9jGL9btsTMu5uH0TAWWSOk1vdfejDOmERqRolurVBioYt3OAmvWD5PAPMs9wTYn8_QSnQAco8ayUZ_2qkXN7kg476xn2AV578A-psvalweeHv2zy9YTOdLkp2MVfbSbTKT7a7BUBQw1mQaqaBxPLTifqIG_rzVke_VcOO1IbZlG0npgHVWxJC66uC90WAieVQqYMKnmfHhi_Ywg462IsHq9CuvRMBsbdTYqKvNShBSEJVI7dI8Qv6td1IKKY9BidAVXH7etfsbDa4sQJ9YO0NqWh0beWZSgSJ6ZlVWENRrzusdSOHyOy4f7Eg-Sg7e6iknUmtvIytaybttBRf9I6RAn-z83Y2RRkPuVK2_KCd5-aR9mbuL9g2uDZ_bc-KhoIrCx71YieDjgCq_fMdPI-avWnSufIsMiEsmtPaJ-i06rlJKDRJPm5JjB6Cpx8dbn2Uh5Xb5ffm84tEGxS6Qn=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1rOXZsMytyUeRi3DhR/giphy.gif";
+                        video_path = "https://media.giphy.com/media/gLKiKUHjU1ynAno8cr/giphy.gif";
                         description = "-Piernas fijas dobladas sobre cuerpo\n-Crunch corto con tronco\n-Barbilla en el pecho (subida)";
                         muscle_zone = "abs";
                         hip_weight = "0/2.5/5/10/15";
@@ -2053,7 +2042,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 23:
                         name = "Bici";
                         photo_path = "https://lh3.googleusercontent.com/Ug04Mj3zxMe5hmY8QGyhsACJaTB-zbY4jUGiKSjcqj5_QL0bex1tjpbeQv_jOVzxWv93Ipnbix_0eztAfrTP-lhCfYALG3euMPLrQTUNvSCn_3xBPzua5nqQR1bCEy28rZVilBegbZGzS7un9lgnyY8b83xvynEkYQjqPu0AEYXrXasn9iXR4ord6RzaQi1bSd1-psVTFOzh2zsyGmyJLhHbZ2iMUk3n9cCI3L8Ujobdx7C9gNF-HvnDAmYVAgvP0htsjRez_pI3ZCFlDFuHilHQ17tt6mZzp_qViUo01FbCK92wVX9cJ_6JgQZE7r211UOwzQkEbB9MHBlrwV2zSSqDyg2SNsPVIqwO2lp3p0YDLT91QxqbVzHKX_CuNT2qWj8Cz-qMLQMZBzmbkt6pcAZGAbGwkv8y74ZwCgGBoD81Qm1UxhiJwzYjiGS2ns5ydqM8ZX9gSd7xBbOEW6s8JwQms6MbQuN3oUH22CD22YYHAVaIJl_ZBWpleYtTSQ_Tj4BZd3V1mlySQ5eahlywd8wN_Haql9tR4WC8WM3hvx13SYMNpHbhJcb93b4eV0T0MpEpOzAHiwvKCjgkyiQGH62W_12GIox2rRIicpCYY_ZrgPkPB262wa2yiEHsf9r6wobomrdCbi8yIiHGK9JrQWlf1vhoe7cneLBwOmecnHT3ophj2E2VHUSm=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/3kxqtvnl6ZtYGlZ507/giphy.gif";
+                        video_path = "https://media.giphy.com/media/kcNCK0k5RMcZrN8aKJ/giphy.gif";
                         description = "-Piernas dobladas sobre cuerpo\n-Una flexiona otra extiende\n-Codo a tocar rodilla contraria\n-Alternando lados\n-Levanto tronco luego giro";
                         muscle_zone = "abs";
                         hip_weight = "0/0/0/0/0";
@@ -2065,7 +2054,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 24:
                         name = "Lateral Piernas Cruzadas";
                         photo_path = "https://lh3.googleusercontent.com/Dj5lrC7mXI3FKEelMvZ_U8yb01FXAXtIPZd_YgFugPgmQHlzpz20PpDZuN5ypZjzrtD_4icIA8aKWOSiGTyEwOOKBZc1WWo1Szc-KTpvr6-DpCUKTWfzaEz6KaZLuBQiNapvwif-G1YZYeOlOIekySo5YOhwHXyEn-3kfWwjH-cEh6Z7cKpYWrtQZKN7WjIByob916jfuG1CvGBNV7FGtgiKauGewaSsyhdMcUY04pgIhYtfG6QP-HMEyDzc64yPYlEvMRo8s2OBqwXgM6dCzhT2DIxR1-eOtoHE7c4rj8lnT31PsgfN30R7JJ003cSxiwghfPS2PnbC4nBdMc-WzSgHO185lWtj6fY6OO_mcfzyEXBN3GEoBoVS9UPF4Hj5n2Sv4NPjFgTX8NpVRP4PQRhPRVYhr8lr8w-phL8w8CodG9YQDjPzPOkfQLa4zAh_dz0RZCIf-pQmFSIcKJgS75wQAqwqSlMbBEeouhh8XBJ6xkdP-yWZ_p63RRz4WwrEIvfUoTnDilQ2UnSnTc-rlwOtEq6phFZ91elKZmrJSXWqzOs_kTl4TOx35Po9QjLtdLa5nOTA3VFgP7nMZGsXM-uG3OVLdyBNlrGDbrsxBabwGueRyOJmnyFXY_H26DoE0LZp2DfUMH40ELlR9tMvgdG1Rvss3zW5MnHPrz2hl8uolSBSagyIHXe5=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/w7vu3QLKvuS49d8nvF/giphy.gif";
+                        video_path = "https://media.giphy.com/media/gEXp2cCPS7FBrSibCf/giphy.gif";
                         description = "-Un pie encima de la otra rodilla\n-Hombro dirección rodilla opuesta\n-Levanto tronco luego giro\n-No alterno lados\n-Puedo apoyar brazo en suelo";
                         muscle_zone = "abs";
                         hip_weight = "0/2.5/5/10/15";
@@ -2077,7 +2066,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                     case 25:
                         name = "Plancha Frontal a Lateral";
                         photo_path = "https://lh3.googleusercontent.com/-PM1IBlAyGpVJrx0YChTLdJ-zzdKEWwT9DqrmW9suf6KJr0M-D1ZhdnQv81O9f8YdU2c9EhcBVvOUm9UePTdHDO74fdiHq5zAKcqv6yOcfzmcxvpai2W7_XW9vy-i6830phazM8R36PDYEJzhY4RvBpv5ZsSa_aFrEA9BaypXq3ylr-eUd2cztUW7qUmvILHrTEFoQjUOpxEW9osasXtazENhVQCjiAybu21cE80uLKtytStfIQHm-U9hhCCt-VSzQ-1JhYwLmBscZ7uLmBzxw8THWquxmmfIY3Zqy9fAoTlx8-wWS8-iWfqjYodo39fhub6H1gkkT_j1KeDoLd1KkUrVYomfZr11ZpHCt2PHLk9fYT6jR_3zyF2mHABUWDcEYtXeaSm88Z_w7XgvaloYXYan6z92vD2qpRMlqMXP03HeQzeEcVzW3YTfzmY4_6C4Cq3d6d5KDOkysubNhGXnalOWSLZtgiHO5_2KbWASfoLFo2Rd1uyQAWhku8k9rCig72HLaaZoHH3X0IyHzNFtNUphP8hMdXhdu5LAURlWW8Uf4OLUa72JPruktJEf2WhvwVqEbdPHoeQP1K4m9gvge4R5X9Lr8gTcbDYY9G-bemoSERqWxQDaW8R29j5kPoPfND6ZVRA2cxx6catwn4otyEUPxg_zIzbAcGhZLnVW78iTm5iPZk14HgO=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/t6J5AiLkWqOCiJEc2j/giphy.gif";
+                        video_path = "https://media.giphy.com/media/Q7LEuj87PmzoDJpXCs/giphy.gif";
                         description = "-Pasar de plancha frontal a lateral\n-Marcar cada plancha\n-Subir y bajar brazo (lateral)\n-Abdominal bloqueado cadera no baja";
                         muscle_zone = "abs";
                         hip_weight = "0/0/0/0/0";
@@ -2174,9 +2163,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/Lp4c1Ofp6QAaIk1TMF/giphy.gif";
                         description = "-En banco declinado\n-Bajada casi a tocar el pecho\n-Movimiento completo\n-Peso sin contar barra\n-Subida rápida, bajada más lenta";
                         muscle_zone = "chest";
-                        hip_weight = "20/25/35/40/50";
-                        res_weight ="15/20/30/40/45";
-                        vol_weight = "25/30/40/45/55";
+                        hip_weight = "15/30/40/50/60";
+                        res_weight ="10/20/30/40/50";
+                        vol_weight = "20/40/50/60/70";
                         subclasses = "med.-inf.";
                         break;
                     case 34:
@@ -2196,9 +2185,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/YrNy2LmzNOGsWBXCUG/giphy.gif";
                         description = "-Tumbado\n-Ángulo codo con tronco 90º\n-Codo baja un poco mas que el pecho\n-Subida hacia arriba, no diagonal";
                         muscle_zone = "chest";
-                        hip_weight = "10/14/16/18/22";
-                        res_weight ="8/12/14/16/18";
-                        vol_weight = "12/16/18/20/26";
+                        hip_weight = "10/14/18/22/26";
+                        res_weight ="6/10/14/18/22";
+                        vol_weight = "12/16/20/24/28";
                         subclasses = "med.-inf.";
                         break;
                     case 36:
@@ -2207,9 +2196,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/KDPE8fHLRTAgY0aiBg/giphy.gif";
                         description = "-Banco 30º inclinado\n-Ángulo codo con tronco 90º\n-Codos bajan mas abajo que pecho\n-Mancuernas suben rectas, no diagonal";
                         muscle_zone = "chest";
-                        hip_weight = "10/14/16/18/22";
-                        res_weight ="8/12/14/16/18";
-                        vol_weight = "12/16/18/20/26";
+                        hip_weight = "10/14/18/22/26";
+                        res_weight ="6/10/14/18/22";
+                        vol_weight = "12/16/20/24/28";
                         subclasses = "med.-inf.";
                         break;
                     case 37:
@@ -2218,9 +2207,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/RkEA44dsJXzVpd2LJo/giphy.gif";
                         description = "-Banco 45º inclinado\n-Mancuernas se tocan por los lados\n-Bajar hasta casi tocar el pecho\n-Codos cómodos al lado";
                         muscle_zone = "chest";
-                        hip_weight = "10/14/16/18/22";
-                        res_weight ="8/12/14/16/18";
-                        vol_weight = "12/16/18/20/26";
+                        hip_weight = "10/14/18/22/26";
+                        res_weight ="6/10/14/18/22";
+                        vol_weight = "12/16/20/24/28";
                         subclasses = "superior";
                         break;
                     case 38:
@@ -2251,9 +2240,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/lckzTgWUmCygx5AiDH/giphy.gif";
                         description = "-Con un brazo solo (luego cambio)\n-Rango de movimiento completo\n-Espalda recta pies fijos\n-Controlar el movimiento";
                         muscle_zone = "chest";
-                        hip_weight = "45/55/60/65/75";
-                        res_weight ="40/50/55/60/70";
-                        vol_weight = "50/60/65/70/80";
+                        hip_weight = "45/55/65/70/80";
+                        res_weight ="40/50/60/65/75";
+                        vol_weight = "50/60/70/75/85";
                         subclasses = "med.-inf.";
                         break;
                     case 41:
@@ -2273,9 +2262,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/QOcdHH38L6p4XFeqCG/giphy.gif";
                         description = "-Ambos brazos a la vez\n-Rango de movimiento completo\n-Espalda recta pies fijos\n-Controlar el movimiento";
                         muscle_zone = "chest";
-                        hip_weight = "35/45/50/55/65";
-                        res_weight ="30/40/45/50/60";
-                        vol_weight = "40/50/55/60/70";
+                        hip_weight = "35/45/55/60/70";
+                        res_weight ="30/40/50/55/65";
+                        vol_weight = "40/50/60/65/75";
                         subclasses = "med.-inf.";
                         break;
                     case 43:
@@ -2284,9 +2273,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/1yn2K3ajrcTo14Rr10/giphy.gif";
                         description = "-Barra casi en el cuello\n-Tumbado posición cómoda\n-Comprobar posición antes sin peso\n-Rango de movimiento completo\n-Peso no cuenta barra";
                         muscle_zone = "chest";
-                        hip_weight = "15/20/25/30/40";
-                        res_weight ="10/15/20/25/30";
-                        vol_weight = "20/25/30/35/50";
+                        hip_weight = "15/20/30/40/50";
+                        res_weight ="10/15/20/30/40";
+                        vol_weight = "20/25/40/50/60";
                         subclasses = "med.-inf.";
                         break;
                     case 44:
@@ -2345,15 +2334,15 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         subclasses = "anterior";
                         break;
                     case 49:
-                        name = "Kettlebell Push Press";
-                        photo_path = "https://lh3.googleusercontent.com/GuLrkB8YXC1MEY7xWDEymgx7OuU2iBfNYbThHTLbjjK6yjqzP2bUuQghtNAFDjXpIhvPteXcwvJnvjMoBUix9rY4HMGndy29SoyOAsfj8Fa-FWUEzr12HFm0Z6_UhKlzLSSSG6ydTVCS3fU4adTpQruv17DCC0fnIojRKCZfcqeiH1G1XFnQ82X3y74sGh3MlHUTtnijwXKOrI83IhsgssWyVK3mHnJnHXliCxoeOXwM66fvyJWnrHkFzImjn9pEJpS_wosf3m-WNBMR3Vm233uUL1WnLKGuHJSRfL_EI8Qvo1J8hdE5Jf_WbIRKgp24VAVDSB4GPInc-DFw17xJ2jfDC2kYIv6RPwwzlgySqZv_kSSecDGzU56kNNbE9q9xKZTQ2PHAzzZZbQI6K8mjDkKgEjFL9HPmm_E0WpElp304IvUhgkyqmRDg6UZlC8RWMjEpS1rjDqN_39q8WHBtd1wYraSYtH2mCFbqKDMRW0sDAnctbQEyQG52hVmIazpq7b5uzDvxG4_zHnI3RNiR9IWs9ytqv11cxRXAQVLgVkil61FlgoFL-ST3huD4tHKdeLEZLY7nV11K14EjElbpn7NdmAVIGboeBweGWu4GyWn9BHiO2L7AAK9CmQ_6EuvWGPVQflpAJlFEQQ2s_6Yj5mu--swHVU9KV6pWsJMeSsB3AeqILIvkCcG1=w698-h632-no";
-                        video_path = "https://media.giphy.com/media/1AIfHfxKGqCNWBPJnM/giphy.gif";
-                        description = "-Espalda recta, piernas semiflex.\n-No balanceo\n-Kettlebell apoyado en hombro\n-Subida en vertical";
+                        name = "Polea a la cara";
+                        photo_path = "https://lh3.googleusercontent.com/5mevVmwn8Vo77PFyjCF042lx55TkL8dx2dCukINLsl5ho1KSmgYB_wWR1ilpCaIodSS1eEWR_mtWDuM9E-GH2CxCaxzggzmwSEGRHUW8y4TWm8bcoyEvT-1PCHSuEg4AX4W5-yPsqFJs6oNZbVnurIEJq7AvulJztGiPsY1b1yZBToVvPGjiTwrVl3GFztqEXZ8R9Lnf-vaubmnJcwELG0Ov0oVc5uleLZGT_1wAebrAy4obnOZEyYkeaM1bxEtqtlpZK2LL_wbavjpz1UmAPYO5CsDLyODvXXt1BcZ4A960LbBNPbkPv9wF4GuX2lLa1FDpOWVMD-a7rOBjN4rTDRJxoXWwOxORYwDsQ39QEy0qNN06h8AGFx1W7CuCcVzVZQUU5GfSIgWJfTUqqYvlzvgyBzNijL9-pLMqb0cNoBUETEdTDENS2GYJpraHR-b9WSJWPIBKowUyeRm6W4xYhoarQnrpqLpUdPtmRQQOgW1po3QjjoYl5uXWk2hRA2Cq6SGNiSEsYdNGmy8kLbOzStWaNLbi8_cJ3jrAHtP9188Do3Of6P5YeXBaZoFKnJVkQGHCcYmLPu_0VT_HO_jS_kdtq25lCBT6t35T2xiI7LwPWcn2iIUCRl8052qB3S9o92NqdjLWgeAG5AQ4D1gHAlViXxb04AMipF91N8NV82cgBknPtuG3V_o=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/MaxxmOKT5h1aiLZVRG/giphy.gif";
+                        description = "-Espalda recta\n-Controlo la vuelta\n-Sin balanceos\n-Movimiento natural\n-No bajo codos";
                         muscle_zone = "deltoid";
-                        hip_weight = "8/10/12/14/18";
-                        res_weight ="6/8/10/12/16";
-                        vol_weight = "10/12/14/16/20";
-                        subclasses = "anterior";
+                        hip_weight = "5/10/15/20/30";
+                        res_weight ="2.5/5/10/15/25";
+                        vol_weight = "7.5/12.5/20/25/35";
+                        subclasses = "posterior";
                         break;
                     case 50:
                         name = "Remo Colgando";
@@ -2380,8 +2369,8 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 52:
                         name = "Maquina de Remo Codos Altos";
-                        photo_path = "https://lh3.googleusercontent.com/Lz8EF9TMHtpX0JjN8qxVUClUeT54WkE-a_RQz9AkwbM5lvXIEUx-i0iFa6FvTn9vXeLp6e4HCYxqkGGTvBVzRTZ9LqxLy8yhleuW7IkZBvybkwZxdFrf3vnVYihnoqfQD1FqyViJT2bf6z0TMjWcShYJEkmJwI_YOz6FEML5h_l8hd3-qzr9y0ISvsJ7lz-YnQPJuZGO3PYgdEAxWmvGSA393KQkr334WEZReG1N2Im2JGJa70Rj94aItzt9mEgU59O5Fr3tJUU53yE03KxJeq5cRlnQnqtxzFuntdtTbzc1xCJgP82WQjY6H75Xja3QrQTOdrO-aqlD6im_sBQrKLJQcbLG-NrQcbZUkuwKIx_R37hpymZ8jdjwZ1jwwgbp2l7T314NvzpGwXHMrSDsEfGcIwvj4ry-CUPfpkeQXyKezmnMpYQjYI4JbCR11EFR1cGpbD8FfwA7IUIjDcNhzI_DsAcLuDoKp_g5t3IPbPaxjT_QaT3ua5YmehDKe8tD039ir9zu15bvRY7U21OwSO_tH_WrQtF0mGI_r7iHRuO42LHj3PL-JPo2cmrL0-2dexkQWuav0Dqp8NLiLTbFgSUt-8F4ASi3OgJX8MIDQ0gbanVbHerDF52OZEwQDojp9Mx1RMoak85q31Tl_6iSrqB9Crc9zFmXpK-4uh5sfZ0DWG_Ke69tLR0=w1062-h944-no";
-                        video_path = "https://media.giphy.com/media/fr4HoxDhvjaif4oRKg/giphy.gif";
+                        photo_path = "https://lh3.googleusercontent.com/RY4SwIbHZJgrOY6rQlRDJP4Yix7J9KAfumLegLbh3tq9LGKqkJthpaMx7Ek8QF8DOiqiX8o43jUUFklO1RFn3hOfDFvNhIXIJmMI0RTGneo4kSNpcdT22LQ_cRwRA2KHV1OFaT6l7Fy-FTwMdV9ItNREExUq2X56su7_ZD4zZjrHGOmPsRVC2pVy46-T6ByyfPWmWZr6Zklhhj8ApJn0E2ToGCMjQW8xKiArbtWMPcELUC2lW_mQWY7iyIUj7T6HsqJpnaYUg-fm7mcUR7onZkYi_NqdbBFXdEy586iOJSr3PEzK-WLqTee1EzxHYKTCbH3rJkOVyD0OocLt5c6wd_lrhMMZH9J1B44DLcTtXjt_eXO3BdF5iZOiIASaq0M0dnO6e2GWVC13Ia5EODdQtDjaB9eTzRXSLGuqvsBtW8-BDfvUHyfIOuAFLGfNFbCnXheNvuyPeVPwZUBETng98UeA2nXjUHzEH3qulK5oGPEUcyX8Ke10J5NcaP5NM7xVwVF2WSsdtTTFiyOSS06DIXobuee83Lc2DGgqCOzq5mocY_v_K8dDYA36ut-0pYlFJObF9_7POnfCsKzBAyCkpkObk6YLOEKsz2L_-jV-zcbtIkNCdf7RMniS-K86pca3e48ZCb3AmGYl76D1DuO1__ogSVHhpx1uMDz9Q0MRJXqz_BHt3KqxSlW6=w713-h632-no";
+                        video_path = "https://media.giphy.com/media/dtdDalKlMY01KECU8Z/giphy.gif";
                         description = "-Sentado pies fijos, espalda recta\n-Silla lo más baja posible\n-Tronco rígido, se mueven brazos\n-Mantener codos altos (sin forzar)";
                         muscle_zone = "deltoid";
                         hip_weight = "45/55/60/65/75";
@@ -2462,15 +2451,15 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/jRfbFtoWENAz6q5Pb7/giphy.gif";
                         description = "-Sentado cómodo\n-Amplitud de movimiento";
                         muscle_zone = "glute";
-                        hip_weight = "40/50/55/60/70";
-                        res_weight ="35/45/50/55/65";
-                        vol_weight = "45/55/60/65/75";
+                        hip_weight = "40/50/60/80/90";
+                        res_weight ="35/45/50/70/80";
+                        vol_weight = "50/60/70/90/100";
                         subclasses = "menor";
                         break;
                     case 60:
                         name = "Rotacion con Banda Elastica";
                         photo_path = "https://lh3.googleusercontent.com/aym_LIz0ITRwJkqHYklsmTIwRp6Pi_ALjQnmY9P8oG4nr4lYZP0NVBOt9UwoQ1y26bu0u6sSl3YhZyOcMc0JFN9eE_2DeRA1o96rheM9aOhohO1AutHBwnLu6HYkkQyJl92vi9_TyaXLDe5xzVicy_Qmgaggw2FVyXpHFy8SQqu8eFS_t3RYCddTjf1sdUnT4r0mABWd_hRm67mNPjIxG858baR80LnUKQdVNrYfXJgppseLvh5VVC6uO_YvDjGyg8WIFSUlZ4BgRCWugGpsO2rgz-z2t8uFMoWXJdG7DUz1PJW4QFua-C7FUro50jx9GYiiqPR7CtGHfCbYlIlQ8quLeZzdW7DypTNP3iNblLKIZuFYJUCB7ob7h8E9OkwitAG29I-fx_jLTELiSzQzWhUH0TtMvm1cFwfjNvmxUFdBV0sBTvvDjzhROa-60HOHOjQcIqH0aAVWUKY0A7u8YeSsxuaX9Bc08mm-odeJ0jH7k1Ktg8WkjxPcNItvBUCRVhtwUkQjpp_DS9boj6Q4eJMCTtBvWEmZnX5sm1llKbFWg26b9pmr_MzSP23S5Lp5jPkiANfG2CPYDzsWg0HQu-Nq4zBFrVd1kDyMTW-ZrNCs05O_1dRm1KQbv3doqPHvSjix7kZx2BfLEx49mpbZD6NkSdfWa3-hNl6EqzJ-i1d_bpSC3pXHc4Ag=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/1lCGZxbOoKwOOZDCkj/giphy.gif";
+                        video_path = "https://media.giphy.com/media/huVbtq44V78loMJ6Am/giphy.gif";
                         description = "-Banda elástica en rodillas\n-Piernas en V\n-Movimiento de la pierna externa solo\n-Rotación, amplitud de movimiento\n-Peso/Nivel: color de banda (elegir)";
                         muscle_zone = "glute";
                         hip_weight = "0/0/0/0/0";
@@ -2539,9 +2528,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/5vYnunLwmnPJAMFGwD/giphy.gif";
                         description = "-Amplitud de movimiento\n-Pierna estirada firme\n-La vuelta controlada\n-Sin balancearse\n-Se mueve la pierna solo";
                         muscle_zone = "glute";
-                        hip_weight = "40/50/60/65/75";
-                        res_weight ="35/45/50/55/65";
-                        vol_weight = "45/55/65/70/80";
+                        hip_weight = "40/60/80/90/100";
+                        res_weight ="30/40/60/80/90";
+                        vol_weight = "50/70/90/100/120";
                         subclasses = "medio";
                         break;
                     case 67:
@@ -2550,9 +2539,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/7STqShwodzd1jGJD2w/giphy.gif";
                         description = "-Sentado suelo, espalda banco (coloco posición inicial)\n-Relajo en la bajada musculatura\n-Tenso musculatura en la subida\n-Marco las posiciones";
                         muscle_zone = "glute";
-                        hip_weight = "5/15/20/25/35";
-                        res_weight ="0/10/15/20/30";
-                        vol_weight = "10/20/25/30/40";
+                        hip_weight = "10/20/30/40/50";
+                        res_weight ="0/10/20/30/40";
+                        vol_weight = "20/30/40/50/60";
                         subclasses = "mayor";
                         break;
                     case 68:
@@ -2572,14 +2561,14 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         video_path = "https://media.giphy.com/media/5ndmzORKczTEPqlJ2V/giphy.gif";
                         description = "-Tenso músculos en la subida\n-Relajo músculos en la bajada\n-Marco las posiciones\n-Movimientos controlados";
                         muscle_zone = "glute";
-                        hip_weight = "5/15/20/25/35";
-                        res_weight ="0/10/15/20/30";
-                        vol_weight = "10/20/25/30/40";
+                        hip_weight = "5/10/20/30/40";
+                        res_weight ="0/5/10/20/30";
+                        vol_weight = "10/20/30/40/50";
                         subclasses = "mayor";
                         break;
                     case 70:
                         name = "Lunge Lateral";
-                        photo_path = "https://lh3.googleusercontent.com/GOAAzT3KLEM7aH7Qikp2WQi3bAknF8oTDtSQOW_4vuNWx92M53V0ipViBz6UugZx4QbxKSQd3Zgvl28vAxYGo25Ukci5DVziIIGuh8Oc_LKZHaYkkozPjOppA1znsac9gHdbTxWffo2HCPO22OXMyHG_0lkcv5sYq-sG-2mNNb1Y-QuZ07DCzgC9nsh1HOQbrh5JVAfe2ENQ416o3GpObv_JlwbMIoTXnlbqvV8Oqy98a3sAAxjzUMTBU8KgiqtSqPlbk2ALWRsZxxxZIcDTgR1G2AHHl82zekmwftiZgguJfN57nIgjNP-oT2TOJwgDTOs-5g6Iz0ojOtalv2bPjEGg1VU3xys00PJI78fz6eMogggH56fshxDQhjCTMfMzy0Yjh5TPzxAVGppwVprojZ6bCUWHtNbd2zeTL-ddKfKTF5OO7aetP_riUoLueNw15Bk2AQq0pUsGr8tjjq3N5dGtVpX3EPlN3GBeMiAS50DgGTVWQSeDbqh-82Nj1Gghf8ht6vtyYE15h726M0Ee2UzI_Bl6iEGta6v1eb2m2T5aFL2TXHIextxPICeaWZq2JtnJsM2aB5-BH9j-ndQ-d2-MxFb_LKm3Iu6K893pb2hMWXwydXBCVU76WJ6uOAmpdZaIBDibWs7heDyfez5Ikbvf3VLl_e4FvPX2xIHgyG0uv7YNJhTAL50=w708-h944-no";
+                        photo_path = "https://lh3.googleusercontent.com/dG0Jn_viCiEpk3Z0G3BdxbIYBPmDhof12Q2Va_lPW4JF45y9FwN_JrDzxph7SXmnl82_qflILb5VeogMdUw2BETC2Nm4ObJSxjthj37gLy3QRCjBJ_LpeZrxVM7stgjHC5wLO5X0fvaOVqKJT6eFA3XSnkHFopsqcVNlS_r1OseNDGev_McWLa0HpWrWyCAGIXEMUwMcr2d7gDrBjyUUiL9--te1tCdxeg5Yyf5vRi51rIwzyb2LWHiS6HdIj5AA5i7pXsvr6hqejhdGPVQgaPPiEYfAUANcP3f0R3__MLhZg2ADX7gxWTSB2bwnv5rsRIiEC_fZFHTluFppUSP67lgBCaA0d2sv0i6y3EOJESQhWzmSvFac7GpB8QUg66Nlq4fwhQbGrjE3esU3elEWWOC0Deaf76_XUY3yLuxaAsr2KVsrf8xjNyGK0Tjf4Iw7haccTAyQ-a5TwPJoI_KRPCbicQ0E_m0DUeWQuy6yqTk6zm-0ubFhyw05N6zI_datvR6mcsbgtoEXqthRjJht7JU8s3GRaRJmKY2ZbTTVpDJ2u9QTBHxsKOHqmeLUWa4R_v08n4Pc08UKIq31M3SP-uJ3EwqOwT6sGY5Hb534KF_ldCdNqkfAuBOwlaIYJm--qKj4nazU9X0U5YofwF9Vr5L03GLRTOUtrZORQMs2CybzyVoPboKd890=w1062-h944-no";
                         video_path = "https://media.giphy.com/media/RN31a6hZh0WD5GpQzf/giphy.gif";
                         description = "-Rodilla altura del pie (no sobrepasa)\n-Bajo cadera\n-Espalda recta, saco culo\n-Movimiento controlado, equilibrio\n-Pierna interior estirada";
                         muscle_zone = "glute";
@@ -2652,9 +2641,9 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         vol_weight = "0/0/0/5/10";
                         break;
                     case 77:
-                        name = "Row Machine";
-                        photo_path = "https://lh3.googleusercontent.com/axK6489X0fY5I_gZY6kEon7lxXQrnvxP3qYFqCzeftgldesJljtJw6PcibZCWMfQyWTf-vJYidYOmedsfzA6nqGqCVdTs2bBfG-Jd9QosUZCV5sEYEDBeRiLP138V3QeoSry8wtL4VXUcuyGb1VJqpN1SPc2Tiflm-Ss7ynpYa03wn7WjQIw8zgujJBvwWO5P9vd_B_xw2sKSe20ytyH0JCfa2xBCewl0TUefPdd0QpVsD-dicoVrQT38hLKRUCSsqU5cmzQK8L7Q7rTh7GhQBL5S3ULpBotTCdSBWYFcdhRKi0zKXn3Q0md_8FAaei0Z5jp4BFAAxZ_aQqx7UxqrVzAHqTt7nk2Xbk5j7SlT1IybuUYL01UC0okYyhdRjiCNyUkuITl4L7obuReK4pngy2iYPvXvJI7BU1QIvYVRC8E1WfJBFOPg-HORnJ5CyG_0wwdqiXt6fcwEXMJpdSN_wqI2ttV51s-sWhXEAozxjeVXPG5OdxeHqG8NLjr9GYXsKI6G9WDHdAUwx-t5JAg3FXfydfHEysfxanxcBfNB_oUdht1d5RBkenZgJiB5xYN0uR6VURzmDgKpLoDyXHRptl1gThikK_v8DOn3LjNpfMOPM4gTK8g7jcvyRo2HtCGARk7HxfP_FpCVR4UBzFpQSe2XmxXYCAFpDXg_VAcB80rNtw79iDQjRk1=w713-h632-no";
-                        video_path = "https://media.giphy.com/media/3b6qrDLve0XifFgU5H/giphy.gif";
+                        name = "Maquina de remo";
+                        photo_path = "https://lh3.googleusercontent.com/Lz8EF9TMHtpX0JjN8qxVUClUeT54WkE-a_RQz9AkwbM5lvXIEUx-i0iFa6FvTn9vXeLp6e4HCYxqkGGTvBVzRTZ9LqxLy8yhleuW7IkZBvybkwZxdFrf3vnVYihnoqfQD1FqyViJT2bf6z0TMjWcShYJEkmJwI_YOz6FEML5h_l8hd3-qzr9y0ISvsJ7lz-YnQPJuZGO3PYgdEAxWmvGSA393KQkr334WEZReG1N2Im2JGJa70Rj94aItzt9mEgU59O5Fr3tJUU53yE03KxJeq5cRlnQnqtxzFuntdtTbzc1xCJgP82WQjY6H75Xja3QrQTOdrO-aqlD6im_sBQrKLJQcbLG-NrQcbZUkuwKIx_R37hpymZ8jdjwZ1jwwgbp2l7T314NvzpGwXHMrSDsEfGcIwvj4ry-CUPfpkeQXyKezmnMpYQjYI4JbCR11EFR1cGpbD8FfwA7IUIjDcNhzI_DsAcLuDoKp_g5t3IPbPaxjT_QaT3ua5YmehDKe8tD039ir9zu15bvRY7U21OwSO_tH_WrQtF0mGI_r7iHRuO42LHj3PL-JPo2cmrL0-2dexkQWuav0Dqp8NLiLTbFgSUt-8F4ASi3OgJX8MIDQ0gbanVbHerDF52OZEwQDojp9Mx1RMoak85q31Tl_6iSrqB9Crc9zFmXpK-4uh5sfZ0DWG_Ke69tLR0=w1062-h944-no";
+                        video_path = "https://media.giphy.com/media/fr4HoxDhvjaif4oRKg/giphy.gif";
                         description = "-Espalda recta, pies fijos\n-Sillín posición cómoda\n-Codos posición natural\n-Cuerpo rígido, se mueven brazos\n-Hacer el movimiento completo";
                         muscle_zone = "mid-back";
                         hip_weight = "45/55/60/65/75";
@@ -2982,7 +2971,7 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         break;
                     case 107:
                         name = "Biceps Curl Inclinado";
-                        photo_path = "https://lh3.googleusercontent.com/Z9VxJmG4q4kXDRkJaiyRZEocuUYTiDQN3BZ6xxP5AgW-pmKNcHkLnN8L4a2x03spyVZ9PP0oP3h3x8h3Iw4-CLn8Kp-hRSTzem7T7MR-cB_Lnck0_EUHPkkKvk__veAfFSbkooisJgbHAs1PXyvg8SklngYF2UXnAyJJFYplHyfV48rtIKdWxFpbsKkoXpBsplauy5GRouqehpOJgRfsDafsogI9__8AwKrwcY2G9il_phjx9DEvz2-rxJs2YeTabw1id2smbw62jvEPUAE7C3heliqWYLRIVkwb6RZjdhg8ATMFzn8d6_o1xnPLVdOLuiz5JWiTilE9ichd5O_YyeQMWk5HBi_OOTMf4AHlGJNwgtUjutpvIYbDP4Pgk1pFn9Wbd7sY-izk_9v386SWVufdR0RZ6ZNc2HImhjeT8kggAA4GfoYWzBxGgqkYWaXEYVBCRFgw83TefcTDiaKv8DTEIfuJ9NIv-wksrcKPS0pFier5EwiPEWPnx_0ZyR5rKIjxUCvfS5Sq4owySjhdCbL6rYuBk9l-psv5U5Fzw5GPuQQDViQJlEnChyXzdseKOZMVndRm4HAlXDCU2advcav-QpCgFHni1_bPDe-jH4onD7J9EULvSa_DzmSVOQUdxdom5529P9A1myzCnH9esOXI=w713-h632-no";
+                        photo_path = "https://lh3.googleusercontent.com/sVgVoAAVBorz5w0koJCIwaHtVsZRbx6uhm2hDz7WXKg23GKiO21eKn11OFmd2fmOJ0S3aT-8VB3f0GKM25D5t2QY3CC8AuKFkpqNNwhmgncbgJ84QohNRdO3FATQEYAIJy4s4G0ovB7xdcClIg7_Fm-hTNi3-3qmDcSRQQRMrkYu4MIj_ESsA_XmA9b8qbC4wHU5VAyRT1kIPZpR7ChTGrpNMk_UyaUw2acmk0id1hUG7OWS7JD-_4ZjTNWJmu_7r0HDr5CwWP9xkiP01kxwcG7ERWszhfiek8hDjGJXdBoAtuChSC30lIHp8GlVbPKuYPJac_G0jc4D6LZ_nP15SQHn-yRwcccyLn4Cmk7y1jZbnG2GxMX2RkPF6d3LQnn6UKkA8VPQ5YoqZeBK8Y8HvAKiOlAKy5WR77-gjaBxFbPQvLkIzH-jv1pdwaf90DTh9Z5z3WAZTOv-Xzt121Mpqyjxx6v_pIvRp3uTYnEraxqu-StbZUkpXFHGw_8sq280PFy4MEMnnZoKgOGAzGtcR9jPIssbSbEmooe9Pq4Khh3HpA9nzDVE1VErTkWBdlR8ZjwXkk1TGg8Xehsig9sQ7yQTFiiR-wdNZQXLI1hKvsZZAmXW05DkXKw9jOX37sj-PdfTPb9T4fHA6I2W0qpgW-L7ncnADH20X5t8GxXPafg4V7jlxXieYhA=w713-h632-no";
                         video_path = "https://media.giphy.com/media/Zv9uPsqqBpYdzHDBWV/giphy.gif";
                         description = "-Banco inclinado 45º\n-Agarre supino\n-Cuerpo posición cómoda\n-Codo fijo\n-Bajada controlada";
                         muscle_zone = "biceps";
@@ -3468,17 +3457,6 @@ public class ExercisesDB extends SQLiteOpenHelper {
                         res_weight ="2.5/5/10/12.5/17.5";
                         vol_weight = "7.5/10/15/17.5/22.5";
                         subclasses = "supraesp.";
-                        break;
-                    case 151:
-                        name = "Polea a la cara";
-                        photo_path = "https://lh3.googleusercontent.com/5mevVmwn8Vo77PFyjCF042lx55TkL8dx2dCukINLsl5ho1KSmgYB_wWR1ilpCaIodSS1eEWR_mtWDuM9E-GH2CxCaxzggzmwSEGRHUW8y4TWm8bcoyEvT-1PCHSuEg4AX4W5-yPsqFJs6oNZbVnurIEJq7AvulJztGiPsY1b1yZBToVvPGjiTwrVl3GFztqEXZ8R9Lnf-vaubmnJcwELG0Ov0oVc5uleLZGT_1wAebrAy4obnOZEyYkeaM1bxEtqtlpZK2LL_wbavjpz1UmAPYO5CsDLyODvXXt1BcZ4A960LbBNPbkPv9wF4GuX2lLa1FDpOWVMD-a7rOBjN4rTDRJxoXWwOxORYwDsQ39QEy0qNN06h8AGFx1W7CuCcVzVZQUU5GfSIgWJfTUqqYvlzvgyBzNijL9-pLMqb0cNoBUETEdTDENS2GYJpraHR-b9WSJWPIBKowUyeRm6W4xYhoarQnrpqLpUdPtmRQQOgW1po3QjjoYl5uXWk2hRA2Cq6SGNiSEsYdNGmy8kLbOzStWaNLbi8_cJ3jrAHtP9188Do3Of6P5YeXBaZoFKnJVkQGHCcYmLPu_0VT_HO_jS_kdtq25lCBT6t35T2xiI7LwPWcn2iIUCRl8052qB3S9o92NqdjLWgeAG5AQ4D1gHAlViXxb04AMipF91N8NV82cgBknPtuG3V_o=w1062-h944-no";
-                        video_path = "https://media.giphy.com/media/MaxxmOKT5h1aiLZVRG/giphy.gif";
-                        description = "-Espalda rectaº\n-Controlo la vuelta\n-Sin balanceos\n-Movimiento natural\n-No bajo codos";
-                        muscle_zone = "deltoid";
-                        hip_weight = "5/10/15/20/30";
-                        res_weight ="2.5/5/10/15/25";
-                        vol_weight = "7.5/12.5/20/25/35";
-                        subclasses = "posterior";
                         break;
 
                 }

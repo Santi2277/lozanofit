@@ -34,7 +34,7 @@ public class Activity19 extends AppCompatActivity {
 
 
         //connect db
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 45);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 47);
         SQLiteDatabase db = exdb.getWritableDatabase();
 
         //get profile data

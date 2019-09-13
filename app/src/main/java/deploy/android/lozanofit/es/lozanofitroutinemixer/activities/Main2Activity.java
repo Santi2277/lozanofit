@@ -29,7 +29,7 @@ public class Main2Activity extends AppCompatActivity {
 
 
         //OPEN db in writable mode (it CREATES db if it doesnt exist or UPGRADES if version is lower)
-        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 45);
+        ExercisesDB exdb = new ExercisesDB(this, "DBExercises", null, 47);
         SQLiteDatabase db = exdb.getWritableDatabase();
         //if db is opened correctly
         if(db != null)
