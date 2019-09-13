@@ -3,12 +3,15 @@ package deploy.android.lozanofit.es.lozanofitroutinemixer.activities;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import deploy.android.lozanofit.es.lozanofitroutinemixer.R;
+import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Activity19AlertDialog;
+import deploy.android.lozanofit.es.lozanofitroutinemixer.classes.Activity9AlertDialog;
 import deploy.android.lozanofit.es.lozanofitroutinemixer.sqlite.ExercisesDB;
 
 public class Activity19 extends AppCompatActivity {
@@ -78,9 +81,9 @@ public class Activity19 extends AppCompatActivity {
     }
 
     public void goToAct18 (View view){
-        Intent intent = new Intent (this, Activity18.class);
-        intent.putExtra("profileid", profileid);
-        startActivity(intent);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Activity19AlertDialog dialogo = new Activity19AlertDialog();
+        dialogo.show(fragmentManager, "tagAlerta");
 
     }
 
