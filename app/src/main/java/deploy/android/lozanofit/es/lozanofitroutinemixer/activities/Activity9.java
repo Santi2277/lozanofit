@@ -40,6 +40,13 @@ public class Activity9 extends AppCompatActivity {
         if(comingfromprofile == 1){
             TextView textviewtitle = findViewById(R.id.textView30);
             textviewtitle.setText("Nombre:");
+            TextView textviewtitle2 = findViewById(R.id.textView9info);
+            textviewtitle2.setText("Para guardar los cambios sigue hasta el final.");
+
+
+
+            
+
         }
 
 

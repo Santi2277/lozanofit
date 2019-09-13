@@ -36,7 +36,7 @@
         app:srcCompat="@drawable/ic_keyboard_return_black_24dp" />
 
     <ImageButton
-        android:id="@+id/imageButton14"
+        android:id="@+id/imageButton149"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
@@ -46,6 +46,25 @@
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView9info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Para crear el perfil sigue hasta el final."
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20.5dp"
+        android:textStyle="italic"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton149" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout"

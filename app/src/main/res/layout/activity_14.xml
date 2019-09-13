@@ -54,6 +54,25 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner70"
         app:srcCompat="@drawable/ic_skip_next_black_24dp" />
 
+    <TextView
+        android:id="@+id/textView14info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="La aplicación hará la distribución por ti."
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20.5dp"
+        android:textStyle="italic"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton71" />
+
     <ImageButton
         android:id="@+id/imageButton682"
         android:layout_width="50dp"
