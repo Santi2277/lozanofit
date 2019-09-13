@@ -33,7 +33,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:text="Crea tu rutina de gimnasio de forma libre o guiada guardando tus datos en un perfil.\nPodrás cambiar el ejercicio con el botón de refresh, marcarlo como hecho (con todos marcados se registrará en el calendario), ver vídeos e indicaciones de los ejercicios, entre otros.\nUn complemento genial de vida sana (junto con una buena alimentación, cardio, estiramientos y otras rutinas).\n¡Ejercicios que cambian cada día para unos mejores resultados!"
+        android:text="Crea tu rutina de gimnasio guiada guardando tus datos en un perfil o de forma libre.\nPodrás cambiar el ejercicio con el botón de refresh, marcarlo como hecho (con todos marcados se registrará en el calendario), ver vídeos e indicaciones de los ejercicios, entre otros.\nUn complemento genial de vida sana (junto con una buena alimentación, cardio, estiramientos y otras rutinas).\n¡Ejercicios que cambian cada día para unos mejores resultados!"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="20.5dp"
         android:textColor="@color/colorBlack"
