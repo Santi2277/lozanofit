@@ -17,6 +17,7 @@ public class Activity11 extends AppCompatActivity {
     String dayminutes = "";
     String strengthlevel = "";
     String objective = "";
+    String method = "";
 
     int profileid = 0;
     int comingfromprofile = 0;
@@ -29,13 +30,42 @@ public class Activity11 extends AppCompatActivity {
 
         name = getIntent().getStringExtra("name");
         weekdays = getIntent().getStringExtra("weekdays");
-
+        dayminutes = getIntent().getStringExtra("dayminutes");
         strengthlevel = getIntent().getStringExtra("strengthlevel");
         objective = getIntent().getStringExtra("objective");
-
+        method = getIntent().getStringExtra("method");
 
         profileid = getIntent().getIntExtra("profileid", 0);
         comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
+
+        if(dayminutes!=null){
+            final Spinner timespinner = (Spinner) findViewById(R.id.spinner108);
+            switch (dayminutes){
+                case "15 min":
+                    timespinner.setSelection(0);
+                    break;
+                case "30 min":
+                    timespinner.setSelection(1);
+                    break;
+                case "45 min":
+                    timespinner.setSelection(2);
+                    break;
+                case "1 h":
+                    timespinner.setSelection(3);
+                    break;
+                case "1h 30 min":
+                    timespinner.setSelection(4);
+                    break;
+                default:
+                    timespinner.setSelection(0);
+                    break;
+            }
+        }
+
+
+
+
+
 
     }
 
@@ -49,6 +79,7 @@ public class Activity11 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
 
         startActivity(intent);
 
@@ -66,7 +97,7 @@ public class Activity11 extends AppCompatActivity {
 
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
-
+        intent.putExtra("method", method);
         intent.putExtra("profileid", profileid);
         intent.putExtra("comingfromprofile", comingfromprofile);
         startActivity(intent);
@@ -86,6 +117,7 @@ public class Activity11 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
 
         startActivity(intent);
 

@@ -19,6 +19,7 @@ public class Activity13 extends AppCompatActivity {
     String dayminutes = "";
     String strengthlevel = "";
     String objective = "";
+    String method = "";
 
     int profileid = 0;
     int comingfromprofile = 0;
@@ -32,17 +33,37 @@ public class Activity13 extends AppCompatActivity {
         weekdays = getIntent().getStringExtra("weekdays");
         dayminutes = getIntent().getStringExtra("dayminutes");
         strengthlevel = getIntent().getStringExtra("strengthlevel");
-
+        objective = getIntent().getStringExtra("objective");
+        method = getIntent().getStringExtra("method");
         profileid = getIntent().getIntExtra("profileid", 0);
         comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
 
 
+
         //change text when spinner changes
 
-        final Spinner strengthlevelspinner = (Spinner) findViewById(R.id.spinner101);
+        final Spinner objectivespinner = (Spinner) findViewById(R.id.spinner101);
         //strengthlevel = strengthlevelspinner.getSelectedItem().toString();
+        if(objective!=null){
+            switch (objective){
+                case "Salud":
+                    objectivespinner.setSelection(0);
+                    break;
+                case "Volumen":
+                    objectivespinner.setSelection(1);
+                    break;
+                case "Definición":
+                    objectivespinner.setSelection(2);
+                    break;
+                default:
+                    objectivespinner.setSelection(0);
+                    break;
+            }
+        }
 
-        strengthlevelspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+
+        objectivespinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 // your code here
@@ -87,6 +108,7 @@ public class Activity13 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
 
         intent.putExtra("comingfromprofile", comingfromprofile);
         intent.putExtra("profileid", profileid);
@@ -105,6 +127,7 @@ public class Activity13 extends AppCompatActivity {
         intent.putExtra("weekdays", weekdays);
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
+        intent.putExtra("method", method);
 
         intent.putExtra("profileid", profileid);
         intent.putExtra("comingfromprofile", comingfromprofile);
@@ -122,6 +145,7 @@ public class Activity13 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
 
         intent.putExtra("comingfromprofile", comingfromprofile);
         intent.putExtra("profileid", profileid);

@@ -17,6 +17,7 @@ public class Activity10 extends AppCompatActivity {
     String dayminutes = "";
     String strengthlevel = "";
     String objective = "";
+    String method = "";
 
     int profileid = 0;
     int comingfromprofile = 0;
@@ -27,14 +28,49 @@ public class Activity10 extends AppCompatActivity {
         setContentView(R.layout.activity_10);
 
         name = getIntent().getStringExtra("name");
-
+        weekdays = getIntent().getStringExtra("weekdays");
         dayminutes = getIntent().getStringExtra("dayminutes");
         strengthlevel = getIntent().getStringExtra("strengthlevel");
         objective = getIntent().getStringExtra("objective");
-
+        method = getIntent().getStringExtra("method");
 
         profileid = getIntent().getIntExtra("profileid", 0);
         comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
+
+
+        if(weekdays!=null){
+            final Spinner timespinner = (Spinner) findViewById(R.id.spinner107);
+            switch (weekdays){
+                case "1":
+                    timespinner.setSelection(0);
+                    break;
+                case "2":
+                    timespinner.setSelection(1);
+                    break;
+                case "3":
+                    timespinner.setSelection(2);
+                    break;
+                case "4":
+                    timespinner.setSelection(3);
+                    break;
+                case "5":
+                    timespinner.setSelection(4);
+                    break;
+                case "6":
+                    timespinner.setSelection(5);
+                    break;
+                case "7":
+                    timespinner.setSelection(6);
+                    break;
+                default:
+                    timespinner.setSelection(0);
+                    break;
+            }
+        }
+
+
+
+
 
     }
 
@@ -48,6 +84,7 @@ public class Activity10 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
 
         startActivity(intent);
 
@@ -65,6 +102,7 @@ public class Activity10 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
 
         intent.putExtra("profileid", profileid);
         intent.putExtra("comingfromprofile", comingfromprofile);
@@ -85,6 +123,7 @@ public class Activity10 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
 
         startActivity(intent);
 

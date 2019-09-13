@@ -19,6 +19,7 @@ public class Activity12 extends AppCompatActivity {
     String dayminutes = "";
     String strengthlevel = "";
     String objective = "";
+    String method = "";
 
     int profileid = 0;
     int comingfromprofile = 0;
@@ -31,9 +32,9 @@ public class Activity12 extends AppCompatActivity {
         name = getIntent().getStringExtra("name");
         weekdays = getIntent().getStringExtra("weekdays");
         dayminutes = getIntent().getStringExtra("dayminutes");
-
+        strengthlevel = getIntent().getStringExtra("strengthlevel");
         objective = getIntent().getStringExtra("objective");
-
+        method = getIntent().getStringExtra("method");
 
         profileid = getIntent().getIntExtra("profileid", 0);
         comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
@@ -41,10 +42,35 @@ public class Activity12 extends AppCompatActivity {
 
         //change text when spinner changes
 
-        final Spinner strengthlevelspinner = (Spinner) findViewById(R.id.spinner117);
+        final Spinner levelspinner = (Spinner) findViewById(R.id.spinner117);
+        if(strengthlevel!=null){
+            switch (strengthlevel){
+                case "1.- Básico":
+                    levelspinner.setSelection(0);
+                    break;
+                case "2.- En forma":
+                    levelspinner.setSelection(1);
+                    break;
+                case "3.- Atlético":
+                    levelspinner.setSelection(2);
+                    break;
+                case "4.- Fuerte":
+                    levelspinner.setSelection(3);
+                    break;
+                case "5.- Muy fuerte":
+                    levelspinner.setSelection(4);
+                    break;
+                default:
+                    levelspinner.setSelection(0);
+                    break;
+            }
+        }
+
+
+
         //strengthlevel = strengthlevelspinner.getSelectedItem().toString();
 
-        strengthlevelspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        levelspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 // your code here
@@ -94,6 +120,7 @@ public class Activity12 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
         startActivity(intent);
 
     }
@@ -110,6 +137,7 @@ public class Activity12 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
 
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
 
         intent.putExtra("profileid", profileid);
         intent.putExtra("comingfromprofile", comingfromprofile);
@@ -130,6 +158,7 @@ public class Activity12 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        intent.putExtra("method", method);
         startActivity(intent);
 
     }

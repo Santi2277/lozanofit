@@ -35,9 +35,28 @@ public class Activity14 extends AppCompatActivity {
         dayminutes = getIntent().getStringExtra("dayminutes");
         strengthlevel = getIntent().getStringExtra("strengthlevel");
         objective = getIntent().getStringExtra("objective");
+        method = getIntent().getStringExtra("method");
 
         profileid = getIntent().getIntExtra("profileid", 0);
         comingfromprofile = getIntent().getIntExtra("comingfromprofile", 0);
+
+
+        final Spinner methodspinner = (Spinner) findViewById(R.id.spinner70);
+        //strengthlevel = strengthlevelspinner.getSelectedItem().toString();
+        if(method!=null){
+            switch (method){
+                case "Todos los músculos cada día":
+                    methodspinner.setSelection(0);
+                    break;
+                case "Por separado":
+                    methodspinner.setSelection(1);
+                    break;
+                default:
+                    methodspinner.setSelection(0);
+                    break;
+            }
+        }
+
 
     }
 
@@ -52,6 +71,10 @@ public class Activity14 extends AppCompatActivity {
 
         intent.putExtra("comingfromprofile", comingfromprofile);
         intent.putExtra("profileid", profileid);
+
+        final Spinner methodspinner = (Spinner) findViewById(R.id.spinner70);
+        method = methodspinner.getSelectedItem().toString();
+        intent.putExtra("method", method);
 
         startActivity(intent);
 
@@ -106,6 +129,9 @@ public class Activity14 extends AppCompatActivity {
         intent.putExtra("dayminutes", dayminutes);
         intent.putExtra("strengthlevel", strengthlevel);
         intent.putExtra("objective", objective);
+        final Spinner methodspinner = (Spinner) findViewById(R.id.spinner70);
+        method = methodspinner.getSelectedItem().toString();
+        intent.putExtra("method", method);
 
         intent.putExtra("comingfromprofile", comingfromprofile);
         intent.putExtra("profileid", profileid);
